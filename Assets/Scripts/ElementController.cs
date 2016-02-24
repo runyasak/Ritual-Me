@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ElementController : MonoBehaviour {
 
-	public Transform pivot ;
+	private Transform pivot;
 	public float speedMoveAround = 20f;
 	public float speedMoveForward = 40f;
 
@@ -20,11 +20,13 @@ public class ElementController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isSwipe = false;
+		pivot = GameObject.Find("Element/Pivot").transform;
 		v = transform.position - pivot.position;
+		transform.localScale = new Vector3 (0.1872487f, 0.1872487f, 0.1872487f);
 	}
 
 	void moveAround (){
-		v = Quaternion.AngleAxis(Time.deltaTime * speedMoveAround, Vector3.forward) * v;
+		v = Quaternion.AngleAxis(-Time.deltaTime * speedMoveAround, Vector3.forward) * v;
 		//      Debug.Log (Quaternion.AngleAxis (Time.deltaTime * speedMoveAround, Vector3.forward) * v);
 		if (!isHit) {
 			transform.position = pivot.position + v;
@@ -103,6 +105,7 @@ public class ElementController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 //				Debug.Log (transform.position);
+		Debug.Log(transform.position - pivot.position);
 		//      Debug.Log(Input.mousePosition);
 //		Debug.Log(Time.deltaTime * speedMoveAround);
 		moveCommand ();
