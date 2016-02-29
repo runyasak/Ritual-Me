@@ -19,7 +19,6 @@ public class ElementManager : MonoBehaviour {
 	}
 		
 	public void spawnElement(){
-		Debug.Log ("kuy");
 		var new_element = Instantiate (cat_element, entry.position, Quaternion.identity) as GameObject;
 		new_element.transform.parent = element.transform;
 		new_element.transform.position = entry.position;
