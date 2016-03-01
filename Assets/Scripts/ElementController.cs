@@ -60,7 +60,7 @@ public class ElementController : MonoBehaviour {
 			isSwipe = true;
 		}
 
-		Debug.Log (currentSwipe);
+//		Debug.Log (currentSwipe);
 
 		//          //swipe upwards
 		//          if(currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
@@ -90,7 +90,7 @@ public class ElementController : MonoBehaviour {
 		Vector2 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
 
 		transform.position = curPosition;
-		Debug.Log (transform.position);
+//		Debug.Log (transform.position);
 //		Debug.Log ("Drag!!");
 	}
 
@@ -105,7 +105,7 @@ public class ElementController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 //				Debug.Log (transform.position);
-		Debug.Log(transform.position - pivot.position);
+//		Debug.Log(transform.position - pivot.position);
 		//      Debug.Log(Input.mousePosition);
 //		Debug.Log(Time.deltaTime * speedMoveAround);
 		moveCommand ();
