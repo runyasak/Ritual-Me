@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Element
-<<<<<<< HEAD
-=======
-  - Witch
->>>>>>> master
-  - Domain
+  tags: []
   layers:
   - Default
   - TransparentFX
