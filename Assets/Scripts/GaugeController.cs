@@ -9,6 +9,7 @@ public class GaugeController : MonoBehaviour {
 	private GameObject[] elementArr;
 	private GameObject[] arr;
 	private float timeForCreate;
+	public int maxElement;
 
 
 
@@ -34,12 +35,12 @@ public class GaugeController : MonoBehaviour {
 		arr = GameObject.FindGameObjectsWithTag ("Element");
 
 		foreach (GameObject i in arr){
-			if (Mathf.Abs (randomPosition - i.transform.position.x) > 1.5f) {
+			if (Mathf.Abs (randomPosition - i.transform.position.x) > 0.75f) {
 				distanceCheck++;
 			}
 		}
 
-		if ((distanceCheck == arr.Length || arr.Length == 0) && timeForCreate > 100) {
+		if ((distanceCheck == arr.Length || arr.Length == 0) && timeForCreate > 200 && arr.Length < maxElement) {
 			GameObject instantElement = Instantiate (element1, new Vector3(randomPosition, this.transform.position.y, -1)
 				, Quaternion.identity) as GameObject;
 			timeForCreate = 0;
