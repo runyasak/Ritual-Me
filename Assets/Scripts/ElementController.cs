@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ElementController : MonoBehaviour {
 
-	public Transform pivot ;
+	private Transform pivot;
 	public float speedMoveAround = 20f;
 	public float speedMoveForward = 40f;
 
@@ -20,74 +20,78 @@ public class ElementController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isSwipe = false;
+		pivot = GameObject.Find("Element/Pivot").transform;
 		v = transform.position - pivot.position;
+		transform.localScale = new Vector3 (0.1872487f, 0.1872487f, 0.1872487f);
 	}
 
 	void moveAround (){
-		v = Quaternion.AngleAxis(Time.deltaTime * speedMoveAround, Vector3.forward) * v;
-//		Debug.Log (Quaternion.AngleAxis (Time.deltaTime * speedMoveAround, Vector3.forward) * v);
-		transform.position = pivot.position + v;
+		v = Quaternion.AngleAxis(-Time.deltaTime * speedMoveAround, Vector3.forward) * v;
+		//      Debug.Log (Quaternion.AngleAxis (Time.deltaTime * speedMoveAround, Vector3.forward) * v);
+		if (!isHit) {
+			transform.position = pivot.position + v;
+		}
 	}
 
 	void moveForward (){
 		transform.position += currentSwipe * speedMoveForward * Time.deltaTime;
 	}
-		
-	void clickOnElement(){
-		if(Input.GetMouseButtonDown(0)){
-			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
-			if (hit.collider.transform.tag == "Element"){
-				isSwipe = true;
-			}
+
+	void OnMouseDown(){
+		RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
+		//save began touch 2d point
+		firstPressPos = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
+		if (hit.collider.transform.tag == "Element") {
+			isHit = true;
+
 		}
 	}
 
-	void swipe() {
-		RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
-		if(Input.GetMouseButtonDown(0)) {
-			//save began touch 2d point
-			firstPressPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
-			if (hit.collider.transform.tag == "Element") {
-				isHit = true;
-			}
+	void OnMouseUp(){
+		//save ended touch 2d point
+		secondPressPos = new Vector3(Input.mousePosition.x,Input.mousePosition.y,0);
+
+		//create vector from the two points
+		currentSwipe = new Vector3(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y,0);
+
+		//normalize the 2d vector
+		currentSwipe.Normalize();
+		if (isHit) {
+			isSwipe = true;
 		}
-		if(Input.GetMouseButtonUp(0))
-		{
-			//save ended touch 2d point
-			secondPressPos = new Vector3(Input.mousePosition.x,Input.mousePosition.y,0);
 
-			//create vector from the two points
-			currentSwipe = new Vector3(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y,0);
+//		Debug.Log (currentSwipe);
 
-			//normalize the 2d vector
-			currentSwipe.Normalize();
-			if (isHit) {
-				isSwipe = true;
-			}
+		//          //swipe upwards
+		//          if(currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+		//          {
+		//              Debug.Log("up swipe");
+		//          }
+		//          //swipe down
+		//          if(currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+		//          {
+		//              Debug.Log("down swipe");
+		//          }
+		//          //swipe left
+		//          if(currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+		//          {
+		//              Debug.Log("left swipe");
+		//          }
+		//          //swipe right
+		//          if(currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+		//          {
+		//              Debug.Log("right swipe");
+		//          }
+	}
 
-			Debug.Log (currentSwipe);
+	void OnMouseDrag(){
 
-//			//swipe upwards
-//			if(currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-//			{
-//				Debug.Log("up swipe");
-//			}
-//			//swipe down
-//			if(currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-//			{
-//				Debug.Log("down swipe");
-//			}
-//			//swipe left
-//			if(currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
-//			{
-//				Debug.Log("left swipe");
-//			}
-//			//swipe right
-//			if(currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
-//			{
-//				Debug.Log("right swipe");
-//			}
-		}
+		Vector2 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
+		Vector2 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
+
+		transform.position = curPosition;
+//		Debug.Log (transform.position);
+//		Debug.Log ("Drag!!");
 	}
 
 	void moveCommand(){
@@ -100,14 +104,14 @@ public class ElementController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-//		Debug.Log (transform.position);
-		swipe();
+//				Debug.Log (transform.position);
+//		Debug.Log(transform.position - pivot.position);
+		//      Debug.Log(Input.mousePosition);
+//		Debug.Log(Time.deltaTime * speedMoveAround);
 		moveCommand ();
-//		clickOnElement();
-//		Debug.DrawLine (transform.position, pivot.position);
-//		Debug.Log (Camera.main.ScreenPointToRay (Input.mousePosition));
+		//      clickOnElement();
+		//      Debug.DrawLine (transform.position, pivot.position);
+		//      Debug.Log (Camera.main.ScreenPointToRay (Input.mousePosition));
 	}
-
-
 
 }
