@@ -212,32 +212,16 @@ public class WitchController : MonoBehaviour {
 		if (instance == this) {
 			heartTarget.active = true;
 			isFreeze = false;
-			if (Input.GetKeyDown (KeyCode.H)) {
-				addHR ();
-			}
+			if (Input.GetKeyDown (KeyCode.H)) { addHR (); }
 		} else {
 			heartTarget.active = false;
 		}
-		//		if (curHR == maxHR && hrText.active == true) {
-		//			GameController.newScene = 1;
-		//			pentacle.SetActive(true);
-		//			lrText.SetActive (true);
-		//			hrText.SetActive (false);
-		//			hrBar.GetComponent<Image> ().color = Color.red;
-		//		}
-		//		else if(curHR == 0 && lrText.active == true){
-		//			lrText.SetActive (false);
-		//			hrText.SetActive (true);
-		//			hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
-		//			curHR = maxHR;
-		//		}
+
 		checkRitualPhase ();
-		float myHR = curHR / maxHR;
-		//		if (curHR == maxHR) {
-		//			GameController.newScene = 1;
-		//		}
 		deceaseHR ();
-		hrBar.transform.localScale = new Vector3 (myHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
+
+//		float myHR = curHR / maxHR;
+		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
 
 	}
 }
