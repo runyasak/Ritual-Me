@@ -19,9 +19,24 @@ public class ElementManager : MonoBehaviour {
 	}
 		
 	public void spawnElement(){
-		var new_element = Instantiate (cat_element, entry.position, Quaternion.identity) as GameObject;
-		new_element.transform.parent = element.transform;
-		new_element.transform.position = entry.position;
+		GameObject[] eleArr = GameObject.FindGameObjectsWithTag ("Element");
+		float countDistance = 0;
+		foreach (GameObject i in eleArr) {
+			if (Vector3.Distance (entry.position, i.transform.position) > 2.6) {
+				countDistance++;
+			}
+		}
+
+		if (countDistance == eleArr.Length) {
+			var new_element = Instantiate (cat_element, entry.position, Quaternion.identity) as GameObject;
+			new_element.transform.parent = element.transform;
+			new_element.transform.position = entry.position;
+		}
+
+		countDistance = 0;
+		//var new_element = Instantiate (cat_element, entry.position, Quaternion.identity) as GameObject;
+		//new_element.transform.parent = element.transform;
+		//new_element.transform.position = entry.position;
 
 //		var instantElement = Instantiate (allElement[choice], new Vector3(spawnLocate, this.transform.position.y, -1), Quaternion.identity) as GameObject;
 //		var instantElement_script = instantElement.GetComponent<ElementController>();

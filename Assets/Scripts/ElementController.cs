@@ -120,7 +120,7 @@ public class ElementController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-//				Debug.Log (transform.position);
+//		Debug.Log (transform.localPosition);
 //		Debug.Log(transform.position - pivot.position);
 		//      Debug.Log(Input.mousePosition);
 //		Debug.Log(Time.deltaTime * speedMoveAround);
