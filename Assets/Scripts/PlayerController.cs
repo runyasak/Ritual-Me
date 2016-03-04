@@ -2,9 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class WitchController : MonoBehaviour {
-
-
+public class PlayerController : MonoBehaviour {
+	
 	public float maxHR = 100;
 	public float curHR = 0;
 	public float addHRPoint;
@@ -14,14 +13,14 @@ public class WitchController : MonoBehaviour {
 	public GameObject hrBar;
 	public GameObject hrText;
 	public GameObject lrText;
-//	public GameObject pentacle;
+	public GameObject pentacle;
 	public bool isFreeze;
 	public GameObject heartTarget;
 
 
 
-	public static WitchController instance;
-	private GameObject bat_element, bird_element, candle_element, cat_element, hat_element, potion_element, star_element, sword_element, wand_element, dead_element, ghost_element, talk_element;
+	public static PlayerController instance;
+	public GameObject bat_element, bird_element, candle_element, cat_element, hat_element, potion_element, star_element, sword_element, wand_element, dead_element, ghost_element, talk_element;
 
 	private GameObject[] allElement;
 	private GameObject[] prefer;
@@ -52,31 +51,29 @@ public class WitchController : MonoBehaviour {
 		minusHRPoint = 10;
 		count = 0f;
 		curHR = maxHR/2;
-//		prefer = new GameObject[3];
-//		assignPrefer ();
-//		spawnPrefer ();
-//		printPrefer ();
+		prefer = new GameObject[3];
+		assignPrefer ();
+		spawnPrefer ();
+		printPrefer ();
 
 		lrText.SetActive (false);
 		hrText.SetActive (true);
-//		pentacle.SetActive (false);
+		pentacle.SetActive (false);
 		heartTarget.SetActive (false);
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
 
 
 	}
 
-	void countTime (){
-		count += 1 * Time.deltaTime;
-	}
-
 	void checkRitualPhase(){
 		if (curHR == maxHR && hrText.active == true) {
-			//			GameController.newScene = 1;
-//			pentacle.SetActive(true);
+//			GameController.newScene = 1;
+			pentacle.SetActive(true);
 			lrText.SetActive (true);
 			hrText.SetActive (false);
 			hrBar.GetComponent<Image> ().color = Color.red;
+//			GameController.instance.ritualPhase();
+
 		}
 		else if(curHR == 0 && lrText.active == true){
 			lrText.SetActive (false);
@@ -89,7 +86,7 @@ public class WitchController : MonoBehaviour {
 	void OnMouseDown(){
 		instance = this;
 	}
-
+	 
 	void assignPrefer(){
 		int[] checkDuplicate = new int[3];
 		for(int i = 0; i < prefer.Length; i++){
@@ -97,16 +94,16 @@ public class WitchController : MonoBehaviour {
 			if(i == 0){
 				prefer[i] = allElement[rand];
 				checkDuplicate[i] = rand;
-				//				Debug.Log ("init " + prefer[i]);
+//				Debug.Log ("init " + prefer[i]);
 			} else if(i != 0 && rand != checkDuplicate[0] && rand != checkDuplicate[1]) {
 				prefer[i] = allElement[rand];
 				checkDuplicate[i] = rand;
-				//				Debug.Log (prefer[i]);
+//				Debug.Log (prefer[i]);
 			} else {
 				i--;
 			}
 		}
-		//		prefer = new GameObject[]{bat_element, bird_element, candle_element};
+//		prefer = new GameObject[]{bat_element, bird_element, candle_element};
 	}
 
 	private void spawnPrefer(){
@@ -142,8 +139,8 @@ public class WitchController : MonoBehaviour {
 		for (int i = 0; i < prefer.Length; i++) {
 			if(no_layer == prefer[i].layer){
 				count++;
-				//				addHR (10);
-				//				Debug.Log ("current HR: " + curHR);
+//				addHR (10);
+//				Debug.Log ("current HR: " + curHR);
 			} 
 		}
 		if (count == 1) {
@@ -171,7 +168,7 @@ public class WitchController : MonoBehaviour {
 		float decreaseSpeed = 1;
 		if (isFreeze) {
 			decreaseSpeed = 0;
-		} else if (lrText.active) {
+		}else if (lrText.active) {
 			decreaseSpeed = decreaseSpeedLR;
 		} else if (hrText.active) {
 			decreaseSpeed = decreaseSpeedHR;
@@ -196,16 +193,9 @@ public class WitchController : MonoBehaviour {
 		Debug.Log (prefer[0] + " " + prefer[1]+ " " + prefer[2]);
 	}
 
-	void OnTriggerEnter2D(Collider2D coll) {
-		Debug.Log ("HIT");
-		Destroy (coll.gameObject);
-		addHR ();
-//		ElementManager.instance.spawnElement ();
-	}
-
 	// Update is called once per frame
 	void Update () {
-		countTime ();
+		count += 1 * Time.deltaTime;
 
 		showPrefer ();
 
@@ -238,6 +228,5 @@ public class WitchController : MonoBehaviour {
 		//		}
 		deceaseHR ();
 		hrBar.transform.localScale = new Vector3 (myHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
-
 	}
 }

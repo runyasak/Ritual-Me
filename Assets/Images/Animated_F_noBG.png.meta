@@ -297,7 +297,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: .25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -317,12 +317,11 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
@@ -340,7 +339,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_1
       rect:
         serializedVersion: 2
@@ -351,17 +349,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.2222214, y: 48.794556}
-        - {x: -13.222221, y: 44.794556}
-        - {x: -17.222221, y: 15.794556}
-        - {x: -17.222221, y: -41.205444}
-        - {x: -16.222221, y: -43.205444}
-        - {x: -0.22222137, y: -47.205444}
-        - {x: 11.777779, y: -47.205444}
-        - {x: 18.777779, y: -39.205444}
-        - {x: 18.777779, y: 42.794556}
-        - {x: 13.777779, y: 48.794556}
     - name: Animated_F_noBG_2
       rect:
         serializedVersion: 2
@@ -372,15 +359,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 12.5681305, y: 48.794556}
-        - {x: -10.4318695, y: 48.794556}
-        - {x: -18.43187, y: 32.794556}
-        - {x: -18.43187, y: -47.205444}
-        - {x: 16.56813, y: -47.205444}
-        - {x: 19.56813, y: -39.205444}
-        - {x: 19.56813, y: 35.794556}
-        - {x: 17.56813, y: 41.794556}
     - name: Animated_F_noBG_3
       rect:
         serializedVersion: 2
@@ -391,12 +369,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.64151, y: 48.794556}
-        - {x: -17.64151, y: -47.205444}
-        - {x: 13.35849, y: -47.205444}
-        - {x: 18.35849, y: -45.205444}
-        - {x: 18.35849, y: 48.794556}
     - name: Animated_F_noBG_4
       rect:
         serializedVersion: 2
@@ -407,7 +379,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_5
       rect:
         serializedVersion: 2
@@ -418,7 +389,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_6
       rect:
         serializedVersion: 2
@@ -429,7 +399,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_7
       rect:
         serializedVersion: 2
@@ -440,7 +409,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_8
       rect:
         serializedVersion: 2
@@ -451,7 +419,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_9
       rect:
         serializedVersion: 2
@@ -462,7 +429,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_10
       rect:
         serializedVersion: 2
@@ -473,7 +439,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_11
       rect:
         serializedVersion: 2
@@ -484,7 +449,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_12
       rect:
         serializedVersion: 2
@@ -495,16 +459,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 9.639404, y: 48.794556}
-        - {x: -13.360596, y: 48.794556}
-        - {x: -15.360596, y: 45.794556}
-        - {x: -16.360596, y: 36.794556}
-        - {x: -16.360596, y: -17.205444}
-        - {x: -11.360596, y: -47.205444}
-        - {x: 17.639404, y: -47.205444}
-        - {x: 17.639404, y: 33.794556}
-        - {x: 15.639404, y: 46.794556}
     - name: Animated_F_noBG_13
       rect:
         serializedVersion: 2
@@ -515,7 +469,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_14
       rect:
         serializedVersion: 2
@@ -526,7 +479,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_15
       rect:
         serializedVersion: 2
@@ -537,7 +489,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_16
       rect:
         serializedVersion: 2
@@ -548,7 +499,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_17
       rect:
         serializedVersion: 2
@@ -559,7 +509,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_18
       rect:
         serializedVersion: 2
@@ -570,7 +519,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_19
       rect:
         serializedVersion: 2
@@ -581,7 +529,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_20
       rect:
         serializedVersion: 2
@@ -592,7 +539,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_21
       rect:
         serializedVersion: 2
@@ -603,15 +549,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12.222221, y: 47.722168}
-        - {x: -16.222221, y: 45.722168}
-        - {x: -17.222221, y: 40.722168}
-        - {x: -17.222221, y: -43.277832}
-        - {x: -12.222221, y: -47.277832}
-        - {x: 11.777779, y: -47.277832}
-        - {x: 18.777779, y: -40.277832}
-        - {x: 18.777779, y: 47.722168}
     - name: Animated_F_noBG_22
       rect:
         serializedVersion: 2
@@ -622,14 +559,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.4318695, y: 47.722168}
-        - {x: -18.43187, y: 36.722168}
-        - {x: -18.43187, y: -44.277832}
-        - {x: -17.43187, y: -44.277832}
-        - {x: -9.4318695, y: -47.277832}
-        - {x: 19.56813, y: -47.277832}
-        - {x: 19.56813, y: 47.722168}
     - name: Animated_F_noBG_23
       rect:
         serializedVersion: 2
@@ -640,17 +569,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.64151, y: 47.722168}
-        - {x: -16.64151, y: 45.722168}
-        - {x: -17.64151, y: 35.722168}
-        - {x: -17.64151, y: -42.277832}
-        - {x: -16.64151, y: -44.277832}
-        - {x: -5.64151, y: -47.277832}
-        - {x: 13.35849, y: -47.277832}
-        - {x: 18.35849, y: -42.277832}
-        - {x: 18.35849, y: 45.722168}
-        - {x: 16.35849, y: 47.722168}
     - name: Animated_F_noBG_24
       rect:
         serializedVersion: 2
@@ -661,7 +579,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_25
       rect:
         serializedVersion: 2
@@ -672,7 +589,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_26
       rect:
         serializedVersion: 2
@@ -683,7 +599,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_27
       rect:
         serializedVersion: 2
@@ -694,7 +609,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_28
       rect:
         serializedVersion: 2
@@ -705,7 +619,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_29
       rect:
         serializedVersion: 2
@@ -716,7 +629,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_30
       rect:
         serializedVersion: 2
@@ -727,7 +639,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_31
       rect:
         serializedVersion: 2
@@ -738,7 +649,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_32
       rect:
         serializedVersion: 2
@@ -749,16 +659,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 9.639404, y: 47.722168}
-        - {x: -13.360596, y: 47.722168}
-        - {x: -15.360596, y: 44.722168}
-        - {x: -16.360596, y: 35.722168}
-        - {x: -16.360596, y: -18.277832}
-        - {x: -11.360596, y: -47.277832}
-        - {x: 17.639404, y: -47.277832}
-        - {x: 17.639404, y: 32.722168}
-        - {x: 15.639404, y: 45.722168}
     - name: Animated_F_noBG_33
       rect:
         serializedVersion: 2
@@ -769,7 +669,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_34
       rect:
         serializedVersion: 2
@@ -780,7 +679,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_35
       rect:
         serializedVersion: 2
@@ -791,7 +689,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_36
       rect:
         serializedVersion: 2
@@ -802,7 +699,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_37
       rect:
         serializedVersion: 2
@@ -813,7 +709,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_38
       rect:
         serializedVersion: 2
@@ -824,7 +719,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_39
       rect:
         serializedVersion: 2
@@ -835,7 +729,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_40
       rect:
         serializedVersion: 2
@@ -846,7 +739,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_41
       rect:
         serializedVersion: 2
@@ -857,15 +749,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.222221, y: 48.658203}
-        - {x: -17.222221, y: 30.658203}
-        - {x: -17.222221, y: -42.341797}
-        - {x: -16.222221, y: -43.341797}
-        - {x: -0.22222137, y: -47.341797}
-        - {x: 11.777779, y: -47.341797}
-        - {x: 18.777779, y: -41.341797}
-        - {x: 18.777779, y: 48.658203}
     - name: Animated_F_noBG_42
       rect:
         serializedVersion: 2
@@ -876,17 +759,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.5681305, y: 48.658203}
-        - {x: -15.4318695, y: 48.658203}
-        - {x: -18.43187, y: 29.658203}
-        - {x: -18.43187, y: -42.341797}
-        - {x: -17.43187, y: -43.341797}
-        - {x: -6.4318695, y: -47.341797}
-        - {x: 13.5681305, y: -47.341797}
-        - {x: 17.56813, y: -39.341797}
-        - {x: 19.56813, y: -34.341797}
-        - {x: 19.56813, y: 34.658203}
     - name: Animated_F_noBG_43
       rect:
         serializedVersion: 2
@@ -897,16 +769,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.64151, y: 48.658203}
-        - {x: -17.64151, y: 36.658203}
-        - {x: -17.64151, y: -41.341797}
-        - {x: -16.64151, y: -43.341797}
-        - {x: -6.64151, y: -47.341797}
-        - {x: 14.35849, y: -47.341797}
-        - {x: 18.35849, y: -37.341797}
-        - {x: 18.35849, y: 45.658203}
-        - {x: 17.35849, y: 48.658203}
     - name: Animated_F_noBG_44
       rect:
         serializedVersion: 2
@@ -917,7 +779,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_45
       rect:
         serializedVersion: 2
@@ -928,7 +789,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_46
       rect:
         serializedVersion: 2
@@ -939,7 +799,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_47
       rect:
         serializedVersion: 2
@@ -950,7 +809,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_48
       rect:
         serializedVersion: 2
@@ -961,7 +819,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_49
       rect:
         serializedVersion: 2
@@ -972,7 +829,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_50
       rect:
         serializedVersion: 2
@@ -983,7 +839,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_51
       rect:
         serializedVersion: 2
@@ -994,7 +849,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_52
       rect:
         serializedVersion: 2
@@ -1005,15 +859,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 8.639404, y: 48.658203}
-        - {x: -10.360596, y: 48.658203}
-        - {x: -16.360596, y: 46.658203}
-        - {x: -16.360596, y: -18.341797}
-        - {x: -11.360596, y: -47.341797}
-        - {x: 17.639404, y: -47.341797}
-        - {x: 17.639404, y: 19.658203}
-        - {x: 12.639404, y: 43.658203}
     - name: Animated_F_noBG_53
       rect:
         serializedVersion: 2
@@ -1024,7 +869,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_54
       rect:
         serializedVersion: 2
@@ -1035,7 +879,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_55
       rect:
         serializedVersion: 2
@@ -1046,7 +889,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_56
       rect:
         serializedVersion: 2
@@ -1057,7 +899,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_57
       rect:
         serializedVersion: 2
@@ -1068,7 +909,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_58
       rect:
         serializedVersion: 2
@@ -1079,7 +919,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_59
       rect:
         serializedVersion: 2
@@ -1090,7 +929,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_60
       rect:
         serializedVersion: 2
@@ -1101,7 +939,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_61
       rect:
         serializedVersion: 2
@@ -1112,7 +949,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_62
       rect:
         serializedVersion: 2
@@ -1123,7 +959,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_63
       rect:
         serializedVersion: 2
@@ -1134,7 +969,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_64
       rect:
         serializedVersion: 2
@@ -1145,7 +979,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_65
       rect:
         serializedVersion: 2
@@ -1156,7 +989,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_66
       rect:
         serializedVersion: 2
@@ -1167,7 +999,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_67
       rect:
         serializedVersion: 2
@@ -1178,7 +1009,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_68
       rect:
         serializedVersion: 2
@@ -1189,7 +1019,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_69
       rect:
         serializedVersion: 2
@@ -1200,7 +1029,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_70
       rect:
         serializedVersion: 2
@@ -1211,7 +1039,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_71
       rect:
         serializedVersion: 2
@@ -1222,7 +1049,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_72
       rect:
         serializedVersion: 2
@@ -1233,7 +1059,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_73
       rect:
         serializedVersion: 2
@@ -1244,7 +1069,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_74
       rect:
         serializedVersion: 2
@@ -1255,7 +1079,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_75
       rect:
         serializedVersion: 2
@@ -1266,7 +1089,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_77
       rect:
         serializedVersion: 2
@@ -1277,16 +1099,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -2.5335426, y: 56.643555}
-        - {x: -16.533543, y: 31.643555}
-        - {x: -19.533543, y: 14.643555}
-        - {x: -19.533543, y: -51.356445}
-        - {x: -7.5335426, y: -55.356445}
-        - {x: 18.466457, y: -55.356445}
-        - {x: 21.466457, y: -53.356445}
-        - {x: 21.466457, y: 32.643555}
-        - {x: 16.466457, y: 56.643555}
     - name: Animated_F_noBG_78
       rect:
         serializedVersion: 2
@@ -1297,16 +1109,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 6.756813, y: 56.143555}
-        - {x: -6.243187, y: 56.143555}
-        - {x: -20.243187, y: 33.143555}
-        - {x: -20.243187, y: -52.856445}
-        - {x: -11.243187, y: -54.856445}
-        - {x: 12.756813, y: -54.856445}
-        - {x: 21.756813, y: -38.856445}
-        - {x: 21.756813, y: -22.856445}
-        - {x: 13.756813, y: 46.143555}
     - name: Animated_F_noBG_79
       rect:
         serializedVersion: 2
@@ -1317,15 +1119,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -4.9570236, y: 56.143555}
-        - {x: -18.957024, y: 31.143555}
-        - {x: -18.957024, y: -47.856445}
-        - {x: -6.9570236, y: -54.856445}
-        - {x: 8.042976, y: -54.856445}
-        - {x: 20.042976, y: -48.856445}
-        - {x: 20.042976, y: 51.143555}
-        - {x: 11.042976, y: 56.143555}
     - name: Animated_F_noBG_80
       rect:
         serializedVersion: 2
@@ -1336,16 +1129,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -4.1582794, y: 56.143555}
-        - {x: -13.158279, y: 50.143555}
-        - {x: -18.15828, y: 2.1435547}
-        - {x: -18.15828, y: -48.856445}
-        - {x: -9.158279, y: -54.856445}
-        - {x: 11.841721, y: -54.856445}
-        - {x: 18.84172, y: -49.856445}
-        - {x: 18.84172, y: 38.143555}
-        - {x: 12.841721, y: 56.143555}
     - name: Animated_F_noBG_81
       rect:
         serializedVersion: 2
@@ -1356,16 +1139,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -3.3469696, y: 56.643555}
-        - {x: -15.34697, y: 31.643555}
-        - {x: -18.34697, y: 6.6435547}
-        - {x: -18.34697, y: -50.356445}
-        - {x: -3.3469696, y: -55.356445}
-        - {x: 16.65303, y: -55.356445}
-        - {x: 18.65303, y: -50.356445}
-        - {x: 18.65303, y: 49.643555}
-        - {x: 9.65303, y: 56.643555}
     - name: Animated_F_noBG_82
       rect:
         serializedVersion: 2
@@ -1376,14 +1149,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.0398407, y: 56.143555}
-        - {x: -17.03984, y: 35.143555}
-        - {x: -17.03984, y: -48.856445}
-        - {x: -9.039841, y: -54.856445}
-        - {x: 13.960159, y: -54.856445}
-        - {x: 18.96016, y: -52.856445}
-        - {x: 18.96016, y: 56.143555}
     - name: Animated_F_noBG_83
       rect:
         serializedVersion: 2
@@ -1394,14 +1159,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.228516, y: 56.143555}
-        - {x: -18.228516, y: 45.143555}
-        - {x: -18.228516, y: -50.856445}
-        - {x: -14.228516, y: -54.856445}
-        - {x: 19.771484, y: -54.856445}
-        - {x: 19.771484, y: 51.143555}
-        - {x: 15.771484, y: 56.143555}
     - name: Animated_F_noBG_84
       rect:
         serializedVersion: 2
@@ -1412,15 +1169,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -4.9255676, y: 56.143555}
-        - {x: -18.925568, y: 32.143555}
-        - {x: -18.925568, y: -47.856445}
-        - {x: -7.9255676, y: -54.856445}
-        - {x: 14.074432, y: -54.856445}
-        - {x: 20.074432, y: -52.856445}
-        - {x: 20.074432, y: 33.143555}
-        - {x: 9.074432, y: 56.143555}
     - name: Animated_F_noBG_85
       rect:
         serializedVersion: 2
@@ -1431,13 +1179,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6.126831, y: 56.143555}
-        - {x: -20.126831, y: 49.143555}
-        - {x: -20.126831, y: -54.856445}
-        - {x: 20.873169, y: -54.856445}
-        - {x: 20.873169, y: 36.143555}
-        - {x: 6.873169, y: 56.143555}
     - name: Animated_F_noBG_86
       rect:
         serializedVersion: 2
@@ -1448,14 +1189,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 8.159332, y: 55.639404}
-        - {x: -9.840668, y: 55.639404}
-        - {x: -18.840668, y: 42.639404}
-        - {x: -18.840668, y: -54.360596}
-        - {x: 19.159332, y: -54.360596}
-        - {x: 19.159332, y: 45.639404}
-        - {x: 18.159332, y: 49.639404}
     - name: Animated_F_noBG_87
       rect:
         serializedVersion: 2
@@ -1466,15 +1199,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6.541931, y: 56.143555}
-        - {x: -18.541931, y: 29.143555}
-        - {x: -18.541931, y: -52.856445}
-        - {x: -13.541931, y: -54.856445}
-        - {x: 9.458069, y: -54.856445}
-        - {x: 20.458069, y: -44.856445}
-        - {x: 20.458069, y: 20.143555}
-        - {x: 15.458069, y: 56.143555}
     - name: Animated_F_noBG_88
       rect:
         serializedVersion: 2
@@ -1485,13 +1209,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -4.743225, y: 56.643555}
-        - {x: -18.743225, y: 41.643555}
-        - {x: -18.743225, y: -53.356445}
-        - {x: -16.743225, y: -55.356445}
-        - {x: 20.256775, y: -55.356445}
-        - {x: 20.256775, y: 56.643555}
     - name: Animated_F_noBG_89
       rect:
         serializedVersion: 2
@@ -1502,19 +1219,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 12.055542, y: 57.147827}
-        - {x: -2.944458, y: 57.147827}
-        - {x: -5.944458, y: 52.147827}
-        - {x: -18.944458, y: 27.147827}
-        - {x: -19.944458, y: 22.147827}
-        - {x: -19.944458, y: -53.852173}
-        - {x: -17.944458, y: -55.852173}
-        - {x: 5.055542, y: -55.852173}
-        - {x: 19.055542, y: -46.852173}
-        - {x: 21.055542, y: -44.852173}
-        - {x: 21.055542, y: 9.147827}
-        - {x: 15.055542, y: 56.147827}
     - name: Animated_F_noBG_90
       rect:
         serializedVersion: 2
@@ -1525,15 +1229,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.654114, y: 56.643555}
-        - {x: -18.654114, y: 39.643555}
-        - {x: -18.654114, y: -55.356445}
-        - {x: 9.345886, y: -55.356445}
-        - {x: 14.345886, y: -54.356445}
-        - {x: 19.345886, y: -51.356445}
-        - {x: 19.345886, y: 24.643555}
-        - {x: 11.345886, y: 56.643555}
     - name: Animated_F_noBG_91
       rect:
         serializedVersion: 2
@@ -1544,15 +1239,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.8511353, y: 55.639404}
-        - {x: -14.851135, y: 38.639404}
-        - {x: -17.851135, y: 17.639404}
-        - {x: -17.851135, y: -50.360596}
-        - {x: -14.851135, y: -54.360596}
-        - {x: 18.148865, y: -54.360596}
-        - {x: 18.148865, y: 47.639404}
-        - {x: 7.1488647, y: 55.639404}
     - name: Animated_F_noBG_92
       rect:
         serializedVersion: 2
@@ -1563,15 +1249,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.0440674, y: 56.643555}
-        - {x: -19.044067, y: 41.643555}
-        - {x: -20.044067, y: 32.643555}
-        - {x: -20.044067, y: -55.356445}
-        - {x: 8.955933, y: -55.356445}
-        - {x: 21.955933, y: -44.356445}
-        - {x: 21.955933, y: 6.6435547}
-        - {x: 13.955933, y: 56.643555}
     - name: Animated_F_noBG_93
       rect:
         serializedVersion: 2
@@ -1582,13 +1259,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.52935, y: 46.621582}
-        - {x: -16.52935, y: -43.378418}
-        - {x: -15.52935, y: -46.378418}
-        - {x: 17.47065, y: -46.378418}
-        - {x: 18.47065, y: -39.378418}
-        - {x: 18.47065, y: 46.621582}
     - name: Animated_F_noBG_94
       rect:
         serializedVersion: 2
@@ -1599,13 +1269,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.74738, y: 46.621582}
-        - {x: -17.74738, y: -45.378418}
-        - {x: -15.747379, y: -46.378418}
-        - {x: 13.252621, y: -46.378418}
-        - {x: 19.25262, y: -43.378418}
-        - {x: 19.25262, y: 46.621582}
     - name: Animated_F_noBG_95
       rect:
         serializedVersion: 2
@@ -1616,12 +1279,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.973793, y: 46.621582}
-        - {x: -18.973793, y: -44.378418}
-        - {x: -13.973793, y: -46.378418}
-        - {x: 20.026207, y: -46.378418}
-        - {x: 20.026207, y: 46.621582}
     - name: Animated_F_noBG_96
       rect:
         serializedVersion: 2
@@ -1632,14 +1289,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22.196014, y: 46.621582}
-        - {x: -26.196014, y: 41.621582}
-        - {x: -26.196014, y: -25.378418}
-        - {x: -18.196014, y: -46.378418}
-        - {x: 24.803986, y: -46.378418}
-        - {x: 26.803986, y: -33.378418}
-        - {x: 26.803986, y: 46.621582}
     - name: Animated_F_noBG_97
       rect:
         serializedVersion: 2
@@ -1650,20 +1299,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0.044021606, y: 46.621582}
-        - {x: -8.955978, y: 43.621582}
-        - {x: -10.955978, y: 25.621582}
-        - {x: -25.955978, y: -3.378418}
-        - {x: -25.955978, y: -14.378418}
-        - {x: -15.955978, y: -21.378418}
-        - {x: -12.955978, y: -20.378418}
-        - {x: -6.9559784, y: -36.378418}
-        - {x: 5.0440216, y: -46.378418}
-        - {x: 25.044022, y: -46.378418}
-        - {x: 26.044022, y: -41.378418}
-        - {x: 26.044022, y: 44.621582}
-        - {x: 24.044022, y: 46.621582}
     - name: Animated_F_noBG_98
       rect:
         serializedVersion: 2
@@ -1674,17 +1309,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 1.2840576, y: 46.621582}
-        - {x: -5.7159424, y: 44.621582}
-        - {x: -26.715942, y: -1.378418}
-        - {x: -26.715942, y: -12.378418}
-        - {x: -4.7159424, y: -36.378418}
-        - {x: 7.2840576, y: -46.378418}
-        - {x: 27.284058, y: -46.378418}
-        - {x: 28.284058, y: -41.378418}
-        - {x: 28.284058, y: 44.621582}
-        - {x: 26.284058, y: 46.621582}
     - name: Animated_F_noBG_99
       rect:
         serializedVersion: 2
@@ -1695,16 +1319,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0.51571655, y: 46.621582}
-        - {x: -9.484283, y: 31.621582}
-        - {x: -27.484283, y: 1.621582}
-        - {x: -27.484283, y: -13.378418}
-        - {x: 0.51571655, y: -46.378418}
-        - {x: 22.515717, y: -46.378418}
-        - {x: 28.515717, y: -43.378418}
-        - {x: 28.515717, y: 45.621582}
-        - {x: 26.515717, y: 46.621582}
     - name: Animated_F_noBG_100
       rect:
         serializedVersion: 2
@@ -1715,13 +1329,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.269409, y: 46.621582}
-        - {x: -27.26941, y: 15.621582}
-        - {x: -27.26941, y: -30.378418}
-        - {x: -15.269409, y: -46.378418}
-        - {x: 27.73059, y: -46.378418}
-        - {x: 27.73059, y: 46.621582}
     - name: Animated_F_noBG_101
       rect:
         serializedVersion: 2
@@ -1732,14 +1339,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.088074, y: 47.625732}
-        - {x: -17.088074, y: 39.625732}
-        - {x: -17.088074, y: -31.374268}
-        - {x: -13.088074, y: -47.374268}
-        - {x: 18.911926, y: -47.374268}
-        - {x: 18.911926, y: 44.625732}
-        - {x: 14.911926, y: 47.625732}
     - name: Animated_F_noBG_102
       rect:
         serializedVersion: 2
@@ -1750,12 +1349,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.310303, y: 47.625732}
-        - {x: -16.310303, y: -47.374268}
-        - {x: 14.689697, y: -47.374268}
-        - {x: 17.689697, y: -18.374268}
-        - {x: 17.689697, y: 47.625732}
     - name: Animated_F_noBG_103
       rect:
         serializedVersion: 2
@@ -1766,13 +1359,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.532532, y: 47.625732}
-        - {x: -17.532532, y: -46.374268}
-        - {x: -15.532532, y: -47.374268}
-        - {x: 18.467468, y: -47.374268}
-        - {x: 18.467468, y: 45.625732}
-        - {x: 14.467468, y: 47.625732}
     - name: Animated_F_noBG_104
       rect:
         serializedVersion: 2
@@ -1783,14 +1369,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.242126, y: 47.625732}
-        - {x: -23.242126, y: 32.625732}
-        - {x: -23.242126, y: -16.374268}
-        - {x: -13.242126, y: -42.374268}
-        - {x: -6.2421265, y: -47.374268}
-        - {x: 23.757874, y: -47.374268}
-        - {x: 23.757874, y: 47.625732}
     - name: Animated_F_noBG_105
       rect:
         serializedVersion: 2
@@ -1801,17 +1379,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 21.010498, y: 47.625732}
-        - {x: -8.989502, y: 47.625732}
-        - {x: -12.989502, y: 38.625732}
-        - {x: -23.989502, y: 7.6257324}
-        - {x: -23.989502, y: -13.374268}
-        - {x: -13.989502, y: -42.374268}
-        - {x: -2.989502, y: -47.374268}
-        - {x: 22.010498, y: -47.374268}
-        - {x: 24.010498, y: -46.374268}
-        - {x: 24.010498, y: 44.625732}
     - name: Animated_F_noBG_106
       rect:
         serializedVersion: 2
@@ -1822,14 +1389,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.2453, y: 47.625732}
-        - {x: -25.2453, y: 32.625732}
-        - {x: -25.2453, y: -30.374268}
-        - {x: -7.2453003, y: -47.374268}
-        - {x: 24.7547, y: -47.374268}
-        - {x: 26.7547, y: -31.374268}
-        - {x: 26.7547, y: 47.625732}
     - name: Animated_F_noBG_107
       rect:
         serializedVersion: 2
@@ -1840,13 +1399,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.501038, y: 47.625732}
-        - {x: -26.501038, y: 33.625732}
-        - {x: -26.501038, y: -26.374268}
-        - {x: -7.5010376, y: -47.374268}
-        - {x: 27.498962, y: -47.374268}
-        - {x: 27.498962, y: 47.625732}
     - name: Animated_F_noBG_108
       rect:
         serializedVersion: 2
@@ -1857,14 +1409,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.765198, y: 47.625732}
-        - {x: -25.765198, y: 32.625732}
-        - {x: -25.765198, y: -30.374268}
-        - {x: -7.7651978, y: -47.374268}
-        - {x: 24.234802, y: -47.374268}
-        - {x: 26.234802, y: -31.374268}
-        - {x: 26.234802, y: 47.625732}
     - name: Animated_F_noBG_109
       rect:
         serializedVersion: 2
@@ -1875,13 +1419,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.033543, y: 47.091187}
-        - {x: -14.033543, y: 46.091187}
-        - {x: -19.033543, y: 2.0911865}
-        - {x: -19.033543, y: -45.908813}
-        - {x: 20.966457, y: -45.908813}
-        - {x: 20.966457, y: 47.091187}
     - name: Animated_F_noBG_110
       rect:
         serializedVersion: 2
@@ -1892,15 +1429,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.256813, y: 47.091187}
-        - {x: -6.743187, y: 47.091187}
-        - {x: -17.743187, y: 41.091187}
-        - {x: -17.743187, y: -45.908813}
-        - {x: 15.256813, y: -45.908813}
-        - {x: 19.256813, y: -42.908813}
-        - {x: 19.256813, y: 13.091187}
-        - {x: 17.256813, y: 42.091187}
     - name: Animated_F_noBG_111
       rect:
         serializedVersion: 2
@@ -1911,15 +1439,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 17.063942, y: 42.091187}
-        - {x: 14.063942, y: 47.091187}
-        - {x: -6.936058, y: 47.091187}
-        - {x: -18.936058, y: 41.091187}
-        - {x: -18.936058, y: -45.908813}
-        - {x: 10.063942, y: -45.908813}
-        - {x: 20.063942, y: -41.908813}
-        - {x: 20.063942, y: 15.091187}
     - name: Animated_F_noBG_112
       rect:
         serializedVersion: 2
@@ -1930,15 +1449,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11.362686, y: 47.091187}
-        - {x: -10.637314, y: 47.091187}
-        - {x: -18.637314, y: 26.091187}
-        - {x: -18.637314, y: -45.908813}
-        - {x: 9.362686, y: -45.908813}
-        - {x: 19.362686, y: -42.908813}
-        - {x: 19.362686, y: 22.091187}
-        - {x: 17.362686, y: 43.091187}
     - name: Animated_F_noBG_113
       rect:
         serializedVersion: 2
@@ -1949,13 +1459,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.834381, y: 47.091187}
-        - {x: -12.834381, y: 45.091187}
-        - {x: -18.834381, y: 8.091187}
-        - {x: -18.834381, y: -45.908813}
-        - {x: 19.165619, y: -45.908813}
-        - {x: 19.165619, y: 47.091187}
     - name: Animated_F_noBG_114
       rect:
         serializedVersion: 2
@@ -1966,13 +1469,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.031448, y: 47.591187}
-        - {x: -17.031448, y: 37.591187}
-        - {x: -17.031448, y: -37.408813}
-        - {x: -12.031448, y: -46.408813}
-        - {x: 18.968552, y: -46.408813}
-        - {x: 18.968552, y: 47.591187}
     - name: Animated_F_noBG_115
       rect:
         serializedVersion: 2
@@ -1983,12 +1479,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.720123, y: 47.591187}
-        - {x: -16.720123, y: -46.408813}
-        - {x: 15.279877, y: -46.408813}
-        - {x: 18.279877, y: -36.408813}
-        - {x: 18.279877, y: 47.591187}
     - name: Animated_F_noBG_116
       rect:
         serializedVersion: 2
@@ -1999,13 +1489,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.404633, y: 47.591187}
-        - {x: -16.404633, y: 34.591187}
-        - {x: -16.404633, y: -46.408813}
-        - {x: 17.595367, y: -46.408813}
-        - {x: 17.595367, y: 45.591187}
-        - {x: 16.595367, y: 47.591187}
     - name: Animated_F_noBG_117
       rect:
         serializedVersion: 2
@@ -2016,7 +1499,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_118
       rect:
         serializedVersion: 2
@@ -2027,7 +1509,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_119
       rect:
         serializedVersion: 2
@@ -2038,16 +1519,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.512573, y: 44.582764}
-        - {x: -17.512573, y: 27.582764}
-        - {x: -17.512573, y: -40.417236}
-        - {x: -15.512573, y: -42.417236}
-        - {x: -9.512573, y: -43.417236}
-        - {x: 15.487427, y: -43.417236}
-        - {x: 19.487427, y: -40.417236}
-        - {x: 19.487427, y: 33.582764}
-        - {x: 14.487427, y: 44.582764}
     - name: Animated_F_noBG_120
       rect:
         serializedVersion: 2
@@ -2058,12 +1529,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.705444, y: 44.582764}
-        - {x: -17.705444, y: -43.417236}
-        - {x: 19.294556, y: -43.417236}
-        - {x: 19.294556, y: 39.582764}
-        - {x: 13.294556, y: 44.582764}
     - name: Animated_F_noBG_121
       rect:
         serializedVersion: 2
@@ -2074,15 +1539,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.898315, y: 44.582764}
-        - {x: -15.898315, y: 33.582764}
-        - {x: -17.898315, y: 21.582764}
-        - {x: -17.898315, y: -43.417236}
-        - {x: 18.101685, y: -43.417236}
-        - {x: 19.101685, y: -40.417236}
-        - {x: 19.101685, y: 37.582764}
-        - {x: 12.101685, y: 44.582764}
     - name: Animated_F_noBG_122
       rect:
         serializedVersion: 2
@@ -2093,12 +1549,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.091187, y: 44.082764}
-        - {x: -18.091187, y: 43.082764}
-        - {x: -18.091187, y: -42.917236}
-        - {x: 18.908813, y: -42.917236}
-        - {x: 18.908813, y: 44.082764}
     - name: Animated_F_noBG_123
       rect:
         serializedVersion: 2
@@ -2109,14 +1559,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.284058, y: 43.578613}
-        - {x: -18.284058, y: 35.578613}
-        - {x: -18.284058, y: -42.421387}
-        - {x: 14.715942, y: -42.421387}
-        - {x: 18.715942, y: -41.421387}
-        - {x: 18.715942, y: 29.578613}
-        - {x: 12.715942, y: 43.578613}
     - name: Animated_F_noBG_124
       rect:
         serializedVersion: 2
@@ -2127,13 +1569,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.476929, y: 44.582764}
-        - {x: -18.476929, y: -43.417236}
-        - {x: 6.5230713, y: -43.417236}
-        - {x: 18.523071, y: -41.417236}
-        - {x: 18.523071, y: 39.582764}
-        - {x: 13.523071, y: 44.582764}
     - name: Animated_F_noBG_125
       rect:
         serializedVersion: 2
@@ -2144,14 +1579,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.674011, y: 44.582764}
-        - {x: -17.674011, y: 39.582764}
-        - {x: -17.674011, y: -43.417236}
-        - {x: 13.325989, y: -43.417236}
-        - {x: 19.325989, y: -38.417236}
-        - {x: 19.325989, y: 41.582764}
-        - {x: 18.325989, y: 44.582764}
     - name: Animated_F_noBG_126
       rect:
         serializedVersion: 2
@@ -2162,13 +1589,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.866882, y: 44.582764}
-        - {x: -18.866882, y: 18.582764}
-        - {x: -18.866882, y: -42.417236}
-        - {x: -15.866882, y: -43.417236}
-        - {x: 20.133118, y: -43.417236}
-        - {x: 20.133118, y: 44.582764}
     - name: Animated_F_noBG_127
       rect:
         serializedVersion: 2
@@ -2179,13 +1599,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.568176, y: 44.082764}
-        - {x: -18.568176, y: 22.082764}
-        - {x: -18.568176, y: -42.917236}
-        - {x: 19.431824, y: -42.917236}
-        - {x: 19.431824, y: 40.082764}
-        - {x: 13.431824, y: 44.082764}
     - name: Animated_F_noBG_128
       rect:
         serializedVersion: 2
@@ -2196,14 +1609,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.765198, y: 43.578613}
-        - {x: -18.765198, y: 33.578613}
-        - {x: -18.765198, y: -42.421387}
-        - {x: 18.234802, y: -42.421387}
-        - {x: 19.234802, y: -41.421387}
-        - {x: 19.234802, y: 28.578613}
-        - {x: 15.234802, y: 43.578613}
     - name: Animated_F_noBG_129
       rect:
         serializedVersion: 2
@@ -2214,17 +1619,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 12.474842, y: 49.09436}
-        - {x: -14.525158, y: 49.09436}
-        - {x: -20.525158, y: 34.09436}
-        - {x: -20.525158, y: -32.90564}
-        - {x: -17.525158, y: -44.90564}
-        - {x: -9.525158, y: -48.90564}
-        - {x: 18.474842, y: -48.90564}
-        - {x: 22.474842, y: -39.90564}
-        - {x: 22.474842, y: 6.0943604}
-        - {x: 16.474842, y: 36.09436}
     - name: Animated_F_noBG_130
       rect:
         serializedVersion: 2
@@ -2235,16 +1629,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.738995, y: 48.590088}
-        - {x: -16.738995, y: 43.590088}
-        - {x: -20.738995, y: 30.590088}
-        - {x: -20.738995, y: -39.409912}
-        - {x: -1.7389946, y: -48.409912}
-        - {x: 20.261005, y: -48.409912}
-        - {x: 22.261005, y: -47.409912}
-        - {x: 22.261005, y: 26.590088}
-        - {x: 18.261005, y: 48.590088}
     - name: Animated_F_noBG_131
       rect:
         serializedVersion: 2
@@ -2255,14 +1639,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12.957024, y: 49.09436}
-        - {x: -19.957024, y: 26.09436}
-        - {x: -19.957024, y: -40.90564}
-        - {x: -1.9570236, y: -48.90564}
-        - {x: 21.042976, y: -48.90564}
-        - {x: 21.042976, y: 31.09436}
-        - {x: 17.042976, y: 49.09436}
     - name: Animated_F_noBG_132
       rect:
         serializedVersion: 2
@@ -2273,16 +1649,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.166672, y: 49.59436}
-        - {x: -20.166672, y: 34.59436}
-        - {x: -20.166672, y: -34.40564}
-        - {x: -17.166672, y: -44.40564}
-        - {x: -3.1666718, y: -49.40564}
-        - {x: 16.833328, y: -49.40564}
-        - {x: 20.833328, y: -46.40564}
-        - {x: 20.833328, y: 38.59436}
-        - {x: 18.833328, y: 49.59436}
     - name: Animated_F_noBG_133
       rect:
         serializedVersion: 2
@@ -2293,17 +1659,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6.3763123, y: 50.09851}
-        - {x: -10.376312, y: 43.09851}
-        - {x: -22.376312, y: 26.09851}
-        - {x: -22.376312, y: 8.098511}
-        - {x: -17.376312, y: -47.90149}
-        - {x: -7.3763123, y: -49.90149}
-        - {x: 15.623688, y: -49.90149}
-        - {x: 22.623688, y: -41.90149}
-        - {x: 22.623688, y: 19.09851}
-        - {x: 15.623688, y: 50.09851}
     - name: Animated_F_noBG_134
       rect:
         serializedVersion: 2
@@ -2314,12 +1669,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.106934, y: 49.59436}
-        - {x: -23.106934, y: 35.59436}
-        - {x: -23.106934, y: -49.40564}
-        - {x: 24.893066, y: -49.40564}
-        - {x: 24.893066, y: 49.59436}
     - name: Animated_F_noBG_135
       rect:
         serializedVersion: 2
@@ -2330,16 +1679,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.658264, y: 48.090088}
-        - {x: -8.341736, y: 48.090088}
-        - {x: -11.341736, y: 47.090088}
-        - {x: -19.341736, y: 42.090088}
-        - {x: -19.341736, y: -47.909912}
-        - {x: 11.658264, y: -47.909912}
-        - {x: 20.658264, y: -40.909912}
-        - {x: 20.658264, y: 22.090088}
-        - {x: 18.658264, y: 32.090088}
     - name: Animated_F_noBG_136
       rect:
         serializedVersion: 2
@@ -2350,15 +1689,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 9.948639, y: 47.585938}
-        - {x: -11.051361, y: 47.585938}
-        - {x: -17.051361, y: 36.585938}
-        - {x: -18.051361, y: 32.585938}
-        - {x: -18.051361, y: -47.414062}
-        - {x: 18.948639, y: -47.414062}
-        - {x: 18.948639, y: 16.585938}
-        - {x: 14.948639, y: 37.585938}
     - name: Animated_F_noBG_137
       rect:
         serializedVersion: 2
@@ -2369,13 +1699,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.740051, y: 48.090088}
-        - {x: -17.740051, y: 43.090088}
-        - {x: -17.740051, y: -47.909912}
-        - {x: 18.259949, y: -47.909912}
-        - {x: 18.259949, y: 43.090088}
-        - {x: 11.259949, y: 48.090088}
     - name: Animated_F_noBG_138
       rect:
         serializedVersion: 2
@@ -2386,12 +1709,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.932922, y: 48.590088}
-        - {x: -17.932922, y: -48.409912}
-        - {x: 18.067078, y: -48.409912}
-        - {x: 18.067078, y: 25.590088}
-        - {x: 12.067078, y: 48.590088}
     - name: Animated_F_noBG_139
       rect:
         serializedVersion: 2
@@ -2402,14 +1719,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.125793, y: 49.09436}
-        - {x: -18.125793, y: 45.09436}
-        - {x: -18.125793, y: -45.90564}
-        - {x: -12.125793, y: -48.90564}
-        - {x: 9.874207, y: -48.90564}
-        - {x: 19.874207, y: -44.90564}
-        - {x: 19.874207, y: 49.09436}
     - name: Animated_F_noBG_140
       rect:
         serializedVersion: 2
@@ -2420,16 +1729,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.818665, y: 38.590088}
-        - {x: -19.818665, y: 25.590088}
-        - {x: -19.818665, y: -48.409912}
-        - {x: 12.181335, y: -48.409912}
-        - {x: 21.181335, y: -42.409912}
-        - {x: 21.181335, y: 15.590088}
-        - {x: 15.181335, y: 42.590088}
-        - {x: 11.181335, y: 48.590088}
-        - {x: -9.818665, y: 48.590088}
     - name: Animated_F_noBG_141
       rect:
         serializedVersion: 2
@@ -2440,19 +1739,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.466457, y: -42.931885}
-        - {x: 18.466457, y: -38.931885}
-        - {x: 18.466457, y: 46.068115}
-        - {x: 15.466457, y: 49.068115}
-        - {x: -10.533543, y: 49.068115}
-        - {x: -16.533543, y: 47.068115}
-        - {x: -16.533543, y: -38.931885}
-        - {x: 4.4664574, y: -47.931885}
-        - {x: 12.466457, y: -47.931885}
-        - {x: 12.466457, y: -43.931885}
-        - {x: 10.466457, y: -42.931885}
-        - {x: 8.466457, y: -42.931885}
     - name: Animated_F_noBG_142
       rect:
         serializedVersion: 2
@@ -2463,7 +1749,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_143
       rect:
         serializedVersion: 2
@@ -2474,7 +1759,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_144
       rect:
         serializedVersion: 2
@@ -2485,7 +1769,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_145
       rect:
         serializedVersion: 2
@@ -2496,7 +1779,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_146
       rect:
         serializedVersion: 2
@@ -2507,7 +1789,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_147
       rect:
         serializedVersion: 2
@@ -2518,7 +1799,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_148
       rect:
         serializedVersion: 2
@@ -2529,7 +1809,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_149
       rect:
         serializedVersion: 2
@@ -2540,7 +1819,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_150
       rect:
         serializedVersion: 2
@@ -2551,14 +1829,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.089111, y: 46.54712}
-        - {x: -17.089111, y: 44.54712}
-        - {x: -17.089111, y: -41.45288}
-        - {x: -10.089111, y: -45.45288}
-        - {x: 17.910889, y: -45.45288}
-        - {x: 17.910889, y: 44.54712}
-        - {x: 15.910889, y: 46.54712}
     - name: Animated_F_noBG_151
       rect:
         serializedVersion: 2
@@ -2569,7 +1839,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_152
       rect:
         serializedVersion: 2
@@ -2580,7 +1849,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_153
       rect:
         serializedVersion: 2
@@ -2591,7 +1859,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_154
       rect:
         serializedVersion: 2
@@ -2602,7 +1869,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_155
       rect:
         serializedVersion: 2
@@ -2613,7 +1879,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_156
       rect:
         serializedVersion: 2
@@ -2624,7 +1889,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_157
       rect:
         serializedVersion: 2
@@ -2635,7 +1899,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_158
       rect:
         serializedVersion: 2
@@ -2646,7 +1909,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_159
       rect:
         serializedVersion: 2
@@ -2657,7 +1919,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_160
       rect:
         serializedVersion: 2
@@ -2668,13 +1929,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.54193, y: -45.983215}
-        - {x: 18.45807, y: -45.983215}
-        - {x: 18.45807, y: 44.016785}
-        - {x: 17.45807, y: 46.016785}
-        - {x: -11.541929, y: 46.016785}
-        - {x: -16.54193, y: 29.016785}
     - name: Animated_F_noBG_161
       rect:
         serializedVersion: 2
@@ -2685,7 +1939,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_165
       rect:
         serializedVersion: 2
@@ -2696,7 +1949,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_166
       rect:
         serializedVersion: 2
@@ -2707,7 +1959,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_167
       rect:
         serializedVersion: 2
@@ -2718,7 +1969,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_168
       rect:
         serializedVersion: 2
@@ -2729,15 +1979,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.12265, y: 42.49579}
-        - {x: -7.12265, y: 41.49579}
-        - {x: -17.12265, y: 34.49579}
-        - {x: -17.12265, y: -25.504211}
-        - {x: -9.12265, y: -40.50421}
-        - {x: 17.87735, y: -40.50421}
-        - {x: 17.87735, y: 22.495789}
-        - {x: 7.87735, y: 42.49579}
     - name: Animated_F_noBG_169
       rect:
         serializedVersion: 2
@@ -2748,7 +1989,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_170
       rect:
         serializedVersion: 2
@@ -2759,7 +1999,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_171
       rect:
         serializedVersion: 2
@@ -2770,7 +2009,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_172
       rect:
         serializedVersion: 2
@@ -2781,7 +2019,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_175
       rect:
         serializedVersion: 2
@@ -2792,14 +2029,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.525158, y: 48.498962}
-        - {x: -13.525158, y: 39.498962}
-        - {x: -20.525158, y: 8.498962}
-        - {x: -20.525158, y: -42.501038}
-        - {x: -13.525158, y: -47.501038}
-        - {x: 22.474842, y: -47.501038}
-        - {x: 22.474842, y: 48.498962}
     - name: Animated_F_noBG_176
       rect:
         serializedVersion: 2
@@ -2810,14 +2039,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.755768, y: 48.498962}
-        - {x: -14.755768, y: 40.498962}
-        - {x: -20.755768, y: 13.498962}
-        - {x: -20.755768, y: -44.501038}
-        - {x: -14.755768, y: -47.501038}
-        - {x: 22.244232, y: -47.501038}
-        - {x: 22.244232, y: 48.498962}
     - name: Animated_F_noBG_177
       rect:
         serializedVersion: 2
@@ -2828,11 +2049,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.994759, y: 48.498962}
-        - {x: -20.994759, y: -47.501038}
-        - {x: 22.005241, y: -47.501038}
-        - {x: 22.005241, y: 48.498962}
     - name: Animated_F_noBG_178
       rect:
         serializedVersion: 2
@@ -2843,16 +2059,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 16.76625, y: 48.498962}
-        - {x: -11.233749, y: 48.498962}
-        - {x: -21.23375, y: 34.498962}
-        - {x: -21.23375, y: -46.501038}
-        - {x: -18.23375, y: -47.501038}
-        - {x: 18.76625, y: -47.501038}
-        - {x: 21.76625, y: -41.501038}
-        - {x: 21.76625, y: 35.498962}
-        - {x: 20.76625, y: 45.498962}
     - name: Animated_F_noBG_179
       rect:
         serializedVersion: 2
@@ -2863,14 +2069,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19.968552, y: 48.498962}
-        - {x: -20.968552, y: 47.498962}
-        - {x: -20.968552, y: -47.501038}
-        - {x: 18.031448, y: -47.501038}
-        - {x: 21.031448, y: -40.501038}
-        - {x: 21.031448, y: 46.498962}
-        - {x: 16.031448, y: 48.498962}
     - name: Animated_F_noBG_180
       rect:
         serializedVersion: 2
@@ -2881,17 +2079,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6.703369, y: 47.998962}
-        - {x: -19.70337, y: 41.998962}
-        - {x: -20.70337, y: 32.998962}
-        - {x: -20.70337, y: -38.001038}
-        - {x: -17.70337, y: -42.001038}
-        - {x: -4.703369, y: -47.001038}
-        - {x: 21.29663, y: -47.001038}
-        - {x: 22.29663, y: -41.001038}
-        - {x: 22.29663, y: 45.998962}
-        - {x: 19.29663, y: 47.998962}
     - name: Animated_F_noBG_181
       rect:
         serializedVersion: 2
@@ -2902,15 +2089,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.9381714, y: 47.998962}
-        - {x: -17.938171, y: 41.998962}
-        - {x: -20.938171, y: 20.998962}
-        - {x: -20.938171, y: -42.001038}
-        - {x: -13.938171, y: -47.001038}
-        - {x: 22.061829, y: -47.001038}
-        - {x: 22.061829, y: 45.998962}
-        - {x: 19.061829, y: 47.998962}
     - name: Animated_F_noBG_182
       rect:
         serializedVersion: 2
@@ -2921,15 +2099,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.310272, y: 45.99054}
-        - {x: -9.689728, y: 45.99054}
-        - {x: -17.689728, y: 41.99054}
-        - {x: -17.689728, y: -45.00946}
-        - {x: 9.310272, y: -45.00946}
-        - {x: 18.310272, y: -34.00946}
-        - {x: 18.310272, y: 16.99054}
-        - {x: 15.310272, y: 41.99054}
     - name: Animated_F_noBG_183
       rect:
         serializedVersion: 2
@@ -2940,15 +2109,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.403564, y: 45.99054}
-        - {x: -17.403564, y: 40.99054}
-        - {x: -17.403564, y: -43.00946}
-        - {x: -15.403564, y: -45.00946}
-        - {x: 6.5964355, y: -45.00946}
-        - {x: 17.596436, y: -40.00946}
-        - {x: 17.596436, y: 41.99054}
-        - {x: 12.596436, y: 45.99054}
     - name: Animated_F_noBG_184
       rect:
         serializedVersion: 2
@@ -2959,15 +2119,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12.109009, y: 45.99054}
-        - {x: -16.109009, y: 40.99054}
-        - {x: -17.109009, y: 16.99054}
-        - {x: -17.109009, y: -44.00946}
-        - {x: -15.109009, y: -45.00946}
-        - {x: 11.890991, y: -45.00946}
-        - {x: 18.890991, y: -40.00946}
-        - {x: 18.890991, y: 45.99054}
     - name: Animated_F_noBG_185
       rect:
         serializedVersion: 2
@@ -2978,14 +2129,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.181335, y: 45.99054}
-        - {x: -11.818665, y: 45.99054}
-        - {x: -17.818665, y: 33.99054}
-        - {x: -17.818665, y: -45.00946}
-        - {x: 18.181335, y: -45.00946}
-        - {x: 19.181335, y: -43.00946}
-        - {x: 19.181335, y: 35.99054}
     - name: Animated_F_noBG_186
       rect:
         serializedVersion: 2
@@ -2996,13 +2139,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.532532, y: 45.99054}
-        - {x: -17.532532, y: -45.00946}
-        - {x: 10.467468, y: -45.00946}
-        - {x: 18.467468, y: -41.00946}
-        - {x: 18.467468, y: 33.99054}
-        - {x: 11.467468, y: 45.99054}
     - name: Animated_F_noBG_187
       rect:
         serializedVersion: 2
@@ -3013,15 +2149,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.733765, y: 45.48639}
-        - {x: -17.733765, y: 36.48639}
-        - {x: -17.733765, y: -42.51361}
-        - {x: -15.733765, y: -44.51361}
-        - {x: 7.2662354, y: -44.51361}
-        - {x: 18.266235, y: -39.51361}
-        - {x: 18.266235, y: 44.48639}
-        - {x: 14.266235, y: 45.48639}
     - name: Animated_F_noBG_188
       rect:
         serializedVersion: 2
@@ -3032,14 +2159,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.939209, y: 45.48639}
-        - {x: -16.939209, y: 42.48639}
-        - {x: -16.939209, y: -44.51361}
-        - {x: 12.060791, y: -44.51361}
-        - {x: 17.060791, y: -42.51361}
-        - {x: 17.060791, y: 42.48639}
-        - {x: 10.060791, y: 45.48639}
     - name: Animated_F_noBG_189
       rect:
         serializedVersion: 2
@@ -3050,16 +2169,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12.02935, y: 46.48114}
-        - {x: -19.02935, y: 33.48114}
-        - {x: -19.02935, y: -41.51886}
-        - {x: -13.02935, y: -44.51886}
-        - {x: 11.97065, y: -44.51886}
-        - {x: 20.97065, y: -36.51886}
-        - {x: 20.97065, y: 27.48114}
-        - {x: 18.97065, y: 42.48114}
-        - {x: 9.97065, y: 46.48114}
     - name: Animated_F_noBG_190
       rect:
         serializedVersion: 2
@@ -3070,13 +2179,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.734802, y: 45.97693}
-        - {x: -16.734802, y: 43.97693}
-        - {x: -16.734802, y: -42.02307}
-        - {x: -13.734802, y: -44.02307}
-        - {x: 18.265198, y: -44.02307}
-        - {x: 18.265198, y: 45.97693}
     - name: Animated_F_noBG_194
       rect:
         serializedVersion: 2
@@ -3087,16 +2189,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.98114, y: 45.989502}
-        - {x: -16.98114, y: 37.989502}
-        - {x: -18.98114, y: 6.989502}
-        - {x: -18.98114, y: -36.010498}
-        - {x: -7.98114, y: -44.010498}
-        - {x: 12.01886, y: -44.010498}
-        - {x: 19.01886, y: -37.010498}
-        - {x: 19.01886, y: 41.989502}
-        - {x: 11.01886, y: 45.989502}
     - name: Animated_F_noBG_195
       rect:
         serializedVersion: 2
@@ -3107,14 +2199,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.682404, y: 45.489502}
-        - {x: -18.682404, y: -41.510498}
-        - {x: -13.682404, y: -43.510498}
-        - {x: 13.317596, y: -43.510498}
-        - {x: 20.317596, y: -36.510498}
-        - {x: 20.317596, y: 41.489502}
-        - {x: 13.317596, y: 45.489502}
     - name: Animated_F_noBG_196
       rect:
         serializedVersion: 2
@@ -3125,16 +2209,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.883667, y: 45.989502}
-        - {x: -16.883667, y: 43.989502}
-        - {x: -18.883667, y: 17.989502}
-        - {x: -18.883667, y: -37.010498}
-        - {x: 0.11633301, y: -44.010498}
-        - {x: 14.116333, y: -44.010498}
-        - {x: 20.116333, y: -36.010498}
-        - {x: 20.116333, y: 39.989502}
-        - {x: 12.116333, y: 45.989502}
     - name: Animated_F_noBG_197
       rect:
         serializedVersion: 2
@@ -3145,16 +2219,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.0849, y: 45.989502}
-        - {x: -15.0849, y: 42.989502}
-        - {x: -19.0849, y: 2.989502}
-        - {x: -19.0849, y: -37.010498}
-        - {x: 2.9151, y: -44.010498}
-        - {x: 10.9151, y: -44.010498}
-        - {x: 19.9151, y: -33.010498}
-        - {x: 19.9151, y: 38.989502}
-        - {x: 9.9151, y: 45.989502}
     - name: Animated_F_noBG_198
       rect:
         serializedVersion: 2
@@ -3165,16 +2229,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.407776, y: 45.489502}
-        - {x: -15.407776, y: 40.489502}
-        - {x: -17.407776, y: 37.489502}
-        - {x: -17.407776, y: -39.510498}
-        - {x: -13.407776, y: -43.510498}
-        - {x: 0.5922241, y: -43.510498}
-        - {x: 17.592224, y: -37.510498}
-        - {x: 17.592224, y: 21.489502}
-        - {x: 12.592224, y: 45.489502}
     - name: Animated_F_noBG_199
       rect:
         serializedVersion: 2
@@ -3185,16 +2239,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.596436, y: 44.98529}
-        - {x: -10.596436, y: 43.98529}
-        - {x: -17.596436, y: 35.98529}
-        - {x: -17.596436, y: -38.01471}
-        - {x: -11.596436, y: -43.01471}
-        - {x: 1.4035645, y: -43.01471}
-        - {x: 19.403564, y: -36.01471}
-        - {x: 19.403564, y: 17.98529}
-        - {x: 14.403564, y: 44.98529}
     - name: Animated_F_noBG_200
       rect:
         serializedVersion: 2
@@ -3205,15 +2249,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.785095, y: 45.489502}
-        - {x: -17.785095, y: 41.489502}
-        - {x: -17.785095, y: -39.510498}
-        - {x: -12.785095, y: -43.510498}
-        - {x: 0.21490479, y: -43.510498}
-        - {x: 19.214905, y: -36.510498}
-        - {x: 19.214905, y: 18.489502}
-        - {x: 17.214905, y: 45.489502}
     - name: Animated_F_noBG_201
       rect:
         serializedVersion: 2
@@ -3224,19 +2259,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 12.021973, y: 45.489502}
-        - {x: -7.9780273, y: 45.489502}
-        - {x: -13.978027, y: 39.489502}
-        - {x: -15.978027, y: 34.489502}
-        - {x: -16.978027, y: 27.489502}
-        - {x: -17.978027, y: 21.489502}
-        - {x: -17.978027, y: -41.510498}
-        - {x: -12.978027, y: -43.510498}
-        - {x: 7.0219727, y: -43.510498}
-        - {x: 19.021973, y: -36.510498}
-        - {x: 19.021973, y: 17.489502}
-        - {x: 14.021973, y: 44.489502}
     - name: Animated_F_noBG_202
       rect:
         serializedVersion: 2
@@ -3247,7 +2269,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_204
       rect:
         serializedVersion: 2
@@ -3258,7 +2279,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_205
       rect:
         serializedVersion: 2
@@ -3269,7 +2289,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_206
       rect:
         serializedVersion: 2
@@ -3280,7 +2299,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_207
       rect:
         serializedVersion: 2
@@ -3291,7 +2309,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_208
       rect:
         serializedVersion: 2
@@ -3302,7 +2319,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_209
       rect:
         serializedVersion: 2
@@ -3313,7 +2329,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_210
       rect:
         serializedVersion: 2
@@ -3324,7 +2339,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_211
       rect:
         serializedVersion: 2
@@ -3335,7 +2349,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_212
       rect:
         serializedVersion: 2
@@ -3346,7 +2359,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_213
       rect:
         serializedVersion: 2
@@ -3357,7 +2369,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_214
       rect:
         serializedVersion: 2
@@ -3368,7 +2379,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_215
       rect:
         serializedVersion: 2
@@ -3379,7 +2389,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_216
       rect:
         serializedVersion: 2
@@ -3390,7 +2399,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_217
       rect:
         serializedVersion: 2
@@ -3401,15 +2409,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.541929, y: 48.953857}
-        - {x: -14.541929, y: 43.953857}
-        - {x: -18.54193, y: 23.953857}
-        - {x: -18.54193, y: -38.046143}
-        - {x: -8.541929, y: -47.046143}
-        - {x: 20.45807, y: -47.046143}
-        - {x: 20.45807, y: 47.953857}
-        - {x: 16.45807, y: 48.953857}
     - name: Animated_F_noBG_218
       rect:
         serializedVersion: 2
@@ -3420,18 +2419,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 13.756813, y: 49.45807}
-        - {x: -9.243187, y: 49.45807}
-        - {x: -17.243187, y: 47.45807}
-        - {x: -24.243187, y: 26.458069}
-        - {x: -24.243187, y: -22.541931}
-        - {x: -20.243187, y: -42.54193}
-        - {x: -9.243187, y: -47.54193}
-        - {x: 23.756813, y: -47.54193}
-        - {x: 25.756813, y: -39.54193}
-        - {x: 25.756813, y: 37.45807}
-        - {x: 22.756813, y: 41.45807}
     - name: Animated_F_noBG_219
       rect:
         serializedVersion: 2
@@ -3442,17 +2429,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 20.00943, y: 49.45807}
-        - {x: -21.99057, y: 49.45807}
-        - {x: -24.99057, y: 35.45807}
-        - {x: -24.99057, y: -32.54193}
-        - {x: -20.99057, y: -43.54193}
-        - {x: -8.99057, y: -47.54193}
-        - {x: 19.00943, y: -47.54193}
-        - {x: 26.00943, y: -26.541931}
-        - {x: 26.00943, y: 36.45807}
-        - {x: 23.00943, y: 47.45807}
     - name: Animated_F_noBG_220
       rect:
         serializedVersion: 2
@@ -3463,18 +2439,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.257858, y: 49.45807}
-        - {x: -6.7421417, y: 49.45807}
-        - {x: -16.742142, y: 46.45807}
-        - {x: -24.742142, y: 29.458069}
-        - {x: -24.742142, y: -24.541931}
-        - {x: -21.742142, y: -43.54193}
-        - {x: -4.7421417, y: -47.54193}
-        - {x: 17.257858, y: -47.54193}
-        - {x: 25.257858, y: -33.54193}
-        - {x: 25.257858, y: 30.458069}
-        - {x: 24.257858, y: 42.45807}
     - name: Animated_F_noBG_221
       rect:
         serializedVersion: 2
@@ -3485,14 +2449,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -18.989517, y: -44.046143}
-        - {x: -13.989517, y: -47.046143}
-        - {x: 17.010483, y: -47.046143}
-        - {x: 19.010483, y: -45.046143}
-        - {x: 19.010483, y: 48.953857}
-        - {x: -16.989517, y: 48.953857}
-        - {x: -18.989517, y: 33.953857}
     - name: Animated_F_noBG_222
       rect:
         serializedVersion: 2
@@ -3503,15 +2459,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12.186584, y: 48.453857}
-        - {x: -17.186584, y: 44.453857}
-        - {x: -18.186584, y: 26.453857}
-        - {x: -18.186584, y: -37.546143}
-        - {x: -16.186584, y: -38.546143}
-        - {x: -2.1865845, y: -46.546143}
-        - {x: 19.813416, y: -46.546143}
-        - {x: 19.813416, y: 48.453857}
     - name: Animated_F_noBG_223
       rect:
         serializedVersion: 2
@@ -3522,17 +2469,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.887848, y: 49.45807}
-        - {x: -18.887848, y: 47.45807}
-        - {x: -25.887848, y: 26.458069}
-        - {x: -25.887848, y: -13.541931}
-        - {x: -18.887848, y: -41.54193}
-        - {x: -13.887848, y: -47.54193}
-        - {x: 19.112152, y: -47.54193}
-        - {x: 27.112152, y: -37.54193}
-        - {x: 27.112152, y: 33.45807}
-        - {x: 17.112152, y: 49.45807}
     - name: Animated_F_noBG_224
       rect:
         serializedVersion: 2
@@ -3543,17 +2479,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 17.852203, y: 49.45807}
-        - {x: -11.147797, y: 49.45807}
-        - {x: -25.147797, y: 26.458069}
-        - {x: -25.147797, y: -27.541931}
-        - {x: -23.147797, y: -45.54193}
-        - {x: -20.147797, y: -47.54193}
-        - {x: 24.852203, y: -47.54193}
-        - {x: 25.852203, y: -45.54193}
-        - {x: 25.852203, y: 44.45807}
-        - {x: 21.852203, y: 48.45807}
     - name: Animated_F_noBG_225
       rect:
         serializedVersion: 2
@@ -3564,16 +2489,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.600616, y: 49.45807}
-        - {x: -24.399384, y: 49.45807}
-        - {x: -24.399384, y: -44.54193}
-        - {x: -15.399384, y: -47.54193}
-        - {x: 13.600616, y: -47.54193}
-        - {x: 17.600616, y: -45.54193}
-        - {x: 24.600616, y: -19.541931}
-        - {x: 24.600616, y: 25.458069}
-        - {x: 18.600616, y: 45.45807}
     - name: Animated_F_noBG_226
       rect:
         serializedVersion: 2
@@ -3584,14 +2499,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 16.353241, y: 48.953857}
-        - {x: -20.646759, y: 48.953857}
-        - {x: -20.646759, y: -47.046143}
-        - {x: 18.353241, y: -47.046143}
-        - {x: 22.353241, y: -45.046143}
-        - {x: 22.353241, y: 31.953857}
-        - {x: 20.353241, y: 44.953857}
     - name: Animated_F_noBG_227
       rect:
         serializedVersion: 2
@@ -3602,16 +2509,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.864807, y: 48.953857}
-        - {x: -14.864807, y: 44.953857}
-        - {x: -20.864807, y: 21.953857}
-        - {x: -20.864807, y: -35.046143}
-        - {x: -2.8648071, y: -47.046143}
-        - {x: 19.135193, y: -47.046143}
-        - {x: 22.135193, y: -39.046143}
-        - {x: 22.135193, y: 46.953857}
-        - {x: 19.135193, y: 48.953857}
     - name: Animated_F_noBG_228
       rect:
         serializedVersion: 2
@@ -3622,18 +2519,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.082825, y: 48.953857}
-        - {x: -15.082825, y: 44.953857}
-        - {x: -21.082825, y: 19.953857}
-        - {x: -21.082825, y: -24.046143}
-        - {x: -19.082825, y: -34.046143}
-        - {x: -15.082825, y: -39.046143}
-        - {x: -3.0828247, y: -47.046143}
-        - {x: 17.917175, y: -47.046143}
-        - {x: 21.917175, y: -46.046143}
-        - {x: 21.917175, y: 38.953857}
-        - {x: 17.917175, y: 48.953857}
     - name: Animated_F_noBG_229
       rect:
         serializedVersion: 2
@@ -3644,15 +2529,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -21.300842, y: -42.046143}
-        - {x: -14.300842, y: -47.046143}
-        - {x: 17.699158, y: -47.046143}
-        - {x: 21.699158, y: -43.046143}
-        - {x: 21.699158, y: 45.953857}
-        - {x: 19.699158, y: 48.953857}
-        - {x: -12.300842, y: 48.953857}
-        - {x: -21.300842, y: 41.953857}
     - name: Animated_F_noBG_230
       rect:
         serializedVersion: 2
@@ -3663,14 +2539,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.51886, y: 48.953857}
-        - {x: -20.51886, y: 39.953857}
-        - {x: -20.51886, y: -40.046143}
-        - {x: -8.51886, y: -47.046143}
-        - {x: 22.48114, y: -47.046143}
-        - {x: 22.48114, y: 46.953857}
-        - {x: 21.48114, y: 48.953857}
     - name: Animated_F_noBG_231
       rect:
         serializedVersion: 2
@@ -3681,15 +2549,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.736938, y: 48.953857}
-        - {x: -20.736938, y: 45.953857}
-        - {x: -20.736938, y: -39.046143}
-        - {x: -4.7369385, y: -47.046143}
-        - {x: 20.263062, y: -47.046143}
-        - {x: 22.263062, y: -46.046143}
-        - {x: 22.263062, y: 45.953857}
-        - {x: 19.263062, y: 48.953857}
     - name: Animated_F_noBG_232
       rect:
         serializedVersion: 2
@@ -3700,14 +2559,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5.954956, y: 48.953857}
-        - {x: -14.954956, y: 44.953857}
-        - {x: -20.954956, y: 36.953857}
-        - {x: -20.954956, y: -36.046143}
-        - {x: -13.954956, y: -47.046143}
-        - {x: 22.045044, y: -47.046143}
-        - {x: 22.045044, y: 48.953857}
     - name: Animated_F_noBG_233
       rect:
         serializedVersion: 2
@@ -3718,15 +2569,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.046122, y: 47.398315}
-        - {x: -19.046122, y: 30.398315}
-        - {x: -19.046122, y: -41.601685}
-        - {x: -12.046122, y: -46.601685}
-        - {x: 16.953878, y: -46.601685}
-        - {x: 20.953878, y: -40.601685}
-        - {x: 20.953878, y: 39.398315}
-        - {x: 11.953878, y: 47.398315}
     - name: Animated_F_noBG_234
       rect:
         serializedVersion: 2
@@ -3737,13 +2579,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22.251572, y: 47.902496}
-        - {x: -22.251572, y: -47.097504}
-        - {x: 15.748428, y: -47.097504}
-        - {x: 23.748428, y: -40.097504}
-        - {x: 23.748428, y: 44.902496}
-        - {x: 15.748428, y: 47.902496}
     - name: Animated_F_noBG_235
       rect:
         serializedVersion: 2
@@ -3754,16 +2589,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.513626, y: 47.902496}
-        - {x: -12.486374, y: 47.902496}
-        - {x: -19.486374, y: 43.902496}
-        - {x: -23.486374, y: 30.902496}
-        - {x: -23.486374, y: -30.097504}
-        - {x: -15.486374, y: -47.097504}
-        - {x: 13.513626, y: -47.097504}
-        - {x: 24.513626, y: -42.097504}
-        - {x: 24.513626, y: 43.902496}
     - name: Animated_F_noBG_236
       rect:
         serializedVersion: 2
@@ -3774,13 +2599,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22.721176, y: 47.902496}
-        - {x: -22.721176, y: -47.097504}
-        - {x: 15.278824, y: -47.097504}
-        - {x: 23.278824, y: -40.097504}
-        - {x: 23.278824, y: 44.902496}
-        - {x: 15.278824, y: 47.902496}
     - name: Animated_F_noBG_237
       rect:
         serializedVersion: 2
@@ -3791,16 +2609,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19.451782, y: -42.601685}
-        - {x: -14.451782, y: -46.601685}
-        - {x: 9.548218, y: -46.601685}
-        - {x: 19.548218, y: -41.601685}
-        - {x: 19.548218, y: 23.398315}
-        - {x: 17.548218, y: 42.398315}
-        - {x: 14.548218, y: 47.398315}
-        - {x: -13.451782, y: 47.398315}
-        - {x: -19.451782, y: 45.398315}
     - name: Animated_F_noBG_238
       rect:
         serializedVersion: 2
@@ -3811,17 +2619,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7.661438, y: 46.898315}
-        - {x: -17.661438, y: 39.898315}
-        - {x: -18.661438, y: 34.898315}
-        - {x: -18.661438, y: -42.101685}
-        - {x: -13.661438, y: -46.101685}
-        - {x: 10.338562, y: -46.101685}
-        - {x: 20.338562, y: -40.101685}
-        - {x: 20.338562, y: 35.898315}
-        - {x: 19.338562, y: 42.898315}
-        - {x: 13.338562, y: 46.898315}
     - name: Animated_F_noBG_239
       rect:
         serializedVersion: 2
@@ -3832,16 +2629,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.137299, y: 47.902496}
-        - {x: -14.862701, y: 47.902496}
-        - {x: -26.862701, y: 29.902496}
-        - {x: -26.862701, y: -29.097504}
-        - {x: -24.862701, y: -44.097504}
-        - {x: -10.862701, y: -47.097504}
-        - {x: 25.137299, y: -47.097504}
-        - {x: 28.137299, y: -39.097504}
-        - {x: 28.137299, y: 39.902496}
     - name: Animated_F_noBG_240
       rect:
         serializedVersion: 2
@@ -3852,16 +2639,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10.1310425, y: 47.902496}
-        - {x: -27.131042, y: 35.902496}
-        - {x: -27.131042, y: -42.097504}
-        - {x: -26.131042, y: -46.097504}
-        - {x: -24.131042, y: -47.097504}
-        - {x: 18.868958, y: -47.097504}
-        - {x: 27.868958, y: -35.097504}
-        - {x: 27.868958, y: 24.902496}
-        - {x: 19.868958, y: 47.902496}
     - name: Animated_F_noBG_241
       rect:
         serializedVersion: 2
@@ -3872,16 +2649,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.895172, y: 47.902496}
-        - {x: -17.895172, y: 44.902496}
-        - {x: -23.895172, y: 36.902496}
-        - {x: -23.895172, y: -26.097504}
-        - {x: -16.895172, y: -47.097504}
-        - {x: 13.104828, y: -47.097504}
-        - {x: 24.104828, y: -42.097504}
-        - {x: 24.104828, y: 44.902496}
-        - {x: 21.104828, y: 47.902496}
     - name: Animated_F_noBG_242
       rect:
         serializedVersion: 2
@@ -3892,16 +2659,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7.6383667, y: 47.398315}
-        - {x: -23.638367, y: 28.398315}
-        - {x: -23.638367, y: -24.601685}
-        - {x: -18.638367, y: -42.601685}
-        - {x: -9.638367, y: -46.601685}
-        - {x: 14.361633, y: -46.601685}
-        - {x: 25.361633, y: -39.601685}
-        - {x: 25.361633, y: 42.398315}
-        - {x: 17.361633, y: 47.398315}
     - name: Animated_F_noBG_243
       rect:
         serializedVersion: 2
@@ -3912,16 +2669,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -2.8815308, y: 47.398315}
-        - {x: -24.88153, y: 28.398315}
-        - {x: -24.88153, y: -15.601685}
-        - {x: -17.88153, y: -41.601685}
-        - {x: -12.881531, y: -46.601685}
-        - {x: 15.118469, y: -46.601685}
-        - {x: 26.11847, y: -40.601685}
-        - {x: 26.11847, y: 34.398315}
-        - {x: 23.11847, y: 47.398315}
     - name: Animated_F_noBG_244
       rect:
         serializedVersion: 2
@@ -3932,16 +2679,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8.633118, y: 47.398315}
-        - {x: -17.633118, y: 44.398315}
-        - {x: -24.633118, y: 26.398315}
-        - {x: -24.633118, y: -2.6016846}
-        - {x: -13.633118, y: -46.601685}
-        - {x: 14.366882, y: -46.601685}
-        - {x: 25.366882, y: -36.601685}
-        - {x: 25.366882, y: 41.398315}
-        - {x: 21.366882, y: 47.398315}
     - name: Animated_F_noBG_245
       rect:
         serializedVersion: 2
@@ -3952,15 +2689,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12.380493, y: 47.398315}
-        - {x: -24.380493, y: 40.398315}
-        - {x: -24.380493, y: -18.601685}
-        - {x: -18.380493, y: -41.601685}
-        - {x: -9.380493, y: -46.601685}
-        - {x: 24.619507, y: -46.601685}
-        - {x: 24.619507, y: 41.398315}
-        - {x: 22.619507, y: 47.398315}
     - name: Animated_F_noBG_246
       rect:
         serializedVersion: 2
@@ -3971,25 +2699,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 16.372131, y: 47.398315}
-        - {x: -2.6278687, y: 47.398315}
-        - {x: -11.627869, y: 40.398315}
-        - {x: -12.627869, y: 38.398315}
-        - {x: -11.627869, y: 31.398315}
-        - {x: -13.627869, y: 29.398315}
-        - {x: -13.627869, y: 27.398315}
-        - {x: -14.627869, y: 29.398315}
-        - {x: -12.627869, y: 31.398315}
-        - {x: -12.627869, y: 37.398315}
-        - {x: -14.627869, y: 41.398315}
-        - {x: -23.627869, y: 39.398315}
-        - {x: -23.627869, y: 1.3983154}
-        - {x: -17.627869, y: -41.601685}
-        - {x: -7.6278687, y: -46.601685}
-        - {x: 14.372131, y: -46.601685}
-        - {x: 25.372131, y: -39.601685}
-        - {x: 25.372131, y: 38.398315}
     - name: Animated_F_noBG_247
       rect:
         serializedVersion: 2
@@ -4000,15 +2709,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 25.128906, y: 39.398315}
-        - {x: 21.128906, y: 47.398315}
-        - {x: -24.871094, y: 47.398315}
-        - {x: -24.871094, y: -46.601685}
-        - {x: 15.128906, y: -46.601685}
-        - {x: 26.128906, y: -40.601685}
-        - {x: 26.128906, y: -17.601685}
-        - {x: 25.128906, y: -14.601685}
     - name: Animated_F_noBG_248
       rect:
         serializedVersion: 2
@@ -4019,16 +2719,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.622681, y: 47.398315}
-        - {x: -24.62268, y: 34.398315}
-        - {x: -24.62268, y: -28.601685}
-        - {x: -13.622681, y: -45.601685}
-        - {x: -10.622681, y: -46.601685}
-        - {x: 15.377319, y: -46.601685}
-        - {x: 25.37732, y: -39.601685}
-        - {x: 25.37732, y: 40.398315}
-        - {x: 16.37732, y: 47.398315}
     - name: Animated_F_noBG_249
       rect:
         serializedVersion: 2
@@ -4039,14 +2729,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.52935, y: 60.481125}
-        - {x: -49.52935, y: 34.481125}
-        - {x: -49.52935, y: -54.518875}
-        - {x: -42.52935, y: -55.518875}
-        - {x: -18.52935, y: -58.518875}
-        - {x: 51.47065, y: -58.518875}
-        - {x: 51.47065, y: 60.481125}
     - name: Animated_F_noBG_250
       rect:
         serializedVersion: 2
@@ -4057,18 +2739,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 33.00943, y: 60.481125}
-        - {x: -12.99057, y: 60.481125}
-        - {x: -28.99057, y: 49.481125}
-        - {x: -49.99057, y: -6.518875}
-        - {x: -49.99057, y: -42.518875}
-        - {x: -42.99057, y: -55.518875}
-        - {x: -20.99057, y: -58.518875}
-        - {x: 42.00943, y: -58.518875}
-        - {x: 51.00943, y: -48.518875}
-        - {x: 51.00943, y: 41.481125}
-        - {x: 49.00943, y: 53.481125}
     - name: Animated_F_noBG_251
       rect:
         serializedVersion: 2
@@ -4079,24 +2749,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.951782, y: 59.97693}
-        - {x: -34.951782, y: 51.97693}
-        - {x: -49.951782, y: 8.976929}
-        - {x: -49.951782, y: -44.02307}
-        - {x: -41.951782, y: -53.02307}
-        - {x: -30.951782, y: -58.02307}
-        - {x: 50.048218, y: -58.02307}
-        - {x: 50.048218, y: 55.97693}
-        - {x: 42.048218, y: 59.97693}
-      - - {x: 43.048218, y: 51.97693}
-        - {x: 40.048218, y: 47.97693}
-        - {x: 40.048218, y: 43.97693}
-        - {x: 41.048218, y: 42.97693}
-        - {x: 46.048218, y: 42.97693}
-        - {x: 48.048218, y: 44.97693}
-        - {x: 48.048218, y: 49.97693}
-        - {x: 47.048218, y: 51.97693}
     - name: Animated_F_noBG_252
       rect:
         serializedVersion: 2
@@ -4107,19 +2759,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 28.087006, y: 57.46855}
-        - {x: 26.087006, y: 51.46855}
-        - {x: 27.087006, y: 56.46855}
-        - {x: 27.087006, y: 57.46855}
-        - {x: -26.912994, y: 57.46855}
-        - {x: -49.912994, y: 3.4685516}
-        - {x: -49.912994, y: -41.53145}
-        - {x: -42.912994, y: -51.53145}
-        - {x: -34.912994, y: -55.53145}
-        - {x: 51.087006, y: -55.53145}
-        - {x: 51.087006, y: 53.46855}
-        - {x: 38.087006, y: 57.46855}
     - name: Animated_F_noBG_253
       rect:
         serializedVersion: 2
@@ -4130,15 +2769,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25.874207, y: 57.46855}
-        - {x: -27.874207, y: 40.46855}
-        - {x: -49.874207, y: -15.531448}
-        - {x: -49.874207, y: -39.53145}
-        - {x: -47.874207, y: -46.53145}
-        - {x: -28.874207, y: -55.53145}
-        - {x: 50.125793, y: -55.53145}
-        - {x: 50.125793, y: 57.46855}
     - name: Animated_F_noBG_254
       rect:
         serializedVersion: 2
@@ -4149,14 +2779,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 29.16455, y: 59.47693}
-        - {x: -49.83545, y: 59.47693}
-        - {x: -49.83545, y: -57.52307}
-        - {x: 40.16455, y: -57.52307}
-        - {x: 51.16455, y: -52.52307}
-        - {x: 51.16455, y: 35.47693}
-        - {x: 45.16455, y: 45.47693}
     - name: Animated_F_noBG_255
       rect:
         serializedVersion: 2
@@ -4167,13 +2789,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.050316, y: 49.46331}
-        - {x: -27.050316, y: -48.53669}
-        - {x: 9.949684, y: -48.53669}
-        - {x: 28.949684, y: -14.53669}
-        - {x: 28.949684, y: 44.46331}
-        - {x: 19.949684, y: 49.46331}
     - name: Animated_F_noBG_256
       rect:
         serializedVersion: 2
@@ -4184,13 +2799,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.827042, y: 49.967506}
-        - {x: -27.827042, y: 46.967506}
-        - {x: -27.827042, y: -49.032494}
-        - {x: 19.172958, y: -49.032494}
-        - {x: 29.172958, y: -2.0324936}
-        - {x: 29.172958, y: 49.967506}
     - name: Animated_F_noBG_257
       rect:
         serializedVersion: 2
@@ -4201,17 +2809,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 17.896225, y: 48.96331}
-        - {x: -16.103775, y: 48.96331}
-        - {x: -26.103775, y: 41.96331}
-        - {x: -28.103775, y: 18.96331}
-        - {x: -28.103775, y: -46.03669}
-        - {x: -19.103775, y: -48.03669}
-        - {x: 2.896225, y: -48.03669}
-        - {x: 7.896225, y: -41.03669}
-        - {x: 28.896225, y: -0.03668976}
-        - {x: 28.896225, y: 32.96331}
     - name: Animated_F_noBG_258
       rect:
         serializedVersion: 2
@@ -4222,14 +2819,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20.376312, y: 48.45912}
-        - {x: -28.376312, y: 44.45912}
-        - {x: -28.376312, y: -47.54088}
-        - {x: 9.623688, y: -47.54088}
-        - {x: 28.623688, y: -6.5408783}
-        - {x: 28.623688, y: 43.45912}
-        - {x: 19.623688, y: 48.45912}
     - name: Animated_F_noBG_259
       rect:
         serializedVersion: 2
@@ -4240,15 +2829,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24.157227, y: 47.95912}
-        - {x: -28.157227, y: 37.95912}
-        - {x: -28.157227, y: -44.04088}
-        - {x: -16.157227, y: -47.04088}
-        - {x: 11.842773, y: -47.04088}
-        - {x: 18.842773, y: -42.04088}
-        - {x: 29.842773, y: -6.0408783}
-        - {x: 29.842773, y: 47.95912}
     - name: Animated_F_noBG_260
       rect:
         serializedVersion: 2
@@ -4259,13 +2839,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.942352, y: 48.96331}
-        - {x: -27.942352, y: -48.03669}
-        - {x: 17.057648, y: -48.03669}
-        - {x: 29.057648, y: -22.03669}
-        - {x: 29.057648, y: 33.96331}
-        - {x: 21.057648, y: 48.96331}
     - name: Animated_F_noBG_261
       rect:
         serializedVersion: 2
@@ -4276,14 +2849,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.714905, y: 49.46331}
-        - {x: -29.714905, y: 39.46331}
-        - {x: -29.714905, y: -48.53669}
-        - {x: 18.285095, y: -48.53669}
-        - {x: 30.285095, y: -20.53669}
-        - {x: 30.285095, y: 45.46331}
-        - {x: 18.285095, y: 49.46331}
     - name: Animated_F_noBG_262
       rect:
         serializedVersion: 2
@@ -4294,16 +2859,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.012573, y: 49.46331}
-        - {x: -27.012573, y: 35.46331}
-        - {x: -29.012573, y: 25.46331}
-        - {x: -29.012573, y: -32.53669}
-        - {x: -22.012573, y: -48.53669}
-        - {x: 16.987427, y: -48.53669}
-        - {x: 30.987427, y: -12.53669}
-        - {x: 30.987427, y: 36.46331}
-        - {x: 19.987427, y: 49.46331}
     - name: Animated_F_noBG_263
       rect:
         serializedVersion: 2
@@ -4314,15 +2869,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -28.80188, y: 49.46331}
-        - {x: -28.80188, y: -11.53669}
-        - {x: -23.80188, y: -10.53669}
-        - {x: -21.80188, y: -47.53669}
-        - {x: -19.80188, y: -48.53669}
-        - {x: 14.19812, y: -48.53669}
-        - {x: 30.19812, y: -8.53669}
-        - {x: 30.19812, y: 49.46331}
     - name: Animated_F_noBG_264
       rect:
         serializedVersion: 2
@@ -4333,15 +2879,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.912964, y: 48.96331}
-        - {x: -27.087036, y: 48.96331}
-        - {x: -27.087036, y: -38.03669}
-        - {x: -24.087036, y: -48.03669}
-        - {x: 16.912964, y: -48.03669}
-        - {x: 27.912964, y: -20.03669}
-        - {x: 27.912964, y: 40.96331}
-        - {x: 26.912964, y: 43.96331}
     - name: Animated_F_noBG_265
       rect:
         serializedVersion: 2
@@ -4352,13 +2889,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -23.855347, y: 48.96331}
-        - {x: -26.855347, y: 46.96331}
-        - {x: -26.855347, y: -10.03669}
-        - {x: -22.855347, y: -48.03669}
-        - {x: 27.144653, y: -48.03669}
-        - {x: 27.144653, y: 48.96331}
     - name: Animated_F_noBG_266
       rect:
         serializedVersion: 2
@@ -4369,18 +2899,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 23.376282, y: 48.96331}
-        - {x: -21.623718, y: 48.96331}
-        - {x: -26.623718, y: 40.96331}
-        - {x: -26.623718, y: -9.03669}
-        - {x: -19.623718, y: -10.03669}
-        - {x: -20.623718, y: -47.03669}
-        - {x: -19.623718, y: -48.03669}
-        - {x: 11.376282, y: -48.03669}
-        - {x: 15.376282, y: -44.03669}
-        - {x: 28.376282, y: -20.03669}
-        - {x: 28.376282, y: 41.96331}
     - name: Animated_F_noBG_267
       rect:
         serializedVersion: 2
@@ -4391,14 +2909,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6.037735, y: 44.949684}
-        - {x: -12.037735, y: 41.949684}
-        - {x: -17.037735, y: 31.949684}
-        - {x: -17.037735, y: -43.050316}
-        - {x: 18.962265, y: -43.050316}
-        - {x: 18.962265, y: 36.949684}
-        - {x: 14.962265, y: 44.949684}
     - name: Animated_F_noBG_268
       rect:
         serializedVersion: 2
@@ -4409,15 +2919,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10.781971, y: 44.949684}
-        - {x: -18.218029, y: 44.949684}
-        - {x: -18.218029, y: -41.050316}
-        - {x: -10.218029, y: -43.050316}
-        - {x: 17.781971, y: -43.050316}
-        - {x: 19.781971, y: -41.050316}
-        - {x: 19.781971, y: 7.949684}
-        - {x: 17.781971, y: 33.949684}
     - name: Animated_F_noBG_269
       rect:
         serializedVersion: 2
@@ -4428,14 +2929,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.406708, y: 44.449684}
-        - {x: -19.406708, y: 38.449684}
-        - {x: -19.406708, y: -39.550316}
-        - {x: -14.406708, y: -42.550316}
-        - {x: 20.593292, y: -42.550316}
-        - {x: 20.593292, y: 33.449684}
-        - {x: 17.593292, y: 44.449684}
     - name: Animated_F_noBG_270
       rect:
         serializedVersion: 2
@@ -4446,14 +2939,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14.603775, y: 44.449684}
-        - {x: -21.603775, y: 38.449684}
-        - {x: -21.603775, y: -35.550316}
-        - {x: -14.603775, y: -42.550316}
-        - {x: 22.396225, y: -42.550316}
-        - {x: 22.396225, y: 6.449684}
-        - {x: 14.396225, y: 44.449684}
     - name: Animated_F_noBG_271
       rect:
         serializedVersion: 2
@@ -4464,11 +2949,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 17.678192, y: -42.550316}
-        - {x: 17.678192, y: 44.449684}
-        - {x: -17.321808, y: 44.449684}
-        - {x: -17.321808, y: -42.550316}
     - name: Animated_F_noBG_272
       rect:
         serializedVersion: 2
@@ -4479,7 +2959,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_273
       rect:
         serializedVersion: 2
@@ -4490,19 +2969,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -21.53984, y: 44.449684}
-        - {x: -21.53984, y: -38.550316}
-        - {x: -14.539841, y: -42.550316}
-        - {x: 12.460159, y: -42.550316}
-        - {x: 14.460159, y: -40.550316}
-        - {x: 14.460159, y: 41.449684}
-        - {x: 13.460159, y: 44.449684}
-      - - {x: 16.46016, y: -31.550316}
-        - {x: 16.46016, y: -36.550316}
-        - {x: 17.46016, y: -37.550316}
-        - {x: 23.46016, y: -37.550316}
-        - {x: 23.46016, y: -31.550316}
     - name: Animated_F_noBG_274
       rect:
         serializedVersion: 2
@@ -4513,16 +2979,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 12.242126, y: 45.45388}
-        - {x: -7.7578735, y: 45.45388}
-        - {x: -12.757874, y: 43.45388}
-        - {x: -16.757874, y: 26.45388}
-        - {x: -16.757874, y: -37.54612}
-        - {x: -9.757874, y: -43.54612}
-        - {x: 14.242126, y: -43.54612}
-        - {x: 18.242126, y: -35.54612}
-        - {x: 18.242126, y: 35.45388}
     - name: Animated_F_noBG_275
       rect:
         serializedVersion: 2
@@ -4533,13 +2989,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.93396, y: 45.45388}
-        - {x: -16.93396, y: -39.54612}
-        - {x: -10.93396, y: -43.54612}
-        - {x: 18.06604, y: -43.54612}
-        - {x: 18.06604, y: 43.45388}
-        - {x: 16.06604, y: 45.45388}
     - name: Animated_F_noBG_276
       rect:
         serializedVersion: 2
@@ -4550,12 +2999,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19.110077, y: 44.449684}
-        - {x: -19.110077, y: -42.550316}
-        - {x: 11.889923, y: -42.550316}
-        - {x: 19.889923, y: -38.550316}
-        - {x: 19.889923, y: 44.449684}
     - name: Animated_F_noBG_277
       rect:
         serializedVersion: 2
@@ -4566,14 +3009,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11.302948, y: 44.449684}
-        - {x: -18.302948, y: 9.449684}
-        - {x: -18.302948, y: -34.550316}
-        - {x: -9.302948, y: -42.550316}
-        - {x: 13.697052, y: -42.550316}
-        - {x: 18.697052, y: -31.550316}
-        - {x: 18.697052, y: 44.449684}
     - name: Animated_F_noBG_278
       rect:
         serializedVersion: 2
@@ -4584,7 +3019,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_279
       rect:
         serializedVersion: 2
@@ -4595,7 +3029,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_280
       rect:
         serializedVersion: 2
@@ -4606,15 +3039,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.364807, y: 46.95807}
-        - {x: -18.364807, y: 35.95807}
-        - {x: -18.364807, y: -37.04193}
-        - {x: -8.364807, y: -45.04193}
-        - {x: 8.635193, y: -45.04193}
-        - {x: 19.635193, y: -33.04193}
-        - {x: 19.635193, y: 34.95807}
-        - {x: 12.635193, y: 46.95807}
     - name: Animated_F_noBG_281
       rect:
         serializedVersion: 2
@@ -4625,17 +3049,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 9.446533, y: 48.966457}
-        - {x: -9.553467, y: 48.966457}
-        - {x: -13.553467, y: 46.966457}
-        - {x: -17.553467, y: 21.966457}
-        - {x: -17.553467, y: -42.033543}
-        - {x: -14.553467, y: -47.033543}
-        - {x: 8.446533, y: -47.033543}
-        - {x: 18.446533, y: -32.033543}
-        - {x: 18.446533, y: 27.966457}
-        - {x: 16.446533, y: 40.966457}
     - name: Animated_F_noBG_282
       rect:
         serializedVersion: 2
@@ -4646,16 +3059,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 9.762024, y: 45.432915}
-        - {x: -10.237976, y: 45.432915}
-        - {x: -15.237976, y: 43.432915}
-        - {x: -17.237976, y: 11.432915}
-        - {x: -17.237976, y: -43.567085}
-        - {x: 14.762024, y: -43.567085}
-        - {x: 17.762024, y: -38.567085}
-        - {x: 17.762024, y: 33.432915}
-        - {x: 16.762024, y: 37.432915}
     - name: Animated_F_noBG_283
       rect:
         serializedVersion: 2
@@ -4666,18 +3069,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15.590149, y: 37.432915}
-        - {x: 8.590149, y: 45.432915}
-        - {x: -9.409851, y: 45.432915}
-        - {x: -14.409851, y: 43.432915}
-        - {x: -17.409851, y: 16.432915}
-        - {x: -17.409851, y: -41.567085}
-        - {x: -12.409851, y: -43.567085}
-        - {x: 9.590149, y: -43.567085}
-        - {x: 16.590149, y: -35.567085}
-        - {x: 17.590149, y: -33.567085}
-        - {x: 17.590149, y: 8.432915}
     - name: Animated_F_noBG_284
       rect:
         serializedVersion: 2
@@ -4688,14 +3079,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12.090149, y: 46.45807}
-        - {x: -17.090149, y: 9.458069}
-        - {x: -17.090149, y: -44.54193}
-        - {x: 15.909851, y: -44.54193}
-        - {x: 18.909851, y: -43.54193}
-        - {x: 18.909851, y: 34.45807}
-        - {x: 16.909851, y: 46.45807}
     - name: Animated_F_noBG_285
       rect:
         serializedVersion: 2
@@ -4706,12 +3089,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11.225342, y: 46.45807}
-        - {x: -17.774658, y: 46.45807}
-        - {x: -17.774658, y: -44.54193}
-        - {x: 19.225342, y: -44.54193}
-        - {x: 19.225342, y: 40.45807}
     - name: Animated_F_noBG_286
       rect:
         serializedVersion: 2
@@ -4722,15 +3099,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.959106, y: 45.45388}
-        - {x: -16.959106, y: 22.45388}
-        - {x: -19.959106, y: -3.5461197}
-        - {x: -19.959106, y: -43.54612}
-        - {x: 19.040894, y: -43.54612}
-        - {x: 21.040894, y: -40.54612}
-        - {x: 21.040894, y: 16.45388}
-        - {x: 13.040894, y: 45.45388}
     - name: Animated_F_noBG_287
       rect:
         serializedVersion: 2
@@ -4741,13 +3109,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 12.343811, y: -43.54612}
-        - {x: 19.343811, y: -40.54612}
-        - {x: 19.343811, y: 34.45388}
-        - {x: 15.343811, y: 45.45388}
-        - {x: -18.656189, y: 45.45388}
-        - {x: -18.656189, y: -43.54612}
     - name: Animated_F_noBG_288
       rect:
         serializedVersion: 2
@@ -4758,7 +3119,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Animated_F_noBG_289
       rect:
         serializedVersion: 2
@@ -4769,8 +3129,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
