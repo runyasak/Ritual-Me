@@ -3,12 +3,11 @@ using System.Collections;
 
 public class ElementController : MonoBehaviour {
 
-	private Transform pivot;
+	private Transform pivot, dropPoint;
 	public float speedMoveAround = 20f;
 	public float speedMoveForward = 40f;
 
-	private bool isSwipe;
-	private bool isHit;
+	private bool isSwipe, isHit, isDrop;
 
 
 	private Vector3 v;
@@ -20,7 +19,9 @@ public class ElementController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isSwipe = false;
+		isDrop = false;
 		pivot = GameObject.Find("Element/Pivot").transform;
+		dropPoint = GameObject.Find ("Element/DropPoint").transform;
 		v = transform.position - pivot.position;
 		transform.localScale = new Vector3 (0.1872487f, 0.1872487f, 0.1872487f);
 	}
@@ -37,13 +38,17 @@ public class ElementController : MonoBehaviour {
 		transform.position += currentSwipe * speedMoveForward * Time.deltaTime;
 	}
 
+	void moveDrop (){
+		Debug.Log ("DROP!!");
+		transform.position = Vector3.MoveTowards (transform.position, dropPoint.position, speedMoveForward*Time.deltaTime);
+	}
+
 	void OnMouseDown(){
 		RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 		//save began touch 2d point
 		firstPressPos = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
 		if (hit.collider.transform.tag == "Element") {
 			isHit = true;
-
 		}
 	}
 
@@ -56,8 +61,14 @@ public class ElementController : MonoBehaviour {
 
 		//normalize the 2d vector
 		currentSwipe.Normalize();
+		Debug.Log (currentSwipe);
+
 		if (isHit) {
-			isSwipe = true;
+			if (currentSwipe == Vector3.zero){
+				isDrop = true;
+			} else {
+				isSwipe = true;
+			}
 		}
 
 //		Debug.Log (currentSwipe);
@@ -99,6 +110,11 @@ public class ElementController : MonoBehaviour {
 			moveAround ();
 		} else {
 			moveForward ();
+		}
+
+		if (isDrop){
+			Debug.Log ("CHECK!!");
+			moveDrop ();	
 		}
 	}
 

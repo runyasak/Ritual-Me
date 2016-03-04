@@ -495,6 +495,7 @@ Transform:
   - {fileID: 526532902}
   - {fileID: 915413832}
   - {fileID: 217781510}
+  - {fileID: 1767798855}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &526532901
@@ -1489,7 +1490,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1211170142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.17, y: 4.38, z: 0}
+  m_LocalPosition: {x: -5.94, y: 3.91, z: 0}
   m_LocalScale: {x: 0.36606613, y: 0.36606613, z: 0.36606613}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1511,6 +1512,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1767798854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1767798855}
+  m_Layer: 0
+  m_Name: DropPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767798855
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767798854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 503390922}
+  m_RootOrder: 15
 --- !u!1 &1896979668
 GameObject:
   m_ObjectHideFlags: 0
