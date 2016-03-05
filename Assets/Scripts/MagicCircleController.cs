@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rotate : MonoBehaviour {
+public class MagicCircleController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
