@@ -9,7 +9,6 @@ public class ElementController : MonoBehaviour {
 
 	private bool isSwipe, isHit, isDrop;
 
-
 	private Vector3 v;
 
 	Vector3 firstPressPos;
@@ -30,12 +29,13 @@ public class ElementController : MonoBehaviour {
 		v = Quaternion.AngleAxis(-Time.deltaTime * speedMoveAround, Vector3.forward) * v;
 		//      Debug.Log (Quaternion.AngleAxis (Time.deltaTime * speedMoveAround, Vector3.forward) * v);
 		if (!isHit) {
+			Debug.Log (this.gameObject + "" +isHit);
 			transform.position = pivot.position + v;
 		}
 	}
 
 	void moveForward (){
-		transform.position += currentSwipe * speedMoveForward * Time.deltaTime;
+		transform.position += currentSwipe * Time.deltaTime* speedMoveForward;
 	}
 
 	void moveDrop (){
@@ -44,12 +44,20 @@ public class ElementController : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
+		RaycastHit hit; Ray ray;
+		ray = new Ray (Camera.main.ScreenToWorldPoint (Input.mousePosition), new Vector3(0f,0f,1.0f));
+		if (Physics.Raycast (ray, out hit, 100)) {
+			if (hit.collider.transform.tag == "Element") {
+				isHit = true;
+			}
+		}
+
+/*		RaycastHit hit = Physics.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), new Vector3(0f,0f,5f));
 		//save began touch 2d point
-		firstPressPos = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
+		firstPressPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y);
 		if (hit.collider.transform.tag == "Element") {
 			isHit = true;
-		}
+		}*/
 	}
 
 	void OnMouseUp(){

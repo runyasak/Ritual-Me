@@ -13,7 +13,7 @@ public class EdgeTrigger : MonoBehaviour {
 		ElementManager.instance.spawnElement ();
 	}
 
-	void OnTriggerEnter2D(Collider2D coll) {
+	void OnTriggerEnter(Collider coll) {
 //		Debug.Log (coll);
 		Destroy (coll.gameObject);
 		//ElementManager.instance.spawnElement ();

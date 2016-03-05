@@ -6,8 +6,13 @@ public class ElementManager : MonoBehaviour {
 	public Transform entry;
 
 	public GameObject element;
-	public GameObject cat_element;
+	public GameObject cat_element, bird_element, candle_element, dead_element, hat_element, hook_element,
+						pot_element, star_element, talk_element, wand_element;
+	private GameObject[] elementsArr;
+
 	public static ElementManager instance;
+
+
 
 	void Awake () {
 		instance = this;
@@ -15,7 +20,10 @@ public class ElementManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		elementsArr = new GameObject[] {
+			cat_element, bird_element, candle_element, dead_element, hat_element, hook_element,
+			pot_element, star_element, talk_element, wand_element
+		};
 	}
 		
 	public void spawnElement(){
@@ -28,7 +36,8 @@ public class ElementManager : MonoBehaviour {
 		}
 
 		if (countDistance == eleArr.Length) {
-			var new_element = Instantiate (cat_element, entry.position, Quaternion.identity) as GameObject;
+			int rand = Random.Range (0, elementsArr.Length - 1);
+			var new_element = Instantiate (elementsArr[rand], entry.position, Quaternion.identity) as GameObject;
 			new_element.transform.parent = element.transform;
 			new_element.transform.position = entry.position;
 		}
@@ -42,7 +51,7 @@ public class ElementManager : MonoBehaviour {
 //		var instantElement_script = instantElement.GetComponent<ElementController>();
 //		instantElement_script.isMove = true;
 	}
-
+		
 	// Update is called once per frame
 	void Update () {
 	
