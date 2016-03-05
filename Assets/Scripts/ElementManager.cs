@@ -36,7 +36,7 @@ public class ElementManager : MonoBehaviour {
 		}
 
 		if (countDistance == eleArr.Length) {
-			int rand = Random.Range (0, elementsArr.Length - 1);
+			int rand = Random.Range (0, elementsArr.Length);
 			var new_element = Instantiate (elementsArr[rand], entry.position, Quaternion.identity) as GameObject;
 			new_element.transform.parent = element.transform;
 			new_element.transform.position = entry.position;

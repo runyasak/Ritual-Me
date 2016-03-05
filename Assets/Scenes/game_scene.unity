@@ -152,7 +152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 154302229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0839d866daadbcb4183acca60c1c5020, type: 3}
+  m_Script: {fileID: 11500000, guid: 94bd3ac1ef531774d94c936aa7c32c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &217781509
@@ -441,7 +441,7 @@ MonoBehaviour:
   entry: {fileID: 526532902}
   element: {fileID: 503390921}
   cat_element: {fileID: 164840, guid: 4bd0dde1ef68fb04596a29e37717a30b, type: 2}
-  bird_element: {fileID: 104458, guid: c6e6b8431615938419826de5418b5c21, type: 2}
+  bird_element: {fileID: 195082, guid: b1033598731045b4894828895fa2ab2d, type: 2}
   candle_element: {fileID: 193160, guid: dd7fb6d19dc92004993cbd3c725340ad, type: 2}
   dead_element: {fileID: 124872, guid: 7355bd39f579f7d48b0b34b839a6c776, type: 2}
   hat_element: {fileID: 122896, guid: 035f99a6b36b78545a2eec5dea9b29d6, type: 2}
