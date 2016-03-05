@@ -29,13 +29,13 @@ public class ElementController : MonoBehaviour {
 		v = Quaternion.AngleAxis(-Time.deltaTime * speedMoveAround, Vector3.forward) * v;
 		//      Debug.Log (Quaternion.AngleAxis (Time.deltaTime * speedMoveAround, Vector3.forward) * v);
 		if (!isHit) {
-			Debug.Log (this.gameObject + "" +isHit);
+//			Debug.Log (this.gameObject + "" +isHit);
 			transform.position = pivot.position + v;
 		}
 	}
 
 	void moveForward (){
-		transform.position += currentSwipe * Time.deltaTime* speedMoveForward;
+		transform.position += currentSwipe * speedMoveForward * Time.deltaTime;
 	}
 
 	void moveDrop (){
@@ -46,6 +46,7 @@ public class ElementController : MonoBehaviour {
 	void OnMouseDown(){
 		RaycastHit hit; Ray ray;
 		ray = new Ray (Camera.main.ScreenToWorldPoint (Input.mousePosition), new Vector3(0f,0f,1.0f));
+		firstPressPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y);
 		if (Physics.Raycast (ray, out hit, 100)) {
 			if (hit.collider.transform.tag == "Element") {
 				isHit = true;
@@ -116,8 +117,10 @@ public class ElementController : MonoBehaviour {
 	void moveCommand(){
 		if(!isSwipe){
 			moveAround ();
+			Debug.Log ("Moving Around");
 		} else {
 			moveForward ();
+			Debug.Log ("Moving Forward");
 		}
 
 		if (isDrop){

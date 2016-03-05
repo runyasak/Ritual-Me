@@ -54,6 +54,6 @@ public class ElementManager : MonoBehaviour {
 		
 	// Update is called once per frame
 	void Update () {
-	
+		spawnElement ();
 	}
 }
