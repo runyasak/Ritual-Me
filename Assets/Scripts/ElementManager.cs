@@ -28,6 +28,7 @@ public class ElementManager : MonoBehaviour {
 		}
 
 		if (countDistance == eleArr.Length) {
+			Debug.Log ("CHECK");
 			var new_element = Instantiate (cat_element, entry.position, Quaternion.identity) as GameObject;
 			new_element.transform.parent = element.transform;
 			new_element.transform.position = entry.position;
@@ -45,6 +46,6 @@ public class ElementManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+		spawnElement ();
 	}
 }

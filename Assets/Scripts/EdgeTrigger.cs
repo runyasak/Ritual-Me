@@ -10,7 +10,7 @@ public class EdgeTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ElementManager.instance.spawnElement ();
+//		ElementManager.instance.spawnElement ();
 	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
