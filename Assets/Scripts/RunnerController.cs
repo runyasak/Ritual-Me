@@ -13,8 +13,13 @@ public class RunnerController : MonoBehaviour {
 	public GameObject missText;
 	public GameObject perfectText;
 
+	public ParticleSystem talkEffect;
+	public ParticleSystem elementEffect;
+
 	private int countTalkElement;
 	private Transform hitTemp;
+
+	private bool leftToRight;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +28,8 @@ public class RunnerController : MonoBehaviour {
 		countTalkElement = 0;
 		missText.SetActive (false);
 		perfectText.SetActive (false);
+		leftToRight = true;
+		talkEffect.enableEmission = false;
 	}
 
 	void move() {
@@ -34,24 +41,30 @@ public class RunnerController : MonoBehaviour {
 		move ();
 		checkElement ();
 		checkTalkElement ();
-
 	}
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.transform.tag == "Domain") {
 			dir = -dir;
 			countTalkElement = 0;
+			if (leftToRight) {
+				leftToRight = false;
+			} else {
+				leftToRight = true;
+			}
 //			GaugeController.instance.Create ();
 		}
 	}
 
 	void checkElement(){
-		if(Input.GetMouseButtonDown(0)){
-			RaycastHit hit; Ray ray;
-			ray = new Ray (transform.position, new Vector3(0f,0f,1.0f));
+		if (Input.GetMouseButtonDown (0)) {
+			RaycastHit hit;
+			Ray ray;
+			ray = new Ray (transform.position, new Vector3 (0f, 0f, 1.0f));
 			if (Physics.Raycast (ray, out hit, 100)) {
 				Debug.Log (hit.transform.tag);
 				if (hit.transform.tag == "Element") {
 					Destroy (hit.transform.gameObject);
+					showElementEffect ();
 					showPerfectText ();
 				} else if (hit.transform.tag == "Domain" && countTalkElement == 0) {
 					countTalkElement++;
@@ -59,12 +72,10 @@ public class RunnerController : MonoBehaviour {
 				} else if (hit.transform.tag == "Wizard") {
 					showMissText ();
 					Destroy (hit.transform.parent.parent.gameObject);
-				}
-				else {
+				} else {
 					showMissText ();
 				}
 			}
-
 		}
 	}
 
@@ -74,12 +85,15 @@ public class RunnerController : MonoBehaviour {
 			ray = new Ray (transform.position, new Vector3(0f,0f,1.0f));
 			if (Physics.Raycast (ray, out hit, 100)) {
 				if (hit.transform.tag == "Wizard" && countTalkElement == 1) {
+					showTalkEffect ();
 					countTalkElement++;
 				} else if (hit.transform.tag == "Domain" && countTalkElement == 2) {
+					showTalkEffect ();
 					countTalkElement++;
 				} else if(hit.transform.tag == "Untagged" && (countTalkElement == 1|| countTalkElement == 3)){
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
+					talkEffect.enableEmission = false;
 					countTalkElement = 0;
 				}
 			}
@@ -92,6 +106,7 @@ public class RunnerController : MonoBehaviour {
 				if (hit.transform.tag == "Domain" && countTalkElement == 3) {
 					showPerfectText ();
 					Destroy (hit.transform.parent.parent.gameObject);
+					talkEffect.enableEmission = false;
 					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
 				}
 
@@ -99,6 +114,7 @@ public class RunnerController : MonoBehaviour {
 //					Destroy (hit.transform.parent.parent.gameObject);
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
+					talkEffect.enableEmission = false;
 				} 
 //				else if (countTalkElement == 10) {
 //					Destroy (hitTemp.parent.parent.gameObject);
@@ -120,5 +136,20 @@ public class RunnerController : MonoBehaviour {
 		perfectText.SetActive (true);
 	}
 
+	void showTalkEffect(){
+		if (leftToRight) {
+			talkEffect.transform.localPosition = new Vector3 (-30, talkEffect.transform.localPosition.y, talkEffect.transform.localPosition.z);
+			talkEffect.transform.localRotation = Quaternion.Euler (325, -90, 0); //leftToRight
+		} else{
+			talkEffect.transform.localPosition = new Vector3 (28, talkEffect.transform.localPosition.y, talkEffect.transform.localPosition.z);
+			talkEffect.transform.localRotation = Quaternion.Euler (325, 90, 0); //RightToLeft
+		}
+		talkEffect.enableEmission = true;
+	}
 
+	void showElementEffect(){
+		ParticleSystem newElementEffect = Instantiate (elementEffect, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z)
+			, Quaternion.identity) as ParticleSystem;
+		Destroy (newElementEffect.gameObject, 2);
+	}
 }
