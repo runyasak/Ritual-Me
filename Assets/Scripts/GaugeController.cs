@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class GaugeController : MonoBehaviour {
 	public static GaugeController instance ;
 	private Vector3 gaugePosition;
-	public GameObject element1;
+	public GameObject r_element1, r_element2, r_element3, r_element4, r_element5, r_element6, r_element7, r_element8, r_element9;
 	private GameObject[] elementArr;
 	private GameObject[] arr;
 	private GameObject[] arrTalk;
@@ -17,7 +17,15 @@ public class GaugeController : MonoBehaviour {
 	void Start () {
 		gaugePosition = this.transform.position;
 		elementArr = new GameObject[] {
-			element1
+			r_element1,
+			r_element2,
+			r_element3,
+			r_element4,
+			r_element5,
+			r_element6,
+			r_element7,
+			r_element8,
+			r_element9,
 		};
 		instance = this;
 //		CreateTalkElement ();
@@ -59,9 +67,10 @@ public class GaugeController : MonoBehaviour {
 				}
 			}
 		}
-			
+
+		int rand = Random.Range (0, elementArr.Length);	
 		if ((distanceCheck == arr.Length) && timeForCreate > 200 && arr.Length < maxElement) {
-			GameObject instantElement = Instantiate (element1, new Vector3(randomPosition, this.transform.position.y, -1)
+			GameObject instantElement = Instantiate (elementArr[rand], new Vector3(randomPosition, this.transform.position.y, -1)
 				, Quaternion.identity) as GameObject;
 			timeForCreate = 0;
 		}
