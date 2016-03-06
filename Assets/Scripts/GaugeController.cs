@@ -3,49 +3,106 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GaugeController : MonoBehaviour {
-
+	public static GaugeController instance ;
 	private Vector3 gaugePosition;
 	public GameObject element1;
 	private GameObject[] elementArr;
 	private GameObject[] arr;
+	private GameObject[] arrTalk;
 	private float timeForCreate;
 	public int maxElement;
 
+	public TalkElement talkElement;
 
-
-
-	// Use this for initialization
 	void Start () {
 		gaugePosition = this.transform.position;
 		elementArr = new GameObject[] {
 			element1
 		};
-
+		instance = this;
+//		CreateTalkElement ();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		timeForCreate += Random.Range (0,5);
-		CreateElement();
+		Create ();
+	}
+
+	public void Create(){
+		int rand = Random.Range (0,2);
+		if (rand == 0) {
+			CreateTalkElement ();
+		} else {
+			CreateElement ();
+		}
 	}
 
 	void CreateElement(){
 		float randomPosition = Random.Range (-7f, 7f);
 		int distanceCheck = 0;
 		arr = GameObject.FindGameObjectsWithTag ("Element");
+		arrTalk = GameObject.FindGameObjectsWithTag ("TalkElement");
 
 		foreach (GameObject i in arr){
-			if (Mathf.Abs (randomPosition - i.transform.position.x) > 0.75f) {
+			if (Mathf.Abs (randomPosition - i.transform.position.x) > 1.0f) {
 				distanceCheck++;
 			}
 		}
+		if (arrTalk.Length != 0) {
+			foreach (GameObject j in arrTalk) {
+				//						Debug.Log ("   bird|"+randomPosition +"   talk|"+j.GetComponent<TalkElement>().getLeft()+"   length|"+j.GetComponent<TalkElement>().cLenght);
+				if (randomPosition > j.GetComponent<TalkElement> ().getLeft ()-1.5f
+					&& randomPosition < j.GetComponent<TalkElement> ().getRight ()+1.5f) {
+					distanceCheck = -1;
+
+				}
+			}
+		}
 			
-		if ((distanceCheck == arr.Length || arr.Length == 0) && timeForCreate > 200 && arr.Length < maxElement) {
+		if ((distanceCheck == arr.Length) && timeForCreate > 200 && arr.Length < maxElement) {
 			GameObject instantElement = Instantiate (element1, new Vector3(randomPosition, this.transform.position.y, -1)
 				, Quaternion.identity) as GameObject;
 			timeForCreate = 0;
 		}
 		distanceCheck = 0;
+	}
+
+	void CreateTalkElement(){
+		float randomPosition = Random.Range (-6f, 5f);
+		float randomLenght = Random.Range(2f, 11f);
+		int distanceCheck = 0;
+		float fixSizeCenter = randomLenght;
+		if (randomLenght >= 7) {
+			fixSizeCenter -= fixSizeCenter / 10.0f;
+		}
+
+		talkElement.talkLeft.transform.position = new Vector3 (randomPosition, this.transform.position.y, talkElement.talkRight.transform.position.z);
+		talkElement.talkRight.transform.position = new Vector3 (randomPosition + randomLenght, talkElement.talkLeft.transform.position.y, talkElement.talkLeft.transform.position.z);
+		talkElement.center.transform.position = new Vector3 (talkElement.talkLeft.transform.position.x, talkElement.talkLeft.transform.position.y, -0.1f);
+		talkElement.center.transform.localScale = new Vector3 (fixSizeCenter, talkElement.center.transform.localScale.y, talkElement.center.transform.localScale.z);
+		talkElement.cLenght = randomLenght;
+
+		arr = GameObject.FindGameObjectsWithTag ("Element");
+		arrTalk = GameObject.FindGameObjectsWithTag ("TalkElement");
+
+//		Debug.Log (talkElement.getLeft()+"     L     "+ talkElement.talkLeft.transform.position.x);
+//		Debug.Log (talkElement.getRight()+"     R     "+ talkElement.talkRight.transform.position.x);
+//		Debug.Log ("-----------------------------------------------------------------------------------");
+		foreach (GameObject i in arr) {
+			if (i.transform.position.x < talkElement.GetComponent<TalkElement> ().getLeft () - 1.5f
+				|| i.transform.position.x > talkElement.GetComponent<TalkElement> ().getRight () + 1.5f) {
+				distanceCheck++;
+				Debug.Log ("CreateTalkElement");
+			}
+		}
+
+		if (randomPosition + randomLenght < 7 && timeForCreate > 200 && distanceCheck == arr.Length && arrTalk.Length ==0) {
+			GameObject instantElement = Instantiate (talkElement, new Vector3 (talkElement.transform.position.x
+			, talkElement.transform.position.y, talkElement.transform.position.z)
+			, Quaternion.identity) as GameObject;
+			timeForCreate = 0;
+		}
 	}
 	
 }

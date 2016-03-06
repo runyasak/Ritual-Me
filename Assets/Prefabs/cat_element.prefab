@@ -55,7 +55,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5002b275905ee1141a1a96da93672de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivot: {fileID: 0}
   speedMoveAround: 20
   speedMoveForward: 40
 --- !u!212 &21216530
