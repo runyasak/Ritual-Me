@@ -5,8 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Element
-  - Witch
   - Domain
+  - Wizard
+  - Witch
+  - TalkElement
   layers:
   - Default
   - TransparentFX
