@@ -40,6 +40,7 @@ public class ElementManager : MonoBehaviour {
 			var new_element = Instantiate (elementsArr[rand], entry.position, Quaternion.identity) as GameObject;
 			new_element.transform.parent = element.transform;
 			new_element.transform.position = entry.position;
+			Debug.Log (new_element.transform.name);
 		}
 
 		countDistance = 0;

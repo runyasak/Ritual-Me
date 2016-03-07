@@ -402,6 +402,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 503390922}
   m_RootOrder: 4
+--- !u!1001 &754254431
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459784, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 438d3f632d3c0f2449aa48a7f17f59bc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &915413831
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1211170143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +647,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762b215966528054aabe85a58f8c9a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHR: 100
+  curHR: 0
+  addHRPoint: 0
+  minusHRPoint: 0
+  decreaseSpeedHR: 2
+  decreaseSpeedLR: 1
+  hrBar: {fileID: 0}
+  hrText: {fileID: 0}
+  lrText: {fileID: 0}
+  isFreeze: 0
+  heartTarget: {fileID: 0}
+  cat_element: {fileID: 0}
+  bird_element: {fileID: 0}
+  candle_element: {fileID: 0}
+  dead_element: {fileID: 0}
+  hat_element: {fileID: 0}
+  hook_element: {fileID: 0}
+  pot_element: {fileID: 0}
+  star_element: {fileID: 0}
+  talk_element: {fileID: 0}
+  wand_element: {fileID: 0}
 --- !u!61 &1211170144
 BoxCollider2D:
   m_ObjectHideFlags: 0

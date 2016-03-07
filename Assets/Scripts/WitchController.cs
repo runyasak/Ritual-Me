@@ -21,7 +21,8 @@ public class WitchController : MonoBehaviour {
 
 
 	public static WitchController instance;
-	private GameObject bat_element, bird_element, candle_element, cat_element, hat_element, potion_element, star_element, sword_element, wand_element, dead_element, ghost_element, talk_element;
+	public GameObject cat_element, bird_element, candle_element, dead_element, hat_element, hook_element,
+					  pot_element, star_element, talk_element, wand_element;
 
 	private GameObject[] allElement;
 	private GameObject[] prefer;
@@ -31,17 +32,13 @@ public class WitchController : MonoBehaviour {
 	void Awake(){
 		instance = this;
 		allElement = new GameObject[] {
-			bat_element,
 			bird_element,
 			candle_element,
 			cat_element,
 			hat_element,
-			potion_element,
 			star_element,
-			sword_element,
 			wand_element,
 			dead_element,
-			ghost_element,
 			talk_element
 		};
 	}
@@ -52,10 +49,10 @@ public class WitchController : MonoBehaviour {
 		minusHRPoint = 10;
 		count = 0f;
 		curHR = maxHR/2;
-//		prefer = new GameObject[3];
-//		assignPrefer ();
+		prefer = new GameObject[3];
+		assignPrefer ();
 //		spawnPrefer ();
-//		printPrefer ();
+		printPrefer ();
 
 		lrText.SetActive (false);
 		hrText.SetActive (true);
@@ -93,15 +90,15 @@ public class WitchController : MonoBehaviour {
 	void assignPrefer(){
 		int[] checkDuplicate = new int[3];
 		for(int i = 0; i < prefer.Length; i++){
-			int rand = Random.Range(0, 12);
+			int rand = Random.Range(0, allElement.Length);
 			if(i == 0){
 				prefer[i] = allElement[rand];
 				checkDuplicate[i] = rand;
-				//				Debug.Log ("init " + prefer[i]);
+				Debug.Log ("init " + prefer[i]);
 			} else if(i != 0 && rand != checkDuplicate[0] && rand != checkDuplicate[1]) {
 				prefer[i] = allElement[rand];
 				checkDuplicate[i] = rand;
-				//				Debug.Log (prefer[i]);
+				Debug.Log (prefer[i]);
 			} else {
 				i--;
 			}
@@ -134,28 +131,49 @@ public class WitchController : MonoBehaviour {
 		}
 	}
 
-	public void checkElement(int no_layer){
-		Debug.Log("perferNumber"+prefer[0].layer);
-		Debug.Log("perferNumber"+prefer[1].layer);
-		Debug.Log("perferNumber"+prefer[2].layer);
-		int count = 0;
-		for (int i = 0; i < prefer.Length; i++) {
-			if(no_layer == prefer[i].layer){
-				count++;
+//	public void checkElement(int no_layer){
+//		Debug.Log("perferNumber"+prefer[0].layer);
+//		Debug.Log("perferNumber"+prefer[1].layer);
+//		Debug.Log("perferNumber"+prefer[2].layer);
+//		int count = 0;
+//		for (int i = 0; i < prefer.Length; i++) {
+//			if(no_layer == prefer[i].layer){
+//				count++;
+//				//				addHR (10);
+//				//				Debug.Log ("current HR: " + curHR);
+//			} 
+//		}
+//		if (count == 1) {
+//			Debug.Log("yesssssss   Input"+no_layer); 
+//			addHR ();
+//		}
+//		else if(count == 0) {
+//			Debug.Log("noooooooo   Input"+no_layer); 
+//			minusHR ();
+//		}
+//
+//		Debug.Log ("-----------------------------------------------------------------------------");
+//	}
+
+	void checkElement(GameObject element){
+		int count_elem = 0;
+		string element_name = element.name.Substring(0, element.name.Length - "(Clone)".Length);
+		foreach (GameObject i in prefer) {
+			Debug.Log ("i: " + i.name + "element: " + element.name);
+			if(i.name == element_name){
+				count_elem++;
 				//				addHR (10);
 				//				Debug.Log ("current HR: " + curHR);
 			} 
 		}
-		if (count == 1) {
-			Debug.Log("yesssssss   Input"+no_layer); 
+		if (count_elem == 1) {
+//			Debug.Log("yesssssss   Input "+element); 
 			addHR ();
 		}
-		else if(count == 0) {
-			Debug.Log("noooooooo   Input"+no_layer); 
+		else if(count_elem == 0) {
+//			Debug.Log("noooooooo   Input"+element); 
 			minusHR ();
 		}
-
-		Debug.Log ("-----------------------------------------------------------------------------");
 	}
 
 	public void minusHR(){
@@ -186,7 +204,7 @@ public class WitchController : MonoBehaviour {
 
 	}
 
-	private void showPrefer(){
+	void showPrefer(){
 		if (count > 3f) {
 			count = 0;
 		}
@@ -196,10 +214,11 @@ public class WitchController : MonoBehaviour {
 		Debug.Log (prefer[0] + " " + prefer[1]+ " " + prefer[2]);
 	}
 
-	void OnTriggerEnter2D(Collider2D coll) {
+	void OnTriggerEnter(Collider coll) {
 		Debug.Log ("HIT");
+		checkElement (coll.gameObject);
 		Destroy (coll.gameObject);
-		addHR ();
+//		addHR ();
 //		ElementManager.instance.spawnElement ();
 	}
 
