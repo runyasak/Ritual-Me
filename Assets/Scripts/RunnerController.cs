@@ -20,7 +20,7 @@ public class RunnerController : MonoBehaviour {
 	private Transform hitTemp;
 	private Vector3 startPoint;
 
-	public int countPerfect, countMiss, randMission;
+	public int countPerfect, countMiss, countCombo, randMission;
 
 	private bool leftToRight;
 
@@ -55,7 +55,9 @@ public class RunnerController : MonoBehaviour {
 
 		countPerfect = 0;
 		countMiss = 0;
-		randMission = Random.Range (0, 2);
+		countCombo = 0;
+//		randMission = Random.Range (0, 3);
+		randMission = 2;
 		Debug.Log (randMission);
 	}
 
@@ -68,13 +70,6 @@ public class RunnerController : MonoBehaviour {
 		move ();
 		checkElement ();
 		checkTalkElement ();
-		if(Input.GetKeyDown(KeyCode.K)){
-//			initiate ();
-			Debug.Log("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-			Debug.Log (this.transform.position);
-			Debug.Log (startPoint);
-			this.transform.position = startPoint;
-		}
 	}
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.transform.tag == "Domain") {
@@ -99,6 +94,7 @@ public class RunnerController : MonoBehaviour {
 				if (hit.transform.tag == "Element") {
 					Destroy (hit.transform.gameObject);
 					countPerfect++;
+					countCombo++;
 					showElementEffect ();
 					showPerfectText ();
 				} else if (hit.transform.tag == "Domain" && countTalkElement == 0) {
@@ -107,10 +103,12 @@ public class RunnerController : MonoBehaviour {
 				} else if (hit.transform.tag == "Wizard") {
 					showMissText ();
 					countMiss++;
+					countCombo = 0;
 					Destroy (hit.transform.parent.parent.gameObject);
 				} else {
 					showMissText ();
 					countMiss++;
+					countCombo = 0;
 				}
 			}
 		}
@@ -131,6 +129,7 @@ public class RunnerController : MonoBehaviour {
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
 					countMiss++;
+					countCombo = 0;
 					talkEffect.enableEmission = false;
 					countTalkElement = 0;
 				}
@@ -144,6 +143,7 @@ public class RunnerController : MonoBehaviour {
 				if (hit.transform.tag == "Domain" && countTalkElement == 3) {
 					showPerfectText ();
 					countPerfect++;
+					countCombo++;
 					Debug.Log (countPerfect);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;
@@ -155,6 +155,7 @@ public class RunnerController : MonoBehaviour {
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
 					countMiss++;
+					countCombo = 0;
 					talkEffect.enableEmission = false;
 				} 
 //				else if (countTalkElement == 10) {

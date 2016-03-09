@@ -53,12 +53,23 @@ public class GaugeController : MonoBehaviour {
 		
 		if(RunnerController.instance.randMission == 0){
 			Debug.Log ("Perfect Mission");
+			GameController.instance.assignMissionText ("Perfect: " + (5 - RunnerController.instance.countPerfect).ToString ());
 			if(RunnerController.instance.countPerfect >= 5){
 				GameController.instance.stopRitualPhase ();
 			}
 		} else if(RunnerController.instance.randMission == 1){
 			Debug.Log ("Miss Mission");
+			GameController.instance.assignMissionText ("Miss: " + (3 - RunnerController.instance.countMiss).ToString ());
 			if(RunnerController.instance.countMiss > 3){
+				GameController.instance.stopRitualPhase ();
+				Debug.Log (RunnerController.instance.countMiss);
+			}
+		} else if(RunnerController.instance.randMission == 2){
+			Debug.Log ("Combo Mission");
+			GameController.instance.assignMissionText ("Combo 3x: " + (RunnerController.instance.countCombo).ToString ());
+			Debug.Log (GameController.instance.ritualCounter.ToString ());
+			GameController.instance.assignTimerText ("Time: " + ((int) (15 - GameController.instance.ritualCounter)).ToString());
+			if(RunnerController.instance.countCombo == 3){
 				GameController.instance.stopRitualPhase ();
 				Debug.Log (RunnerController.instance.countMiss);
 			}
