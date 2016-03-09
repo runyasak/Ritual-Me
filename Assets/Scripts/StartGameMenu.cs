@@ -18,7 +18,6 @@ public class StartGameMenu : MonoBehaviour {
 
 	public void startGame(){
 		grayBG.gameObject.SetActive (false);
-		//Destroy (grayBG.gameObject);
 		Time.timeScale = 1;
 	}
 }
