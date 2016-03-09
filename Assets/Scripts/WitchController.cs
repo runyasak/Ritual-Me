@@ -74,6 +74,7 @@ public class WitchController : MonoBehaviour {
 			lrText.SetActive (true);
 			hrText.SetActive (false);
 			hrBar.GetComponent<Image> ().color = Color.red;
+			GameController.instance.startRitualPhase ();
 		}
 		else if(curHR == 0 && lrText.active == true){
 			lrText.SetActive (false);
@@ -106,7 +107,7 @@ public class WitchController : MonoBehaviour {
 		//		prefer = new GameObject[]{bat_element, bird_element, candle_element};
 	}
 
-	private void spawnPrefer(){
+	void spawnPrefer(){
 		GameObject temp = Instantiate(prefer[0]) as GameObject;
 		temp.transform.parent = this.transform;
 		temp.transform.localPosition= new Vector3 (0.3f, 0.3f, 0);
@@ -124,36 +125,12 @@ public class WitchController : MonoBehaviour {
 
 	}
 
-	private void addHR(){
+	void addHR(){
 		curHR += addHRPoint;
 		if (curHR > maxHR) {
 			curHR = maxHR;
 		}
 	}
-
-//	public void checkElement(int no_layer){
-//		Debug.Log("perferNumber"+prefer[0].layer);
-//		Debug.Log("perferNumber"+prefer[1].layer);
-//		Debug.Log("perferNumber"+prefer[2].layer);
-//		int count = 0;
-//		for (int i = 0; i < prefer.Length; i++) {
-//			if(no_layer == prefer[i].layer){
-//				count++;
-//				//				addHR (10);
-//				//				Debug.Log ("current HR: " + curHR);
-//			} 
-//		}
-//		if (count == 1) {
-//			Debug.Log("yesssssss   Input"+no_layer); 
-//			addHR ();
-//		}
-//		else if(count == 0) {
-//			Debug.Log("noooooooo   Input"+no_layer); 
-//			minusHR ();
-//		}
-//
-//		Debug.Log ("-----------------------------------------------------------------------------");
-//	}
 
 	void checkElement(GameObject element){
 		int count_elem = 0;
@@ -176,7 +153,7 @@ public class WitchController : MonoBehaviour {
 		}
 	}
 
-	public void minusHR(){
+	void minusHR(){
 		curHR -= minusHRPoint;
 		if (curHR < 0) {
 			curHR = 0;
