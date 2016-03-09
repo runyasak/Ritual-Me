@@ -26,7 +26,12 @@ public class ElementManager : MonoBehaviour {
 		};
 	}
 		
-	public void spawnElement(){
+	void randomElementController () {
+		
+	}
+
+
+	public void spawnElement () {
 		GameObject[] eleArr = GameObject.FindGameObjectsWithTag ("Element");
 		float countDistance = 0;
 		foreach (GameObject i in eleArr) {

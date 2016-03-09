@@ -46,7 +46,7 @@ GameObject:
   - 212: {fileID: 21237498}
   - 114: {fileID: 11480938}
   m_Layer: 0
-  m_Name: TalkElement 1 1 1 1
+  m_Name: TalkElement
   m_TagString: TalkElement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
