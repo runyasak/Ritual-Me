@@ -16,7 +16,6 @@ public class WitchController : MonoBehaviour {
 	public GameObject lrText;
 //	public GameObject pentacle;
 	public bool isFreeze;
-	public GameObject heartTarget;
 
 
 
@@ -57,7 +56,7 @@ public class WitchController : MonoBehaviour {
 		lrText.SetActive (false);
 		hrText.SetActive (true);
 //		pentacle.SetActive (false);
-		heartTarget.SetActive (false);
+//		heartTarget.SetActive (false);
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
 
 
@@ -229,11 +228,11 @@ public class WitchController : MonoBehaviour {
 		showPrefer ();
 
 		if (instance == this) {
-			heartTarget.active = true;
+//			heartTarget.active = true;
 			isFreeze = false;
 			if (Input.GetKeyDown (KeyCode.H)) { addHR (); }
 		} else {
-			heartTarget.active = false;
+//			heartTarget.active = false;
 		}
 
 		checkRitualPhase ();
