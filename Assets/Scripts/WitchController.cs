@@ -86,11 +86,17 @@ public class WitchController : MonoBehaviour {
 			hrBar.GetComponent<Image> ().color = Color.red;
 			GameController.instance.startRitualPhase ();
 		}
-		else if(curHR == 0 && lrText.active == true){
+		/*else if(curHR == 0 && lrText.active == true){
 			lrText.SetActive (false);
 			hrText.SetActive (true);
 			hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
 			curHR = maxHR;
+		}*/
+	}
+
+	void checkGameover(){
+		if (curHR == 0) {
+			GameController.instance.restart ();
 		}
 	}
 
@@ -254,11 +260,13 @@ public class WitchController : MonoBehaviour {
 //			heartTarget.active = true;
 			isFreeze = false;
 			if (Input.GetKeyDown (KeyCode.H)) { addHR (); }
+			if (Input.GetKeyDown (KeyCode.L)) { minusHR (); }
 		} else {
 //			heartTarget.active = false;
 		}
 
 		checkRitualPhase ();
+		checkGameover ();
 		deceaseHR ();
 
 //		float myHR = curHR / maxHR;
