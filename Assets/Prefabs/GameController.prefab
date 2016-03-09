@@ -42,6 +42,8 @@ MonoBehaviour:
   wizard: {fileID: 174938, guid: bcabe071564d445a78ed1207558104a5, type: 2}
   mission_text: {fileID: 0}
   timer_text: {fileID: 0}
+  startScene: {fileID: 0}
+  restartScene: {fileID: 0}
   ritualCounter: 0
 --- !u!1001 &100100000
 Prefab:

@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour {
 	public GameObject wizard;
 	public Text mission_text, timer_text;
 
+	private static int checker;
+	public SpriteRenderer startScene, restartScene;
 
 	GameObject circleBar, gaugeBar, notice, magicCircle;
 	bool isRitual;
@@ -19,16 +21,38 @@ public class GameController : MonoBehaviour {
 	static float width = height * cam.aspect;
 
 	void Awake () {
+		DontDestroyOnLoad (instance);
 		instance = this;
 	}
 
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 0;
+		startScene.enabled = true;
+		restartScene.enabled = false;
+		restartScene.gameObject.SetActive (false);
 		circleBar = GameObject.Find ("Element");
 		gaugeBar = GameObject.Find ("Gauge");
 		notice = GameObject.Find ("Notice");
 		magicCircle = GameObject.Find ("MagicCircle");
 		notice.SetActive (false);
+		hideGauge ();
+	}
+
+	public void noStartScene(){
+		checker = 1;
+		Application.LoadLevel (0);
+	}
+
+	public void startGame(){
+		startScene.gameObject.SetActive (false);
+		Time.timeScale = 1;
+	}
+
+	public void restart(){
+		restartScene.enabled = true;
+		restartScene.gameObject.SetActive (true);
+		clearElement ();
 		hideGauge ();
 	}
 
@@ -42,7 +66,6 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
-
 
 	public void startRitualPhase () {
 		hideCircleBar ();
@@ -144,6 +167,10 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.C)) { clearElement (); }
+
+		if (checker == 1) {
+			startGame ();
+		}
 
 		ritualPhaseCounter ();
 
