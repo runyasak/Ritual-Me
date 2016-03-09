@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.745611, y: -0.052064404, z: -2.0000288}
+  m_LocalPosition: {x: -4.325217, y: -0.052064404, z: -2.0000288}
   m_LocalScale: {x: -0.27522936, y: 0.30000004, z: 1}
   m_Children: []
   m_Father: {fileID: 22407472}
@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.010892366, y: -0.052064404, z: -2.0000288}
+  m_LocalPosition: {x: -1.4940691, y: -0.052064404, z: -2.0000288}
   m_LocalScale: {x: -0.27522936, y: 0.30000004, z: 1}
   m_Children: []
   m_Father: {fileID: 22407472}
@@ -239,7 +239,7 @@ MonoBehaviour:
   talkLeft: {fileID: 134120}
   talkRight: {fileID: 102594}
   center: {fileID: 162962}
-  cLenght: 9.520844
+  cLenght: 3.0859513
 --- !u!212 &21209868
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -412,13 +412,13 @@ RectTransform:
   m_GameObject: {fileID: 162962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.101085015}
-  m_LocalScale: {x: 8.56876, y: 0.82, z: 1}
+  m_LocalScale: {x: 3.0859513, y: 0.82, z: 1}
   m_Children: []
   m_Father: {fileID: 22407472}
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.010892361, y: -0.07857877}
+  m_AnchoredPosition: {x: -1.4940691, y: -0.07857877}
   m_SizeDelta: {x: 1, y: 0.29999995}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1001 &100100000
