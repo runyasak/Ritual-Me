@@ -40,6 +40,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wizard: {fileID: 174938, guid: bcabe071564d445a78ed1207558104a5, type: 2}
+  mission_text: {fileID: 0}
+  timer_text: {fileID: 0}
+  ritualCounter: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
