@@ -18,11 +18,33 @@ public class RunnerController : MonoBehaviour {
 
 	private int countTalkElement;
 	private Transform hitTemp;
+	private Vector3 startPoint;
+
+	public int countPerfect, countMiss, countCombo, randMission;
 
 	private bool leftToRight;
 
+	void Awake () {
+		instance = this;
+		startPoint = this.transform.position;
+	}
+
 	// Use this for initialization
 	void Start () {
+//		mult = 5f;
+//		dir = new Vector3(1, 0, 0);
+//		countTalkElement = 0;
+//		missText.SetActive (false);
+//		perfectText.SetActive (false);
+//		leftToRight = true;
+//		talkEffect.enableEmission = false;
+		Debug.Log ("Start: "+startPoint);
+//		initiate();
+	}
+
+	public void initiate () {
+//		Debug.Log ("KUY");
+		this.transform.position = startPoint;
 		mult = 5f;
 		dir = new Vector3(1, 0, 0);
 		countTalkElement = 0;
@@ -30,6 +52,13 @@ public class RunnerController : MonoBehaviour {
 		perfectText.SetActive (false);
 		leftToRight = true;
 		talkEffect.enableEmission = false;
+
+		countPerfect = 0;
+		countMiss = 0;
+		countCombo = 0;
+//		randMission = Random.Range (0, 3);
+		randMission = 2;
+		Debug.Log (randMission);
 	}
 
 	void move() {
@@ -64,6 +93,8 @@ public class RunnerController : MonoBehaviour {
 				Debug.Log (hit.transform.tag);
 				if (hit.transform.tag == "Element") {
 					Destroy (hit.transform.gameObject);
+					countPerfect++;
+					countCombo++;
 					showElementEffect ();
 					showPerfectText ();
 				} else if (hit.transform.tag == "Domain" && countTalkElement == 0) {
@@ -71,9 +102,13 @@ public class RunnerController : MonoBehaviour {
 					hitTemp = hit.transform;
 				} else if (hit.transform.tag == "Wizard") {
 					showMissText ();
+					countMiss++;
+					countCombo = 0;
 					Destroy (hit.transform.parent.parent.gameObject);
 				} else {
 					showMissText ();
+					countMiss++;
+					countCombo = 0;
 				}
 			}
 		}
@@ -93,6 +128,8 @@ public class RunnerController : MonoBehaviour {
 				} else if(hit.transform.tag == "Untagged" && (countTalkElement == 1|| countTalkElement == 3)){
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
+					countMiss++;
+					countCombo = 0;
 					talkEffect.enableEmission = false;
 					countTalkElement = 0;
 				}
@@ -105,6 +142,9 @@ public class RunnerController : MonoBehaviour {
 			if (Physics.Raycast (ray, out hit, 100)) {
 				if (hit.transform.tag == "Domain" && countTalkElement == 3) {
 					showPerfectText ();
+					countPerfect++;
+					countCombo++;
+					Debug.Log (countPerfect);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;
 					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
@@ -114,6 +154,8 @@ public class RunnerController : MonoBehaviour {
 //					Destroy (hit.transform.parent.parent.gameObject);
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
+					countMiss++;
+					countCombo = 0;
 					talkEffect.enableEmission = false;
 				} 
 //				else if (countTalkElement == 10) {

@@ -410,7 +410,6 @@ MonoBehaviour:
   cat_element: {fileID: 164840, guid: 4bd0dde1ef68fb04596a29e37717a30b, type: 2}
   bird_element: {fileID: 101326, guid: b1033598731045b4894828895fa2ab2d, type: 2}
   candle_element: {fileID: 193160, guid: dd7fb6d19dc92004993cbd3c725340ad, type: 2}
-  dead_element: {fileID: 124872, guid: 7355bd39f579f7d48b0b34b839a6c776, type: 2}
   hat_element: {fileID: 122896, guid: 035f99a6b36b78545a2eec5dea9b29d6, type: 2}
   hook_element: {fileID: 197988, guid: a34124a4aaa03f041a935442b8d1f013, type: 2}
   pot_element: {fileID: 166032, guid: c853e18cf2c812149b7e875817a430b2, type: 2}
@@ -418,6 +417,7 @@ MonoBehaviour:
   talk_element: {fileID: 152316, guid: ae3dc9feff2f0454f99b3000e118e3da, type: 2}
   wand_element: {fileID: 144014, guid: 3eeecf943b2a6de42b23dd85f7d03967, type: 2}
   ghost_element: {fileID: 164374, guid: 044dccf321249d341b05591073e47b7f, type: 2}
+  lock_element: {fileID: 189218, guid: 7355bd39f579f7d48b0b34b839a6c776, type: 2}
 --- !u!114 &11469608
 MonoBehaviour:
   m_ObjectHideFlags: 1

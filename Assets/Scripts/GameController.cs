@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;
 	public GameObject wizard;
+	public Text mission_text, timer_text;
+
 
 	GameObject circleBar, gaugeBar, notice, magicCircle;
 	bool isRitual;
-	float ritualCounter;
+
+	public float ritualCounter;
 
 	static Camera cam = Camera.main;
 	static float height = 2f * cam.orthographicSize;
@@ -35,7 +39,6 @@ public class GameController : MonoBehaviour {
 			if (ritualCounter >= 15) {
 				stopRitualPhase ();
 				ritualCounter = 0;
-//				RitualController.instance.stopRitual();
 			}
 		}
 	}
@@ -46,6 +49,9 @@ public class GameController : MonoBehaviour {
 		hideMagicCircle ();
 		notice.SetActive (true);
 		unhideGauge ();
+		RunnerController.instance.initiate ();
+
+//		GaugeController.instance.startMission ();
 		isRitual = true;
 
 //		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
@@ -75,6 +81,14 @@ public class GameController : MonoBehaviour {
 //		}
 			
 		MovieController.instance.stopRitual();
+	}
+
+	public void assignMissionText(string input_text) {
+		mission_text.text = input_text;		
+	}
+
+	public void assignTimerText(string input_text) {
+		timer_text.text = input_text;		
 	}
 
 	void clearElement () {
