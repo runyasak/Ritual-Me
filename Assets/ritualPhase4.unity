@@ -405,7 +405,7 @@ Prefab:
     - target: {fileID: 11465046, guid: b55ef83f88f084d1e8804b89a491c8af, type: 2}
       propertyPath: talkElement
       value: 
-      objectReference: {fileID: 11460382, guid: 6e8a60ef96b1f483c89b2ba5e88e4cda,
+      objectReference: {fileID: 11480938, guid: 99bc765364392344587fbf866156a1b3,
         type: 2}
     - target: {fileID: 11465046, guid: b55ef83f88f084d1e8804b89a491c8af, type: 2}
       propertyPath: maxElement
