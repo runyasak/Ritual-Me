@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 	public static GameController instance;
 	public GameObject wizard;
 
-	GameObject circleBar, gaugeBar;
+	GameObject circleBar, gaugeBar, notice;
 	bool isRitual;
 	float ritualCounter;
 
@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		circleBar = GameObject.Find ("Element");
 		gaugeBar = GameObject.Find ("Gauge");
+		notice = GameObject.Find ("Notice");
+		notice.SetActive (false);
 		hideGauge ();
 	}
 
@@ -40,16 +42,17 @@ public class GameController : MonoBehaviour {
 
 	public void startRitualPhase () {
 		hideCircleBar ();
+		notice.SetActive (true);
 		unhideGauge ();
 		isRitual = true;
 
-		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-		foreach(GameObject i in temp){
-			if (WitchController.instance != i) {
-				i.GetComponent<WitchController> ().isFreeze = true;
-			}
-			Debug.Log ("isFreeze      "+      i.GetComponent<WitchController> ().isFreeze);
-		}
+//		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
+//		foreach(GameObject i in temp){
+//			if (WitchController.instance != i) {
+//				i.GetComponent<WitchController> ().isFreeze = true;
+//			}
+//			Debug.Log ("isFreeze      "+      i.GetComponent<WitchController> ().isFreeze);
+//		}
 		MovieController.instance.playRitual ();
 	}
 
@@ -58,21 +61,30 @@ public class GameController : MonoBehaviour {
 		hideGauge ();
 		isRitual = false;
 		addWizard ();
+		notice.SetActive (false);
 
-		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-		foreach(GameObject i in temp) {
-			if (WitchController.instance != i) {
-				i.GetComponent<WitchController> ().isFreeze = false;
-				//				i.GetComponent<PlayerController> ().pentacle.active = false;
-			}
-		}
+//		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
+//		foreach(GameObject i in temp) {
+//			if (WitchController.instance != i) {
+//				i.GetComponent<WitchController> ().isFreeze = false;
+//				//				i.GetComponent<PlayerController> ().pentacle.active = false;
+//			}
+//		}
 			
 		MovieController.instance.stopRitual();
 	}
 
 	void clearElement () {
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Element");
+		GameObject[] temp_talkElement = GameObject.FindGameObjectsWithTag("TalkElement");
+		GameObject[] temp_deadElement = GameObject.FindGameObjectsWithTag("DeadElement");
 		foreach(GameObject i in temp){
+			Destroy (i);	
+		}
+		foreach(GameObject i in temp_talkElement){
+			Destroy (i);	
+		}
+		foreach(GameObject i in temp_deadElement){
 			Destroy (i);	
 		}
 	}

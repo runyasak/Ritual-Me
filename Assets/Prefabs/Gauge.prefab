@@ -193,8 +193,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9914a784b9a4f649de157cf6ab3108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  element1: {fileID: 188074, guid: e5b1fc89dee074dc3b5848e04f2f5b2b, type: 2}
+  r_element1: {fileID: 197696, guid: 105f51ad73e0a411c97a27a5cc6e1b20, type: 2}
+  r_element2: {fileID: 192154, guid: 963b19c23bab74e889a7f7261c0e19c2, type: 2}
+  r_element3: {fileID: 159782, guid: 2131bf3be426d41159ef31921757fadf, type: 2}
+  r_element4: {fileID: 119352, guid: 24b7feea3b29549e08f1437390cb1872, type: 2}
+  r_element5: {fileID: 151236, guid: edd16dfe709cc45f797a89341ecdf324, type: 2}
+  r_element6: {fileID: 161862, guid: 44aa3ff76ea0e4076a3475e9284a05fd, type: 2}
+  r_element7: {fileID: 119162, guid: 615bad7372f564e32a37f721bb01cb57, type: 2}
+  r_element8: {fileID: 168438, guid: aced7f819e51f41809d3012b50851977, type: 2}
+  r_element9: {fileID: 128900, guid: 7bd18603780c743c6af87cf890d71504, type: 2}
   maxElement: 1
+  talkElement: {fileID: 11480938, guid: 99bc765364392344587fbf866156a1b3, type: 2}
 --- !u!114 &11489766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,6 +217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftGauge: {fileID: 143868}
   RightGauge: {fileID: 107454}
+  missText: {fileID: 0}
+  perfectText: {fileID: 0}
+  talkEffect: {fileID: 0}
+  elementEffect: {fileID: 0}
 --- !u!212 &21230196
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -334,7 +347,12 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: talkElement
+      value: 
+      objectReference: {fileID: 11480938, guid: 99bc765364392344587fbf866156a1b3,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 196312}

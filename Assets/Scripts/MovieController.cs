@@ -26,6 +26,7 @@ public class MovieController : MonoBehaviour {
 	}
 
 	public void stopRitual(){
+		Debug.Log ("Video stop");
 		this.GetComponent<Renderer> ().enabled = false;
 		movie.Stop ();
 //		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
