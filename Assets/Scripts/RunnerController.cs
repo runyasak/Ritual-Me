@@ -20,8 +20,7 @@ public class RunnerController : MonoBehaviour {
 	private Transform hitTemp;
 	private Vector3 startPoint;
 
-	public int countPerfect;
-	public int countMiss;
+	public int countPerfect, countMiss, randMission;
 
 	private bool leftToRight;
 
@@ -40,7 +39,7 @@ public class RunnerController : MonoBehaviour {
 //		leftToRight = true;
 //		talkEffect.enableEmission = false;
 		Debug.Log ("Start: "+startPoint);
-		initiate();
+//		initiate();
 	}
 
 	public void initiate () {
@@ -53,8 +52,11 @@ public class RunnerController : MonoBehaviour {
 		perfectText.SetActive (false);
 		leftToRight = true;
 		talkEffect.enableEmission = false;
+
 		countPerfect = 0;
 		countMiss = 0;
+		randMission = Random.Range (0, 2);
+		Debug.Log (randMission);
 	}
 
 	void move() {
@@ -104,9 +106,11 @@ public class RunnerController : MonoBehaviour {
 					hitTemp = hit.transform;
 				} else if (hit.transform.tag == "Wizard") {
 					showMissText ();
+					countMiss++;
 					Destroy (hit.transform.parent.parent.gameObject);
 				} else {
 					showMissText ();
+					countMiss++;
 				}
 			}
 		}
@@ -126,6 +130,7 @@ public class RunnerController : MonoBehaviour {
 				} else if(hit.transform.tag == "Untagged" && (countTalkElement == 1|| countTalkElement == 3)){
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
+					countMiss++;
 					talkEffect.enableEmission = false;
 					countTalkElement = 0;
 				}
@@ -149,6 +154,7 @@ public class RunnerController : MonoBehaviour {
 //					Destroy (hit.transform.parent.parent.gameObject);
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
+					countMiss++;
 					talkEffect.enableEmission = false;
 				} 
 //				else if (countTalkElement == 10) {

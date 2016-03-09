@@ -12,6 +12,8 @@ public class GaugeController : MonoBehaviour {
 	private float timeForCreate;
 	public int maxElement;
 
+
+
 	public TalkElement talkElement;
 
 	void Start () {
@@ -48,8 +50,18 @@ public class GaugeController : MonoBehaviour {
 	}
 
 	public void startMission (){
-		if(RunnerController.instance.countPerfect >= 5){
-			GameController.instance.stopRitualPhase ();
+		
+		if(RunnerController.instance.randMission == 0){
+			Debug.Log ("Perfect Mission");
+			if(RunnerController.instance.countPerfect >= 5){
+				GameController.instance.stopRitualPhase ();
+			}
+		} else if(RunnerController.instance.randMission == 1){
+			Debug.Log ("Miss Mission");
+			if(RunnerController.instance.countMiss > 3){
+				GameController.instance.stopRitualPhase ();
+				Debug.Log (RunnerController.instance.countMiss);
+			}
 		}
 	}
 
