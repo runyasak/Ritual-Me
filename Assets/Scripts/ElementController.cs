@@ -11,6 +11,10 @@ public class ElementController : MonoBehaviour {
 
 	private Vector3 v;
 
+	private Transform one_click;
+	private float timer_for_double_click;
+	private float delay = 0.5f;
+
 	Vector3 firstPressPos;
 	Vector3 secondPressPos;
 	Vector3 currentSwipe;
@@ -19,6 +23,8 @@ public class ElementController : MonoBehaviour {
 	void Start () {
 		isSwipe = false;
 		isDrop = false;
+		one_click = null;
+		timer_for_double_click = 0;
 		pivot = GameObject.Find("Element/Pivot").transform;
 		dropPoint = GameObject.Find ("Element/DropPoint").transform;
 		v = transform.position - pivot.position;
@@ -39,7 +45,7 @@ public class ElementController : MonoBehaviour {
 	}
 
 	void moveDrop (){
-		Debug.Log ("DROP!!");
+//		Debug.Log ("DROP!!");
 		transform.position = Vector3.MoveTowards (transform.position, dropPoint.position, speedMoveForward*Time.deltaTime);
 	}
 
@@ -48,6 +54,7 @@ public class ElementController : MonoBehaviour {
 		ray = new Ray (Camera.main.ScreenToWorldPoint (Input.mousePosition), new Vector3(0f,0f,1.0f));
 		firstPressPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y);
 		if (Physics.Raycast (ray, out hit, 100)) {
+			doubleClick (hit.transform);
 			if (hit.collider.transform.tag == "Element") {
 				isHit = true;
 			}
@@ -70,7 +77,7 @@ public class ElementController : MonoBehaviour {
 
 		//normalize the 2d vector
 		currentSwipe.Normalize();
-		Debug.Log (currentSwipe);
+//		Debug.Log (currentSwipe);
 
 		if (isHit) {
 			if (currentSwipe == Vector3.zero){
@@ -104,6 +111,28 @@ public class ElementController : MonoBehaviour {
 		//          }
 	}
 
+	void doubleClick(Transform hit){
+		bool timer_running;
+		Debug.Log (Time.time);
+		if(one_click == null){
+			one_click = hit.transform;
+			timer_for_double_click = Time.time;
+		} else{
+			if (one_click == hit) {
+				Destroy (hit.gameObject);
+			}
+			one_click = null;
+		}
+	}
+
+	void countDoubleClick(){
+		if(one_click != null){
+			if((Time. time - timer_for_double_click ) > delay){
+				one_click = null;
+			}
+		}
+	}
+
 	void OnMouseDrag(){
 
 		Vector2 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
@@ -117,14 +146,14 @@ public class ElementController : MonoBehaviour {
 	void moveCommand(){
 		if(!isSwipe){
 			moveAround ();
-			Debug.Log ("Moving Around");
+//			Debug.Log ("Moving Around");
 		} else {
 			moveForward ();
-			Debug.Log ("Moving Forward");
+//			Debug.Log ("Moving Forward");
 		}
 
 		if (isDrop){
-			Debug.Log ("CHECK!!");
+//			Debug.Log ("CHECK!!");
 			moveDrop ();	
 		}
 	}
@@ -136,6 +165,8 @@ public class ElementController : MonoBehaviour {
 		//      Debug.Log(Input.mousePosition);
 //		Debug.Log(Time.deltaTime * speedMoveAround);
 		moveCommand ();
+		countDoubleClick ();
+
 		//      clickOnElement();
 		//      Debug.DrawLine (transform.position, pivot.position);
 		//      Debug.Log (Camera.main.ScreenPointToRay (Input.mousePosition));

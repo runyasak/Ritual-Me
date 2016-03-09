@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11417902}
   - 65: {fileID: 6537960}
   m_Layer: 0
-  m_Name: hook_element
+  m_Name: 'hook_element '
   m_TagString: Element
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
