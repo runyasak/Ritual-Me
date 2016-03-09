@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WitchController : MonoBehaviour {
 
@@ -90,14 +91,27 @@ public class WitchController : MonoBehaviour {
 
 	void assignPrefer(){
 		int[] checkDuplicate = new int[3];
+//		foreach(GameObject i in ElementManager.instance.preferArr){
+//			Debug.Log ("Element Manager: " + i);
+//		}
+//		GameObject[] oldPrefer = new GameObject[ElementManager.instance.preferArr.Length];
+//
+//		System.Array.Copy(oldPrefer, ElementManager.instance.preferArr, ElementManager.instance.preferArr.Length);
+//		Debug.Log (oldPrefer.Length);
+//		foreach(GameObject i in oldPrefer){
+//			Debug.Log ("OLD: " + i);
+//		}
 		for(int i = 0; i < prefer.Length; i++){
 			int rand = Random.Range(0, allElement.Length);
 			if(i == 0){
 				prefer[i] = allElement[rand];
+					ElementManager.instance.preferArr.Add (prefer [i]);
+				
 				checkDuplicate[i] = rand;
 				Debug.Log ("init " + prefer[i]);
 			} else if(i != 0 && rand != checkDuplicate[0] && rand != checkDuplicate[1]) {
 				prefer[i] = allElement[rand];
+					ElementManager.instance.preferArr.Add (prefer [i]);
 				checkDuplicate[i] = rand;
 				Debug.Log (prefer[i]);
 			} else {
@@ -188,7 +202,18 @@ public class WitchController : MonoBehaviour {
 	}
 
 	private void printPrefer(){
-		Debug.Log (prefer[0] + " " + prefer[1]+ " " + prefer[2]);
+//		Debug.Log (prefer[0] + " " + prefer[1]+ " " + prefer[2]);
+//		Debug.Log(ElementManager.instance.preferArr);
+		foreach(GameObject i in prefer){
+			Debug.Log ("Witch: " + i);
+		}
+		if (ElementManager.instance.preferArr != null) {
+			foreach (GameObject i in ElementManager.instance.preferArr) {
+				Debug.Log ("Element Manager: " + i);
+			}
+		}
+
+
 	}
 
 	void OnTriggerEnter(Collider coll) {

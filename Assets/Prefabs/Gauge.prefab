@@ -219,8 +219,8 @@ MonoBehaviour:
   RightGauge: {fileID: 107454}
   missText: {fileID: 0}
   perfectText: {fileID: 0}
-  talkEffect: {fileID: 0}
-  elementEffect: {fileID: 0}
+  talkEffect: {fileID: 19832898, guid: 03c1dcd4655cd9540ba72e722db7ae34, type: 2}
+  elementEffect: {fileID: 19852898, guid: 2010cd87e4d9084468d66ffdab8241de, type: 2}
 --- !u!212 &21230196
 SpriteRenderer:
   m_ObjectHideFlags: 1
