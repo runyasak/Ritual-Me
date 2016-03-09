@@ -60,12 +60,6 @@ public class ElementController : MonoBehaviour {
 			}
 		}
 
-/*		RaycastHit hit = Physics.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), new Vector3(0f,0f,5f));
-		//save began touch 2d point
-		firstPressPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y);
-		if (hit.collider.transform.tag == "Element") {
-			isHit = true;
-		}*/
 	}
 
 	void OnMouseUp(){
