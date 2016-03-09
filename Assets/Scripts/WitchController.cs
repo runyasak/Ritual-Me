@@ -15,6 +15,10 @@ public class WitchController : MonoBehaviour {
 	public GameObject hrBar;
 	public GameObject hrText;
 	public GameObject lrText;
+	public SpriteRenderer angryEmo;
+	public SpriteRenderer loveEmo;
+	private float countEmo;
+
 //	public GameObject pentacle;
 	public bool isFreeze;
 
@@ -55,6 +59,10 @@ public class WitchController : MonoBehaviour {
 		prefer = new GameObject[3];
 		assignPrefer ();
 		spawnPrefer ();
+
+		spawnEmo ();
+		loveEmo.enabled = false;
+		angryEmo.enabled = false;
 //		printPrefer ();
 
 		lrText.SetActive (false);
@@ -140,11 +148,20 @@ public class WitchController : MonoBehaviour {
 		perfer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
 	}
 
+	void spawnEmo(){
+		angryEmo.transform.position= new Vector3 (this.transform.position.x - 0.75f, this.transform.position.y + 1.25f, 0);
+		loveEmo.transform.position= new Vector3 (this.transform.position.x - 0.75f, this.transform.position.y + 1.0f, 0);
+//		angryEmo.transform.localPosition= new Vector3 (this.transform.position.x - 1.25f, this.transform.position.y - 2.0f, 0);
+//		loveEmo.transform.localPosition= new Vector3 (this.transform.position.x - 1.25f, this.transform.position.y - 2.5f, 0);
+	}
+
 	void addHR(){
 		curHR += addHRPoint;
 		if (curHR > maxHR) {
 			curHR = maxHR;
 		}
+		loveEmo.enabled = true;
+		countEmo = 0;
 	}
 
 	void checkElement(GameObject element){
@@ -173,6 +190,8 @@ public class WitchController : MonoBehaviour {
 		if (curHR < 0) {
 			curHR = 0;
 		}
+		angryEmo.enabled = true;
+		countEmo = 0;
 	}
 
 
@@ -245,5 +264,12 @@ public class WitchController : MonoBehaviour {
 //		float myHR = curHR / maxHR;
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
 		MovePerfer ();
+
+		spawnEmo ();
+		countEmo += Time.deltaTime;
+		if (countEmo >= 1.5) {
+			loveEmo.enabled = false;
+			angryEmo.enabled = false;
+		}
 	}
 }
