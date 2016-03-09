@@ -21,7 +21,7 @@ public class WitchController : MonoBehaviour {
 
 
 	public static WitchController instance;
-	public GameObject cat_element, bird_element, candle_element, dead_element, hat_element, hook_element,
+	public GameObject cat_element, bird_element, candle_element, hat_element, hook_element,
 					  pot_element, star_element, talk_element, wand_element;
 
 	private GameObject[] allElement;
@@ -38,7 +38,6 @@ public class WitchController : MonoBehaviour {
 			hat_element,
 			star_element,
 			wand_element,
-			dead_element,
 			talk_element
 		};
 	}
