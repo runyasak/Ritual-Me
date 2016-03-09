@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 	public static GameController instance;
 	public GameObject wizard;
 
-	GameObject circleBar, gaugeBar, notice;
+	GameObject circleBar, gaugeBar, notice, magicCircle;
 	bool isRitual;
 	float ritualCounter;
 
@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour {
 		circleBar = GameObject.Find ("Element");
 		gaugeBar = GameObject.Find ("Gauge");
 		notice = GameObject.Find ("Notice");
+		magicCircle = GameObject.Find ("MagicCircle");
 		notice.SetActive (false);
 		hideGauge ();
 	}
@@ -31,7 +32,7 @@ public class GameController : MonoBehaviour {
 		if (isRitual) {
 			ritualCounter += Time.deltaTime;
 
-			if (ritualCounter >= 10) {
+			if (ritualCounter >= 15) {
 				stopRitualPhase ();
 				ritualCounter = 0;
 //				RitualController.instance.stopRitual();
@@ -42,6 +43,7 @@ public class GameController : MonoBehaviour {
 
 	public void startRitualPhase () {
 		hideCircleBar ();
+		hideMagicCircle ();
 		notice.SetActive (true);
 		unhideGauge ();
 		isRitual = true;
@@ -58,6 +60,7 @@ public class GameController : MonoBehaviour {
 
 	public void stopRitualPhase () {
 		unhideCircleBar ();
+		unhideMagicCircle ();
 		hideGauge ();
 		isRitual = false;
 		addWizard ();
@@ -115,11 +118,14 @@ public class GameController : MonoBehaviour {
 		gaugeBar.SetActive (false);
 	}
 
+	void hideMagicCircle() {
+		clearElement ();
+		magicCircle.SetActive (false);
+	}
+
 	void unhideCircleBar () { circleBar.SetActive (true); }
 	void unhideGauge () { gaugeBar.SetActive (true); }
-
-		
-
+	void unhideMagicCircle() { magicCircle.SetActive (true); }
 
 	// Update is called once per frame
 	void Update () {
