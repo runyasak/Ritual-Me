@@ -21,24 +21,28 @@ public class WitchController : MonoBehaviour {
 
 
 	public static WitchController instance;
-	public GameObject cat_element, bird_element, candle_element, hat_element, hook_element,
-					  pot_element, star_element, talk_element, wand_element;
+	public GameObject bat_perfer, bird_perfer, cat_perfer, candle_perfer, hat_perfer, hook_perfer,
+		pot_perfer, star_perfer, wand_perfer;
 
 	private GameObject[] allElement;
 	private GameObject[] prefer;
+
+	private GameObject perfer1, perfer2, perfer3;
 
 	private float count;
 
 	void Awake(){
 		instance = this;
 		allElement = new GameObject[] {
-			bird_element,
-			candle_element,
-			cat_element,
-			hat_element,
-			star_element,
-			wand_element,
-			talk_element
+			bat_perfer,
+			bird_perfer,
+			cat_perfer,
+			candle_perfer,
+			hat_perfer,
+			hook_perfer,
+			pot_perfer,
+			star_perfer,
+			wand_perfer,
 		};
 	}
 	// Use this for initialization
@@ -50,15 +54,14 @@ public class WitchController : MonoBehaviour {
 		curHR = maxHR/2;
 		prefer = new GameObject[3];
 		assignPrefer ();
-//		spawnPrefer ();
-		printPrefer ();
+		spawnPrefer ();
+//		printPrefer ();
 
 		lrText.SetActive (false);
 		hrText.SetActive (true);
 //		pentacle.SetActive (false);
 //		heartTarget.SetActive (false);
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
-
 
 	}
 
@@ -120,21 +123,21 @@ public class WitchController : MonoBehaviour {
 	}
 
 	void spawnPrefer(){
-		GameObject temp = Instantiate(prefer[0]) as GameObject;
-		temp.transform.parent = this.transform;
-		temp.transform.localPosition= new Vector3 (0.3f, 0.3f, 0);
-		temp.transform.localScale = new Vector3 (0.05f, 0.05f, 0);
+		perfer1 = Instantiate(prefer[0]) as GameObject;
+		perfer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
 
-		GameObject temp2 = Instantiate(prefer[1]) as GameObject;
-		temp2.transform.parent = this.transform;
-		temp2.transform.localPosition= new Vector3 (-0.3f, 0.3f, 0);
-		temp2.transform.localScale = new Vector3 (0.05f, 0.05f, 0);
+		perfer2 = Instantiate(prefer[1]) as GameObject;
+		perfer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
 
-		GameObject temp3 = Instantiate(prefer[2]) as GameObject;
-		temp3.transform.parent = this.transform;
-		temp3.transform.localPosition= new Vector3 (-0.3f, -0.3f, 0);
-		temp3.transform.localScale = new Vector3 (0.05f, 0.05f, 0);
+		perfer3 = Instantiate(prefer[2]) as GameObject;
+		perfer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
 
+	}
+
+	void MovePerfer(){
+		perfer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
+		perfer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
+		perfer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
 	}
 
 	void addHR(){
@@ -241,6 +244,6 @@ public class WitchController : MonoBehaviour {
 
 //		float myHR = curHR / maxHR;
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
-
+		MovePerfer ();
 	}
 }

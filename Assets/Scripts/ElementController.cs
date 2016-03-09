@@ -69,12 +69,14 @@ public class ElementController : MonoBehaviour {
 		//create vector from the two points
 		currentSwipe = new Vector3(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y,0);
 
+
+//		Vector3.Distance (secondPressPos, firstPressPos);
 		//normalize the 2d vector
 		currentSwipe.Normalize();
 //		Debug.Log (currentSwipe);
 
 		if (isHit) {
-			if (currentSwipe == Vector3.zero){
+			if (currentSwipe == Vector3.zero ){
 				isDrop = true;
 			} else {
 				isSwipe = true;
