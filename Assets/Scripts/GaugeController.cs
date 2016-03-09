@@ -35,6 +35,7 @@ public class GaugeController : MonoBehaviour {
 	void Update () {
 		timeForCreate += Random.Range (0,5);
 		Create ();
+		startMission ();
 	}
 
 	public void Create(){
@@ -43,6 +44,12 @@ public class GaugeController : MonoBehaviour {
 			CreateTalkElement ();
 		} else {
 			CreateElement ();
+		}
+	}
+
+	public void startMission (){
+		if(RunnerController.instance.countPerfect >= 5){
+			GameController.instance.stopRitualPhase ();
 		}
 	}
 

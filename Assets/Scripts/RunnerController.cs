@@ -18,11 +18,34 @@ public class RunnerController : MonoBehaviour {
 
 	private int countTalkElement;
 	private Transform hitTemp;
+	private Vector3 startPoint;
+
+	public int countPerfect;
+	public int countMiss;
 
 	private bool leftToRight;
 
+	void Awake () {
+		instance = this;
+		startPoint = this.transform.position;
+	}
+
 	// Use this for initialization
 	void Start () {
+//		mult = 5f;
+//		dir = new Vector3(1, 0, 0);
+//		countTalkElement = 0;
+//		missText.SetActive (false);
+//		perfectText.SetActive (false);
+//		leftToRight = true;
+//		talkEffect.enableEmission = false;
+		Debug.Log ("Start: "+startPoint);
+		initiate();
+	}
+
+	public void initiate () {
+//		Debug.Log ("KUY");
+		this.transform.position = startPoint;
 		mult = 5f;
 		dir = new Vector3(1, 0, 0);
 		countTalkElement = 0;
@@ -30,6 +53,8 @@ public class RunnerController : MonoBehaviour {
 		perfectText.SetActive (false);
 		leftToRight = true;
 		talkEffect.enableEmission = false;
+		countPerfect = 0;
+		countMiss = 0;
 	}
 
 	void move() {
@@ -41,6 +66,13 @@ public class RunnerController : MonoBehaviour {
 		move ();
 		checkElement ();
 		checkTalkElement ();
+		if(Input.GetKeyDown(KeyCode.K)){
+//			initiate ();
+			Debug.Log("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+			Debug.Log (this.transform.position);
+			Debug.Log (startPoint);
+			this.transform.position = startPoint;
+		}
 	}
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.transform.tag == "Domain") {
@@ -64,6 +96,7 @@ public class RunnerController : MonoBehaviour {
 				Debug.Log (hit.transform.tag);
 				if (hit.transform.tag == "Element") {
 					Destroy (hit.transform.gameObject);
+					countPerfect++;
 					showElementEffect ();
 					showPerfectText ();
 				} else if (hit.transform.tag == "Domain" && countTalkElement == 0) {
@@ -105,6 +138,8 @@ public class RunnerController : MonoBehaviour {
 			if (Physics.Raycast (ray, out hit, 100)) {
 				if (hit.transform.tag == "Domain" && countTalkElement == 3) {
 					showPerfectText ();
+					countPerfect++;
+					Debug.Log (countPerfect);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;
 					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");

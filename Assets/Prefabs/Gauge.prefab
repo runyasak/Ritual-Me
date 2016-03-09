@@ -251,6 +251,8 @@ MonoBehaviour:
   perfectText: {fileID: 0}
   talkEffect: {fileID: 19810654}
   elementEffect: {fileID: 19852898, guid: 2010cd87e4d9084468d66ffdab8241de, type: 2}
+  countPerfect: 0
+  countMiss: 0
 --- !u!198 &19810654
 ParticleSystem:
   m_ObjectHideFlags: 1

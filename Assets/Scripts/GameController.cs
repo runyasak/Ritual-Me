@@ -35,7 +35,6 @@ public class GameController : MonoBehaviour {
 			if (ritualCounter >= 15) {
 				stopRitualPhase ();
 				ritualCounter = 0;
-//				RitualController.instance.stopRitual();
 			}
 		}
 	}
@@ -46,6 +45,9 @@ public class GameController : MonoBehaviour {
 		hideMagicCircle ();
 		notice.SetActive (true);
 		unhideGauge ();
+		RunnerController.instance.initiate ();
+
+//		GaugeController.instance.startMission ();
 		isRitual = true;
 
 //		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
