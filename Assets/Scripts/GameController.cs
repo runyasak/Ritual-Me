@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour {
 
 	public float ritualCounter, gameCounter;
 
+	public int MAX_ritualTime = 15;
+
 	static Camera cam = Camera.main;
 	static float height = 2f * cam.orthographicSize;
 	static float width = height * cam.aspect;
@@ -73,7 +75,7 @@ public class GameController : MonoBehaviour {
 		if (isRitual) {
 			ritualCounter += Time.deltaTime;
 
-			if (ritualCounter >= 15) {
+			if (ritualCounter >= MAX_ritualTime) {
 				stopRitualPhase ();
 				ritualCounter = 0;
 			}
@@ -90,16 +92,7 @@ public class GameController : MonoBehaviour {
 		RunnerController.instance.initiate ();
 		ritualCounter = 0;
 
-//		GaugeController.instance.startMission ();
 		isRitual = true;
-
-//		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-//		foreach(GameObject i in temp){
-//			if (WitchController.instance != i) {
-//				i.GetComponent<WitchController> ().isFreeze = true;
-//			}
-//			Debug.Log ("isFreeze      "+      i.GetComponent<WitchController> ().isFreeze);
-//		}
 		MovieController.instance.playRitual ();
 	}
 
