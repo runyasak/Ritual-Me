@@ -104,6 +104,7 @@ public class WitchController : MonoBehaviour {
 	}
 	void checkGameover(){
 		if (curHR == 0) {
+			GameController.instance.isGameOver = true;
 			GameController.instance.restart ();
 		}
 	}
