@@ -7,8 +7,8 @@ public class ElementManager : MonoBehaviour {
 	public Transform entry;
 
 	public GameObject element;
-	public GameObject cat_element, bird_element, candle_element, hat_element, hook_element,
-		pot_element, star_element, talk_element, wand_element, ghost_element, lock_element;
+	public GameObject bat_element, bird_element, cat_element, candle_element, hat_element, hook_element,
+	pot_element, star_element, wand_element, talk_element, ghost_element, lock_element;
 	private GameObject[] elementsArr;
 
 	public ArrayList preferArr;
@@ -23,8 +23,8 @@ public class ElementManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		elementsArr = new GameObject[] {
-			cat_element, bird_element, candle_element, hat_element, hook_element,
-			pot_element, star_element, talk_element, wand_element, ghost_element,lock_element
+			bat_element, bird_element, cat_element, candle_element, hat_element, hook_element,
+			pot_element, star_element, wand_element, talk_element, ghost_element, lock_element
 		};
 	}
 		
@@ -42,7 +42,8 @@ public class ElementManager : MonoBehaviour {
 //		else if(rand <= 0.55f) { element = bird_element;}
 		else if (rand <= 0.7f) {
 			int prefer_rand = Random.Range (0, preferArr.Count);
-			element = (GameObject)preferArr[prefer_rand];
+//			element = (GameObject)preferArr[prefer_rand];
+			element = elementsArr[WitchController.instance.preferNumber[prefer_rand]];
 		}
 		else if( rand <= 0.9f) { element = ghost_element;}
 		else {element = lock_element; }

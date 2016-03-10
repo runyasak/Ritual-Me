@@ -486,6 +486,7 @@ MonoBehaviour:
   pot_prefer: {fileID: 183240, guid: f95d68cd8d8af42969bebd04ee33376d, type: 2}
   star_prefer: {fileID: 191612, guid: 3d6dbe06ae28641e69d90bdefc58f99f, type: 2}
   wand_prefer: {fileID: 198368, guid: ef93bc98d4cc740beb801d62c32eaa38, type: 2}
+  preferNumber: 
 --- !u!114 &11459218
 MonoBehaviour:
   m_ObjectHideFlags: 1

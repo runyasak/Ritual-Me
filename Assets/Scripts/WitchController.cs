@@ -30,6 +30,7 @@ public class WitchController : MonoBehaviour {
 
 	private GameObject[] allElement;
 	private GameObject[] prefer;
+	public int[] preferNumber;
 
 	private GameObject prefer1, prefer2, prefer3;
 
@@ -48,6 +49,7 @@ public class WitchController : MonoBehaviour {
 			star_prefer,
 			wand_prefer,
 		};
+		preferNumber = new int[3];
 	}
 	// Use this for initialization
 	void Start () {
@@ -120,13 +122,14 @@ public class WitchController : MonoBehaviour {
 			int rand = Random.Range(0, allElement.Length);
 			if(i == 0){
 				prefer[i] = allElement[rand];
-					ElementManager.instance.preferArr.Add (prefer [i]);
-				
+				ElementManager.instance.preferArr.Add (prefer [i]);
+				preferNumber [i] = rand;
 				checkDuplicate[i] = rand;
 				Debug.Log ("init " + prefer[i]);
 			} else if(i != 0 && rand != checkDuplicate[0] && rand != checkDuplicate[1]) {
 				prefer[i] = allElement[rand];
-					ElementManager.instance.preferArr.Add (prefer [i]);
+				ElementManager.instance.preferArr.Add (prefer [i]);
+				preferNumber [i] = rand;
 				checkDuplicate[i] = rand;
 				Debug.Log (prefer[i]);
 			} else {
@@ -167,21 +170,27 @@ public class WitchController : MonoBehaviour {
 			curHR = maxHR;
 		}
 		loveEmo.enabled = true;
+		angryEmo.enabled = false;
 		countEmo = 0;
 	}
 
 	void checkElement(GameObject element){
 		int count_elem = 0;
-		string element_name = element.name.Substring(0, element.name.Length - "(Clone)".Length);
+		string element_name = element.name.Substring(0, element.name.Length - "_element(Clone)".Length);
 		foreach (GameObject i in prefer) {
-			Debug.Log ("i: " + i.name + "element: " + element.name);
-			if(i.name == element_name){
+			string i_name = i.name.Substring(0, i.name.Length - "_prefer".Length);
+			Debug.Log ("i: " + i_name + "                  element: " + element_name);
+			if (element_name == "talk") {
+				Debug.Log ("talkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+				count_elem = 2;
+			}
+			if(i_name == element_name){
 				count_elem++;
 				//				addHR (10);
 				//				Debug.Log ("current HR: " + curHR);
 			} 
 		}
-		if (count_elem == 1) {
+		if (count_elem >= 1) {
 //			Debug.Log("yesssssss   Input "+element); 
 			addHR ();
 		}
@@ -197,6 +206,7 @@ public class WitchController : MonoBehaviour {
 			curHR = 0;
 		}
 		angryEmo.enabled = true;
+		loveEmo.enabled = false;
 		countEmo = 0;
 	}
 
