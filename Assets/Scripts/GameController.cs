@@ -6,15 +6,17 @@ public class GameController : MonoBehaviour {
 
 	public static GameController instance;
 	public GameObject wizard;
-	public Text mission_text, timer_text;
+	public Text mission_text, timer_text, score_text;
 
 	private static int checker;
 	public SpriteRenderer startScene, restartScene;
 
-	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, ritualMission_canvas;
+	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, ritualMission_canvas, score_canvas;
 	bool isRitual;
 
-	public float ritualCounter;
+	public int score;
+
+	public float ritualCounter, gameCounter;
 
 	static Camera cam = Camera.main;
 	static float height = 2f * cam.orthographicSize;
@@ -37,6 +39,9 @@ public class GameController : MonoBehaviour {
 		magicCircle = GameObject.Find ("MagicCircle");
 		botAura = GameObject.Find ("BotAura");
 		ritualMission_canvas = GameObject.Find("RitualMission_Canvas");
+
+		gameCounter = 0;
+		score = 0;
 
 		ritualMission_canvas.SetActive (false);
 		notice.SetActive (false);
@@ -124,6 +129,10 @@ public class GameController : MonoBehaviour {
 		timer_text.text = input_text;		
 	}
 
+	void scoreTextCommand() {
+		score_text.text = "Score: " + score;	
+	}
+
 	void clearElement () {
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Element");
 		GameObject[] temp_talkElement = GameObject.FindGameObjectsWithTag("TalkElement");
@@ -180,6 +189,14 @@ public class GameController : MonoBehaviour {
 	void unhideMagicCircle() { magicCircle.SetActive (true); }
 	void unhideBotAura(){ botAura.SetActive (true); }
 
+	void gameTimeScore (){
+		gameCounter += Time.deltaTime;
+		if(gameCounter >= 1){
+			score += 10;
+			gameCounter = 0;
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.C)) { clearElement (); }
@@ -189,6 +206,10 @@ public class GameController : MonoBehaviour {
 		}
 
 		ritualPhaseCounter ();
+
+		gameTimeScore ();
+		scoreTextCommand();
+
 
 //		if (Input.GetKeyDown (KeyCode.Q)) { hideCircleBar (); }
 //		if (Input.GetKeyDown (KeyCode.W)) { unhideCircleBar (); }

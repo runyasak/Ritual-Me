@@ -108,7 +108,6 @@ public class ElementController : MonoBehaviour {
 	}
 
 	void doubleClick(Transform hit){
-		bool timer_running;
 		Debug.Log (Time.time);
 		if(one_click == null){
 			one_click = hit.transform;
