@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour {
 		width = height * cam.aspect;
 
 		isRitualSuccess = false;
-		Time.timeScale = 0;
+//		Time.timeScale = 0;
 		startScene.enabled = true;
 		restartScene.enabled = false;
 		restartScene.gameObject.SetActive (false);
@@ -60,14 +60,14 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void noStartScene(){
-		checker = 1;
+//		checker = 1;
 		Application.LoadLevel (0);
 	}
 
-	public void startGame(){
-		startScene.gameObject.SetActive (false);
-		Time.timeScale = 1;
-	}
+//	public void startGame(){
+//		startScene.gameObject.SetActive (false);
+//		Time.timeScale = 1;
+//	}
 
 	public void restart(){
 		restartScene.enabled = true;
@@ -247,9 +247,9 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.C)) { clearElement (); }
 
-		if (checker == 1) {
-			startGame ();
-		}
+//		if (checker == 1) {
+//			startGame ();
+//		}
 
 		ritualPhaseCounter ();
 
