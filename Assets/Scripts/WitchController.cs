@@ -164,6 +164,16 @@ public class WitchController : MonoBehaviour {
 //		loveEmo.transform.localPosition= new Vector3 (this.transform.position.x - 1.25f, this.transform.position.y - 2.5f, 0);
 	}
 
+	void addHR(float hr){
+		curHR += hr;
+		if (curHR > maxHR) {
+			curHR = maxHR;
+		}
+		loveEmo.enabled = true;
+		angryEmo.enabled = false;
+		countEmo = 0;
+	}
+
 	void addHR(){
 		curHR += addHRPoint;
 		if (curHR > maxHR) {
@@ -190,7 +200,12 @@ public class WitchController : MonoBehaviour {
 				//				Debug.Log ("current HR: " + curHR);
 			} 
 		}
-		if (count_elem >= 1) {
+		if (count_elem == 2) {
+			//			Debug.Log("yesssssss   Input "+element); 
+			addHR (5f);
+		}
+
+		if (count_elem == 1) {
 //			Debug.Log("yesssssss   Input "+element); 
 			addHR ();
 		}
