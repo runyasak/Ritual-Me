@@ -25,9 +25,9 @@ public class GameController : MonoBehaviour {
 
 	private GameObject[] wizardArr;
 
-	static Camera cam = Camera.main;
-	static float height = 2f * cam.orthographicSize;
-	static float width = height * cam.aspect;
+	static Camera cam;
+	static float height;
+	static float width;
 
 	void Awake () {
 		DontDestroyOnLoad (instance);
@@ -36,8 +36,12 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		cam = Camera.main;
+		height = 2f * cam.orthographicSize;
+		width = height * cam.aspect;
+
 		isRitualSuccess = false;
-		Time.timeScale = 0;
+//		Time.timeScale = 0;
 		startScene.enabled = true;
 		restartScene.enabled = false;
 		ritualScene.gameObject.SetActive (false);
@@ -60,14 +64,13 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void noStartScene(){
-		checker = 1;
-		Application.LoadLevel (0);
+		Application.LoadLevel (1);
 	}
 
-	public void startGame(){
-		startScene.gameObject.SetActive (false);
-		Time.timeScale = 1;
-	}
+//	public void startGame(){
+//		startScene.gameObject.SetActive (false);
+//		Time.timeScale = 1;
+//	}
 
 	public void restart(){
 		restartScene.enabled = true;
@@ -278,9 +281,9 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.C)) { clearElement (); }
 
-		if (checker == 1) {
-			startGame ();
-		}
+//		if (checker == 1) {
+//			startGame ();
+//		}
 
 		ritualPhaseCounter ();
 
