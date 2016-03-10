@@ -10,6 +10,7 @@ TagManager:
   - Witch
   - TalkElement
   - DeadElement
+  - LockElement
   layers:
   - Default
   - TransparentFX

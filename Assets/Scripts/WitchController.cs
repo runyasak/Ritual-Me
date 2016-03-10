@@ -25,28 +25,28 @@ public class WitchController : MonoBehaviour {
 
 
 	public static WitchController instance;
-	public GameObject bat_perfer, bird_perfer, cat_perfer, candle_perfer, hat_perfer, hook_perfer,
-		pot_perfer, star_perfer, wand_perfer;
+	public GameObject bat_prefer, bird_prefer, cat_prefer, candle_prefer, hat_prefer, hook_prefer,
+		pot_prefer, star_prefer, wand_prefer;
 
 	private GameObject[] allElement;
 	private GameObject[] prefer;
 
-	private GameObject perfer1, perfer2, perfer3;
+	private GameObject prefer1, prefer2, prefer3;
 
 	private float count;
 
 	void Awake(){
 		instance = this;
 		allElement = new GameObject[] {
-			bat_perfer,
-			bird_perfer,
-			cat_perfer,
-			candle_perfer,
-			hat_perfer,
-			hook_perfer,
-			pot_perfer,
-			star_perfer,
-			wand_perfer,
+			bat_prefer,
+			bird_prefer,
+			cat_prefer,
+			candle_prefer,
+			hat_prefer,
+			hook_prefer,
+			pot_prefer,
+			star_prefer,
+			wand_prefer,
 		};
 	}
 	// Use this for initialization
@@ -137,21 +137,21 @@ public class WitchController : MonoBehaviour {
 	}
 
 	void spawnPrefer(){
-		perfer1 = Instantiate(prefer[0]) as GameObject;
-		perfer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
+		prefer1 = Instantiate(prefer[0]) as GameObject;
+		prefer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
 
-		perfer2 = Instantiate(prefer[1]) as GameObject;
-		perfer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
+		prefer2 = Instantiate(prefer[1]) as GameObject;
+		prefer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
 
-		perfer3 = Instantiate(prefer[2]) as GameObject;
-		perfer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
+		prefer3 = Instantiate(prefer[2]) as GameObject;
+		prefer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
 
 	}
 
-	void MovePerfer(){
-		perfer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
-		perfer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
-		perfer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
+	void Moveprefer(){
+		prefer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
+		prefer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
+		prefer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
 	}
 
 	void spawnEmo(){
@@ -271,7 +271,7 @@ public class WitchController : MonoBehaviour {
 
 //		float myHR = curHR / maxHR;
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
-		MovePerfer ();
+		Moveprefer ();
 
 		spawnEmo ();
 		countEmo += Time.deltaTime;
