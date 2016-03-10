@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
 	public bool isGameOver;
 
 	public int score;
+	public bool isRitualSuccess;
 
 	public float ritualCounter, gameCounter;
 
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		isRitualSuccess = false;
 		Time.timeScale = 0;
 		startScene.enabled = true;
 		restartScene.enabled = false;
@@ -160,7 +162,14 @@ public class GameController : MonoBehaviour {
 		
 	void addWizard(){
 
-		var instantElement_1 = Instantiate (wizard, new Vector3(0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;
+		if (isRitualSuccess) {
+			WitchController.instance.hrBar.GetComponent<Image> ().color = Color.red;
+			WitchController.instance.lrText.SetActive (true);
+			WitchController.instance.hrText.SetActive (false);
+			var instantElement_1 = Instantiate (wizard, new Vector3 (0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;	
+		} else {
+			WitchController.instance.curHR = 20;
+		}
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
 		Debug.Log ("lllllllllllllll"+temp.Length);
 		int j = 1;
@@ -224,11 +233,6 @@ public class GameController : MonoBehaviour {
 	void wizardNotRitualPhase(){
 //		GameObject[] wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
 		foreach(GameObject i in wizardArr){
-			if (i.GetComponent<WitchController> ().isRitual) {
-				i.GetComponent<WitchController> ().hrBar.GetComponent<Image> ().color = Color.red;
-				i.GetComponent<WitchController> ().lrText.SetActive (true);
-				i.GetComponent<WitchController> ().hrText.SetActive (false);
-			}
 			i.GetComponent<WitchController> ().isRitual = false;
 			i.GetComponent<WitchController> ().isFreeze = false;
 			i.GetComponent<WitchController> ().gameObject.SetActive (true);

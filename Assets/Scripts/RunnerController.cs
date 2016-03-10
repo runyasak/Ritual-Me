@@ -143,10 +143,10 @@ public class RunnerController : MonoBehaviour {
 					showPerfectText ();
 					countPerfect++;
 					countCombo++;
-					Debug.Log (countPerfect);
+//					Debug.Log (countPerfect);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;
-					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+//					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
 				}
 
 				if (countTalkElement > 0 && countTalkElement < 3) {//&& hit.transform.tag != "Untagged" && hit.transform.tag != "Element"){
