@@ -553,6 +553,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11455410, guid: bcabe071564d445a78ed1207558104a5, type: 2}
+      propertyPath: healEffect
+      value: 
+      objectReference: {fileID: 19878440, guid: a7a94ab46c9c36a4dacc7d5d0ee64df7,
+        type: 2}
+    - target: {fileID: 11455410, guid: bcabe071564d445a78ed1207558104a5, type: 2}
+      propertyPath: debuffEffect
+      value: 
+      objectReference: {fileID: 19861514, guid: 3a134bee3069e9a46a74a63c5e7c8e2c,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcabe071564d445a78ed1207558104a5, type: 2}
   m_IsPrefabParent: 0

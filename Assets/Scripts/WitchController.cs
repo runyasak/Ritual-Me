@@ -19,6 +19,9 @@ public class WitchController : MonoBehaviour {
 	public SpriteRenderer loveEmo;
 	private float countEmo;
 
+	public ParticleSystem healEffect;
+	public ParticleSystem debuffEffect;
+
 //	public GameObject pentacle;
 	public bool isFreeze;
 
@@ -165,6 +168,18 @@ public class WitchController : MonoBehaviour {
 //		loveEmo.transform.localPosition= new Vector3 (this.transform.position.x - 1.25f, this.transform.position.y - 2.5f, 0);
 	}
 
+	void showHealEffect(){
+		ParticleSystem newHealElementEffect = Instantiate (healEffect, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z)
+			, Quaternion.identity) as ParticleSystem;
+		Destroy (newHealElementEffect.gameObject, 2);
+	}
+
+	void showDebuffEffect(){
+		ParticleSystem newDebuffElementEffect = Instantiate (debuffEffect, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z)
+			, Quaternion.identity) as ParticleSystem;
+		Destroy (newDebuffElementEffect.gameObject, 2);
+	}
+
 	void addHR(float hr){
 		curHR += hr;
 		if (curHR > maxHR) {
@@ -173,6 +188,7 @@ public class WitchController : MonoBehaviour {
 		loveEmo.enabled = true;
 		angryEmo.enabled = false;
 		countEmo = 0;
+		showHealEffect ();
 	}
 
 	void addHR(){
@@ -183,6 +199,7 @@ public class WitchController : MonoBehaviour {
 		loveEmo.enabled = true;
 		angryEmo.enabled = false;
 		countEmo = 0;
+		showHealEffect ();
 	}
 
 	void checkElement(GameObject element){
@@ -224,6 +241,7 @@ public class WitchController : MonoBehaviour {
 		angryEmo.enabled = true;
 		loveEmo.enabled = false;
 		countEmo = 0;
+		showDebuffEffect ();
 	}
 
 
