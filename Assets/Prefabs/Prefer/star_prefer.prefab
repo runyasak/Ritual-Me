@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 433226}
   - 212: {fileID: 21208166}
   m_Layer: 0
-  m_Name: prefer_star
+  m_Name: star_prefer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

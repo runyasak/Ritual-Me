@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 483700}
   - 212: {fileID: 21281826}
   m_Layer: 0
-  m_Name: prefer_bird
+  m_Name: bird_prefer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 461900}
   - 212: {fileID: 21269004}
   m_Layer: 0
-  m_Name: prefer_cat
+  m_Name: cat_prefer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 474892}
   - 212: {fileID: 21291990}
   m_Layer: 0
-  m_Name: prefer_wand
+  m_Name: wand_prefer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
