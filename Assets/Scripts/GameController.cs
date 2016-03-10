@@ -171,13 +171,13 @@ public class GameController : MonoBehaviour {
 			WitchController.instance.curHR = 20;
 		}
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-		Debug.Log ("lllllllllllllll"+temp.Length);
+//		Debug.Log ("lllllllllllllll"+temp.Length);
 		int j = 1;
 
 		foreach(GameObject i in temp){
 			float x = (-width/2) +((width) / (temp.Length + 1))*j;
 			i.GetComponent<Transform>().position = new Vector3 (x, i.transform.position.y, 0.1f);
-			Debug.Log ("ppppppppppppppppppppppppp"+i.GetComponent<Transform>().position);
+//			Debug.Log ("ppppppppppppppppppppppppp"+i.GetComponent<Transform>().position);
 			j += 1;
 		}
 	}

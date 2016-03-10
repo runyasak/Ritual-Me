@@ -117,9 +117,10 @@ public class GaugeController : MonoBehaviour {
 			}
 		}
 
-		int rand = Random.Range (0, elementArr.Length);	
+		int[] preferWizard = WitchController.instance.GetComponent<WitchController> ().preferNumber;
+		int prefer_rand = Random.Range (0, preferWizard.Length);	
 		if ((distanceCheck == arr.Length) && timeForCreate > 200 && arr.Length < maxElement) {
-			GameObject instantElement = Instantiate (elementArr[rand], new Vector3(randomPosition, this.transform.position.y, -1)
+			GameObject instantElement = Instantiate (elementArr[preferWizard[prefer_rand]], new Vector3(randomPosition, this.transform.position.y, -1)
 				, Quaternion.identity) as GameObject;
 			timeForCreate = 0;
 		}
