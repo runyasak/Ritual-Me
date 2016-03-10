@@ -71,7 +71,7 @@ public class ElementManager : MonoBehaviour {
 			element = elementsArr[all_rand];
 			Debug.Log ("NOT PREFER: " + element);
 		}
-		else if (rand <= 0.7f) {
+		else if (rand <= 0.8f) {
 			//prefer
 			//choose wizard
 			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
@@ -86,7 +86,7 @@ public class ElementManager : MonoBehaviour {
 			Debug.Log ("PREFER: " + element);
 		}
 		else if( rand <= 1f) { element = ghost_element;}
-//		else {element = lock_element; }
+
 
 		return element;
 	}
