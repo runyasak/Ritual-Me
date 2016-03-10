@@ -60,8 +60,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void noStartScene(){
-//		checker = 1;
-		Application.LoadLevel (0);
+		Application.LoadLevel (1);
 	}
 
 //	public void startGame(){
