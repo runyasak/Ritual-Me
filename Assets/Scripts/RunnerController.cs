@@ -56,8 +56,7 @@ public class RunnerController : MonoBehaviour {
 		countPerfect = 0;
 		countMiss = 0;
 		countCombo = 0;
-//		randMission = Random.Range (0, 3);
-		randMission = 2;
+		randMission = Random.Range (0, 3);
 		Debug.Log (randMission);
 	}
 
