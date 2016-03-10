@@ -55,7 +55,7 @@ public class ElementManager : MonoBehaviour {
 	GameObject randomElementController () {
 		float rand = Random.Range (0f, 1f);
 		Debug.Log (rand);
-		GameObject element;
+		GameObject element = null;
 		if(rand <= 0.35f){ element = talk_element; }
 		else if(rand <= 0.55f) { 
 			//not prefer
@@ -85,8 +85,8 @@ public class ElementManager : MonoBehaviour {
 			element = elementsArr[preferWizard[prefer_rand]];
 			Debug.Log ("PREFER: " + element);
 		}
-		else if( rand <= 0.9f) { element = ghost_element;}
-		else {element = lock_element; }
+		else if( rand <= 1f) { element = ghost_element;}
+//		else {element = lock_element; }
 
 		return element;
 	}
@@ -107,6 +107,13 @@ public class ElementManager : MonoBehaviour {
 			var new_element = Instantiate (randomElementController(), entry.position, Quaternion.identity) as GameObject;
 			new_element.transform.parent = element.transform;
 			new_element.transform.position = entry.position;
+			int rand = Random.Range (0,5);
+			if (rand == 0) {
+				var lockElement = Instantiate (elementsArr[elementsArr.Length-1], entry.position, Quaternion.identity) as GameObject;
+				lockElement.transform.parent = element.transform;
+				lockElement.transform.position = entry.position;
+			}
+
 //			Debug.Log (new_element.transform.name);
 		}
 
