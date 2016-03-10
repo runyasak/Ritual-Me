@@ -41,9 +41,14 @@ public class ElementManager : MonoBehaviour {
 		if(rand <= 0.35f){ element = talk_element; }
 //		else if(rand <= 0.55f) { element = bird_element;}
 		else if (rand <= 0.7f) {
-			int prefer_rand = Random.Range (0, preferArr.Count);
+			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
+			int wizard_rand =Random.Range (0, wizardArr.Length);
+
+			int[] preferWizard = wizardArr [wizard_rand].GetComponent<WitchController> ().preferNumber;
+			int prefer_rand = Random.Range (0, preferWizard.Length);
 //			element = (GameObject)preferArr[prefer_rand];
-			element = elementsArr[WitchController.instance.preferNumber[prefer_rand]];
+//			element = elementsArr[WitchController.instance.preferNumber[prefer_rand]];
+			element = elementsArr[preferWizard[prefer_rand]];
 		}
 		else if( rand <= 0.9f) { element = ghost_element;}
 		else {element = lock_element; }
