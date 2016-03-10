@@ -121,7 +121,7 @@ public class GameController : MonoBehaviour {
 	void clearElement () {
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Element");
 		GameObject[] temp_talkElement = GameObject.FindGameObjectsWithTag("TalkElement");
-		GameObject[] temp_deadElement = GameObject.FindGameObjectsWithTag("DeadElement");
+		GameObject[] temp_deadElement = GameObject.FindGameObjectsWithTag("LockElement");
 		foreach(GameObject i in temp){
 			Destroy (i);	
 		}
