@@ -18,6 +18,7 @@ public class GhostChecker : MonoBehaviour {
 			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
 			foreach(GameObject i in wizardArr){
 				i.GetComponent<WitchController> ().curHR -= 5;
+				i.GetComponent<WitchController> ().showDebuffEffect ();
 			}
 		}
 
