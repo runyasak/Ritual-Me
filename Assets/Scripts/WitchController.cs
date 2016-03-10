@@ -24,6 +24,7 @@ public class WitchController : MonoBehaviour {
 
 //	public GameObject pentacle;
 	public bool isFreeze;
+	public bool isRitual;
 
 
 
@@ -56,6 +57,7 @@ public class WitchController : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		isRitual = false;
 		isFreeze = false;
 		addHRPoint = 10;
 		minusHRPoint = 10;
@@ -86,9 +88,11 @@ public class WitchController : MonoBehaviour {
 		if (curHR == maxHR && hrText.active == true) {
 			//			GameController.newScene = 1;
 //			pentacle.SetActive(true);
-			lrText.SetActive (true);
-			hrText.SetActive (false);
-			hrBar.GetComponent<Image> ().color = Color.red;
+			isRitual = true;
+			this.transform.position = new Vector3(0,2,this.transform.position.z);
+//			lrText.SetActive (true);
+//			hrText.SetActive (false);
+//			hrBar.GetComponent<Image> ().color = Color.red;
 			GameController.instance.startRitualPhase ();
 		}
 		/*else if(curHR == 0 && lrText.active == true){
@@ -98,7 +102,6 @@ public class WitchController : MonoBehaviour {
 			curHR = maxHR;
 		}*/
 	}
-
 	void checkGameover(){
 		if (curHR == 0) {
 			GameController.instance.restart ();
@@ -302,7 +305,7 @@ public class WitchController : MonoBehaviour {
 
 		if (instance == this) {
 //			heartTarget.active = true;
-			isFreeze = false;
+//			isFreeze = false;
 			if (Input.GetKeyDown (KeyCode.H)) { addHR (); }
 			if (Input.GetKeyDown (KeyCode.L)) { minusHR (); }
 		} else {

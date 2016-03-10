@@ -12,8 +12,6 @@ public class GaugeController : MonoBehaviour {
 	private float timeForCreate;
 	public int maxElement;
 
-
-
 	public TalkElement talkElement;
 
 	void Start () {
@@ -51,7 +49,7 @@ public class GaugeController : MonoBehaviour {
 
 	public void startMission (){
 		
-		if(RunnerController.instance.randMission == 0){
+//		if(RunnerController.instance.randMission == 0){
 			Debug.Log ("Perfect Mission");
 			GameController.instance.assignMissionText ("Perfect: " + (5 - RunnerController.instance.countPerfect).ToString ());
 			if(RunnerController.instance.countPerfect >= 5){
@@ -59,7 +57,7 @@ public class GaugeController : MonoBehaviour {
 				//success
 				GameController.instance.score += 100;
 			}
-		} else if(RunnerController.instance.randMission == 1){
+//		} else if(RunnerController.instance.randMission == 1){
 			Debug.Log ("Miss Mission");
 			GameController.instance.assignMissionText ("Miss: " + (3 - RunnerController.instance.countMiss).ToString ());
 			if(RunnerController.instance.countMiss >= 3){
@@ -69,7 +67,7 @@ public class GaugeController : MonoBehaviour {
 			} else if (GameController.instance.ritualCounter >= 15) {
 				GameController.instance.score += 100;
 			}
-		} else if(RunnerController.instance.randMission == 2){
+//		} else if(RunnerController.instance.randMission == 2){
 			Debug.Log ("Combo Mission");
 			GameController.instance.assignMissionText ("Combo 3x: " + (RunnerController.instance.countCombo).ToString ());
 			Debug.Log (GameController.instance.ritualCounter.ToString ());
@@ -79,7 +77,7 @@ public class GaugeController : MonoBehaviour {
 				//success
 				GameController.instance.score += 100;
 				Debug.Log (RunnerController.instance.countMiss);
-			}
+//			}
 		}
 	}
 

@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour {
 
 	public float ritualCounter, gameCounter;
 
+	private GameObject[] wizardArr;
+
 	static Camera cam = Camera.main;
 	static float height = 2f * cam.orthographicSize;
 	static float width = height * cam.aspect;
@@ -69,7 +71,7 @@ public class GameController : MonoBehaviour {
 	void ritualPhaseCounter(){
 		if (isRitual) {
 			ritualCounter += Time.deltaTime;
-
+		
 			if (ritualCounter >= 15) {
 				stopRitualPhase ();
 				ritualCounter = 0;
@@ -86,6 +88,10 @@ public class GameController : MonoBehaviour {
 		unhideGauge ();
 		RunnerController.instance.initiate ();
 		ritualCounter = 0;
+
+		wizardRitualPhase ();
+
+
 
 //		GaugeController.instance.startMission ();
 		isRitual = true;
@@ -106,6 +112,7 @@ public class GameController : MonoBehaviour {
 		unhideBotAura ();
 		hideGauge ();
 		isRitual = false;
+		wizardNotRitualPhase ();
 		addWizard ();
 		notice.SetActive (false);
 		ritualMission_canvas.SetActive (false);
@@ -161,7 +168,6 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("ppppppppppppppppppppppppp"+i.GetComponent<Transform>().position);
 			j += 1;
 		}
-
 	}
 
 	void hideCircleBar () {
@@ -194,6 +200,32 @@ public class GameController : MonoBehaviour {
 		if(gameCounter >= 1){
 			score += 10;
 			gameCounter = 0;
+		}
+	}
+
+	void wizardRitualPhase(){
+		wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
+		foreach(GameObject i in wizardArr){
+			if (!i.GetComponent<WitchController> ().isRitual) {
+				i.GetComponent<WitchController> ().gameObject.SetActive (false);
+			} else {
+				i.GetComponent<WitchController> ().curHR = 99;
+			}
+			i.GetComponent<WitchController> ().isFreeze = true;
+		}
+	}
+
+	void wizardNotRitualPhase(){
+//		GameObject[] wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
+		foreach(GameObject i in wizardArr){
+			if (i.GetComponent<WitchController> ().isRitual) {
+				i.GetComponent<WitchController> ().hrBar.GetComponent<Image> ().color = Color.red;
+				i.GetComponent<WitchController> ().lrText.SetActive (true);
+				i.GetComponent<WitchController> ().hrText.SetActive (false);
+			}
+			i.GetComponent<WitchController> ().isRitual = false;
+			i.GetComponent<WitchController> ().isFreeze = false;
+			i.GetComponent<WitchController> ().gameObject.SetActive (true);
 		}
 	}
 
