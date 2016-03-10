@@ -107,7 +107,7 @@ public class ElementManager : MonoBehaviour {
 			var new_element = Instantiate (randomElementController(), entry.position, Quaternion.identity) as GameObject;
 			new_element.transform.parent = element.transform;
 			new_element.transform.position = entry.position;
-			int rand = Random.Range (0,5);
+			int rand = Random.Range (0,10);
 			if (rand == 0) {
 				var lockElement = Instantiate (elementsArr[elementsArr.Length-1], entry.position, Quaternion.identity) as GameObject;
 				lockElement.transform.parent = element.transform;
