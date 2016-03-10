@@ -11,7 +11,7 @@ public class ElementManager : MonoBehaviour {
 	pot_element, star_element, wand_element, talk_element, ghost_element, lock_element;
 	private GameObject[] elementsArr;
 
-	public ArrayList preferArr;
+	public ArrayList preferArr, notPreferArr;
 
 	public static ElementManager instance;
 
@@ -27,28 +27,63 @@ public class ElementManager : MonoBehaviour {
 			pot_element, star_element, wand_element, talk_element, ghost_element, lock_element
 		};
 	}
-		
-//	void checkNotPrefer(){
-//		for(int i = 0; i < elementsArr; i++){
-//			
+
+	public void deleteDuplicatePrefer () {
+//		preferArr.Sort ();
+//		for (int i=1; i <= preferArr.Count - 1; i++){
+//			if(preferArr[i] == preferArr[i-1]) {
+//				preferArr.Remove(i);
+//			}
 //		}
-//	}
+		foreach(GameObject i in preferArr) {
+			foreach(GameObject j in preferArr) {
+				if(j == i)
+					preferArr.Remove(i);
+			}
+		}
+	}
+
+	public void createNotPrefer () {
+		Debug.Log ("NOT PREFER");
+		foreach (GameObject i in elementsArr) {
+			if(!preferArr.Contains(System.Array.IndexOf (elementsArr, i))) {
+				notPreferArr.Add(System.Array.IndexOf (elementsArr, i));
+			}
+		}
+	}
 	
 	GameObject randomElementController () {
 		float rand = Random.Range (0f, 1f);
 		Debug.Log (rand);
 		GameObject element;
 		if(rand <= 0.35f){ element = talk_element; }
-//		else if(rand <= 0.55f) { element = bird_element;}
-		else if (rand <= 0.7f) {
+		else if(rand <= 0.55f) { 
+			//not prefer
+			int all_rand;
 			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
 			int wizard_rand =Random.Range (0, wizardArr.Length);
 
 			int[] preferWizard = wizardArr [wizard_rand].GetComponent<WitchController> ().preferNumber;
+			do{
+				all_rand = Random.Range (0, 9);
+			} while(System.Array.IndexOf(preferWizard, all_rand)>=0);
+
+			element = elementsArr[all_rand];
+			Debug.Log ("NOT PREFER: " + element);
+		}
+		else if (rand <= 0.7f) {
+			//prefer
+			//choose wizard
+			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
+			int wizard_rand =Random.Range (0, wizardArr.Length);
+
+			//choose prefer from wizard
+			int[] preferWizard = wizardArr [wizard_rand].GetComponent<WitchController> ().preferNumber;
 			int prefer_rand = Random.Range (0, preferWizard.Length);
-//			element = (GameObject)preferArr[prefer_rand];
-//			element = elementsArr[WitchController.instance.preferNumber[prefer_rand]];
+
+
 			element = elementsArr[preferWizard[prefer_rand]];
+			Debug.Log ("PREFER: " + element);
 		}
 		else if( rand <= 0.9f) { element = ghost_element;}
 		else {element = lock_element; }

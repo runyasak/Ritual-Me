@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 452210}
   - 212: {fileID: 21200264}
   m_Layer: 0
-  m_Name: prefer_pot
+  m_Name: pot_prefer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

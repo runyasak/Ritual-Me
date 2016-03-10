@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 424754}
   - 212: {fileID: 21212464}
   m_Layer: 0
-  m_Name: perfer_candle
+  m_Name: candle_prefer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

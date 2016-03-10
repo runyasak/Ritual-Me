@@ -122,20 +122,21 @@ public class WitchController : MonoBehaviour {
 			int rand = Random.Range(0, allElement.Length);
 			if(i == 0){
 				prefer[i] = allElement[rand];
-				ElementManager.instance.preferArr.Add (prefer [i]);
 				preferNumber [i] = rand;
+//				ElementManager.instance.preferArr.Add (preferNumber [i]);
 				checkDuplicate[i] = rand;
 				Debug.Log ("init " + prefer[i]);
 			} else if(i != 0 && rand != checkDuplicate[0] && rand != checkDuplicate[1]) {
 				prefer[i] = allElement[rand];
-				ElementManager.instance.preferArr.Add (prefer [i]);
 				preferNumber [i] = rand;
-				checkDuplicate[i] = rand;
+//				ElementManager.instance.preferArr.Add (preferNumber [i]);
+				checkDuplicate [i] = rand;
 				Debug.Log (prefer[i]);
 			} else {
 				i--;
 			}
 		}
+			
 		//		prefer = new GameObject[]{bat_element, bird_element, candle_element};
 	}
 
