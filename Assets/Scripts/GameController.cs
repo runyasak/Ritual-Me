@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour {
 	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, ritualMission_canvas, score_canvas;
 	bool isRitual;
 
+	public bool isGameOver;
+
 	public int score;
 
 	public float ritualCounter, gameCounter;
@@ -40,6 +42,7 @@ public class GameController : MonoBehaviour {
 		botAura = GameObject.Find ("BotAura");
 		ritualMission_canvas = GameObject.Find("RitualMission_Canvas");
 
+		isGameOver = false;
 		gameCounter = 0;
 		score = 0;
 
@@ -190,9 +193,12 @@ public class GameController : MonoBehaviour {
 	void unhideBotAura(){ botAura.SetActive (true); }
 
 	void gameTimeScore (){
-		gameCounter += Time.deltaTime;
+		if (!isGameOver) {
+			gameCounter += Time.deltaTime;
+		}
 		if(gameCounter >= 1){
-			score += 10;
+			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
+			score += 10*wizardArr.Length;
 			gameCounter = 0;
 		}
 	}
