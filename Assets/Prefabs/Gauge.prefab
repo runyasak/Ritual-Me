@@ -233,7 +233,7 @@ MonoBehaviour:
   r_element8: {fileID: 168438, guid: aced7f819e51f41809d3012b50851977, type: 2}
   r_element9: {fileID: 128900, guid: 7bd18603780c743c6af87cf890d71504, type: 2}
   maxElement: 5
-  talkElement: {fileID: 11480938, guid: 99bc765364392344587fbf866156a1b3, type: 2}
+  talkElement: {fileID: 11488164, guid: 99bc765364392344587fbf866156a1b3, type: 2}
 --- !u!114 &11489766
 MonoBehaviour:
   m_ObjectHideFlags: 1

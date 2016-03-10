@@ -23,9 +23,9 @@ public class GameController : MonoBehaviour {
 
 	private GameObject[] wizardArr;
 
-	static Camera cam = Camera.main;
-	static float height = 2f * cam.orthographicSize;
-	static float width = height * cam.aspect;
+	static Camera cam;
+	static float height;
+	static float width;
 
 	void Awake () {
 		DontDestroyOnLoad (instance);
@@ -34,6 +34,10 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		cam = Camera.main;
+		height = 2f * cam.orthographicSize;
+		width = height * cam.aspect;
+
 		isRitualSuccess = false;
 		Time.timeScale = 0;
 		startScene.enabled = true;
