@@ -5,7 +5,8 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;
-	public GameObject wizard;
+
+	public GameObject wizard, wizard_2;
 	public Text mission_text, timer_text, score_text;
 
 	private static int checker;
@@ -14,14 +15,13 @@ public class GameController : MonoBehaviour {
 	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, ritualMission_canvas, score_canvas;
 	bool isRitual;
 
-	public bool isGameOver;
+	public bool isGameOver, isRitualSuccess;
 
 	public int score;
-	public bool isRitualSuccess;
 
 	public float ritualCounter, gameCounter;
 
-	private GameObject[] wizardArr;
+	private GameObject[] wizardArr, allWizard;
 
 	static Camera cam;
 	static float height;
@@ -34,6 +34,12 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		allWizard = new GameObject[] {
+			wizard,
+			wizard_2
+		};
+
 		cam = Camera.main;
 		height = 2f * cam.orthographicSize;
 		width = height * cam.aspect;
@@ -57,6 +63,8 @@ public class GameController : MonoBehaviour {
 		ritualMission_canvas.SetActive (false);
 		notice.SetActive (false);
 		hideGauge ();
+		spawnWizard ();
+
 	}
 
 	public void noStartScene(){
@@ -170,7 +178,9 @@ public class GameController : MonoBehaviour {
 			WitchController.instance.hrBar.GetComponent<Image> ().color = Color.red;
 			WitchController.instance.lrText.SetActive (true);
 			WitchController.instance.hrText.SetActive (false);
-			var instantElement_1 = Instantiate (wizard, new Vector3 (0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;	
+//			var instantElement_1 = Instantiate (allWizard[rand_wizard()], new Vector3 (0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;	
+//			var instantElement_1 = Instantiate (wizard, new Vector3 (0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;	
+			spawnWizard();
 		} else {
 			WitchController.instance.curHR = 20;
 		}
@@ -181,9 +191,17 @@ public class GameController : MonoBehaviour {
 		foreach(GameObject i in temp){
 			float x = (-width/2) +((width) / (temp.Length + 1))*j;
 			i.GetComponent<Transform>().position = new Vector3 (x, i.transform.position.y, 0.1f);
-//			Debug.Log ("ppppppppppppppppppppppppp"+i.GetComponent<Transform>().position);
 			j += 1;
 		}
+	}
+
+	void spawnWizard () {
+		int rand_wizard = Random.Range (0, allWizard.Length);
+		var instantElement = Instantiate (allWizard[rand_wizard], new Vector3 (0, allWizard[rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;	
+	}
+
+	int rand_wizard () {
+		return Random.Range (0, allWizard.Length);
 	}
 
 	void hideCircleBar () {

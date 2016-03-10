@@ -40,11 +40,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wizard: {fileID: 118316, guid: bcabe071564d445a78ed1207558104a5, type: 2}
+  wizard_2: {fileID: 118210, guid: a7911b8fb509e5d4fb6d66d637929823, type: 2}
   mission_text: {fileID: 0}
   timer_text: {fileID: 0}
   score_text: {fileID: 0}
   startScene: {fileID: 0}
   restartScene: {fileID: 0}
+  isGameOver: 0
+  isRitualSuccess: 0
   score: 0
   ritualCounter: 0
   gameCounter: 0
