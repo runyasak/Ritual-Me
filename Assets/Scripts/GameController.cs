@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour {
 	private static int checker;
 	public SpriteRenderer startScene, restartScene;
 
-	GameObject circleBar, gaugeBar, notice, magicCircle;
+	GameObject circleBar, gaugeBar, notice, magicCircle, botAura;
 	bool isRitual;
 
 	public float ritualCounter;
@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour {
 		gaugeBar = GameObject.Find ("Gauge");
 		notice = GameObject.Find ("Notice");
 		magicCircle = GameObject.Find ("MagicCircle");
+		botAura = GameObject.Find ("BotAura");
 		notice.SetActive (false);
 		hideGauge ();
 	}
@@ -54,6 +55,7 @@ public class GameController : MonoBehaviour {
 		restartScene.gameObject.SetActive (true);
 		clearElement ();
 		hideGauge ();
+		hideBotAura ();
 	}
 
 	void ritualPhaseCounter(){
@@ -70,6 +72,7 @@ public class GameController : MonoBehaviour {
 	public void startRitualPhase () {
 		hideCircleBar ();
 		hideMagicCircle ();
+		hideBotAura ();
 		notice.SetActive (true);
 		unhideGauge ();
 		RunnerController.instance.initiate ();
@@ -90,6 +93,7 @@ public class GameController : MonoBehaviour {
 	public void stopRitualPhase () {
 		unhideCircleBar ();
 		unhideMagicCircle ();
+		unhideBotAura ();
 		hideGauge ();
 		isRitual = false;
 		addWizard ();
@@ -160,9 +164,15 @@ public class GameController : MonoBehaviour {
 		magicCircle.SetActive (false);
 	}
 
+	void hideBotAura() {
+		clearElement ();
+		botAura.SetActive (false);
+	}
+
 	void unhideCircleBar () { circleBar.SetActive (true); }
 	void unhideGauge () { gaugeBar.SetActive (true); }
 	void unhideMagicCircle() { magicCircle.SetActive (true); }
+	void unhideBotAura(){ botAura.SetActive (true); }
 
 	// Update is called once per frame
 	void Update () {
