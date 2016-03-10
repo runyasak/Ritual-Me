@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour {
 	private static int checker;
 	public SpriteRenderer startScene, restartScene;
 
-	GameObject circleBar, gaugeBar, notice, magicCircle, botAura;
+	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, ritualMission_canvas;
 	bool isRitual;
 
 	public float ritualCounter;
@@ -36,6 +36,9 @@ public class GameController : MonoBehaviour {
 		notice = GameObject.Find ("Notice");
 		magicCircle = GameObject.Find ("MagicCircle");
 		botAura = GameObject.Find ("BotAura");
+		ritualMission_canvas = GameObject.Find("RitualMission_Canvas");
+
+		ritualMission_canvas.SetActive (false);
 		notice.SetActive (false);
 		hideGauge ();
 	}
@@ -74,8 +77,10 @@ public class GameController : MonoBehaviour {
 		hideMagicCircle ();
 		hideBotAura ();
 		notice.SetActive (true);
+		ritualMission_canvas.SetActive (true);
 		unhideGauge ();
 		RunnerController.instance.initiate ();
+		ritualCounter = 0;
 
 //		GaugeController.instance.startMission ();
 		isRitual = true;
@@ -98,6 +103,7 @@ public class GameController : MonoBehaviour {
 		isRitual = false;
 		addWizard ();
 		notice.SetActive (false);
+		ritualMission_canvas.SetActive (false);
 
 //		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
 //		foreach(GameObject i in temp) {
