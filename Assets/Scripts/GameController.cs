@@ -17,10 +17,11 @@ public class GameController : MonoBehaviour {
 	public bool isGameOver;
 
 	public int score;
+	public bool isRitualSuccess;
 
 	public float ritualCounter, gameCounter;
 
-	public int MAX_ritualTime = 15;
+	private GameObject[] wizardArr;
 
 	static Camera cam = Camera.main;
 	static float height = 2f * cam.orthographicSize;
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		isRitualSuccess = false;
 		Time.timeScale = 0;
 		startScene.enabled = true;
 		restartScene.enabled = false;
@@ -74,8 +76,8 @@ public class GameController : MonoBehaviour {
 	void ritualPhaseCounter(){
 		if (isRitual) {
 			ritualCounter += Time.deltaTime;
-
-			if (ritualCounter >= MAX_ritualTime) {
+		
+			if (ritualCounter >= 15) {
 				stopRitualPhase ();
 				ritualCounter = 0;
 			}
@@ -92,7 +94,20 @@ public class GameController : MonoBehaviour {
 		RunnerController.instance.initiate ();
 		ritualCounter = 0;
 
+		wizardRitualPhase ();
+
+
+
+//		GaugeController.instance.startMission ();
 		isRitual = true;
+
+//		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
+//		foreach(GameObject i in temp){
+//			if (WitchController.instance != i) {
+//				i.GetComponent<WitchController> ().isFreeze = true;
+//			}
+//			Debug.Log ("isFreeze      "+      i.GetComponent<WitchController> ().isFreeze);
+//		}
 		MovieController.instance.playRitual ();
 	}
 
@@ -102,6 +117,7 @@ public class GameController : MonoBehaviour {
 		unhideBotAura ();
 		hideGauge ();
 		isRitual = false;
+		wizardNotRitualPhase ();
 		addWizard ();
 		notice.SetActive (false);
 		ritualMission_canvas.SetActive (false);
@@ -146,18 +162,24 @@ public class GameController : MonoBehaviour {
 		
 	void addWizard(){
 
-		var instantElement_1 = Instantiate (wizard, new Vector3(0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;
+		if (isRitualSuccess) {
+			WitchController.instance.hrBar.GetComponent<Image> ().color = Color.red;
+			WitchController.instance.lrText.SetActive (true);
+			WitchController.instance.hrText.SetActive (false);
+			var instantElement_1 = Instantiate (wizard, new Vector3 (0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;	
+		} else {
+			WitchController.instance.curHR = 20;
+		}
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-		Debug.Log ("lllllllllllllll"+temp.Length);
+//		Debug.Log ("lllllllllllllll"+temp.Length);
 		int j = 1;
 
 		foreach(GameObject i in temp){
 			float x = (-width/2) +((width) / (temp.Length + 1))*j;
 			i.GetComponent<Transform>().position = new Vector3 (x, i.transform.position.y, 0.1f);
-			Debug.Log ("ppppppppppppppppppppppppp"+i.GetComponent<Transform>().position);
+//			Debug.Log ("ppppppppppppppppppppppppp"+i.GetComponent<Transform>().position);
 			j += 1;
 		}
-
 	}
 
 	void hideCircleBar () {
@@ -193,6 +215,27 @@ public class GameController : MonoBehaviour {
 			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
 			score += 10*wizardArr.Length;
 			gameCounter = 0;
+		}
+	}
+
+	void wizardRitualPhase(){
+		wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
+		foreach(GameObject i in wizardArr){
+			if (!i.GetComponent<WitchController> ().isRitual) {
+				i.GetComponent<WitchController> ().gameObject.SetActive (false);
+			} else {
+				i.GetComponent<WitchController> ().curHR = 99;
+			}
+			i.GetComponent<WitchController> ().isFreeze = true;
+		}
+	}
+
+	void wizardNotRitualPhase(){
+//		GameObject[] wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
+		foreach(GameObject i in wizardArr){
+			i.GetComponent<WitchController> ().isRitual = false;
+			i.GetComponent<WitchController> ().isFreeze = false;
+			i.GetComponent<WitchController> ().gameObject.SetActive (true);
 		}
 	}
 

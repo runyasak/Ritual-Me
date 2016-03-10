@@ -99,7 +99,7 @@ public class RunnerController : MonoBehaviour {
 				} else if (hit.transform.tag == "Domain" && countTalkElement == 0) {
 					countTalkElement++;
 					hitTemp = hit.transform;
-				} else if (hit.transform.tag == "Wizard") {
+				} else if (hit.transform.tag == "Witch") {
 					showMissText ();
 					countMiss++;
 					countCombo = 0;
@@ -118,7 +118,7 @@ public class RunnerController : MonoBehaviour {
 			RaycastHit hit; Ray ray;
 			ray = new Ray (transform.position, new Vector3(0f,0f,1.0f));
 			if (Physics.Raycast (ray, out hit, 100)) {
-				if (hit.transform.tag == "Wizard" && countTalkElement == 1) {
+				if (hit.transform.tag == "Witch" && countTalkElement == 1) {
 					showTalkEffect ();
 					countTalkElement++;
 				} else if (hit.transform.tag == "Domain" && countTalkElement == 2) {
@@ -143,10 +143,10 @@ public class RunnerController : MonoBehaviour {
 					showPerfectText ();
 					countPerfect++;
 					countCombo++;
-					Debug.Log (countPerfect);
+//					Debug.Log (countPerfect);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;
-					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+//					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
 				}
 
 				if (countTalkElement > 0 && countTalkElement < 3) {//&& hit.transform.tag != "Untagged" && hit.transform.tag != "Element"){

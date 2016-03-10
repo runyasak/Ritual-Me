@@ -12,8 +12,6 @@ public class GaugeController : MonoBehaviour {
 	private float timeForCreate;
 	public int maxElement;
 
-
-
 	public TalkElement talkElement;
 
 	void Start () {
@@ -48,55 +46,54 @@ public class GaugeController : MonoBehaviour {
 			CreateElement ();
 		}
 	}
-		
-	void perfectMissionController () {
-		Debug.Log ("Perfect Mission");
-		GameController.instance.assignMissionText ("Perfect: " + (5 - RunnerController.instance.countPerfect).ToString ());
-		if(RunnerController.instance.countPerfect >= 5){
-			GameController.instance.stopRitualPhase ();
-			//success
-			GameController.instance.score += 100;
-		}
-	}
-
-	void missMissionController () {
-		Debug.Log ("Miss Mission");
-		GameController.instance.assignMissionText ("Miss: " + (3 - RunnerController.instance.countMiss).ToString ());
-		if(RunnerController.instance.countMiss >= 3){
-			GameController.instance.stopRitualPhase ();
-			//success
-			Debug.Log (RunnerController.instance.countMiss);
-		} else if (GameController.instance.ritualCounter >= GameController.instance.MAX_ritualTime) {
-			GameController.instance.score += 100;
-		}
-	}
-
-	void comboMissionController () {
-		Debug.Log ("Combo Mission");
-		GameController.instance.assignMissionText ("Combo 3x: " + (RunnerController.instance.countCombo).ToString ());
-		Debug.Log (GameController.instance.ritualCounter.ToString ());
-		GameController.instance.assignTimerText ("Time: " + ((int) (GameController.instance.MAX_ritualTime - GameController.instance.ritualCounter)).ToString());
-		if(RunnerController.instance.countCombo == 3){
-			GameController.instance.stopRitualPhase ();
-			//success
-			GameController.instance.score += 100;
-			Debug.Log (RunnerController.instance.countMiss);
-		}
-	}
 
 	public void startMission (){
-		
-		if(RunnerController.instance.randMission == 0) {
-			//PERFECT MISSION
-			perfectMissionController ();
-		} else if(RunnerController.instance.randMission == 1) {
-			//MISS MISSION
-			missMissionController ();
-		} else if(RunnerController.instance.randMission == 2) {
-			//COMBO MISSION
-			comboMissionController ();
+		GameController.instance.assignMissionText ("Combo x5: " + (RunnerController.instance.countCombo).ToString ());
+		GameController.instance.assignTimerText ("Time: " + ((int) (15 - GameController.instance.ritualCounter)).ToString());
+		if(RunnerController.instance.countCombo == 5){
+			GameController.instance.isRitualSuccess = true;
+			GameController.instance.stopRitualPhase ();
+			GameController.instance.score += 100;
+		}else if (RunnerController.instance.countMiss >= 3 || GameController.instance.ritualCounter >= 15) {
+			GameController.instance.isRitualSuccess = false;
+			GameController.instance.stopRitualPhase ();
 		}
 	}
+
+
+//	public void startMission (){
+//		
+//		if(RunnerController.instance.randMission == 0){
+//			Debug.Log ("Perfect Mission");
+//			GameController.instance.assignMissionText ("Perfect: " + (5 - RunnerController.instance.countPerfect).ToString ());
+//			if(RunnerController.instance.countPerfect >= 5){
+//				GameController.instance.stopRitualPhase ();
+//				//success
+//				GameController.instance.score += 100;
+//			}
+//		} else if(RunnerController.instance.randMission == 1){
+//			Debug.Log ("Miss Mission");
+//			GameController.instance.assignMissionText ("Miss: " + (3 - RunnerController.instance.countMiss).ToString ());
+//			if(RunnerController.instance.countMiss >= 3){
+//				GameController.instance.stopRitualPhase ();
+//				//success
+//				Debug.Log (RunnerController.instance.countMiss);
+//			} else if (GameController.instance.ritualCounter >= 15) {
+//				GameController.instance.score += 100;
+//			}
+//		} else if(RunnerController.instance.randMission == 2){
+//			Debug.Log ("Combo Mission");
+//			GameController.instance.assignMissionText ("Combo 3x: " + (RunnerController.instance.countCombo).ToString ());
+//			Debug.Log (GameController.instance.ritualCounter.ToString ());
+//			GameController.instance.assignTimerText ("Time: " + ((int) (15 - GameController.instance.ritualCounter)).ToString());
+//			if(RunnerController.instance.countCombo == 3){
+//				GameController.instance.stopRitualPhase ();
+//				//success
+//				GameController.instance.score += 100;
+//				Debug.Log (RunnerController.instance.countMiss);
+//			}
+//		}
+//	}
 
 	void CreateElement(){
 		float randomPosition = Random.Range (-7f, 7f);
@@ -120,9 +117,10 @@ public class GaugeController : MonoBehaviour {
 			}
 		}
 
-		int rand = Random.Range (0, elementArr.Length);	
+		int[] preferWizard = WitchController.instance.GetComponent<WitchController> ().preferNumber;
+		int prefer_rand = Random.Range (0, preferWizard.Length);	
 		if ((distanceCheck == arr.Length) && timeForCreate > 200 && arr.Length < maxElement) {
-			GameObject instantElement = Instantiate (elementArr[rand], new Vector3(randomPosition, this.transform.position.y, -1)
+			GameObject instantElement = Instantiate (elementArr[preferWizard[prefer_rand]], new Vector3(randomPosition, this.transform.position.y, -1)
 				, Quaternion.identity) as GameObject;
 			timeForCreate = 0;
 		}
