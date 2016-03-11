@@ -1,0 +1,2060 @@
+fileFormatVersion: 2
+guid: 5370e1e6f86f05e48b947b8f439427dc
+timeCreated: 1457653550
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: wizard_1-img_0
+    21300002: wizard_1-img_1
+    21300004: wizard_1-img_2
+    21300006: wizard_1-img_3
+    21300008: wizard_1-img_4
+    21300010: wizard_1-img_5
+    21300012: wizard_1-img_6
+    21300014: wizard_1-img_7
+    21300016: wizard_1-img_8
+    21300018: wizard_1-img_9
+    21300020: wizard_1-img_10
+    21300022: wizard_1-img_11
+    21300024: wizard_1-img_12
+    21300026: wizard_1-img_13
+    21300028: wizard_1-img_14
+    21300030: wizard_1-img_15
+    21300032: wizard_1-img_16
+    21300034: wizard_1-img_17
+    21300036: wizard_1-img_18
+    21300038: wizard_1-img_19
+    21300040: wizard_1-img_20
+    21300042: wizard_1-img_21
+    21300044: wizard_1-img_22
+    21300046: wizard_1-img_23
+    21300048: wizard_1-img_24
+    21300050: wizard_1-img_25
+    21300052: wizard_1-img_26
+    21300054: wizard_1-img_27
+    21300056: wizard_1-img_28
+    21300058: wizard_1-img_29
+    21300060: wizard_1-img_30
+    21300062: wizard_1-img_31
+    21300064: wizard_1-img_32
+    21300066: wizard_1-img_33
+    21300068: wizard_1-img_34
+    21300070: wizard_1-img_35
+    21300072: wizard_1-img_36
+    21300074: wizard_1-img_37
+    21300076: wizard_1-img_38
+    21300078: wizard_1-img_39
+    21300080: wizard_1-img_40
+    21300082: wizard_1-img_41
+    21300084: wizard_1-img_42
+    21300086: wizard_1-img_43
+    21300088: wizard_1-img_44
+    21300090: wizard_1-img_45
+    21300092: wizard_1-img_46
+    21300094: wizard_1-img_47
+    21300096: wizard_1-img_48
+    21300098: wizard_1-img_49
+    21300100: wizard_1-img_50
+    21300102: wizard_1-img_51
+    21300104: wizard_1-img_52
+    21300106: wizard_1-img_53
+    21300108: wizard_1-img_54
+    21300110: wizard_1-img_55
+    21300112: wizard_1-img_56
+    21300114: wizard_1-img_57
+    21300116: wizard_1-img_58
+    21300118: wizard_1-img_59
+    21300120: wizard_1-img_60
+    21300122: wizard_1-img_61
+    21300124: wizard_1-img_62
+    21300126: wizard_1-img_63
+    21300128: wizard_1-img_64
+    21300130: wizard_1-img_65
+    21300132: wizard_1-img_66
+    21300134: wizard_1-img_67
+    21300136: wizard_1-img_68
+    21300138: wizard_1-img_69
+    21300140: wizard_1-img_70
+    21300142: wizard_1-img_71
+    21300144: wizard_1-img_72
+    21300146: wizard_1-img_73
+    21300148: wizard_1-img_74
+    21300150: wizard_1-img_75
+    21300152: wizard_1-img_76
+    21300154: wizard_1-img_77
+    21300156: wizard_1-img_78
+    21300158: wizard_1-img_79
+    21300160: wizard_1-img_80
+    21300162: wizard_1-img_81
+    21300164: wizard_1-img_82
+    21300166: wizard_1-img_83
+    21300168: wizard_1-img_84
+    21300170: wizard_1-img_85
+    21300172: wizard_1-img_86
+    21300174: wizard_1-img_87
+    21300176: wizard_1-img_88
+    21300178: wizard_1-img_89
+    21300180: wizard_1-img_90
+    21300182: wizard_1-img_91
+    21300184: wizard_1-img_92
+    21300186: wizard_1-img_93
+    21300188: wizard_1-img_94
+    21300190: wizard_1-img_95
+    21300192: wizard_1-img_96
+    21300194: wizard_1-img_97
+    21300196: wizard_1-img_98
+    21300198: wizard_1-img_99
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: wizard_1-img_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 845
+        width: 58
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 27.5}
+        - {x: 18, y: 45.5}
+        - {x: -16, y: 45.5}
+        - {x: -29, y: 29.5}
+        - {x: -29, y: -27.5}
+        - {x: -25, y: -44.5}
+        - {x: -21, y: -45.5}
+        - {x: 10, y: -45.5}
+        - {x: 18, y: -41.5}
+        - {x: 29, y: -29.5}
+        - {x: 29, y: 14.5}
+    - name: wizard_1-img_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 846
+        width: 61
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 46.5}
+        - {x: -30.5, y: 45.5}
+        - {x: -30.5, y: -37.5}
+        - {x: -28.5, y: -46.5}
+        - {x: 7.5, y: -46.5}
+        - {x: 30.5, y: -36.5}
+        - {x: 30.5, y: 33.5}
+        - {x: 25.5, y: 46.5}
+    - name: wizard_1-img_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 845
+        width: 57
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 47.5}
+        - {x: -28.5, y: -47.5}
+        - {x: 21.5, y: -47.5}
+        - {x: 28.5, y: -43.5}
+        - {x: 28.5, y: 39.5}
+        - {x: 23.5, y: 47.5}
+    - name: wizard_1-img_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 845
+        width: 60
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 47}
+        - {x: -10, y: 47}
+        - {x: -30, y: 21}
+        - {x: -30, y: -39}
+        - {x: -29, y: -45}
+        - {x: -24, y: -47}
+        - {x: 22, y: -47}
+        - {x: 30, y: -33}
+        - {x: 30, y: 37}
+        - {x: 27, y: 45}
+    - name: wizard_1-img_4
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 846
+        width: 59
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 46.5}
+        - {x: -11.5, y: 45.5}
+        - {x: -26.5, y: 26.5}
+        - {x: -29.5, y: 7.5}
+        - {x: -29.5, y: -2.5}
+        - {x: -23.5, y: -8.5}
+        - {x: -29.5, y: -9.5}
+        - {x: -29.5, y: -33.5}
+        - {x: -26.5, y: -44.5}
+        - {x: -14.5, y: -46.5}
+        - {x: 14.5, y: -46.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 29.5, y: 36.5}
+        - {x: 19.5, y: 46.5}
+    - name: wizard_1-img_5
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 846
+        width: 58
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 46}
+        - {x: -29, y: 24}
+        - {x: -29, y: -25}
+        - {x: -19, y: -46}
+        - {x: 22, y: -46}
+        - {x: 29, y: -21}
+        - {x: 29, y: 39}
+        - {x: 24, y: 46}
+    - name: wizard_1-img_6
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 849
+        width: 65
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 44.5}
+        - {x: -11.5, y: 44.5}
+        - {x: -20.5, y: 42.5}
+        - {x: -32.5, y: 9.5}
+        - {x: -32.5, y: -30.5}
+        - {x: -11.5, y: -44.5}
+        - {x: 25.5, y: -44.5}
+        - {x: 28.5, y: -38.5}
+        - {x: 32.5, y: -12.5}
+        - {x: 32.5, y: 34.5}
+    - name: wizard_1-img_7
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 849
+        width: 68
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 44.5}
+        - {x: -33, y: 35.5}
+        - {x: -34, y: 28.5}
+        - {x: -34, y: -26.5}
+        - {x: -25, y: -27.5}
+        - {x: -15, y: -40.5}
+        - {x: -11, y: -44.5}
+        - {x: 22, y: -44.5}
+        - {x: 34, y: -25.5}
+        - {x: 34, y: 44.5}
+    - name: wizard_1-img_8
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 846
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 45}
+        - {x: -30.5, y: 18}
+        - {x: -30.5, y: -23}
+        - {x: -29.5, y: -26}
+        - {x: -21.5, y: -25}
+        - {x: -12.5, y: -45}
+        - {x: 28.5, y: -45}
+        - {x: 30.5, y: -41}
+        - {x: 30.5, y: 45}
+    - name: wizard_1-img_9
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 846
+        width: 62
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: -17.5}
+        - {x: 27, y: -20.5}
+        - {x: 31, y: -17.5}
+        - {x: 31, y: 45.5}
+        - {x: -18, y: 45.5}
+        - {x: -25, y: 41.5}
+        - {x: -31, y: 15.5}
+        - {x: -31, y: -24.5}
+        - {x: -23, y: -29.5}
+        - {x: -19, y: -29.5}
+        - {x: -16, y: -16.5}
+        - {x: -14, y: -40.5}
+        - {x: -11, y: -45.5}
+        - {x: 11, y: -45.5}
+        - {x: 18, y: -44.5}
+        - {x: 25, y: -25.5}
+        - {x: 15, y: -16.5}
+        - {x: 18, y: -10.5}
+    - name: wizard_1-img_10
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 847
+        width: 60
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 44.5}
+        - {x: -17, y: 44.5}
+        - {x: -30, y: 17.5}
+        - {x: -30, y: -18.5}
+        - {x: -26, y: -20.5}
+        - {x: -18, y: -20.5}
+        - {x: -16, y: -18.5}
+        - {x: -16, y: -16.5}
+        - {x: -18, y: -14.5}
+        - {x: -16, y: -15.5}
+        - {x: -16, y: -25.5}
+        - {x: -18, y: -44.5}
+        - {x: 16, y: -44.5}
+        - {x: 30, y: -29.5}
+        - {x: 30, y: 41.5}
+    - name: wizard_1-img_11
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 848
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 43.5}
+        - {x: -22.5, y: 43.5}
+        - {x: -27.5, y: 42.5}
+        - {x: -28.5, y: 36.5}
+        - {x: -28.5, y: -28.5}
+        - {x: -15.5, y: -43.5}
+        - {x: 20.5, y: -43.5}
+        - {x: 28.5, y: -28.5}
+        - {x: 28.5, y: 36.5}
+        - {x: 26.5, y: 41.5}
+    - name: wizard_1-img_12
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 899
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_13
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 899
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_14
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 899
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_15
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 899
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_16
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 899
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_17
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 896
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_18
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 883
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_19
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 883
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_20
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 883
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_21
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 883
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_22
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 883
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_23
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 880
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 730
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 45.5}
+        - {x: -29.5, y: -45.5}
+        - {x: 29.5, y: -45.5}
+        - {x: 29.5, y: 45.5}
+    - name: wizard_1-img_25
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 735
+        width: 57
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 40}
+        - {x: -28.5, y: 14}
+        - {x: -28.5, y: -40}
+        - {x: 15.5, y: -40}
+        - {x: 28.5, y: -11}
+        - {x: 28.5, y: 35}
+        - {x: 24.5, y: 40}
+    - name: wizard_1-img_26
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 738
+        width: 60
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 37.5}
+        - {x: -30, y: 17.5}
+        - {x: -30, y: -29.5}
+        - {x: -20, y: -37.5}
+        - {x: 13, y: -37.5}
+        - {x: 30, y: -23.5}
+        - {x: 30, y: 37.5}
+    - name: wizard_1-img_27
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 731
+        width: 63
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 43}
+        - {x: -31.5, y: 12}
+        - {x: -31.5, y: -3}
+        - {x: -22.5, y: -11}
+        - {x: -17.5, y: -10}
+        - {x: -9.5, y: -4}
+        - {x: -15.5, y: -8}
+        - {x: -23.5, y: -19}
+        - {x: -25.5, y: -28}
+        - {x: -13.5, y: -40}
+        - {x: -7.5, y: -43}
+        - {x: 14.5, y: -43}
+        - {x: 31.5, y: -30}
+        - {x: 31.5, y: 41}
+        - {x: 30.5, y: 43}
+    - name: wizard_1-img_28
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 729
+        width: 60
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 45.5}
+        - {x: -27, y: 15.5}
+        - {x: -30, y: 1.5}
+        - {x: -30, y: -8.5}
+        - {x: -24, y: -13.5}
+        - {x: -21, y: -12.5}
+        - {x: -16, y: -10.5}
+        - {x: -19, y: -16.5}
+        - {x: -28, y: -31.5}
+        - {x: -25, y: -44.5}
+        - {x: -15, y: -45.5}
+        - {x: 18, y: -45.5}
+        - {x: 30, y: -35.5}
+        - {x: 30, y: 45.5}
+    - name: wizard_1-img_29
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 728
+        width: 58
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 46}
+        - {x: -29, y: 36}
+        - {x: -29, y: -16}
+        - {x: -20, y: -45}
+        - {x: -18, y: -46}
+        - {x: 21, y: -46}
+        - {x: 29, y: -35}
+        - {x: 29, y: 44}
+        - {x: 25, y: 46}
+    - name: wizard_1-img_30
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 731
+        width: 60
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 44.5}
+        - {x: -28, y: 27.5}
+        - {x: -30, y: 14.5}
+        - {x: -30, y: -20.5}
+        - {x: -29, y: -21.5}
+        - {x: -19, y: -22.5}
+        - {x: -16, y: -18.5}
+        - {x: -12, y: -38.5}
+        - {x: -10, y: -44.5}
+        - {x: 14, y: -44.5}
+        - {x: 26, y: -37.5}
+        - {x: 30, y: -16.5}
+        - {x: 30, y: 44.5}
+    - name: wizard_1-img_31
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 736
+        width: 66
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 39.5}
+        - {x: -33, y: 7.5}
+        - {x: -33, y: -23.5}
+        - {x: -28, y: -37.5}
+        - {x: -27, y: -39.5}
+        - {x: 8, y: -39.5}
+        - {x: 14, y: -37.5}
+        - {x: 33, y: -1.5}
+        - {x: 33, y: 39.5}
+    - name: wizard_1-img_32
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 735
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 37}
+        - {x: -34.5, y: 7}
+        - {x: -34.5, y: -17}
+        - {x: -25.5, y: -37}
+        - {x: 9.5, y: -37}
+        - {x: 18.5, y: -35}
+        - {x: 34.5, y: -3}
+        - {x: 34.5, y: 33}
+        - {x: 33.5, y: 37}
+    - name: wizard_1-img_33
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 732
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 40}
+        - {x: -32, y: 30}
+        - {x: -32, y: -40}
+        - {x: 11, y: -40}
+        - {x: 32, y: 6}
+        - {x: 32, y: 39}
+        - {x: 28, y: 40}
+    - name: wizard_1-img_34
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 729
+        width: 58
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 43}
+        - {x: -13, y: 43}
+        - {x: -29, y: 27}
+        - {x: -29, y: -41}
+        - {x: -27, y: -43}
+        - {x: 22, y: -43}
+        - {x: 29, y: 1}
+        - {x: 29, y: 40}
+        - {x: 27, y: 42}
+    - name: wizard_1-img_35
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 728
+        width: 55
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 44.5}
+        - {x: -27.5, y: 29.5}
+        - {x: -27.5, y: -39.5}
+        - {x: -22.5, y: -44.5}
+        - {x: 27.5, y: -44.5}
+        - {x: 27.5, y: 44.5}
+    - name: wizard_1-img_36
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 771
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_37
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 771
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_38
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 771
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_39
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 771
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_40
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 771
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_41
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 768
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_42
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 621
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 38.5}
+        - {x: -19.5, y: 33.5}
+        - {x: -24.5, y: 12.5}
+        - {x: -24.5, y: 5.5}
+        - {x: -23.5, y: 3.5}
+        - {x: -24.5, y: 6.5}
+        - {x: -26.5, y: 14.5}
+        - {x: -29.5, y: 21.5}
+        - {x: -39.5, y: 19.5}
+        - {x: -39.5, y: 1.5}
+        - {x: -30.5, y: -38.5}
+        - {x: 22.5, y: -38.5}
+        - {x: 39.5, y: -14.5}
+        - {x: 39.5, y: 19.5}
+        - {x: 24.5, y: 38.5}
+    - name: wizard_1-img_43
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 623
+        width: 84
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 36.5}
+        - {x: -42, y: 25.5}
+        - {x: -42, y: -36.5}
+        - {x: 32, y: -36.5}
+        - {x: 42, y: -11.5}
+        - {x: 42, y: 12.5}
+        - {x: 17, y: 36.5}
+    - name: wizard_1-img_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 626
+        width: 65
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 33.5}
+        - {x: -26.5, y: 26.5}
+        - {x: -32.5, y: -0.5}
+        - {x: -32.5, y: -23.5}
+        - {x: -26.5, y: -33.5}
+        - {x: 12.5, y: -33.5}
+        - {x: 32.5, y: -25.5}
+        - {x: 32.5, y: 29.5}
+        - {x: 15.5, y: 33.5}
+    - name: wizard_1-img_45
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 629
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.5, y: 30.5}
+        - {x: -19.5, y: 30.5}
+        - {x: -27.5, y: 25.5}
+        - {x: -27.5, y: -30.5}
+        - {x: 19.5, y: -30.5}
+        - {x: 27.5, y: -28.5}
+        - {x: 27.5, y: 16.5}
+        - {x: 20.5, y: 29.5}
+    - name: wizard_1-img_46
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 628
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 30.5}
+        - {x: -27.5, y: 10.5}
+        - {x: -27.5, y: -29.5}
+        - {x: -23.5, y: -30.5}
+        - {x: 17.5, y: -30.5}
+        - {x: 27.5, y: -28.5}
+        - {x: 27.5, y: 0.5}
+        - {x: 11.5, y: 30.5}
+    - name: wizard_1-img_47
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 615
+        width: 77
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: 45.5}
+        - {x: -25.5, y: 45.5}
+        - {x: -38.5, y: 19.5}
+        - {x: -38.5, y: -18.5}
+        - {x: -20.5, y: -45.5}
+        - {x: 25.5, y: -45.5}
+        - {x: 35.5, y: -27.5}
+        - {x: 38.5, y: -19.5}
+        - {x: 38.5, y: 29.5}
+    - name: wizard_1-img_48
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 620
+        width: 83
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 40.5}
+        - {x: -41.5, y: 6.5}
+        - {x: -41.5, y: -15.5}
+        - {x: -22.5, y: -39.5}
+        - {x: -20.5, y: -40.5}
+        - {x: 32.5, y: -40.5}
+        - {x: 41.5, y: -26.5}
+        - {x: 41.5, y: 21.5}
+        - {x: 18.5, y: 40.5}
+    - name: wizard_1-img_49
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 626
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 34}
+        - {x: -36, y: 15}
+        - {x: -36, y: -27}
+        - {x: -35, y: -29}
+        - {x: -29, y: -34}
+        - {x: 25, y: -34}
+        - {x: 36, y: -29}
+        - {x: 36, y: 17}
+        - {x: 27, y: 34}
+    - name: wizard_1-img_50
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 626
+        width: 60
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 34}
+        - {x: -30, y: -5}
+        - {x: -30, y: -34}
+        - {x: 30, y: -34}
+        - {x: 30, y: 30}
+        - {x: 24, y: 34}
+    - name: wizard_1-img_51
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 626
+        width: 60
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 34}
+        - {x: -18, y: 30}
+        - {x: -30, y: -12}
+        - {x: -30, y: -34}
+        - {x: 18, y: -34}
+        - {x: 30, y: -28}
+        - {x: 30, y: 20}
+        - {x: 16, y: 34}
+    - name: wizard_1-img_52
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 668
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_53
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 668
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_54
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 668
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_55
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 668
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_56
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 652
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_57
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 649
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_58
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 652
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_59
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 649
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 542
+        width: 965
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 344.5, y: -18.5}
+        - {x: 346.5, y: -19.5}
+        - {x: 370.5, y: -20.5}
+        - {x: 374.5, y: -13.5}
+        - {x: 373.5, y: -11.5}
+        - {x: 371.5, y: -9.5}
+        - {x: 365.5, y: -6.5}
+        - {x: 334.5, y: -7.5}
+        - {x: 280.5, y: -9.5}
+        - {x: 277.5, y: -10.5}
+        - {x: 277.5, y: -13.5}
+        - {x: 281.5, y: -19.5}
+        - {x: 285.5, y: -20.5}
+        - {x: 295.5, y: -20.5}
+        - {x: 305.5, y: -19.5}
+        - {x: 308.5, y: -18.5}
+        - {x: 311.5, y: -20.5}
+        - {x: 273.5, y: -20.5}
+        - {x: 275.5, y: -18.5}
+        - {x: 277.5, y: -13.5}
+        - {x: 277.5, y: -7.5}
+        - {x: 241.5, y: -4.5}
+        - {x: 239.5, y: -11.5}
+        - {x: 239.5, y: -15.5}
+        - {x: 242.5, y: -20.5}
+        - {x: 239.5, y: -17.5}
+        - {x: 239.5, y: -11.5}
+        - {x: 238.5, y: -4.5}
+        - {x: 482.5, y: 20.5}
+        - {x: 482.5, y: 23.5}
+        - {x: 173.5, y: 23.5}
+        - {x: -482.5, y: -20.5}
+        - {x: -482.5, y: -23.5}
+        - {x: 482.5, y: -23.5}
+        - {x: 482.5, y: -20.5}
+        - {x: 342.5, y: -20.5}
+      - - {x: -359.5, y: 23.5}
+        - {x: -359.5, y: -0.5}
+        - {x: -354.5, y: -11.5}
+        - {x: -319.5, y: -11.5}
+        - {x: -315.5, y: -3.5}
+        - {x: -315.5, y: 21.5}
+        - {x: -319.5, y: 23.5}
+      - - {x: -404.5, y: 23.5}
+        - {x: -405.5, y: 20.5}
+        - {x: -405.5, y: -0.5}
+        - {x: -398.5, y: -7.5}
+        - {x: -394.5, y: -8.5}
+        - {x: -376.5, y: -8.5}
+        - {x: -368.5, y: -2.5}
+        - {x: -368.5, y: 17.5}
+        - {x: -370.5, y: 23.5}
+      - - {x: 192.5, y: 6.5}
+        - {x: 190.5, y: 2.5}
+        - {x: 190.5, y: -6.5}
+        - {x: 191.5, y: -7.5}
+        - {x: 235.5, y: -7.5}
+        - {x: 235.5, y: 6.5}
+      - - {x: 235.5, y: 6.5}
+        - {x: 235.5, y: -3.5}
+        - {x: 236.5, y: -6.5}
+        - {x: 237.5, y: -7.5}
+        - {x: 245.5, y: -7.5}
+        - {x: 249.5, y: -5.5}
+        - {x: 250.5, y: -1.5}
+        - {x: 250.5, y: 4.5}
+        - {x: 244.5, y: 6.5}
+      - - {x: 251.5, y: 6.5}
+        - {x: 250.5, y: 3.5}
+        - {x: 250.5, y: -5.5}
+        - {x: 256.5, y: -7.5}
+        - {x: 281.5, y: -7.5}
+        - {x: 296.5, y: -6.5}
+        - {x: 297.5, y: -4.5}
+        - {x: 297.5, y: 4.5}
+        - {x: 283.5, y: 6.5}
+      - - {x: 299.5, y: 7.5}
+        - {x: 299.5, y: -7.5}
+        - {x: 450.5, y: -7.5}
+        - {x: 457.5, y: -5.5}
+        - {x: 457.5, y: 7.5}
+      - - {x: -446.5, y: 23.5}
+        - {x: -446.5, y: 0.5}
+        - {x: -443.5, y: -5.5}
+        - {x: -414.5, y: -5.5}
+        - {x: -413.5, y: -3.5}
+        - {x: -413.5, y: 15.5}
+        - {x: -415.5, y: 23.5}
+      - - {x: -469.5, y: 20.5}
+        - {x: -473.5, y: 15.5}
+        - {x: -473.5, y: 3.5}
+        - {x: -468.5, y: 1.5}
+        - {x: -456.5, y: 1.5}
+        - {x: -454.5, y: 3.5}
+        - {x: -454.5, y: 18.5}
+        - {x: -459.5, y: 20.5}
+      - - {x: -252.5, y: 17.5}
+        - {x: -291.5, y: 17.5}
+        - {x: -291.5, y: 5.5}
+        - {x: -290.5, y: 3.5}
+        - {x: -253.5, y: 3.5}
+        - {x: -250.5, y: 5.5}
+        - {x: -250.5, y: 14.5}
+      - - {x: -248.5, y: 17.5}
+        - {x: -248.5, y: 3.5}
+        - {x: -208.5, y: 3.5}
+        - {x: -206.5, y: 5.5}
+        - {x: -206.5, y: 14.5}
+        - {x: -214.5, y: 17.5}
+      - - {x: 234.5, y: 20.5}
+        - {x: 228.5, y: 19.5}
+        - {x: 226.5, y: 15.5}
+        - {x: 225.5, y: 18.5}
+        - {x: 223.5, y: 20.5}
+        - {x: 220.5, y: 19.5}
+        - {x: 220.5, y: 8.5}
+        - {x: 227.5, y: 6.5}
+        - {x: 244.5, y: 6.5}
+        - {x: 246.5, y: 8.5}
+        - {x: 247.5, y: 13.5}
+        - {x: 247.5, y: 17.5}
+        - {x: 242.5, y: 20.5}
+      - - {x: 189.5, y: 20.5}
+        - {x: 189.5, y: 8.5}
+        - {x: 220.5, y: 8.5}
+        - {x: 220.5, y: 15.5}
+        - {x: 219.5, y: 20.5}
+    - name: wizard_1-img_61
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 562
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_62
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 559
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 17}
+        - {x: -16.5, y: 15}
+        - {x: -16.5, y: -13}
+        - {x: -15.5, y: -17}
+        - {x: 16.5, y: -17}
+        - {x: 16.5, y: 14}
+        - {x: 12.5, y: 17}
+      - - {x: -7.5, y: -7}
+        - {x: -7.5, y: 9}
+        - {x: 5.5, y: 9}
+        - {x: 10.5, y: -5}
+    - name: wizard_1-img_63
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 556
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -14}
+        - {x: -14, y: -20}
+        - {x: 15, y: -20}
+        - {x: 20, y: -15}
+        - {x: 20, y: 11}
+        - {x: 12, y: 20}
+      - - {x: -6, y: -12}
+        - {x: -13, y: 6}
+        - {x: 8, y: 11}
+        - {x: 13, y: -7}
+    - name: wizard_1-img_64
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 430
+        width: 65
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 47.5}
+        - {x: -17.5, y: 47.5}
+        - {x: -31.5, y: 38.5}
+        - {x: -32.5, y: 36.5}
+        - {x: -32.5, y: -25.5}
+        - {x: -27.5, y: -47.5}
+        - {x: 25.5, y: -47.5}
+        - {x: 32.5, y: -36.5}
+        - {x: 32.5, y: 18.5}
+        - {x: 24.5, y: 44.5}
+    - name: wizard_1-img_65
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 430
+        width: 57
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 47}
+        - {x: -28.5, y: 41}
+        - {x: -28.5, y: -47}
+        - {x: 25.5, y: -47}
+        - {x: 28.5, y: -43}
+        - {x: 28.5, y: 47}
+    - name: wizard_1-img_66
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 431
+        width: 64
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 46.5}
+        - {x: -32, y: 35.5}
+        - {x: -32, y: -36.5}
+        - {x: -30, y: -44.5}
+        - {x: -24, y: -46.5}
+        - {x: 17, y: -46.5}
+        - {x: 32, y: -35.5}
+        - {x: 32, y: 17.5}
+        - {x: 25, y: 46.5}
+    - name: wizard_1-img_67
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 428
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 46.5}
+        - {x: -33.5, y: 19.5}
+        - {x: -33.5, y: -31.5}
+        - {x: -21.5, y: -46.5}
+        - {x: 17.5, y: -46.5}
+        - {x: 33.5, y: -39.5}
+        - {x: 33.5, y: 27.5}
+        - {x: 26.5, y: 46.5}
+    - name: wizard_1-img_68
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 427
+        width: 56
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 47}
+        - {x: -28, y: 36}
+        - {x: -28, y: -28}
+        - {x: -25, y: -47}
+        - {x: 18, y: -47}
+        - {x: 28, y: -39}
+        - {x: 28, y: 47}
+    - name: wizard_1-img_69
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 433
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 44}
+        - {x: -9, y: 44}
+        - {x: -22, y: 28}
+        - {x: -34, y: 13}
+        - {x: -34, y: -36}
+        - {x: -28, y: -44}
+        - {x: 16, y: -44}
+        - {x: 26, y: -37}
+        - {x: 26, y: -31}
+        - {x: 34, y: 3}
+        - {x: 34, y: 34}
+    - name: wizard_1-img_70
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 432
+        width: 62
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 46}
+        - {x: -31, y: 27}
+        - {x: -31, y: -26}
+        - {x: -24, y: -25}
+        - {x: -21, y: -22}
+        - {x: -10, y: -46}
+        - {x: 31, y: -46}
+        - {x: 31, y: 46}
+    - name: wizard_1-img_71
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 428
+        width: 63
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 46}
+        - {x: -31.5, y: 36}
+        - {x: -31.5, y: -24}
+        - {x: -16.5, y: -46}
+        - {x: 31.5, y: -46}
+        - {x: 31.5, y: 42}
+        - {x: 28.5, y: 46}
+    - name: wizard_1-img_72
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 428
+        width: 63
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 45}
+        - {x: -25.5, y: 19}
+        - {x: -31.5, y: 2}
+        - {x: -31.5, y: -28}
+        - {x: -15.5, y: -45}
+        - {x: 31.5, y: -45}
+        - {x: 31.5, y: 44}
+        - {x: 25.5, y: 45}
+    - name: wizard_1-img_73
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 430
+        width: 60
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 44}
+        - {x: -20, y: 37}
+        - {x: -28, y: 22}
+        - {x: -30, y: 17}
+        - {x: -30, y: -26}
+        - {x: -23, y: -44}
+        - {x: 17, y: -44}
+        - {x: 27, y: -40}
+        - {x: 30, y: -22}
+        - {x: 30, y: 43}
+        - {x: 27, y: 44}
+    - name: wizard_1-img_74
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 310
+        width: 60
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 46}
+        - {x: -26, y: 46}
+        - {x: -30, y: 37}
+        - {x: -30, y: -41}
+        - {x: -24, y: -45}
+        - {x: -21, y: -46}
+        - {x: 10, y: -46}
+        - {x: 30, y: -36}
+        - {x: 30, y: 35}
+        - {x: 29, y: 45}
+    - name: wizard_1-img_75
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 311
+        width: 64
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: -28.5}
+        - {x: 18, y: -17.5}
+        - {x: 19, y: -23.5}
+        - {x: 19, y: -31.5}
+        - {x: 20, y: -34.5}
+        - {x: 32, y: -37.5}
+        - {x: 32, y: 46.5}
+        - {x: -30, y: 46.5}
+        - {x: -32, y: 38.5}
+        - {x: -32, y: -19.5}
+        - {x: -19, y: -46.5}
+        - {x: 4, y: -46.5}
+        - {x: 14, y: -43.5}
+        - {x: 18, y: -39.5}
+        - {x: 19, y: -35.5}
+    - name: wizard_1-img_76
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 310
+        width: 62
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 46.5}
+        - {x: -31, y: 16.5}
+        - {x: -31, y: -33.5}
+        - {x: -29, y: -46.5}
+        - {x: 31, y: -46.5}
+        - {x: 31, y: 25.5}
+        - {x: 25, y: 46.5}
+    - name: wizard_1-img_77
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 309
+        width: 65
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 46}
+        - {x: -26.5, y: 21}
+        - {x: -30.5, y: 12}
+        - {x: -32.5, y: 5}
+        - {x: -32.5, y: -14}
+        - {x: -13.5, y: -46}
+        - {x: 29.5, y: -46}
+        - {x: 32.5, y: -33}
+        - {x: 32.5, y: 35}
+        - {x: 22.5, y: 46}
+    - name: wizard_1-img_78
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 313
+        width: 60
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 45.5}
+        - {x: -30, y: 27.5}
+        - {x: -30, y: -43.5}
+        - {x: -27, y: -45.5}
+        - {x: 24, y: -45.5}
+        - {x: 30, y: -37.5}
+        - {x: 30, y: 35.5}
+        - {x: 29, y: 45.5}
+    - name: wizard_1-img_79
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 308
+        width: 73
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 44}
+        - {x: -19.5, y: 28}
+        - {x: -36.5, y: -12}
+        - {x: -36.5, y: -33}
+        - {x: -12.5, y: -44}
+        - {x: 27.5, y: -44}
+        - {x: 33.5, y: -40}
+        - {x: 36.5, y: -16}
+        - {x: 36.5, y: 44}
+    - name: wizard_1-img_80
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 310
+        width: 67
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: 44}
+        - {x: -12.5, y: 44}
+        - {x: -32.5, y: 12}
+        - {x: -33.5, y: 8}
+        - {x: -33.5, y: -38}
+        - {x: -26.5, y: -44}
+        - {x: 25.5, y: -44}
+        - {x: 33.5, y: -18}
+        - {x: 33.5, y: 35}
+        - {x: 31.5, y: 43}
+    - name: wizard_1-img_81
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 309
+        width: 63
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 45}
+        - {x: -31.5, y: 21}
+        - {x: -31.5, y: -40}
+        - {x: -23.5, y: -45}
+        - {x: 21.5, y: -45}
+        - {x: 31.5, y: -37}
+        - {x: 31.5, y: 31}
+        - {x: 28.5, y: 45}
+    - name: wizard_1-img_82
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 309
+        width: 68
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 44.5}
+        - {x: -8, y: 44.5}
+        - {x: -22, y: 23.5}
+        - {x: -34, y: -5.5}
+        - {x: -34, y: -18.5}
+        - {x: -31, y: -22.5}
+        - {x: -18, y: -19.5}
+        - {x: -20, y: -15.5}
+        - {x: -4, y: -44.5}
+        - {x: 16, y: -44.5}
+        - {x: 19, y: -43.5}
+        - {x: 29, y: -35.5}
+        - {x: 34, y: -6.5}
+        - {x: 34, y: 34.5}
+    - name: wizard_1-img_83
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 311
+        width: 63
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 45}
+        - {x: -31.5, y: 21}
+        - {x: -31.5, y: -40}
+        - {x: -23.5, y: -45}
+        - {x: 21.5, y: -45}
+        - {x: 31.5, y: -37}
+        - {x: 31.5, y: 31}
+        - {x: 28.5, y: 45}
+    - name: wizard_1-img_84
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 174
+        width: 61
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 46}
+        - {x: -17.5, y: 46}
+        - {x: -30.5, y: 39}
+        - {x: -30.5, y: -34}
+        - {x: -28.5, y: -46}
+        - {x: 24.5, y: -46}
+        - {x: 30.5, y: -44}
+        - {x: 30.5, y: 21}
+        - {x: 26.5, y: 44}
+    - name: wizard_1-img_85
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 174
+        width: 57
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 46}
+        - {x: -28.5, y: 30}
+        - {x: -28.5, y: -46}
+        - {x: 28.5, y: -46}
+        - {x: 28.5, y: 34}
+        - {x: 19.5, y: 46}
+    - name: wizard_1-img_86
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 165
+        width: 60
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 52}
+        - {x: -30, y: 35}
+        - {x: -30, y: -18}
+        - {x: -21, y: -20}
+        - {x: -20, y: -16}
+        - {x: -20, y: -12}
+        - {x: -19, y: -11}
+        - {x: -22, y: -27}
+        - {x: -24, y: -44}
+        - {x: -20, y: -52}
+        - {x: 16, y: -52}
+        - {x: 30, y: -39}
+        - {x: 30, y: 45}
+        - {x: 27, y: 52}
+    - name: wizard_1-img_87
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 160
+        width: 74
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: -55.5}
+        - {x: 37, y: -51.5}
+        - {x: 37, y: 38.5}
+        - {x: 26, y: 55.5}
+        - {x: -20, y: 55.5}
+        - {x: -37, y: 53.5}
+        - {x: -37, y: -55.5}
+    - name: wizard_1-img_88
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 159
+        width: 69
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 57}
+        - {x: -34.5, y: 42}
+        - {x: -34.5, y: 5}
+        - {x: -31.5, y: -9}
+        - {x: -27.5, y: -9}
+        - {x: -20.5, y: -6}
+        - {x: -20.5, y: 0}
+        - {x: -21.5, y: -25}
+        - {x: -28.5, y: -36}
+        - {x: -22.5, y: -57}
+        - {x: 4.5, y: -57}
+        - {x: 34.5, y: -47}
+        - {x: 34.5, y: 57}
+    - name: wizard_1-img_89
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 161
+        width: 69
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34.5, y: 54.5}
+        - {x: 32.5, y: 56.5}
+        - {x: -13.5, y: 56.5}
+        - {x: -34.5, y: 45.5}
+        - {x: -34.5, y: -17.5}
+        - {x: -28.5, y: -55.5}
+        - {x: -24.5, y: -56.5}
+        - {x: 12.5, y: -56.5}
+        - {x: 16.5, y: -54.5}
+        - {x: 32.5, y: -32.5}
+        - {x: 34.5, y: -28.5}
+    - name: wizard_1-img_90
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 159
+        width: 75
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 54.5}
+        - {x: -37.5, y: 52.5}
+        - {x: -37.5, y: -29.5}
+        - {x: -36.5, y: -34.5}
+        - {x: -26.5, y: -54.5}
+        - {x: 15.5, y: -54.5}
+        - {x: 19.5, y: -53.5}
+        - {x: 37.5, y: -34.5}
+        - {x: 37.5, y: 31.5}
+        - {x: 28.5, y: 54.5}
+    - name: wizard_1-img_91
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 212
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_92
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 212
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_1-img_93
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 21
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 44}
+        - {x: -9, y: 44}
+        - {x: -22, y: 28}
+        - {x: -34, y: 13}
+        - {x: -34, y: -36}
+        - {x: -28, y: -44}
+        - {x: 16, y: -44}
+        - {x: 26, y: -37}
+        - {x: 26, y: -31}
+        - {x: 34, y: 3}
+        - {x: 34, y: 34}
+    - name: wizard_1-img_94
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 17
+        width: 67
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 47.5}
+        - {x: -33.5, y: 13.5}
+        - {x: -33.5, y: -40.5}
+        - {x: -16.5, y: -47.5}
+        - {x: 25.5, y: -47.5}
+        - {x: 33.5, y: -11.5}
+        - {x: 33.5, y: 39.5}
+        - {x: 26.5, y: 47.5}
+    - name: wizard_1-img_95
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 13
+        width: 63
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 48}
+        - {x: -31.5, y: 21}
+        - {x: -31.5, y: -46}
+        - {x: -29.5, y: -48}
+        - {x: 12.5, y: -48}
+        - {x: 26.5, y: -40}
+        - {x: 31.5, y: -25}
+        - {x: 31.5, y: 44}
+        - {x: 27.5, y: 48}
+    - name: wizard_1-img_96
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 7
+        width: 79
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 52.5}
+        - {x: -39.5, y: 37.5}
+        - {x: -39.5, y: -49.5}
+        - {x: -35.5, y: -52.5}
+        - {x: 32.5, y: -52.5}
+        - {x: 39.5, y: -39.5}
+        - {x: 39.5, y: 45.5}
+        - {x: 33.5, y: 52.5}
+    - name: wizard_1-img_97
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 11
+        width: 73
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35.5, y: 53.5}
+        - {x: -23.5, y: 53.5}
+        - {x: -36.5, y: 50.5}
+        - {x: -36.5, y: -14.5}
+        - {x: -29.5, y: -28.5}
+        - {x: -19.5, y: -19.5}
+        - {x: -8.5, y: -48.5}
+        - {x: -4.5, y: -53.5}
+        - {x: 15.5, y: -53.5}
+        - {x: 28.5, y: -44.5}
+        - {x: 36.5, y: -15.5}
+        - {x: 36.5, y: 50.5}
+    - name: wizard_1-img_98
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 16
+        width: 73
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34.5, y: 52.5}
+        - {x: -7.5, y: 52.5}
+        - {x: -36.5, y: 40.5}
+        - {x: -36.5, y: -9.5}
+        - {x: -34.5, y: -17.5}
+        - {x: -31.5, y: -18.5}
+        - {x: -23.5, y: -19.5}
+        - {x: -19.5, y: -13.5}
+        - {x: -11.5, y: -48.5}
+        - {x: -3.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 36.5, y: 4.5}
+        - {x: 36.5, y: 49.5}
+    - name: wizard_1-img_99
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 14
+        width: 80
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 54}
+        - {x: -40, y: 44}
+        - {x: -40, y: -17}
+        - {x: -32, y: -17}
+        - {x: -30, y: -15}
+        - {x: -27, y: -9}
+        - {x: -13, y: -51}
+        - {x: -6, y: -54}
+        - {x: 30, y: -54}
+        - {x: 38, y: -48}
+        - {x: 40, y: -31}
+        - {x: 40, y: 54}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

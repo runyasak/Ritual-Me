@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 
 	public static GameController instance;
 
-	public GameObject wizard, wizard_2;
+	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
 	public Text mission_text, timer_text, score_text;
 
 	private static int checker;
@@ -37,7 +37,13 @@ public class GameController : MonoBehaviour {
 
 		allWizard = new GameObject[] {
 			wizard,
-			wizard_2
+			wizard_2,
+			wizard_3,
+			wizard_4,
+			wizard_5,
+			wizard_6,
+			wizard_7,
+			wizard_8
 		};
 
 		cam = Camera.main;

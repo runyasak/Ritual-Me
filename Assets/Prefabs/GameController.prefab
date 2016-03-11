@@ -9,6 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 454312}
   - 114: {fileID: 11486242}
+  - 212: {fileID: 21260432}
+  - 95: {fileID: 9569792}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -28,6 +30,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &9569792
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fca18fda85d7bf5409cbeb567ef483ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11486242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,6 +60,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wizard: {fileID: 118316, guid: bcabe071564d445a78ed1207558104a5, type: 2}
   wizard_2: {fileID: 118210, guid: a7911b8fb509e5d4fb6d66d637929823, type: 2}
+  wizard_3: {fileID: 124450, guid: 609460b723bc2ab42a0b75213ce38970, type: 2}
+  wizard_4: {fileID: 132022, guid: bad1451a295d62143a58a8410d46a866, type: 2}
+  wizard_5: {fileID: 118708, guid: 8e0edc87c994c1c4a8dc7bc5a2be49b6, type: 2}
+  wizard_6: {fileID: 122422, guid: 269e7bcf235027d40a06ef1892f84562, type: 2}
+  wizard_7: {fileID: 167716, guid: f9c66b97ed7f84045ab3fe9e0e16b537, type: 2}
+  wizard_8: {fileID: 142830, guid: 9fe62af062281e941bed53ad9ea70d2f, type: 2}
   mission_text: {fileID: 0}
   timer_text: {fileID: 0}
   score_text: {fileID: 0}
@@ -51,6 +76,36 @@ MonoBehaviour:
   score: 0
   ritualCounter: 0
   gameCounter: 0
+--- !u!212 &21260432
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161332}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

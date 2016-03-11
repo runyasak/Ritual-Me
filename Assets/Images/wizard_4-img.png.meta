@@ -1,0 +1,1872 @@
+fileFormatVersion: 2
+guid: 688f59cc7c23ea1418f4cb487f86bfa5
+timeCreated: 1457654440
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: wizard_4-img_0
+    21300002: wizard_4-img_1
+    21300004: wizard_4-img_2
+    21300006: wizard_4-img_3
+    21300008: wizard_4-img_4
+    21300010: wizard_4-img_5
+    21300012: wizard_4-img_6
+    21300014: wizard_4-img_7
+    21300016: wizard_4-img_8
+    21300018: wizard_4-img_9
+    21300020: wizard_4-img_10
+    21300022: wizard_4-img_11
+    21300024: wizard_4-img_12
+    21300026: wizard_4-img_13
+    21300028: wizard_4-img_14
+    21300030: wizard_4-img_15
+    21300032: wizard_4-img_16
+    21300034: wizard_4-img_17
+    21300036: wizard_4-img_18
+    21300038: wizard_4-img_19
+    21300040: wizard_4-img_20
+    21300042: wizard_4-img_21
+    21300044: wizard_4-img_22
+    21300046: wizard_4-img_23
+    21300048: wizard_4-img_24
+    21300050: wizard_4-img_25
+    21300052: wizard_4-img_26
+    21300054: wizard_4-img_27
+    21300056: wizard_4-img_28
+    21300058: wizard_4-img_29
+    21300060: wizard_4-img_30
+    21300062: wizard_4-img_31
+    21300064: wizard_4-img_32
+    21300066: wizard_4-img_33
+    21300068: wizard_4-img_34
+    21300070: wizard_4-img_35
+    21300072: wizard_4-img_36
+    21300074: wizard_4-img_37
+    21300076: wizard_4-img_38
+    21300078: wizard_4-img_39
+    21300080: wizard_4-img_40
+    21300082: wizard_4-img_41
+    21300084: wizard_4-img_42
+    21300086: wizard_4-img_43
+    21300088: wizard_4-img_44
+    21300090: wizard_4-img_45
+    21300092: wizard_4-img_46
+    21300094: wizard_4-img_47
+    21300096: wizard_4-img_48
+    21300098: wizard_4-img_49
+    21300100: wizard_4-img_50
+    21300102: wizard_4-img_51
+    21300104: wizard_4-img_52
+    21300106: wizard_4-img_53
+    21300108: wizard_4-img_54
+    21300110: wizard_4-img_55
+    21300112: wizard_4-img_56
+    21300114: wizard_4-img_57
+    21300116: wizard_4-img_58
+    21300118: wizard_4-img_59
+    21300120: wizard_4-img_60
+    21300122: wizard_4-img_61
+    21300124: wizard_4-img_62
+    21300126: wizard_4-img_63
+    21300128: wizard_4-img_64
+    21300130: wizard_4-img_65
+    21300132: wizard_4-img_66
+    21300134: wizard_4-img_67
+    21300136: wizard_4-img_68
+    21300138: wizard_4-img_69
+    21300140: wizard_4-img_70
+    21300142: wizard_4-img_71
+    21300144: wizard_4-img_72
+    21300146: wizard_4-img_73
+    21300148: wizard_4-img_74
+    21300150: wizard_4-img_75
+    21300152: wizard_4-img_76
+    21300154: wizard_4-img_77
+    21300156: wizard_4-img_78
+    21300158: wizard_4-img_79
+    21300160: wizard_4-img_80
+    21300162: wizard_4-img_81
+    21300164: wizard_4-img_82
+    21300166: wizard_4-img_83
+    21300168: wizard_4-img_84
+    21300170: wizard_4-img_85
+    21300172: wizard_4-img_86
+    21300174: wizard_4-img_87
+    21300176: wizard_4-img_88
+    21300178: wizard_4-img_89
+    21300180: wizard_4-img_90
+    21300182: wizard_4-img_91
+    21300184: wizard_4-img_92
+    21300186: wizard_4-img_93
+    21300188: wizard_4-img_94
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: wizard_4-img_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1303
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 41.5}
+        - {x: -17, y: 40.5}
+        - {x: -18, y: 37.5}
+        - {x: -18, y: -39.5}
+        - {x: -17, y: -40.5}
+        - {x: -14, y: -41.5}
+        - {x: 15, y: -41.5}
+        - {x: 18, y: -36.5}
+        - {x: 18, y: 26.5}
+        - {x: 13, y: 41.5}
+    - name: wizard_4-img_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1303
+        width: 35
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 41.5}
+        - {x: -17.5, y: 40.5}
+        - {x: -17.5, y: -37.5}
+        - {x: -15.5, y: -41.5}
+        - {x: 12.5, y: -41.5}
+        - {x: 17.5, y: -35.5}
+        - {x: 17.5, y: 39.5}
+        - {x: 15.5, y: 41.5}
+    - name: wizard_4-img_2
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1302
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 42}
+        - {x: -17.5, y: 39}
+        - {x: -17.5, y: -15}
+        - {x: -15.5, y: -37}
+        - {x: -10.5, y: -40}
+        - {x: -6.5, y: -42}
+        - {x: 16.5, y: -42}
+        - {x: 17.5, y: -34}
+        - {x: 17.5, y: 40}
+        - {x: 10.5, y: 42}
+    - name: wizard_4-img_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1302
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 42}
+        - {x: -17.5, y: -42}
+        - {x: 17.5, y: -42}
+        - {x: 17.5, y: 42}
+    - name: wizard_4-img_4
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1302
+        width: 42
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 42}
+        - {x: -16, y: 42}
+        - {x: -21, y: 37}
+        - {x: -21, y: -33}
+        - {x: -20, y: -38}
+        - {x: -11, y: -42}
+        - {x: 11, y: -42}
+        - {x: 21, y: -20}
+        - {x: 21, y: 7}
+        - {x: 14, y: 40}
+    - name: wizard_4-img_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1302
+        width: 48
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 42.5}
+        - {x: -20, y: 42.5}
+        - {x: -24, y: 38.5}
+        - {x: -24, y: -39.5}
+        - {x: -18, y: -42.5}
+        - {x: 15, y: -42.5}
+        - {x: 24, y: -19.5}
+        - {x: 24, y: 16.5}
+        - {x: 11, y: 39.5}
+    - name: wizard_4-img_6
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1302
+        width: 57
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: -42}
+        - {x: 9.5, y: -42}
+        - {x: 28.5, y: -23}
+        - {x: 28.5, y: 11}
+        - {x: 6.5, y: 40}
+        - {x: -0.5, y: 42}
+        - {x: -26.5, y: 42}
+        - {x: -28.5, y: 41}
+    - name: wizard_4-img_7
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1303
+        width: 50
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 41.5}
+        - {x: -23, y: 41.5}
+        - {x: -25, y: 39.5}
+        - {x: -25, y: -41.5}
+        - {x: 9, y: -41.5}
+        - {x: 25, y: -24.5}
+        - {x: 25, y: 8.5}
+        - {x: 10, y: 38.5}
+    - name: wizard_4-img_8
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1288
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_9
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1288
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_10
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1288
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_11
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 1288
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_12
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1272
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_13
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1272
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_14
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1272
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_15
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 1272
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1173
+        width: 37
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 41}
+        - {x: -18.5, y: 40}
+        - {x: -18.5, y: -38}
+        - {x: -17.5, y: -41}
+        - {x: 18.5, y: -41}
+        - {x: 18.5, y: 36}
+        - {x: 15.5, y: 41}
+    - name: wizard_4-img_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1173
+        width: 34
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 41}
+        - {x: -17, y: 30}
+        - {x: -17, y: -40}
+        - {x: -16, y: -41}
+        - {x: 17, y: -41}
+        - {x: 17, y: 32}
+        - {x: 10, y: 41}
+    - name: wizard_4-img_18
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1171
+        width: 33
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 43}
+        - {x: -16.5, y: -37}
+        - {x: -8.5, y: -43}
+        - {x: 16.5, y: -43}
+        - {x: 16.5, y: 39}
+        - {x: 13.5, y: 43}
+    - name: wizard_4-img_19
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1171
+        width: 33
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 43}
+        - {x: -13.5, y: 38}
+        - {x: -16.5, y: 25}
+        - {x: -16.5, y: -37}
+        - {x: -9.5, y: -43}
+        - {x: 16.5, y: -43}
+        - {x: 16.5, y: 38}
+        - {x: 10.5, y: 43}
+    - name: wizard_4-img_20
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1171
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 43}
+        - {x: -19, y: 29}
+        - {x: -19, y: -36}
+        - {x: -11, y: -43}
+        - {x: 19, y: -43}
+        - {x: 19, y: 38}
+        - {x: 16, y: 43}
+    - name: wizard_4-img_21
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1171
+        width: 46
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 43.5}
+        - {x: -11, y: 41.5}
+        - {x: -23, y: 4.5}
+        - {x: -23, y: -21.5}
+        - {x: -14, y: -42.5}
+        - {x: -7, y: -43.5}
+        - {x: 23, y: -43.5}
+        - {x: 23, y: 37.5}
+        - {x: 21, y: 43.5}
+    - name: wizard_4-img_22
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1171
+        width: 58
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 43}
+        - {x: -29, y: 11}
+        - {x: -29, y: -34}
+        - {x: -19, y: -43}
+        - {x: 28, y: -43}
+        - {x: 29, y: -36}
+        - {x: 29, y: 37}
+        - {x: 26, y: 43}
+    - name: wizard_4-img_23
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1173
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 41}
+        - {x: -24, y: 1}
+        - {x: -24, y: -26}
+        - {x: -11, y: -23}
+        - {x: -9, y: -19}
+        - {x: -9, y: -17}
+        - {x: -9, y: -21}
+        - {x: -10, y: -22}
+        - {x: -15, y: -31}
+        - {x: -3, y: -41}
+        - {x: 24, y: -41}
+        - {x: 24, y: 33}
+        - {x: 17, y: 41}
+    - name: wizard_4-img_24
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1034
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 41.5}
+        - {x: -18, y: 41.5}
+        - {x: -18, y: -39.5}
+        - {x: -17, y: -40.5}
+        - {x: -15, y: -41.5}
+        - {x: 15, y: -41.5}
+        - {x: 18, y: -33.5}
+        - {x: 18, y: 21.5}
+        - {x: 15, y: 37.5}
+    - name: wizard_4-img_25
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1032
+        width: 38
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 43.5}
+        - {x: -18, y: 40.5}
+        - {x: -19, y: 33.5}
+        - {x: -19, y: -42.5}
+        - {x: -16, y: -43.5}
+        - {x: 18, y: -43.5}
+        - {x: 19, y: -34.5}
+        - {x: 19, y: 43.5}
+    - name: wizard_4-img_26
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1033
+        width: 43
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 42}
+        - {x: -17.5, y: 42}
+        - {x: -21.5, y: 28}
+        - {x: -21.5, y: -41}
+        - {x: -17.5, y: -42}
+        - {x: 17.5, y: -42}
+        - {x: 21.5, y: -26}
+        - {x: 21.5, y: 38}
+        - {x: 19.5, y: 40}
+    - name: wizard_4-img_27
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1035
+        width: 51
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 40}
+        - {x: -25.5, y: -40}
+        - {x: 12.5, y: -40}
+        - {x: 25.5, y: -30}
+        - {x: 25.5, y: 1}
+        - {x: 11.5, y: 40}
+    - name: wizard_4-img_28
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1037
+        width: 61
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: 38.5}
+        - {x: -30.5, y: 38.5}
+        - {x: -30.5, y: -38.5}
+        - {x: 9.5, y: -38.5}
+        - {x: 16.5, y: -34.5}
+        - {x: 30.5, y: -14.5}
+        - {x: 30.5, y: 20.5}
+    - name: wizard_4-img_29
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1037
+        width: 54
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 38.5}
+        - {x: -27, y: 34.5}
+        - {x: -27, y: -35.5}
+        - {x: -26, y: -37.5}
+        - {x: -20, y: -38.5}
+        - {x: 10, y: -38.5}
+        - {x: 27, y: -18.5}
+        - {x: 27, y: 10.5}
+        - {x: 13, y: 38.5}
+    - name: wizard_4-img_30
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1032
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_31
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1012
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_32
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 1012
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_33
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1012
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_34
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1012
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_35
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1012
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_36
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1009
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_37
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 904
+        width: 37
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 41}
+        - {x: -18.5, y: 40}
+        - {x: -18.5, y: -38}
+        - {x: -17.5, y: -41}
+        - {x: 18.5, y: -41}
+        - {x: 18.5, y: 36}
+        - {x: 15.5, y: 41}
+    - name: wizard_4-img_38
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 902
+        width: 36
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 43}
+        - {x: -18, y: -38}
+        - {x: -5, y: -43}
+        - {x: 13, y: -43}
+        - {x: 18, y: -33}
+        - {x: 18, y: 36}
+        - {x: 14, y: 43}
+    - name: wizard_4-img_39
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 901
+        width: 38
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 44.5}
+        - {x: -19, y: 36.5}
+        - {x: -19, y: 0.5}
+        - {x: -9, y: -38.5}
+        - {x: 8, y: -44.5}
+        - {x: 19, y: -44.5}
+        - {x: 19, y: 37.5}
+        - {x: 18, y: 44.5}
+    - name: wizard_4-img_40
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 907
+        width: 51
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 38.5}
+        - {x: -13.5, y: 38.5}
+        - {x: -25.5, y: 15.5}
+        - {x: -25.5, y: -28.5}
+        - {x: -20.5, y: -27.5}
+        - {x: -17.5, y: -26.5}
+        - {x: -15.5, y: -20.5}
+        - {x: -13.5, y: -16.5}
+        - {x: -13.5, y: -14.5}
+        - {x: -13.5, y: -29.5}
+        - {x: -9.5, y: -38.5}
+        - {x: 21.5, y: -38.5}
+        - {x: 25.5, y: -37.5}
+        - {x: 25.5, y: 13.5}
+        - {x: 22.5, y: 24.5}
+    - name: wizard_4-img_41
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 909
+        width: 64
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 36.5}
+        - {x: -5, y: 32.5}
+        - {x: -6, y: 22.5}
+        - {x: -32, y: -9.5}
+        - {x: -32, y: -20.5}
+        - {x: -24, y: -36.5}
+        - {x: 32, y: -36.5}
+        - {x: 32, y: 16.5}
+        - {x: 23, y: 36.5}
+    - name: wizard_4-img_42
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 909
+        width: 54
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 36.5}
+        - {x: -15, y: 35.5}
+        - {x: -27, y: -9.5}
+        - {x: -27, y: -30.5}
+        - {x: -14, y: -27.5}
+        - {x: -12, y: -23.5}
+        - {x: -12, y: -21.5}
+        - {x: -12, y: -28.5}
+        - {x: -10, y: -32.5}
+        - {x: -2, y: -36.5}
+        - {x: 27, y: -36.5}
+        - {x: 27, y: 19.5}
+        - {x: 18, y: 36.5}
+    - name: wizard_4-img_43
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 971
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_44
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 773
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 41.5}
+        - {x: -17, y: 40.5}
+        - {x: -18, y: 37.5}
+        - {x: -18, y: -39.5}
+        - {x: -17, y: -40.5}
+        - {x: -14, y: -41.5}
+        - {x: 15, y: -41.5}
+        - {x: 18, y: -36.5}
+        - {x: 18, y: 26.5}
+        - {x: 13, y: 41.5}
+    - name: wizard_4-img_45
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 774
+        width: 49
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 40}
+        - {x: -10.5, y: 38}
+        - {x: -24.5, y: 10}
+        - {x: -24.5, y: -19}
+        - {x: -23.5, y: -22}
+        - {x: -16.5, y: -17}
+        - {x: -12.5, y: -7}
+        - {x: -12.5, y: -5}
+        - {x: -14.5, y: -3}
+        - {x: -13.5, y: -3}
+        - {x: -10.5, y: -7}
+        - {x: -11.5, y: -9}
+        - {x: -20.5, y: -29}
+        - {x: -16.5, y: -40}
+        - {x: 17.5, y: -40}
+        - {x: 24.5, y: -27}
+        - {x: 24.5, y: 39}
+        - {x: 23.5, y: 40}
+    - name: wizard_4-img_46
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 774
+        width: 49
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 40}
+        - {x: -10.5, y: 38}
+        - {x: -24.5, y: 10}
+        - {x: -24.5, y: -19}
+        - {x: -23.5, y: -22}
+        - {x: -16.5, y: -17}
+        - {x: -12.5, y: -7}
+        - {x: -12.5, y: -5}
+        - {x: -14.5, y: -3}
+        - {x: -13.5, y: -3}
+        - {x: -10.5, y: -7}
+        - {x: -11.5, y: -9}
+        - {x: -20.5, y: -29}
+        - {x: -16.5, y: -40}
+        - {x: 17.5, y: -40}
+        - {x: 24.5, y: -27}
+        - {x: 24.5, y: 39}
+        - {x: 23.5, y: 40}
+    - name: wizard_4-img_47
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 785
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 25.5}
+        - {x: -1, y: 19.5}
+        - {x: -9, y: 29.5}
+        - {x: -30, y: 29.5}
+        - {x: -30, y: -29.5}
+        - {x: 30, y: -29.5}
+        - {x: 30, y: 18.5}
+        - {x: 16, y: 29.5}
+    - name: wizard_4-img_48
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 789
+        width: 59
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 25.5}
+        - {x: -29.5, y: 23.5}
+        - {x: -29.5, y: 3.5}
+        - {x: -19.5, y: -8.5}
+        - {x: 8.5, y: -25.5}
+        - {x: 26.5, y: -25.5}
+        - {x: 29.5, y: -23.5}
+        - {x: 29.5, y: 9.5}
+        - {x: 19.5, y: 25.5}
+    - name: wizard_4-img_49
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 795
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_50
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 781
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_51
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 758
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_52
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 758
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_53
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 758
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_54
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 758
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_55
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 742
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_56
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 739
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_57
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 742
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_58
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 739
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 618
+        width: 714
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 166, y: 51.5}
+        - {x: -357, y: -48.5}
+        - {x: -357, y: -51.5}
+        - {x: 357, y: -51.5}
+        - {x: 357, y: 51.5}
+      - - {x: 242, y: -10.5}
+        - {x: 240, y: -21.5}
+        - {x: 245, y: -26.5}
+        - {x: 257, y: -28.5}
+        - {x: 255, y: -32.5}
+        - {x: 251, y: -29.5}
+        - {x: 238, y: -25.5}
+        - {x: 185, y: -28.5}
+        - {x: 182, y: -31.5}
+        - {x: 182, y: -40.5}
+        - {x: 190, y: -43.5}
+        - {x: 286, y: -43.5}
+        - {x: 287, y: -39.5}
+        - {x: 287, y: -20.5}
+        - {x: 285, y: -10.5}
+      - - {x: -337, y: 51.5}
+        - {x: -343, y: 7.5}
+        - {x: -343, y: -19.5}
+        - {x: -332, y: -27.5}
+        - {x: -304, y: -27.5}
+        - {x: -302, y: -18.5}
+        - {x: -302, y: 44.5}
+        - {x: -308, y: 51.5}
+      - - {x: 185, y: -10.5}
+        - {x: 183, y: -14.5}
+        - {x: 183, y: -24.5}
+        - {x: 193, y: -27.5}
+        - {x: 226, y: -27.5}
+        - {x: 239, y: -26.5}
+        - {x: 240, y: -23.5}
+        - {x: 240, y: -10.5}
+      - - {x: -253, y: 51.5}
+        - {x: -257, y: 46.5}
+        - {x: -257, y: 8.5}
+        - {x: -246, y: -25.5}
+        - {x: -211, y: -25.5}
+        - {x: -207, y: -13.5}
+        - {x: -207, y: 16.5}
+        - {x: -221, y: 51.5}
+      - - {x: -161, y: 51.5}
+        - {x: -167, y: 49.5}
+        - {x: -167, y: 14.5}
+        - {x: -155, y: -25.5}
+        - {x: -119, y: -25.5}
+        - {x: -117, y: -20.5}
+        - {x: -117, y: 25.5}
+        - {x: -132, y: 51.5}
+      - - {x: -45, y: 51.5}
+        - {x: -85, y: 51.5}
+        - {x: -85, y: -20.5}
+        - {x: -76, y: -22.5}
+        - {x: -23, y: -22.5}
+        - {x: -19, y: -9.5}
+        - {x: -19, y: 40.5}
+      - - {x: 255, y: 21.5}
+        - {x: 255, y: 11.5}
+        - {x: 257, y: 5.5}
+        - {x: 269, y: 7.5}
+        - {x: 276, y: 4.5}
+        - {x: 273, y: 5.5}
+        - {x: 271, y: 3.5}
+        - {x: 254, y: 5.5}
+        - {x: 255, y: 16.5}
+        - {x: 253, y: 19.5}
+        - {x: 246, y: 21.5}
+        - {x: 194, y: 21.5}
+        - {x: 183, y: 10.5}
+        - {x: 183, y: -11.5}
+        - {x: 351, y: -11.5}
+        - {x: 351, y: 3.5}
+        - {x: 319, y: 21.5}
+      - - {x: 56, y: 39.5}
+        - {x: 2, y: 39.5}
+        - {x: -4, y: 33.5}
+        - {x: -4, y: 11.5}
+        - {x: 2, y: 6.5}
+        - {x: 48, y: -10.5}
+        - {x: 67, y: -10.5}
+        - {x: 79, y: -5.5}
+        - {x: 79, y: 11.5}
+        - {x: 60, y: 38.5}
+      - - {x: 192, y: 21.5}
+        - {x: 185, y: 19.5}
+        - {x: 183, y: 15.5}
+        - {x: 183, y: 7.5}
+        - {x: 188, y: 4.5}
+        - {x: 222, y: 4.5}
+        - {x: 237, y: 5.5}
+        - {x: 237, y: 21.5}
+      - - {x: 138, y: 51.5}
+        - {x: 125, y: 31.5}
+        - {x: 125, y: 23.5}
+        - {x: 150, y: 23.5}
+        - {x: 151, y: 26.5}
+        - {x: 151, y: 51.5}
+      - - {x: 186, y: 37.5}
+        - {x: 183, y: 36.5}
+        - {x: 183, y: 23.5}
+        - {x: 224, y: 23.5}
+        - {x: 224, y: 33.5}
+        - {x: 218, y: 37.5}
+    - name: wizard_4-img_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 644
+        width: 37
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 40.5}
+        - {x: -18.5, y: -40.5}
+        - {x: 18.5, y: -40.5}
+        - {x: 18.5, y: 32.5}
+        - {x: 15.5, y: 40.5}
+    - name: wizard_4-img_61
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 646
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 38.5}
+        - {x: -20, y: 38.5}
+        - {x: -23, y: 34.5}
+        - {x: -23, y: -10.5}
+        - {x: -20, y: -37.5}
+        - {x: -15, y: -38.5}
+        - {x: 21, y: -38.5}
+        - {x: 23, y: -30.5}
+        - {x: 23, y: 9.5}
+        - {x: 12, y: 36.5}
+    - name: wizard_4-img_62
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 646
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 38.5}
+        - {x: -23, y: -10.5}
+        - {x: -20, y: -37.5}
+        - {x: -15, y: -38.5}
+        - {x: 23, y: -38.5}
+        - {x: 23, y: 28.5}
+        - {x: 10, y: 38.5}
+    - name: wizard_4-img_63
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 695
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_64
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 505
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 43}
+        - {x: -19, y: 38}
+        - {x: -19, y: -43}
+        - {x: 15, y: -43}
+        - {x: 19, y: -40}
+        - {x: 19, y: 43}
+    - name: wizard_4-img_65
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 505
+        width: 44
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 43.5}
+        - {x: -21, y: 26.5}
+        - {x: -22, y: 7.5}
+        - {x: -22, y: -41.5}
+        - {x: -16, y: -43.5}
+        - {x: 13, y: -43.5}
+        - {x: 22, y: -7.5}
+        - {x: 22, y: 43.5}
+    - name: wizard_4-img_66
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 506
+        width: 47
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 42.5}
+        - {x: -23.5, y: 34.5}
+        - {x: -23.5, y: -42.5}
+        - {x: 12.5, y: -42.5}
+        - {x: 23.5, y: -6.5}
+        - {x: 23.5, y: 40.5}
+        - {x: 17.5, y: 42.5}
+    - name: wizard_4-img_67
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 506
+        width: 54
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 42.5}
+        - {x: -27, y: -32.5}
+        - {x: -22, y: -42.5}
+        - {x: 16, y: -42.5}
+        - {x: 27, y: -15.5}
+        - {x: 27, y: 35.5}
+        - {x: 15, y: 42.5}
+    - name: wizard_4-img_68
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 506
+        width: 61
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: -42}
+        - {x: 16.5, y: -42}
+        - {x: 30.5, y: -35}
+        - {x: 30.5, y: 42}
+        - {x: -14.5, y: 42}
+        - {x: -30.5, y: 32}
+        - {x: -30.5, y: -35}
+    - name: wizard_4-img_69
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 505
+        width: 49
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 43}
+        - {x: -12.5, y: 43}
+        - {x: -24.5, y: 24}
+        - {x: -24.5, y: -41}
+        - {x: -19.5, y: -43}
+        - {x: 14.5, y: -43}
+        - {x: 24.5, y: -15}
+        - {x: 24.5, y: 36}
+        - {x: 23.5, y: 39}
+    - name: wizard_4-img_70
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 383
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 40.5}
+        - {x: -18, y: -39.5}
+        - {x: -15, y: -40.5}
+        - {x: 16, y: -40.5}
+        - {x: 18, y: -22.5}
+        - {x: 18, y: 28.5}
+        - {x: 8, y: 40.5}
+    - name: wizard_4-img_71
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 380
+        width: 34
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 43}
+        - {x: -17, y: 41}
+        - {x: -17, y: -2}
+        - {x: -13, y: -38}
+        - {x: -3, y: -43}
+        - {x: 17, y: -43}
+        - {x: 17, y: 43}
+    - name: wizard_4-img_72
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 380
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 43}
+        - {x: -19, y: 41}
+        - {x: -19, y: -1}
+        - {x: -11, y: -39}
+        - {x: 7, y: -43}
+        - {x: 19, y: -43}
+        - {x: 19, y: 22}
+        - {x: 14, y: 43}
+    - name: wizard_4-img_73
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 380
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 43}
+        - {x: -19, y: 40}
+        - {x: -19, y: 1}
+        - {x: -11, y: -39}
+        - {x: 7, y: -43}
+        - {x: 19, y: -43}
+        - {x: 19, y: 16}
+        - {x: 16, y: 43}
+    - name: wizard_4-img_74
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 380
+        width: 40
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 43}
+        - {x: -20, y: 42}
+        - {x: -20, y: -21}
+        - {x: -10, y: -43}
+        - {x: 17, y: -43}
+        - {x: 20, y: -17}
+        - {x: 20, y: 25}
+        - {x: 16, y: 43}
+    - name: wizard_4-img_75
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 383
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 40.5}
+        - {x: -18, y: 39.5}
+        - {x: -18, y: -39.5}
+        - {x: -17, y: -40.5}
+        - {x: 18, y: -40.5}
+        - {x: 18, y: 40.5}
+    - name: wizard_4-img_76
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 432
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_77
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 432
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wizard_4-img_78
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 255
+        width: 51
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 40.5}
+        - {x: -25.5, y: 36.5}
+        - {x: -25.5, y: -24.5}
+        - {x: -10.5, y: -39.5}
+        - {x: -7.5, y: -40.5}
+        - {x: 20.5, y: -40.5}
+        - {x: 25.5, y: -25.5}
+        - {x: 25.5, y: 11.5}
+        - {x: 7.5, y: 40.5}
+    - name: wizard_4-img_79
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 264
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 31.5}
+        - {x: -26, y: -13.5}
+        - {x: -20, y: -31.5}
+        - {x: 26, y: -31.5}
+        - {x: 26, y: 9.5}
+        - {x: 7, y: 31.5}
+    - name: wizard_4-img_80
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 269
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 26.5}
+        - {x: -25, y: 19.5}
+        - {x: -25, y: -20.5}
+        - {x: -9, y: -26.5}
+        - {x: 25, y: -26.5}
+        - {x: 25, y: 23.5}
+        - {x: 18, y: 26.5}
+    - name: wizard_4-img_81
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 256
+        width: 51
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 39.5}
+        - {x: -25.5, y: 6.5}
+        - {x: -25.5, y: -37.5}
+        - {x: -17.5, y: -39.5}
+        - {x: 10.5, y: -39.5}
+        - {x: 25.5, y: -12.5}
+        - {x: 25.5, y: 36.5}
+        - {x: 16.5, y: 39.5}
+    - name: wizard_4-img_82
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 262
+        width: 55
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: 33.5}
+        - {x: 0.5, y: 33.5}
+        - {x: -27.5, y: 13.5}
+        - {x: -27.5, y: -31.5}
+        - {x: -20.5, y: -33.5}
+        - {x: 9.5, y: -33.5}
+        - {x: 23.5, y: -19.5}
+        - {x: 27.5, y: 4.5}
+        - {x: 27.5, y: 31.5}
+    - name: wizard_4-img_83
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 268
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 27.5}
+        - {x: -16, y: 22.5}
+        - {x: -30, y: 10.5}
+        - {x: -30, y: -24.5}
+        - {x: -29, y: -27.5}
+        - {x: 26, y: -27.5}
+        - {x: 30, y: 0.5}
+        - {x: 30, y: 21.5}
+        - {x: 23, y: 27.5}
+    - name: wizard_4-img_84
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 140
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 40.5}
+        - {x: -18, y: -39.5}
+        - {x: -17, y: -39.5}
+        - {x: -10, y: -40.5}
+        - {x: 13, y: -40.5}
+        - {x: 18, y: -33.5}
+        - {x: 18, y: 27.5}
+        - {x: 13, y: 40.5}
+    - name: wizard_4-img_85
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 142
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 38}
+        - {x: -13, y: 38}
+        - {x: -18, y: 33}
+        - {x: -18, y: -35}
+        - {x: -12, y: -38}
+        - {x: 16, y: -38}
+        - {x: 18, y: -32}
+        - {x: 18, y: 31}
+        - {x: 17, y: 36}
+    - name: wizard_4-img_86
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 143
+        width: 33
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 37}
+        - {x: -16.5, y: 36}
+        - {x: -16.5, y: -37}
+        - {x: 16.5, y: -37}
+        - {x: 16.5, y: 36}
+        - {x: 15.5, y: 37}
+    - name: wizard_4-img_87
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 142
+        width: 37
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 38}
+        - {x: -17.5, y: 34}
+        - {x: -18.5, y: 28}
+        - {x: -18.5, y: -34}
+        - {x: -16.5, y: -38}
+        - {x: 18.5, y: -38}
+        - {x: 18.5, y: 38}
+    - name: wizard_4-img_88
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 142
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 38}
+        - {x: -18, y: 37}
+        - {x: -18, y: -34}
+        - {x: -12, y: -38}
+        - {x: 18, y: -38}
+        - {x: 18, y: 36}
+        - {x: 13, y: 38}
+    - name: wizard_4-img_89
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 58
+        width: 133
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66.5, y: 65.5}
+        - {x: -66.5, y: -65.5}
+        - {x: 66.5, y: -65.5}
+        - {x: 66.5, y: 65.5}
+      - - {x: -62.5, y: 61.5}
+        - {x: 62.5, y: 61.5}
+        - {x: 62.5, y: -61.5}
+        - {x: -62.5, y: -61.5}
+      - - {x: -12.5, y: -33.5}
+        - {x: -16.5, y: -35.5}
+        - {x: -17.5, y: -43.5}
+        - {x: -17.5, y: -46.5}
+        - {x: -15.5, y: -48.5}
+        - {x: 9.5, y: -49.5}
+        - {x: 37.5, y: -47.5}
+        - {x: 39.5, y: -45.5}
+        - {x: 37.5, y: -49.5}
+        - {x: 40.5, y: -50.5}
+        - {x: 45.5, y: -50.5}
+        - {x: 47.5, y: -49.5}
+        - {x: 47.5, y: -33.5}
+      - - {x: -38.5, y: -33.5}
+        - {x: -40.5, y: -35.5}
+        - {x: -40.5, y: -47.5}
+        - {x: -18.5, y: -47.5}
+        - {x: -18.5, y: -38.5}
+        - {x: -19.5, y: -33.5}
+      - - {x: 15.5, y: 44.5}
+        - {x: 12.5, y: 44.5}
+        - {x: 7.5, y: 38.5}
+        - {x: -14.5, y: 12.5}
+        - {x: -14.5, y: 2.5}
+        - {x: -10.5, y: -6.5}
+        - {x: -4.5, y: -6.5}
+        - {x: 2.5, y: -4.5}
+        - {x: 9.5, y: 3.5}
+        - {x: 18.5, y: 33.5}
+        - {x: 18.5, y: 43.5}
+    - name: wizard_4-img_90
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 15
+        width: 36
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 38.5}
+        - {x: -18, y: 25.5}
+        - {x: -18, y: -36.5}
+        - {x: -17, y: -38.5}
+        - {x: 18, y: -38.5}
+        - {x: 18, y: 38.5}
+    - name: wizard_4-img_91
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 13
+        width: 37
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 38}
+        - {x: -14.5, y: 29}
+        - {x: -18.5, y: 10}
+        - {x: -18.5, y: -38}
+        - {x: 16.5, y: -38}
+        - {x: 18.5, y: -33}
+        - {x: 18.5, y: 38}
+    - name: wizard_4-img_92
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 14
+        width: 37
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 37.5}
+        - {x: -18.5, y: 36.5}
+        - {x: -18.5, y: -33.5}
+        - {x: -5.5, y: -37.5}
+        - {x: 15.5, y: -37.5}
+        - {x: 18.5, y: -35.5}
+        - {x: 18.5, y: 37.5}
+    - name: wizard_4-img_93
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 13
+        width: 38
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 38.5}
+        - {x: -19, y: -38.5}
+        - {x: 11, y: -38.5}
+        - {x: 19, y: -20.5}
+        - {x: 19, y: 36.5}
+        - {x: 11, y: 38.5}
+    - name: wizard_4-img_94
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 13
+        width: 38
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 38.5}
+        - {x: -19, y: 36.5}
+        - {x: -19, y: -31.5}
+        - {x: -11, y: -38.5}
+        - {x: 15, y: -38.5}
+        - {x: 19, y: -31.5}
+        - {x: 19, y: 30.5}
+        - {x: 14, y: 38.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
