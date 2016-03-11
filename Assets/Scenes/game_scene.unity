@@ -282,9 +282,15 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55ef83f88f084d1e8804b89a491c8af, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &704242645 stripped
+--- !u!114 &638496073 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11482850, guid: eef3018fd001e414c9e7e73a66256d94,
+    type: 2}
+  m_PrefabInternal: {fileID: 1292640082}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &704242645 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11450010, guid: eef3018fd001e414c9e7e73a66256d94,
     type: 2}
   m_PrefabInternal: {fileID: 1292640082}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
@@ -542,6 +548,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11496342, guid: e93fa3f1811da304590125f64525e35a, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496342, guid: e93fa3f1811da304590125f64525e35a, type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496342, guid: e93fa3f1811da304590125f64525e35a, type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496342, guid: e93fa3f1811da304590125f64525e35a, type: 2}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e93fa3f1811da304590125f64525e35a, type: 2}
   m_IsPrefabParent: 0
@@ -755,6 +777,10 @@ Prefab:
       propertyPath: restartScene
       value: 
       objectReference: {fileID: 1616909280}
+    - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
+      propertyPath: miss_text
+      value: 
+      objectReference: {fileID: 638496073}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
   m_IsPrefabParent: 0

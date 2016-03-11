@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 
 	public static GameController instance;
 	public GameObject wizard;
-	public Text mission_text, timer_text, score_text;
+	public Text mission_text, timer_text, score_text, miss_text;
 
 	private static int checker;
 	public SpriteRenderer startScene, restartScene;
@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour {
 		if (isRitual) {
 			ritualCounter += Time.deltaTime;
 		
-			if (ritualCounter >= 15) {
+			if (ritualCounter >= 20) {
 				stopRitualPhase ();
 				ritualCounter = 0;
 			}
@@ -142,6 +142,10 @@ public class GameController : MonoBehaviour {
 
 	public void assignTimerText(string input_text) {
 		timer_text.text = input_text;		
+	}
+
+	public void assignMissText(string input_text){
+		miss_text.text = input_text;	
 	}
 
 	void scoreTextCommand() {
