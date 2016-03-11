@@ -22,11 +22,8 @@ public class WitchController : MonoBehaviour {
 	public ParticleSystem healEffect;
 	public ParticleSystem debuffEffect;
 
-//	public GameObject pentacle;
 	public bool isFreeze;
 	public bool isRitual;
-
-
 
 	public static WitchController instance;
 	public GameObject bat_prefer, bird_prefer, cat_prefer, candle_prefer, hat_prefer, hook_prefer,
@@ -55,6 +52,7 @@ public class WitchController : MonoBehaviour {
 		};
 		preferNumber = new int[3];
 	}
+
 	// Use this for initialization
 	void Start () {
 		isRitual = false;
@@ -70,12 +68,9 @@ public class WitchController : MonoBehaviour {
 		spawnEmo ();
 		loveEmo.enabled = false;
 		angryEmo.enabled = false;
-//		printPrefer ();
 
 		lrText.SetActive (false);
 		hrText.SetActive (true);
-//		pentacle.SetActive (false);
-//		heartTarget.SetActive (false);
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
 
 	}
@@ -86,22 +81,12 @@ public class WitchController : MonoBehaviour {
 
 	void checkRitualPhase(){
 		if (curHR == maxHR && hrText.active == true) {
-			//			GameController.newScene = 1;
-//			pentacle.SetActive(true);
 			isRitual = true;
 			this.transform.position = new Vector3(0,2,this.transform.position.z);
-//			lrText.SetActive (true);
-//			hrText.SetActive (false);
-//			hrBar.GetComponent<Image> ().color = Color.red;
 			GameController.instance.startRitualPhase ();
 		}
-		/*else if(curHR == 0 && lrText.active == true){
-			lrText.SetActive (false);
-			hrText.SetActive (true);
-			hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
-			curHR = maxHR;
-		}*/
 	}
+
 	void checkGameover(){
 		if (curHR == 0) {
 			GameController.instance.isGameOver = true;
@@ -115,36 +100,20 @@ public class WitchController : MonoBehaviour {
 
 	void assignPrefer(){
 		int[] checkDuplicate = new int[3];
-//		foreach(GameObject i in ElementManager.instance.preferArr){
-//			Debug.Log ("Element Manager: " + i);
-//		}
-//		GameObject[] oldPrefer = new GameObject[ElementManager.instance.preferArr.Length];
-//
-//		System.Array.Copy(oldPrefer, ElementManager.instance.preferArr, ElementManager.instance.preferArr.Length);
-//		Debug.Log (oldPrefer.Length);
-//		foreach(GameObject i in oldPrefer){
-//			Debug.Log ("OLD: " + i);
-//		}
 		for(int i = 0; i < prefer.Length; i++){
 			int rand = Random.Range(0, allElement.Length);
 			if(i == 0){
 				prefer[i] = allElement[rand];
 				preferNumber [i] = rand;
-//				ElementManager.instance.preferArr.Add (preferNumber [i]);
 				checkDuplicate[i] = rand;
-				Debug.Log ("init " + prefer[i]);
 			} else if(i != 0 && rand != checkDuplicate[0] && rand != checkDuplicate[1]) {
 				prefer[i] = allElement[rand];
 				preferNumber [i] = rand;
-//				ElementManager.instance.preferArr.Add (preferNumber [i]);
 				checkDuplicate [i] = rand;
-				Debug.Log (prefer[i]);
 			} else {
 				i--;
 			}
 		}
-			
-		//		prefer = new GameObject[]{bat_element, bird_element, candle_element};
 	}
 
 	void spawnPrefer(){
@@ -168,8 +137,6 @@ public class WitchController : MonoBehaviour {
 	void spawnEmo(){
 		angryEmo.transform.position= new Vector3 (this.transform.position.x - 0.75f, this.transform.position.y + 1.25f, 0);
 		loveEmo.transform.position= new Vector3 (this.transform.position.x - 0.75f, this.transform.position.y + 1.0f, 0);
-//		angryEmo.transform.localPosition= new Vector3 (this.transform.position.x - 1.25f, this.transform.position.y - 2.0f, 0);
-//		loveEmo.transform.localPosition= new Vector3 (this.transform.position.x - 1.25f, this.transform.position.y - 2.5f, 0);
 	}
 
 	void showHealEffect(){
@@ -211,28 +178,21 @@ public class WitchController : MonoBehaviour {
 		string element_name = element.name.Substring(0, element.name.Length - "_element(Clone)".Length);
 		foreach (GameObject i in prefer) {
 			string i_name = i.name.Substring(0, i.name.Length - "_prefer".Length);
-			Debug.Log ("i: " + i_name + "                  element: " + element_name);
 			if (element_name == "talk") {
-				Debug.Log ("talkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
 				count_elem = 2;
 			}
 			if(i_name == element_name){
 				count_elem++;
-				//				addHR (10);
-				//				Debug.Log ("current HR: " + curHR);
 			} 
 		}
 		if (count_elem == 2) {
-			//			Debug.Log("yesssssss   Input "+element); 
 			addHR (5f);
 		}
 
 		if (count_elem == 1) {
-//			Debug.Log("yesssssss   Input "+element); 
 			addHR ();
 		}
 		else if(count_elem == 0) {
-//			Debug.Log("noooooooo   Input"+element); 
 			minusHR ();
 		}
 	}
@@ -247,9 +207,7 @@ public class WitchController : MonoBehaviour {
 		countEmo = 0;
 		showDebuffEffect ();
 	}
-
-
-
+		
 	private void deceaseHR(){
 		float decreaseSpeed = 1;
 		if (isFreeze) {
@@ -266,7 +224,6 @@ public class WitchController : MonoBehaviour {
 		if (curHR < 0) {
 			curHR = 0;
 		}
-
 	}
 
 	void showPrefer(){
@@ -275,27 +232,9 @@ public class WitchController : MonoBehaviour {
 		}
 	}
 
-	private void printPrefer(){
-//		Debug.Log (prefer[0] + " " + prefer[1]+ " " + prefer[2]);
-//		Debug.Log(ElementManager.instance.preferArr);
-		foreach(GameObject i in prefer){
-			Debug.Log ("Witch: " + i);
-		}
-		if (ElementManager.instance.preferArr != null) {
-			foreach (GameObject i in ElementManager.instance.preferArr) {
-				Debug.Log ("Element Manager: " + i);
-			}
-		}
-
-
-	}
-
 	void OnTriggerEnter(Collider coll) {
-		Debug.Log ("HIT");
 		checkElement (coll.gameObject);
 		Destroy (coll.gameObject);
-//		addHR ();
-//		ElementManager.instance.spawnElement ();
 	}
 
 	// Update is called once per frame
@@ -305,19 +244,14 @@ public class WitchController : MonoBehaviour {
 		showPrefer ();
 
 		if (instance == this) {
-//			heartTarget.active = true;
-//			isFreeze = false;
 			if (Input.GetKeyDown (KeyCode.H)) { addHR (); }
 			if (Input.GetKeyDown (KeyCode.L)) { minusHR (); }
-		} else {
-//			heartTarget.active = false;
 		}
 
 		checkRitualPhase ();
 		checkGameover ();
 		deceaseHR ();
 
-//		float myHR = curHR / maxHR;
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
 		Moveprefer ();
 

@@ -53,7 +53,6 @@ public class GameController : MonoBehaviour {
 		width = height * cam.aspect;
 
 		isRitualSuccess = false;
-//		Time.timeScale = 0;
 		startScene.enabled = true;
 		restartScene.enabled = false;
 		ritualScene.gameObject.SetActive (false);
@@ -81,11 +80,6 @@ public class GameController : MonoBehaviour {
 		Application.LoadLevel (1);
 	}
 
-//	public void startGame(){
-//		startScene.gameObject.SetActive (false);
-//		Time.timeScale = 1;
-//	}
-
 	public void restart(){
 		restartScene.enabled = true;
 		restartScene.gameObject.SetActive (true);
@@ -106,11 +100,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	IEnumerator startCounting(){
-		Debug.Log ("waitttttttttttttttttttttttttttttttt");
 		yield return new WaitForSeconds(2);
 
 		ritualScene.gameObject.SetActive (false);
-//		hideCircleBar ();
 		hideMagicCircle ();
 		hideBotAura ();
 		notice.SetActive (true);
@@ -118,9 +110,7 @@ public class GameController : MonoBehaviour {
 		unhideGauge ();
 		RunnerController.instance.initiate ();
 		ritualCounter = 0;
-//		wizardRitualPhase ();
 		isRitual = true;
-		MovieController.instance.playRitual ();
 	}
 
 	public void startRitualPhase () {
@@ -128,35 +118,17 @@ public class GameController : MonoBehaviour {
 		ritualScene.gameObject.SetActive (true);
 		ritualScene.enabled = true;
 		StartCoroutine (startCounting());
-
-
 		hideCircleBar ();
-//		hideMagicCircle ();
-//		hideBotAura ();
-//		notice.SetActive (true);
-//		ritualMission_canvas.SetActive (true);
-//		unhideGauge ();
-//		RunnerController.instance.initiate ();
-//		ritualCounter = 0;
-//		wizardRitualPhase ();
-//		isRitual = true;
-//		MovieController.instance.playRitual ();
 	}
 
 	IEnumerator stopCounting(){
-		Debug.Log ("waitttttttttttttttttttttttttttttttt");
 		yield return new WaitForSeconds(2);
 		SuccessScene.gameObject.SetActive (false);
 		unhideCircleBar ();
 		unhideMagicCircle ();
 		unhideBotAura ();
-//		hideGauge ();
-//		isRitual = false;
-//		wizardNotRitualPhase ();
-//		addWizard ();
 		notice.SetActive (false);
 		ritualMission_canvas.SetActive (false);
-
 	}
 
 	public void stopRitualPhase () {
@@ -169,20 +141,12 @@ public class GameController : MonoBehaviour {
 		}
 		StartCoroutine (stopCounting());
 
-//		unhideCircleBar ();
-//		unhideMagicCircle ();
-//		unhideBotAura ();
 		RunnerController.instance.missText.SetActive(false);
 		RunnerController.instance.perfectText.SetActive(false);
 		hideGauge ();
 		isRitual = false;
 		wizardNotRitualPhase ();
 		addWizard ();
-//		notice.SetActive (false);
-//		ritualMission_canvas.SetActive (false);
-
-			
-		MovieController.instance.stopRitual();
 	}
 
 	public void assignMissionText(string input_text) {
@@ -222,14 +186,11 @@ public class GameController : MonoBehaviour {
 			WitchController.instance.hrBar.GetComponent<Image> ().color = Color.red;
 			WitchController.instance.lrText.SetActive (true);
 			WitchController.instance.hrText.SetActive (false);
-//			var instantElement_1 = Instantiate (allWizard[rand_wizard()], new Vector3 (0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;	
-//			var instantElement_1 = Instantiate (wizard, new Vector3 (0, wizard.transform.position.y, -1), Quaternion.identity) as GameObject;	
 			spawnWizard();
 		} else {
 			WitchController.instance.curHR = 20;
 		}
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-//		Debug.Log ("lllllllllllllll"+temp.Length);
 		int j = 1;
 
 		foreach(GameObject i in temp){
@@ -297,7 +258,6 @@ public class GameController : MonoBehaviour {
 	}
 
 	void wizardNotRitualPhase(){
-//		GameObject[] wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
 		foreach(GameObject i in wizardArr){
 			i.GetComponent<WitchController> ().isRitual = false;
 			i.GetComponent<WitchController> ().isFreeze = false;
@@ -309,17 +269,9 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.C)) { clearElement (); }
 
-//		if (checker == 1) {
-//			startGame ();
-//		}
-
 		ritualPhaseCounter ();
 
 		gameTimeScore ();
 		scoreTextCommand();
-
-
-//		if (Input.GetKeyDown (KeyCode.Q)) { hideCircleBar (); }
-//		if (Input.GetKeyDown (KeyCode.W)) { unhideCircleBar (); }
 	}
 }

@@ -8,15 +8,6 @@ public class TalkElement : MonoBehaviour {
 	public GameObject center;
 	public float cLenght;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public float getLeft(){
 		return talkLeft.transform.position.x;
 	} 

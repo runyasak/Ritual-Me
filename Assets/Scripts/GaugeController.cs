@@ -28,7 +28,6 @@ public class GaugeController : MonoBehaviour {
 			r_element9,
 		};
 		instance = this;
-//		CreateTalkElement ();
 	}
 
 	// Update is called once per frame
@@ -55,46 +54,11 @@ public class GaugeController : MonoBehaviour {
 			GameController.instance.isRitualSuccess = true;
 			GameController.instance.stopRitualPhase ();
 			GameController.instance.score += 100;
-		}else if (RunnerController.instance.countMiss >= 3 || GameController.instance.ritualCounter >= 20) {
+		} else if (RunnerController.instance.countMiss >= 3 || GameController.instance.ritualCounter >= 20) {
 			GameController.instance.isRitualSuccess = false;
 			GameController.instance.stopRitualPhase ();
 		}
 	}
-
-
-//	public void startMission (){
-//		
-//		if(RunnerController.instance.randMission == 0){
-//			Debug.Log ("Perfect Mission");
-//			GameController.instance.assignMissionText ("Perfect: " + (5 - RunnerController.instance.countPerfect).ToString ());
-//			if(RunnerController.instance.countPerfect >= 5){
-//				GameController.instance.stopRitualPhase ();
-//				//success
-//				GameController.instance.score += 100;
-//			}
-//		} else if(RunnerController.instance.randMission == 1){
-//			Debug.Log ("Miss Mission");
-//			GameController.instance.assignMissionText ("Miss: " + (3 - RunnerController.instance.countMiss).ToString ());
-//			if(RunnerController.instance.countMiss >= 3){
-//				GameController.instance.stopRitualPhase ();
-//				//success
-//				Debug.Log (RunnerController.instance.countMiss);
-//			} else if (GameController.instance.ritualCounter >= 15) {
-//				GameController.instance.score += 100;
-//			}
-//		} else if(RunnerController.instance.randMission == 2){
-//			Debug.Log ("Combo Mission");
-//			GameController.instance.assignMissionText ("Combo 3x: " + (RunnerController.instance.countCombo).ToString ());
-//			Debug.Log (GameController.instance.ritualCounter.ToString ());
-//			GameController.instance.assignTimerText ("Time: " + ((int) (15 - GameController.instance.ritualCounter)).ToString());
-//			if(RunnerController.instance.countCombo == 3){
-//				GameController.instance.stopRitualPhase ();
-//				//success
-//				GameController.instance.score += 100;
-//				Debug.Log (RunnerController.instance.countMiss);
-//			}
-//		}
-//	}
 
 	void CreateElement(){
 		float randomPosition = Random.Range (-7f, 7f);
@@ -109,7 +73,6 @@ public class GaugeController : MonoBehaviour {
 		}
 		if (arrTalk.Length != 0) {
 			foreach (GameObject j in arrTalk) {
-				//						Debug.Log ("   bird|"+randomPosition +"   talk|"+j.GetComponent<TalkElement>().getLeft()+"   length|"+j.GetComponent<TalkElement>().cLenght);
 				if (randomPosition > j.GetComponent<TalkElement> ().getLeft ()-1.5f
 					&& randomPosition < j.GetComponent<TalkElement> ().getRight ()+1.5f) {
 					distanceCheck = -1;
@@ -146,14 +109,10 @@ public class GaugeController : MonoBehaviour {
 		arr = GameObject.FindGameObjectsWithTag ("Element");
 		arrTalk = GameObject.FindGameObjectsWithTag ("TalkElement");
 
-//		Debug.Log (talkElement.getLeft()+"     L     "+ talkElement.talkLeft.transform.position.x);
-//		Debug.Log (talkElement.getRight()+"     R     "+ talkElement.talkRight.transform.position.x);
-//		Debug.Log ("-----------------------------------------------------------------------------------");
 		foreach (GameObject i in arr) {
 			if (i.transform.position.x < talkElement.GetComponent<TalkElement> ().getLeft () - 1.5f
 				|| i.transform.position.x > talkElement.GetComponent<TalkElement> ().getRight () + 1.5f) {
 				distanceCheck++;
-				Debug.Log ("CreateTalkElement");
 			}
 		}
 

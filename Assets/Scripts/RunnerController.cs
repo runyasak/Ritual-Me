@@ -29,21 +29,7 @@ public class RunnerController : MonoBehaviour {
 		startPoint = this.transform.position;
 	}
 
-	// Use this for initialization
-	void Start () {
-//		mult = 5f;
-//		dir = new Vector3(1, 0, 0);
-//		countTalkElement = 0;
-//		missText.SetActive (false);
-//		perfectText.SetActive (false);
-//		leftToRight = true;
-//		talkEffect.enableEmission = false;
-		Debug.Log ("Start: "+startPoint);
-//		initiate();
-	}
-
 	public void initiate () {
-//		Debug.Log ("KUY");
 		this.transform.position = startPoint;
 		mult = 5f;
 		dir = new Vector3(1, 0, 0);
@@ -57,7 +43,6 @@ public class RunnerController : MonoBehaviour {
 		countMiss = 0;
 		countCombo = 0;
 		randMission = Random.Range (0, 3);
-		Debug.Log (randMission);
 	}
 
 	void move() {
@@ -70,6 +55,7 @@ public class RunnerController : MonoBehaviour {
 		checkElement ();
 		checkTalkElement ();
 	}
+
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.transform.tag == "Domain") {
 			dir = -dir;
@@ -79,7 +65,6 @@ public class RunnerController : MonoBehaviour {
 			} else {
 				leftToRight = true;
 			}
-//			GaugeController.instance.Create ();
 		}
 	}
 
@@ -89,7 +74,6 @@ public class RunnerController : MonoBehaviour {
 			Ray ray;
 			ray = new Ray (transform.position, new Vector3 (0f, 0f, 1.0f));
 			if (Physics.Raycast (ray, out hit, 100)) {
-				Debug.Log (hit.transform.tag);
 				if (hit.transform.tag == "Element") {
 					Destroy (hit.transform.gameObject);
 					countPerfect++;
@@ -143,24 +127,17 @@ public class RunnerController : MonoBehaviour {
 					showPerfectText ();
 					countPerfect++;
 					countCombo += 2;
-//					Debug.Log (countPerfect);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;
-//					Debug.Log ("clearrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
 				}
 
-				if (countTalkElement > 0 && countTalkElement < 3) {//&& hit.transform.tag != "Untagged" && hit.transform.tag != "Element"){
-//					Destroy (hit.transform.parent.parent.gameObject);
+				if (countTalkElement > 0 && countTalkElement < 3) {
 					Destroy (hitTemp.parent.parent.gameObject);
 					showMissText ();
 					countMiss++;
 					countCombo = 0;
 					talkEffect.enableEmission = false;
-				} 
-//				else if (countTalkElement == 10) {
-//					Destroy (hitTemp.parent.parent.gameObject);
-//					showMissText ();
-//				}
+				}
 				countTalkElement = 0;
 			}
 

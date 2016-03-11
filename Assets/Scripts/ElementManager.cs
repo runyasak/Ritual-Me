@@ -29,12 +29,6 @@ public class ElementManager : MonoBehaviour {
 	}
 
 	public void deleteDuplicatePrefer () {
-//		preferArr.Sort ();
-//		for (int i=1; i <= preferArr.Count - 1; i++){
-//			if(preferArr[i] == preferArr[i-1]) {
-//				preferArr.Remove(i);
-//			}
-//		}
 		foreach(GameObject i in preferArr) {
 			foreach(GameObject j in preferArr) {
 				if(j == i)
@@ -44,7 +38,6 @@ public class ElementManager : MonoBehaviour {
 	}
 
 	public void createNotPrefer () {
-		Debug.Log ("NOT PREFER");
 		foreach (GameObject i in elementsArr) {
 			if(!preferArr.Contains(System.Array.IndexOf (elementsArr, i))) {
 				notPreferArr.Add(System.Array.IndexOf (elementsArr, i));
@@ -54,7 +47,6 @@ public class ElementManager : MonoBehaviour {
 	
 	GameObject randomElementController () {
 		float rand = Random.Range (0f, 1f);
-		Debug.Log (rand);
 		GameObject element = null;
 		if(rand <= 0.35f){ element = talk_element; }
 		else if(rand <= 0.55f) { 
@@ -69,7 +61,6 @@ public class ElementManager : MonoBehaviour {
 			} while(System.Array.IndexOf(preferWizard, all_rand)>=0);
 
 			element = elementsArr[all_rand];
-			Debug.Log ("NOT PREFER: " + element);
 		}
 		else if (rand <= 0.8f) {
 			//prefer
@@ -81,17 +72,13 @@ public class ElementManager : MonoBehaviour {
 			int[] preferWizard = wizardArr [wizard_rand].GetComponent<WitchController> ().preferNumber;
 			int prefer_rand = Random.Range (0, preferWizard.Length);
 
-
 			element = elementsArr[preferWizard[prefer_rand]];
-			Debug.Log ("PREFER: " + element);
 		}
 		else if( rand <= 1f) { element = ghost_element;}
 
-
 		return element;
 	}
-
-
+		
 	public void spawnElement () {
 		GameObject[] eleArr = GameObject.FindGameObjectsWithTag ("Element");
 		float countDistance = 0;
@@ -102,8 +89,6 @@ public class ElementManager : MonoBehaviour {
 		}
 
 		if (countDistance == eleArr.Length) {
-//			int rand = Random.Range (0, elementsArr.Length);
-//			Debug.Log (randomElementController());
 			var new_element = Instantiate (randomElementController(), entry.position, Quaternion.identity) as GameObject;
 			new_element.transform.parent = element.transform;
 			new_element.transform.position = entry.position;
@@ -113,18 +98,9 @@ public class ElementManager : MonoBehaviour {
 				lockElement.transform.parent = element.transform;
 				lockElement.transform.position = entry.position;
 			}
-
-//			Debug.Log (new_element.transform.name);
 		}
 
 		countDistance = 0;
-		//var new_element = Instantiate (cat_element, entry.position, Quaternion.identity) as GameObject;
-		//new_element.transform.parent = element.transform;
-		//new_element.transform.position = entry.position;
-
-//		var instantElement = Instantiate (allElement[choice], new Vector3(spawnLocate, this.transform.position.y, -1), Quaternion.identity) as GameObject;
-//		var instantElement_script = instantElement.GetComponent<ElementController>();
-//		instantElement_script.isMove = true;
 	}
 		
 	// Update is called once per frame
