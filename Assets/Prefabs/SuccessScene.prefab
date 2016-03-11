@@ -113,7 +113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Success
+  m_Text: Fail
 --- !u!114 &11491774
 MonoBehaviour:
   m_ObjectHideFlags: 1

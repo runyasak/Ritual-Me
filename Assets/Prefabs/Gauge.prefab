@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 436792}
   - 212: {fileID: 21291118}
   - 68: {fileID: 6836594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'RightGauge '
   m_TagString: Domain
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 448912}
   - 198: {fileID: 19810654}
   - 199: {fileID: 19985142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TalkEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 432928}
   - 212: {fileID: 21230196}
   - 68: {fileID: 6886770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftGauge
   m_TagString: Domain
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - 114: {fileID: 11489766}
   - 61: {fileID: 6139378}
   - 50: {fileID: 5087604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Runner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - 4: {fileID: 441366}
   - 212: {fileID: 21276634}
   - 114: {fileID: 11465046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gauge
   m_TagString: Untagged
   m_Icon: {fileID: 0}

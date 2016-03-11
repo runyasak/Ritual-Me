@@ -50,6 +50,7 @@ public class GaugeController : MonoBehaviour {
 	public void startMission (){
 		GameController.instance.assignMissionText ("Combo x6: " + (RunnerController.instance.countCombo).ToString ());
 		GameController.instance.assignTimerText ("Time Left: " + ((int) (20 - GameController.instance.ritualCounter)).ToString());
+		GameController.instance.assignMissText ("Miss Left: " + (3 - RunnerController.instance.countMiss).ToString ());
 		if(RunnerController.instance.countCombo >= 6){
 			GameController.instance.isRitualSuccess = true;
 			GameController.instance.stopRitualPhase ();

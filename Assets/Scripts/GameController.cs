@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
 	public static GameController instance;
 
 	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
-	public Text mission_text, timer_text, score_text;
+	public Text mission_text, timer_text, score_text, miss_text;
 
 	private static int checker;
 	public SpriteRenderer startScene, restartScene, ritualScene, SuccessScene;
@@ -193,9 +193,9 @@ public class GameController : MonoBehaviour {
 		timer_text.text = input_text;		
 	}
 
-//	public void assignMissText(string input_text){
-//		miss_text.text = input_text;	
-//	}
+	public void assignMissText(string input_text){
+		miss_text.text = input_text;	
+	}
 
 	void scoreTextCommand() {
 		score_text.text = "Score: " + score;	

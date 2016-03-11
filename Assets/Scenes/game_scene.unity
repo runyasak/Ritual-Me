@@ -232,6 +232,12 @@ SpriteRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 145640, guid: 815317594336342a7be16c5e2999b6e7, type: 2}
   m_PrefabInternal: {fileID: 1720713665}
+--- !u!114 &476269781 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11482850, guid: eef3018fd001e414c9e7e73a66256d94,
+    type: 2}
+  m_PrefabInternal: {fileID: 1292640082}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &481274196
 Prefab:
   m_ObjectHideFlags: 0
@@ -270,6 +276,14 @@ Prefab:
     - target: {fileID: 453974, guid: 3eadd0887c78343fe8efb7ce0468dcff, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432486, guid: 3eadd0887c78343fe8efb7ce0468dcff, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432486, guid: 3eadd0887c78343fe8efb7ce0468dcff, type: 2}
+      propertyPath: m_Color.r
+      value: 0.9411765
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3eadd0887c78343fe8efb7ce0468dcff, type: 2}
@@ -457,12 +471,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11466586, guid: fc373a993c7972743a79528fd9ce6790, type: 2}
-      propertyPath: grayBG
-      value: 
-      objectReference: {fileID: 243849438}
-    m_RemovedComponents:
-    - {fileID: 11466586, guid: fc373a993c7972743a79528fd9ce6790, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc373a993c7972743a79528fd9ce6790, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1292640082
@@ -744,6 +753,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 815317594336342a7be16c5e2999b6e7, type: 2}
   m_IsPrefabParent: 0
+--- !u!212 &1776321154 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 21227060, guid: 3eadd0887c78343fe8efb7ce0468dcff,
+    type: 2}
+  m_PrefabInternal: {fileID: 481274196}
 --- !u!212 &1805967846 stripped
 SpriteRenderer:
   m_PrefabParentObject: {fileID: 21211948, guid: b8f44acec378443afb720daaf5c0ce7e,
@@ -801,6 +815,10 @@ Prefab:
       value: 
       objectReference: {fileID: 103149303}
     - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
+      propertyPath: miss_text
+      value: 
+      objectReference: {fileID: 476269781}
+    - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
       propertyPath: startScene
       value: 
       objectReference: {fileID: 243849438}
@@ -812,6 +830,10 @@ Prefab:
       propertyPath: ritualScene
       value: 
       objectReference: {fileID: 1805967846}
+    - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
+      propertyPath: SuccessScene
+      value: 
+      objectReference: {fileID: 1776321154}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
   m_IsPrefabParent: 0
