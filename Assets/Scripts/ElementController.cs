@@ -50,10 +50,11 @@ public class ElementController : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		RaycastHit hit; Ray ray;
+		RaycastHit hit; Ray ray; int layermask =1 << 8;
 		ray = new Ray (Camera.main.ScreenToWorldPoint (Input.mousePosition), new Vector3(0f,0f,1.0f));
 		firstPressPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y);
-		if (Physics.Raycast (ray, out hit, 100)) {
+		if (Physics.Raycast (ray, out hit, 100, layermask)) {
+			Debug.Log ("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"+hit);
 			doubleClick (hit.transform);
 			if (hit.collider.transform.tag == "Element") {
 				isHit = true;
