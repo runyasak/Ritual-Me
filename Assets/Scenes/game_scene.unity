@@ -770,6 +770,10 @@ Prefab:
       value: 
       objectReference: {fileID: 103149303}
     - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
+      propertyPath: miss_text
+      value: 
+      objectReference: {fileID: 638496073}
+    - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
       propertyPath: startScene
       value: 
       objectReference: {fileID: 243849438}
@@ -777,10 +781,6 @@ Prefab:
       propertyPath: restartScene
       value: 
       objectReference: {fileID: 1616909280}
-    - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
-      propertyPath: miss_text
-      value: 
-      objectReference: {fileID: 638496073}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
   m_IsPrefabParent: 0
