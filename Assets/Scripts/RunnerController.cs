@@ -142,7 +142,7 @@ public class RunnerController : MonoBehaviour {
 				if (hit.transform.tag == "Domain" && countTalkElement == 3) {
 					showPerfectText ();
 					countPerfect++;
-					countCombo++;
+					countCombo += 2;
 //					Debug.Log (countPerfect);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;

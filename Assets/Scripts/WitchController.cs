@@ -149,20 +149,20 @@ public class WitchController : MonoBehaviour {
 
 	void spawnPrefer(){
 		prefer1 = Instantiate(prefer[0]) as GameObject;
-		prefer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
+		prefer1.transform.parent = this.transform;
 
 		prefer2 = Instantiate(prefer[1]) as GameObject;
-		prefer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
+		prefer2.transform.parent = this.transform;
 
 		prefer3 = Instantiate(prefer[2]) as GameObject;
-		prefer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
+		prefer3.transform.parent = this.transform;
 
 	}
 
 	void Moveprefer(){
-		prefer1.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y + 0.75f, 0);
-		prefer2.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y , 0);
-		prefer3.transform.localPosition= new Vector3 (this.transform.position.x + 0.75f, this.transform.position.y - 0.75f, 0);
+		prefer1.transform.position= new Vector3 (this.transform.position.x + 0.8f, this.transform.position.y + 1f , 0);
+		prefer2.transform.position= new Vector3 (this.transform.position.x + 0.8f, this.transform.position.y , 0);
+		prefer3.transform.position= new Vector3 (this.transform.position.x + 0.8f, this.transform.position.y - 1f, 0);
 	}
 
 	void spawnEmo(){
@@ -178,7 +178,7 @@ public class WitchController : MonoBehaviour {
 		Destroy (newHealElementEffect.gameObject, 2);
 	}
 
-	void showDebuffEffect(){
+	public void showDebuffEffect(){
 		ParticleSystem newDebuffElementEffect = Instantiate (debuffEffect, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z)
 			, Quaternion.identity) as ParticleSystem;
 		Destroy (newDebuffElementEffect.gameObject, 2);
