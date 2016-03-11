@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;
@@ -9,7 +10,8 @@ public class GameController : MonoBehaviour {
 	public Text mission_text, timer_text, score_text, miss_text;
 
 	private static int checker;
-	public SpriteRenderer startScene, restartScene;
+	public SpriteRenderer startScene, restartScene, ritualScene, SuccessScene;
+	private float timeStop;
 
 	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, ritualMission_canvas, score_canvas;
 	bool isRitual;
@@ -42,6 +44,8 @@ public class GameController : MonoBehaviour {
 //		Time.timeScale = 0;
 		startScene.enabled = true;
 		restartScene.enabled = false;
+		ritualScene.gameObject.SetActive (false);
+		SuccessScene.gameObject.SetActive (false);
 		restartScene.gameObject.SetActive (false);
 		circleBar = GameObject.Find ("Element");
 		gaugeBar = GameObject.Find ("Gauge");
@@ -87,8 +91,12 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void startRitualPhase () {
-		hideCircleBar ();
+	IEnumerator startCounting(){
+		Debug.Log ("waitttttttttttttttttttttttttttttttt");
+		yield return new WaitForSeconds(2);
+
+		ritualScene.gameObject.SetActive (false);
+//		hideCircleBar ();
 		hideMagicCircle ();
 		hideBotAura ();
 		notice.SetActive (true);
@@ -96,42 +104,69 @@ public class GameController : MonoBehaviour {
 		unhideGauge ();
 		RunnerController.instance.initiate ();
 		ritualCounter = 0;
-
-		wizardRitualPhase ();
-
-
-
-//		GaugeController.instance.startMission ();
+//		wizardRitualPhase ();
 		isRitual = true;
-
-//		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-//		foreach(GameObject i in temp){
-//			if (WitchController.instance != i) {
-//				i.GetComponent<WitchController> ().isFreeze = true;
-//			}
-//			Debug.Log ("isFreeze      "+      i.GetComponent<WitchController> ().isFreeze);
-//		}
 		MovieController.instance.playRitual ();
 	}
 
-	public void stopRitualPhase () {
+	public void startRitualPhase () {
+		wizardRitualPhase ();
+		ritualScene.gameObject.SetActive (true);
+		ritualScene.enabled = true;
+		StartCoroutine (startCounting());
+
+
+		hideCircleBar ();
+//		hideMagicCircle ();
+//		hideBotAura ();
+//		notice.SetActive (true);
+//		ritualMission_canvas.SetActive (true);
+//		unhideGauge ();
+//		RunnerController.instance.initiate ();
+//		ritualCounter = 0;
+//		wizardRitualPhase ();
+//		isRitual = true;
+//		MovieController.instance.playRitual ();
+	}
+
+	IEnumerator stopCounting(){
+		Debug.Log ("waitttttttttttttttttttttttttttttttt");
+		yield return new WaitForSeconds(2);
+		SuccessScene.gameObject.SetActive (false);
 		unhideCircleBar ();
 		unhideMagicCircle ();
 		unhideBotAura ();
+//		hideGauge ();
+//		isRitual = false;
+//		wizardNotRitualPhase ();
+//		addWizard ();
+		notice.SetActive (false);
+		ritualMission_canvas.SetActive (false);
+
+	}
+
+	public void stopRitualPhase () {
+		SuccessScene.gameObject.SetActive (true);
+		SuccessScene.enabled = true;
+		if (isRitualSuccess) {
+			SuccessScene.GetComponentInChildren<Canvas> ().GetComponentInChildren<Text> ().text = "Success";
+		} else {
+			SuccessScene.GetComponentInChildren<Canvas> ().GetComponentInChildren<Text> ().text = "Fail";
+		}
+		StartCoroutine (stopCounting());
+
+//		unhideCircleBar ();
+//		unhideMagicCircle ();
+//		unhideBotAura ();
+		RunnerController.instance.missText.SetActive(false);
+		RunnerController.instance.perfectText.SetActive(false);
 		hideGauge ();
 		isRitual = false;
 		wizardNotRitualPhase ();
 		addWizard ();
-		notice.SetActive (false);
-		ritualMission_canvas.SetActive (false);
+//		notice.SetActive (false);
+//		ritualMission_canvas.SetActive (false);
 
-//		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
-//		foreach(GameObject i in temp) {
-//			if (WitchController.instance != i) {
-//				i.GetComponent<WitchController> ().isFreeze = false;
-//				//				i.GetComponent<PlayerController> ().pentacle.active = false;
-//			}
-//		}
 			
 		MovieController.instance.stopRitual();
 	}

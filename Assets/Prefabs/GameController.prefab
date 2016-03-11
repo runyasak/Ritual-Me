@@ -45,7 +45,11 @@ MonoBehaviour:
   score_text: {fileID: 0}
   startScene: {fileID: 0}
   restartScene: {fileID: 0}
+  ritualScene: {fileID: 0}
+  SuccessScene: {fileID: 0}
+  isGameOver: 0
   score: 0
+  isRitualSuccess: 0
   ritualCounter: 0
   gameCounter: 0
 --- !u!1001 &100100000
