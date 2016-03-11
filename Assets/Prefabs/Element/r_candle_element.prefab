@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400738}
   - 212: {fileID: 21215904}
   - 65: {fileID: 6574464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: r_candle_element
   m_TagString: Element
   m_Icon: {fileID: 0}

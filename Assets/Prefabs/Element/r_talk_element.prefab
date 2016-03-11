@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 405190}
   - 212: {fileID: 21229086}
   - 65: {fileID: 6501678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: r_talk_element
   m_TagString: Element
   m_Icon: {fileID: 0}

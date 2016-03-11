@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 456618}
   - 212: {fileID: 21234664}
   - 65: {fileID: 6528738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: r_bird_element
   m_TagString: Element
   m_Icon: {fileID: 0}

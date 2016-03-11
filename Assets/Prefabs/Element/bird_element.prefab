@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21226398}
   - 114: {fileID: 11417350}
   - 65: {fileID: 6524790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bird_element
   m_TagString: Element
   m_Icon: {fileID: 0}

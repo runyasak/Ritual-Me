@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21250132}
   - 114: {fileID: 11451986}
   - 65: {fileID: 6598652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lock_element
   m_TagString: LockElement
   m_Icon: {fileID: 0}

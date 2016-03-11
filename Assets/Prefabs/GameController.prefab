@@ -40,17 +40,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wizard: {fileID: 118316, guid: bcabe071564d445a78ed1207558104a5, type: 2}
+  wizard_2: {fileID: 118210, guid: a7911b8fb509e5d4fb6d66d637929823, type: 2}
+  wizard_3: {fileID: 124450, guid: 609460b723bc2ab42a0b75213ce38970, type: 2}
+  wizard_4: {fileID: 132022, guid: bad1451a295d62143a58a8410d46a866, type: 2}
+  wizard_5: {fileID: 118708, guid: 8e0edc87c994c1c4a8dc7bc5a2be49b6, type: 2}
+  wizard_6: {fileID: 122422, guid: 269e7bcf235027d40a06ef1892f84562, type: 2}
+  wizard_7: {fileID: 167716, guid: f9c66b97ed7f84045ab3fe9e0e16b537, type: 2}
+  wizard_8: {fileID: 142830, guid: 9fe62af062281e941bed53ad9ea70d2f, type: 2}
   mission_text: {fileID: 0}
   timer_text: {fileID: 0}
   score_text: {fileID: 0}
-  miss_text: {fileID: 0}
   startScene: {fileID: 0}
   restartScene: {fileID: 0}
-  ritualScene: {fileID: 21211948, guid: b8f44acec378443afb720daaf5c0ce7e, type: 2}
+  ritualScene: {fileID: 0}
   SuccessScene: {fileID: 21227060, guid: 3eadd0887c78343fe8efb7ce0468dcff, type: 2}
   isGameOver: 0
-  score: 0
   isRitualSuccess: 0
+  score: 0
   ritualCounter: 0
   gameCounter: 0
 --- !u!1001 &100100000

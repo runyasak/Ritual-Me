@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21226578}
   - 114: {fileID: 11497246}
   - 65: {fileID: 6536298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ghost_element
   m_TagString: Element
   m_Icon: {fileID: 0}
