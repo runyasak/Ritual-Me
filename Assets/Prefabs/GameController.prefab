@@ -43,10 +43,11 @@ MonoBehaviour:
   mission_text: {fileID: 0}
   timer_text: {fileID: 0}
   score_text: {fileID: 0}
+  miss_text: {fileID: 0}
   startScene: {fileID: 0}
   restartScene: {fileID: 0}
-  ritualScene: {fileID: 0}
-  SuccessScene: {fileID: 0}
+  ritualScene: {fileID: 21211948, guid: b8f44acec378443afb720daaf5c0ce7e, type: 2}
+  SuccessScene: {fileID: 21227060, guid: 3eadd0887c78343fe8efb7ce0468dcff, type: 2}
   isGameOver: 0
   score: 0
   isRitualSuccess: 0
