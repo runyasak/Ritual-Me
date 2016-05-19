@@ -15,6 +15,8 @@ public class ElementController : MonoBehaviour {
 	private float timer_for_double_click;
 	private float delay = 0.5f;
 
+	private Renderer rend;
+
 	Vector3 firstPressPos;
 	Vector3 secondPressPos;
 	Vector3 currentSwipe;
@@ -29,6 +31,8 @@ public class ElementController : MonoBehaviour {
 		dropPoint = GameObject.Find ("Element/DropPoint").transform;
 		v = transform.position - pivot.position;
 		transform.localScale = new Vector3 (0.1872487f, 0.1872487f, 0.1872487f);
+		rend = GetComponent<Renderer> ();
+		rend.material.shader = Shader.Find ("MK/MKGlow/Sprites/Default");
 	}
 
 	void moveAround (){
@@ -47,7 +51,8 @@ public class ElementController : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		RaycastHit hit; Ray ray; int layermask =1 << 8;
+		rend.material.SetFloat ("_MKGlowPower", 0.15f);
+		RaycastHit hit; Ray ray; int layermask = 1 << 8;
 		ray = new Ray (Camera.main.ScreenToWorldPoint (Input.mousePosition), new Vector3(0f,0f,1.0f));
 		firstPressPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y);
 		if (Physics.Raycast (ray, out hit, 100, layermask)) {
