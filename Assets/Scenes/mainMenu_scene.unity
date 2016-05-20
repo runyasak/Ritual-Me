@@ -171,6 +171,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1001 &597535348
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &865868897
 Prefab:
   m_ObjectHideFlags: 0
@@ -258,7 +300,7 @@ Prefab:
       objectReference: {fileID: 1769520676}
     - target: {fileID: 11453890, guid: b3dd0b8acf4558d4ea55a52ad42d657d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: changeToStartScene
+      value: onClick
       objectReference: {fileID: 0}
     - target: {fileID: 119118, guid: b3dd0b8acf4558d4ea55a52ad42d657d, type: 2}
       propertyPath: m_IsActive

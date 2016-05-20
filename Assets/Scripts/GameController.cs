@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using SocketIO;
 
 
@@ -40,8 +42,10 @@ public class GameController : MonoBehaviour {
 		//Socket.IO
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
-		StartCoroutine("CalltoServer");
-//		socketIO.Emit("USER_CONNECT");
+		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
+
+//		StartCoroutine("CalltoServer");
+
 		allWizard = new GameObject[] {
 			wizard,
 			wizard_2,
@@ -90,6 +94,14 @@ public class GameController : MonoBehaviour {
 		socketIO.Emit("USER_CONNECT");
 
 	}
+	string  JsonToString( string target, string s){
+
+		string[] newString = Regex.Split(target,s);
+
+		return newString[1];
+
+	}
+
 
 	public void noStartScene(){
 		Application.LoadLevel (1);
@@ -217,7 +229,19 @@ public class GameController : MonoBehaviour {
 
 	void spawnWizard () {
 		int rand_wizard = Random.Range (0, allWizard.Length);
-		var instantElement = Instantiate (allWizard[rand_wizard], new Vector3 (0, allWizard[rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;	
+		var instantElement = Instantiate (allWizard[rand_wizard], new Vector3 (0, allWizard[rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;
+		Dictionary<string, string> data = new Dictionary<string, string>();
+		data["rand"] = rand_wizard+"";
+		socketIO.Emit ("SPAWN_WIZARD", new JSONObject(data));
+
+	}
+
+	void onSpawnEnemyWizard (SocketIOEvent obj){
+		Debug.Log("enemy spawn");
+		int rand = int.Parse(JsonToString(obj.data.GetField("rand").ToString(), "\""));
+		Debug.Log (rand);
+		var instantElement = Instantiate (allWizard[rand], new Vector3 (-4.1f, 1.5f, 0.1f), Quaternion.identity) as GameObject;
+
 	}
 
 	int rand_wizard () {

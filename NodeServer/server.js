@@ -7,6 +7,8 @@ io.on('connection', function (socket) {
 
 	var currentUser
 
+	socket.join('game room')
+
 	socket.on('USER_CONNECT', function (data) {
 		console.log('user has connect')
 		// for (var i = 0; i < clients.length; i++) {
@@ -17,6 +19,16 @@ io.on('connection', function (socket) {
 		// 	})
 		// 	console.log('User name: ' + clients[i].name + ' is connected..')
 		// }
+	})
+
+	socket.on('START_GAME', function (data) {
+		io.to('game room').emit('CLICK_PLAY')
+	})
+
+	socket.on('SPAWN_WIZARD', function (data) {
+		console.log('spawn wizard!!')
+		console.log(data.rand)
+		socket.broadcast.emit('SPAWN_WIZARD', data)
 	})
 
 	socket.on('PLAY', function (data) {

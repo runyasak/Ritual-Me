@@ -72,7 +72,7 @@ public class WitchController : MonoBehaviour {
 		lrText.SetActive (false);
 		hrText.SetActive (true);
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
-
+		Debug.Log (this.transform.position);
 	}
 
 	void countTime (){
