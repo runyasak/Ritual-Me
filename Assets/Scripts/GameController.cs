@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using SocketIO;
 
 
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;
-
+	public SocketIOComponent socketIO;
 	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
 	public Text mission_text, timer_text, score_text, miss_text;
 
@@ -36,7 +37,11 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		//Socket.IO
+		GameObject go = GameObject.Find("SocketIO");
+		socketIO = go.GetComponent<SocketIOComponent>();
+		StartCoroutine("CalltoServer");
+//		socketIO.Emit("USER_CONNECT");
 		allWizard = new GameObject[] {
 			wizard,
 			wizard_2,
@@ -73,6 +78,16 @@ public class GameController : MonoBehaviour {
 		notice.SetActive (false);
 		hideGauge ();
 		spawnWizard ();
+	}
+
+
+	//Call server
+	private IEnumerator CalltoServer(){
+
+		yield return new WaitForSeconds(1f);
+
+		Debug.Log("Send message to the server");
+		socketIO.Emit("USER_CONNECT");
 
 	}
 
