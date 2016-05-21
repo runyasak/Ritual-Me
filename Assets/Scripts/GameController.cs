@@ -8,18 +8,20 @@ public class GameController : MonoBehaviour {
 	public static GameController instance;
 
 	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
-	public Text mission_text, timer_text, score_text, miss_text;
+	public Text timerToFight_text;
 
 	private static int checker;
 	public SpriteRenderer startScene, restartScene, ritualScene, SuccessScene;
 	private float timeStop;
 
-	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, ritualMission_canvas, score_canvas;
+	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, score_canvas;//, ritualMission_canvas;
 	bool isRitual;
 
 	public bool isGameOver, isRitualSuccess;
 
 	public int score;
+	public int timer;
+	private float timerToFight;
 
 	public float ritualCounter, gameCounter;
 
@@ -63,18 +65,17 @@ public class GameController : MonoBehaviour {
 		notice = GameObject.Find ("Notice");
 		magicCircle = GameObject.Find ("MagicCircle");
 		botAura = GameObject.Find ("BotAura");
-		ritualMission_canvas = GameObject.Find("RitualMission_Canvas");
+//		ritualMission_canvas = GameObject.Find("RitualMission_Canvas");
 
 		isGameOver = false;
 		gameCounter = 0;
 		score = 0;
 
-		ritualMission_canvas.SetActive (false);
+//		ritualMission_canvas.SetActive (false);
 		notice.SetActive (false);
 		hideGauge ();
 		spawnWizard ();
 
-		StartCoroutine (startRitual());
 
 	}
 
@@ -90,16 +91,16 @@ public class GameController : MonoBehaviour {
 		hideBotAura ();
 	}
 
-	void ritualPhaseCounter(){
-		if (isRitual) {
-			ritualCounter += Time.deltaTime;
-		
-			if (ritualCounter >= 20) {
-				stopRitualPhase ();
-				ritualCounter = 0;
-			}
-		}
-	}
+//	void ritualPhaseCounter(){
+//		if (isRitual) {
+//			ritualCounter += Time.deltaTime;
+//		
+//			if (ritualCounter >= 20) {
+//				stopRitualPhase ();
+//				ritualCounter = 0;
+//			}
+//		}
+//	}
 
 	IEnumerator startCounting(){
 		yield return new WaitForSeconds(2);
@@ -108,7 +109,7 @@ public class GameController : MonoBehaviour {
 		hideMagicCircle ();
 		hideBotAura ();
 		notice.SetActive (true);
-		ritualMission_canvas.SetActive (true);
+//		ritualMission_canvas.SetActive (true);
 		unhideGauge ();
 		RunnerController.instance.initiate ();
 		ritualCounter = 0;
@@ -130,41 +131,41 @@ public class GameController : MonoBehaviour {
 		unhideMagicCircle ();
 		unhideBotAura ();
 		notice.SetActive (false);
-		ritualMission_canvas.SetActive (false);
+//		ritualMission_canvas.SetActive (false);
 	}
 
-	public void stopRitualPhase () {
-		SuccessScene.gameObject.SetActive (true);
-		SuccessScene.enabled = true;
-		if (isRitualSuccess) {
-			SuccessScene.GetComponentInChildren<Canvas> ().GetComponentInChildren<Text> ().text = "Success";
-		} else {
-			SuccessScene.GetComponentInChildren<Canvas> ().GetComponentInChildren<Text> ().text = "Fail";
-		}
-		StartCoroutine (stopCounting());
+//	public void stopRitualPhase () {
+//		SuccessScene.gameObject.SetActive (true);
+//		SuccessScene.enabled = true;
+//		if (isRitualSuccess) {
+//			SuccessScene.GetComponentInChildren<Canvas> ().GetComponentInChildren<Text> ().text = "Success";
+//		} else {
+//			SuccessScene.GetComponentInChildren<Canvas> ().GetComponentInChildren<Text> ().text = "Fail";
+//		}
+//		StartCoroutine (stopCounting());
+//
+//		RunnerController.instance.missText.SetActive(false);
+//		RunnerController.instance.perfectText.SetActive(false);
+//		hideGauge ();
+//		isRitual = false;
+////		wizardNotRitualPhase ();
+////		addWizard ();
+//	}
 
-		RunnerController.instance.missText.SetActive(false);
-		RunnerController.instance.perfectText.SetActive(false);
-		hideGauge ();
-		isRitual = false;
-		wizardNotRitualPhase ();
-		addWizard ();
-	}
-
-	public void assignMissionText(string input_text) {
-		mission_text.text = input_text;		
-	}
-
-	public void assignTimerText(string input_text) {
-		timer_text.text = input_text;		
-	}
-
-	public void assignMissText(string input_text){
-		miss_text.text = input_text;	
-	}
+//	public void assignMissionText(string input_text) {
+//		mission_text.text = input_text;		
+//	}
+//
+//	public void assignTimerText(string input_text) {
+//		timer_text.text = input_text;		
+//	}
+//
+//	public void assignMissText(string input_text){
+//		miss_text.text = input_text;	
+//	}
 
 	void scoreTextCommand() {
-		score_text.text = "Score: " + score;	
+//		score_text.text = "Score: " + score;	
 	}
 
 	void clearElement () {
@@ -251,38 +252,48 @@ public class GameController : MonoBehaviour {
 	void wizardRitualPhase(){
 		wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
 		foreach(GameObject i in wizardArr){
-			if (!i.GetComponent<WitchController> ().isRitual) {
-				i.GetComponent<WitchController> ().gameObject.SetActive (false);
-			} else {
-				i.GetComponent<WitchController> ().curHR = 99;
-			}
+//			if (!i.GetComponent<WitchController> ().isRitual) {
+//				i.GetComponent<WitchController> ().gameObject.SetActive (false);
+//			} else {
+//				i.GetComponent<WitchController> ().curHR = 99;
+//			}
 			i.GetComponent<WitchController> ().isFreeze = true;
+			i.GetComponentInChildren<Canvas> ().enabled = false;
 		}
 	}
 
-	void wizardNotRitualPhase(){
-		foreach(GameObject i in wizardArr){
-			i.GetComponent<WitchController> ().isRitual = false;
-			i.GetComponent<WitchController> ().isFreeze = false;
-			i.GetComponent<WitchController> ().gameObject.SetActive (true);
-		}
-	}
+//	void wizardNotRitualPhase(){
+//		foreach(GameObject i in wizardArr){
+//			i.GetComponent<WitchController> ().isRitual = false;
+//			i.GetComponent<WitchController> ().isFreeze = false;
+//			i.GetComponent<WitchController> ().gameObject.SetActive (true);
+//		}
+//	}
 
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.C)) { clearElement (); }
 
-		ritualPhaseCounter ();
+//		ritualPhaseCounter ();
 
-//		startRitual ();
 
 		gameTimeScore ();
-		scoreTextCommand();
+
+		timertoFightCount ();
+//		scoreTextCommand();
 	}
 
-	IEnumerator startRitual(){
-		yield return new WaitForSeconds(2);
+	void timertoFightCount(){
+		if (timerToFight <= timer && timerToFight != -1) {
+			timerToFight += Time.deltaTime;
+		}
+		if (timerToFight > timer) {
+			startRitualPhase ();
+			timerToFight_text.enabled = false;
+			timerToFight = -1;
+		}
 
-		startRitualPhase ();
+		timerToFight_text.text = "Time Left: " + (timer - (int)timerToFight);
+//		score_text.enabled = false;
 	}
 }
