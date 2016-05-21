@@ -37,6 +37,13 @@ public class WitchController : MonoBehaviour {
 
 	private float count;
 
+	private int ATK;
+	private int HP;
+	private int INT;
+	public TextMesh ATKNumber;
+	public TextMesh HPNumber;
+	public TextMesh INTNumber;
+
 	void Awake(){
 		instance = this;
 		allElement = new GameObject[] {
@@ -51,6 +58,14 @@ public class WitchController : MonoBehaviour {
 			wand_prefer,
 		};
 		preferNumber = new int[3];
+
+		ATK = 1;
+		HP = 10;
+		INT = 1;
+
+		ATKNumber.text = ""+ATK;
+		HPNumber.text = ""+HP;
+		INTNumber.text = ""+INT;
 	}
 
 	// Use this for initialization
@@ -83,7 +98,7 @@ public class WitchController : MonoBehaviour {
 		if (curHR == maxHR && hrText.active == true) {
 			isRitual = true;
 			this.transform.position = new Vector3(0,2,this.transform.position.z);
-			GameController.instance.startRitualPhase ();
+			GameController.instance.addWizard ();;
 		}
 	}
 
@@ -186,15 +201,19 @@ public class WitchController : MonoBehaviour {
 			} 
 		}
 		if (count_elem == 2) {
-			addHR (5f);
+			addHR (10f);
 		}
-
+			
 		if (count_elem == 1) {
 			addHR ();
 		}
 		else if(count_elem == 0) {
 			minusHR ();
 		}
+
+		ATK += element.GetComponent<ElementController> ().ATK;
+		HP += element.GetComponent<ElementController> ().HP;
+		INT += element.GetComponent<ElementController> ().INT;
 	}
 
 	void minusHR(){
@@ -237,6 +256,12 @@ public class WitchController : MonoBehaviour {
 		Destroy (coll.gameObject);
 	}
 
+	void upDateStatus(){
+		ATKNumber.text = ""+ATK;
+		HPNumber.text = ""+HP;
+		INTNumber.text = ""+INT;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		countTime ();
@@ -261,5 +286,7 @@ public class WitchController : MonoBehaviour {
 			loveEmo.enabled = false;
 			angryEmo.enabled = false;
 		}
+
+		upDateStatus ();
 	}
 }

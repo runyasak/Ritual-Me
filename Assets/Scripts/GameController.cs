@@ -74,6 +74,8 @@ public class GameController : MonoBehaviour {
 		hideGauge ();
 		spawnWizard ();
 
+		StartCoroutine (startRitual());
+
 	}
 
 	public void noStartScene(){
@@ -180,22 +182,23 @@ public class GameController : MonoBehaviour {
 		}
 	}
 		
-	void addWizard(){
+	public void addWizard(){
 
-		if (isRitualSuccess) {
+//		if (isRitualSuccess) {
 			WitchController.instance.hrBar.GetComponent<Image> ().color = Color.red;
 			WitchController.instance.lrText.SetActive (true);
 			WitchController.instance.hrText.SetActive (false);
 			spawnWizard();
-		} else {
-			WitchController.instance.curHR = 20;
-		}
+//		} else {
+//			WitchController.instance.curHR = 20;
+//		}
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Wizard");
 		int j = 1;
 
 		foreach(GameObject i in temp){
 			float x = (-width/2) +((width) / (temp.Length + 1))*j;
-			i.GetComponent<Transform>().position = new Vector3 (x, i.transform.position.y, 0.1f);
+			float y = 2;
+			i.GetComponent<Transform>().position = new Vector3 (x, y, 0.1f);
 			j += 1;
 		}
 	}
@@ -271,7 +274,15 @@ public class GameController : MonoBehaviour {
 
 		ritualPhaseCounter ();
 
+//		startRitual ();
+
 		gameTimeScore ();
 		scoreTextCommand();
+	}
+
+	IEnumerator startRitual(){
+		yield return new WaitForSeconds(2);
+
+		startRitualPhase ();
 	}
 }

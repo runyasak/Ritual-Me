@@ -55,6 +55,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMoveAround: 20
   speedMoveForward: 30
+  ATK: 0
+  HP: 1
+  INT: 2
 --- !u!212 &21216530
 SpriteRenderer:
   m_ObjectHideFlags: 1

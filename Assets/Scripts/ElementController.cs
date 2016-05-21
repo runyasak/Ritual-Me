@@ -21,6 +21,11 @@ public class ElementController : MonoBehaviour {
 	Vector3 secondPressPos;
 	Vector3 currentSwipe;
 
+
+	public int ATK;
+	public int HP;
+	public int INT;
+
 	// Use this for initialization
 	void Start () {
 		isSwipe = false;
