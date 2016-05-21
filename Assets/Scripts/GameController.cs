@@ -238,16 +238,16 @@ public class GameController : MonoBehaviour {
 	void unhideMagicCircle() { magicCircle.SetActive (true); }
 	void unhideBotAura(){ botAura.SetActive (true); }
 
-	void gameTimeScore (){
-		if (!isGameOver) {
-			gameCounter += Time.deltaTime;
-		}
-		if(gameCounter >= 1){
-			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
-			score += 10*wizardArr.Length;
-			gameCounter = 0;
-		}
-	}
+//	void gameTimeScore (){
+//		if (!isGameOver) {
+//			gameCounter += Time.deltaTime;
+//		}
+//		if(gameCounter >= 1){
+//			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
+//			score += 10*wizardArr.Length;
+//			gameCounter = 0;
+//		}
+//	}
 
 	void wizardRitualPhase(){
 		wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
@@ -257,9 +257,20 @@ public class GameController : MonoBehaviour {
 //			} else {
 //				i.GetComponent<WitchController> ().curHR = 99;
 //			}
-			i.GetComponent<WitchController> ().isFreeze = true;
-			i.GetComponentInChildren<Canvas> ().enabled = false;
+			WitchController aWitch = i.GetComponent<WitchController> ();
+			aWitch.isFreeze = true;
+			aWitch.changeToHpBar();
+//			i.GetComponentInChildren<Canvas> ().enabled = false;
+//			GameObject[] prefers = GameObject.FindGameObjectsWithTag ("PreferElement");
+//			foreach (GameObject p in prefers) {
+//				p.GetComponent<Image> ().enabled = false;
+//			}
 		}
+		GameObject[] prefers = GameObject.FindGameObjectsWithTag ("PreferElement");
+		foreach (GameObject p in prefers) {
+			p.GetComponent<Renderer> ().enabled = false;
+		}
+
 	}
 
 //	void wizardNotRitualPhase(){
@@ -277,7 +288,7 @@ public class GameController : MonoBehaviour {
 //		ritualPhaseCounter ();
 
 
-		gameTimeScore ();
+//		gameTimeScore ();
 
 		timertoFightCount ();
 //		scoreTextCommand();

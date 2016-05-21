@@ -15,6 +15,7 @@ public class WitchController : MonoBehaviour {
 	public GameObject hrBar;
 	public GameObject hrText;
 	public GameObject lrText;
+	public GameObject hpText;
 	public SpriteRenderer angryEmo;
 	public SpriteRenderer loveEmo;
 	private float countEmo;
@@ -30,7 +31,7 @@ public class WitchController : MonoBehaviour {
 		pot_prefer, star_prefer, wand_prefer;
 
 	private GameObject[] allElement;
-	private GameObject[] prefer;
+	public GameObject[] prefer;
 	public int[] preferNumber;
 
 	private GameObject prefer1, prefer2, prefer3;
@@ -40,9 +41,12 @@ public class WitchController : MonoBehaviour {
 	private int ATK;
 	private int HP;
 	private int INT;
+	private int WIS;
 	public TextMesh ATKNumber;
 	public TextMesh HPNumber;
 	public TextMesh INTNumber;
+	public TextMesh WISNumber;
+	public TextMesh curHp_maxHp;
 
 	void Awake(){
 		instance = this;
@@ -62,10 +66,12 @@ public class WitchController : MonoBehaviour {
 		ATK = 1;
 		HP = 10;
 		INT = 1;
+		WIS = 1;
 
 		ATKNumber.text = ""+ATK;
 		HPNumber.text = ""+HP;
 		INTNumber.text = ""+INT;
+		WISNumber.text = "" + WISNumber;
 	}
 
 	// Use this for initialization
@@ -85,7 +91,9 @@ public class WitchController : MonoBehaviour {
 		angryEmo.enabled = false;
 
 		lrText.SetActive (false);
+		hpText.SetActive (false);
 		hrText.SetActive (true);
+		curHp_maxHp.text = "";
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
 
 	}
@@ -214,6 +222,7 @@ public class WitchController : MonoBehaviour {
 		ATK += element.GetComponent<ElementController> ().ATK;
 		HP += element.GetComponent<ElementController> ().HP;
 		INT += element.GetComponent<ElementController> ().INT;
+		WIS += element.GetComponent<ElementController> ().WIS;
 	}
 
 	void minusHR(){
@@ -260,6 +269,7 @@ public class WitchController : MonoBehaviour {
 		ATKNumber.text = ""+ATK;
 		HPNumber.text = ""+HP;
 		INTNumber.text = ""+INT;
+		WISNumber.text = ""+WIS;
 	}
 
 	// Update is called once per frame
@@ -288,5 +298,19 @@ public class WitchController : MonoBehaviour {
 		}
 
 		upDateStatus ();
+//		changeToHpBar ();
+	}
+
+	public void changeToHpBar(){
+		lrText.SetActive (false);
+		hrText.SetActive (false);
+
+		hpText.SetActive (true);
+
+		maxHR = HP;
+		curHR = HP;
+
+		curHp_maxHp.text = curHR+" /"+maxHR;
+		hrBar.GetComponent<Image> ().color = new Color(72f/255,179f/255,0,1);
 	}
 }
