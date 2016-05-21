@@ -128,5 +128,5 @@ public class ElementController : MonoBehaviour {
 		moveCommand ();
 		countDoubleClick ();
 	}
-
+		
 }
