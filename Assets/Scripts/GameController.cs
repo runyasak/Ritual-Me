@@ -43,8 +43,9 @@ public class GameController : MonoBehaviour {
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
+		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
 
-//		StartCoroutine("CalltoServer");
+		StartCoroutine("CalltoServer");
 
 		allWizard = new GameObject[] {
 			wizard,
@@ -81,7 +82,7 @@ public class GameController : MonoBehaviour {
 		ritualMission_canvas.SetActive (false);
 		notice.SetActive (false);
 		hideGauge ();
-		spawnWizard ();
+//		spawnWizard ();
 	}
 
 
@@ -225,6 +226,10 @@ public class GameController : MonoBehaviour {
 			i.GetComponent<Transform>().position = new Vector3 (x, i.transform.position.y, 0.1f);
 			j += 1;
 		}
+	}
+
+	void onStartSpawnWizard (SocketIOEvent obj){
+		spawnWizard ();
 	}
 
 	void spawnWizard () {

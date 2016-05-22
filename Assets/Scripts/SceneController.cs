@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour {
 		socketIO = go.GetComponent<SocketIOComponent>();
 		socketIO.On("CLICK_PLAY", changeToStartScene);
 
-		StartCoroutine("CalltoServer");
+//		StartCoroutine("CalltoServer");
 	}
 
 	//Call server

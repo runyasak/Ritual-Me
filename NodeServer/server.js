@@ -2,15 +2,20 @@ var io = require('socket.io')(6969)
 var shortID = require('shortid')
 
 var clients = []
+var count_player = 0
 
 io.on('connection', function (socket) {
 
 	var currentUser
-
 	socket.join('game room')
 
 	socket.on('USER_CONNECT', function (data) {
 		console.log('user has connect')
+		count_player++
+		console.log(count_player)
+		if(count_player == 2){
+			io.to('game room').emit('START_SPAWN_WIZARD')
+		}
 		// for (var i = 0; i < clients.length; i++) {
 		// 	socket.emit('USER_CONNECTED', {
 		// 		name:clients[i].name,
