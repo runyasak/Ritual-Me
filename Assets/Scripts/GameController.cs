@@ -263,6 +263,7 @@ public class GameController : MonoBehaviour {
 //			}
 			WitchController aWitch = i.GetComponent<WitchController> ();
 			aWitch.isFreeze = true;
+			aWitch.isRitual = true;
 			aWitch.changeToHpBar();
 //			i.GetComponentInChildren<Canvas> ().enabled = false;
 //			GameObject[] prefers = GameObject.FindGameObjectsWithTag ("PreferElement");
@@ -340,13 +341,61 @@ public class GameController : MonoBehaviour {
 
 	void actionByATK (){
 		Debug.Log ("atk");
+		float[] atkArr = new float[wizardOfPlayer2Test.Length];
+		foreach (GameObject i in wizardArr) {
+			WitchController aWitch = i.GetComponent<WitchController> ();
+			if (aWitch.cooldown == aWitch.maxCooldown) {
+				int rand = Random.Range (0,atkArr.Length);
+				atkArr [rand] = aWitch.ATK;
+				aWitch.cooldown = 0;
+			}
+		}
+		for (int i = 0; i < atkArr.Length; i++) {
+			wizardOfPlayer2Test [i] -= atkArr [i];
+		}
 	}
 
 	void actionByWIS (){
 		Debug.Log ("wis");
+		int heal = 0;
+		float[] hpArr = new float[wizardArr.Length];
+		int temp = 0;
+		float min = 0;
+		for(int i =0; i < wizardArr.Length; i++) {
+			WitchController aWitch = wizardArr[i].GetComponent<WitchController> ();
+			if (i == 0 || min > aWitch.curHR) {
+				min = aWitch.curHR;
+				temp = i;
+			}
+			heal += aWitch.WIS;
+		}
+
+		WitchController w = wizardArr[temp].GetComponent<WitchController> ();
+		Debug.Log ("before"+w.curHR);
+		w.curHR += heal;
+		Debug.Log ("after"+w.curHR);
+		if (w.curHR > w.HP) {
+			w.curHR = w.HP;
+		}
+
+
 	}
 
 	void actionByInt (){
 		Debug.Log ("int");
+		float[] intArr = new float[wizardOfPlayer2Test.Length];
+		Debug.Log (intArr.ToString());
+		foreach (GameObject i in wizardArr) {
+			WitchController aWitch = i.GetComponent<WitchController> ();
+			if (aWitch.cooldown == aWitch.maxCooldown) {
+				for (int j = 0; j < intArr.Length; j++) {
+					intArr [j] += aWitch.INT;
+				}
+				aWitch.cooldown = 0;
+			}
+		}
+		for (int i = 0; i < intArr.Length; i++) {
+			wizardOfPlayer2Test [i] -= intArr [i];
+		}
 	}
 }

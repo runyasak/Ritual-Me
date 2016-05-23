@@ -50,6 +50,10 @@ public class WitchController : MonoBehaviour {
 	public TextMesh AGINumber;
 	public TextMesh curHp_maxHp;
 
+	public GameObject cooldownBar;
+	public float cooldown;
+	public float maxCooldown;
+
 	void Awake(){
 		instance = this;
 		allElement = new GameObject[] {
@@ -70,6 +74,7 @@ public class WitchController : MonoBehaviour {
 		INTNumber.text = ""+INT;
 		WISNumber.text = "" + WIS;
 		AGINumber.text = "" + AGI;
+
 	}
 
 	// Use this for initialization
@@ -299,6 +304,9 @@ public class WitchController : MonoBehaviour {
 
 		upDateStatus ();
 //		changeToHpBar ();
+
+		increaseCooldown ();
+		cooldownBar.transform.localScale = new Vector3 (cooldown / maxCooldown, cooldownBar.transform.localScale.y, cooldownBar.transform.localScale.z);
 	}
 
 	public void changeToHpBar(){
@@ -312,5 +320,19 @@ public class WitchController : MonoBehaviour {
 
 		curHp_maxHp.text = curHR+" /"+maxHR;
 		hrBar.GetComponent<Image> ().color = new Color(72f/255,179f/255,0,1);
+	}
+
+	private void increaseCooldown(){
+		float increaseSpeed = 1+AGI;
+		if (isRitual) {
+			if (cooldown < maxCooldown) {
+				cooldown += Time.deltaTime * increaseSpeed;
+				cooldownBar.GetComponent<Image> ().color = new Color(0,181f/255,1,1);
+			}
+			if (cooldown > maxCooldown) {
+				cooldown = maxCooldown;
+				cooldownBar.GetComponent<Image> ().color = new Color(0,1,181f/255,1);
+			}	
+		}
 	}
 }
