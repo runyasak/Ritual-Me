@@ -26,6 +26,7 @@ public class ElementController : MonoBehaviour {
 	public int HP;
 	public int INT;
 	public int WIS;
+	public int AGI;
 
 	// Use this for initialization
 	void Start () {

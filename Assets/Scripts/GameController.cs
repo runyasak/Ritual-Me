@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour {
 	public int score;
 	public int timer;
 	private float timerToFight;
+	public float[] wizardOfPlayer2Test;
 
 	public float ritualCounter, gameCounter;
 
@@ -251,6 +252,9 @@ public class GameController : MonoBehaviour {
 
 	void wizardRitualPhase(){
 		wizardArr = GameObject.FindGameObjectsWithTag("Wizard");
+		int j = 1;
+		float x = -6;
+		float y = 0;
 		foreach(GameObject i in wizardArr){
 //			if (!i.GetComponent<WitchController> ().isRitual) {
 //				i.GetComponent<WitchController> ().gameObject.SetActive (false);
@@ -265,6 +269,20 @@ public class GameController : MonoBehaviour {
 //			foreach (GameObject p in prefers) {
 //				p.GetComponent<Image> ().enabled = false;
 //			}
+
+			//position of wizard in ritual phase;
+			if (j == wizardArr.Length && j%2!=0) {
+				y = height * 0.1f;
+			} else {
+				y = height*0.6f -((height) / (3))*j;
+			}
+			i.GetComponent<Transform>().position = new Vector3 (x, y, 0.1f);
+			j += 1;
+			if (j%2!= 0) {
+				x += 3.5f;
+			}
+
+
 		}
 		GameObject[] prefers = GameObject.FindGameObjectsWithTag ("PreferElement");
 		foreach (GameObject p in prefers) {
@@ -306,5 +324,29 @@ public class GameController : MonoBehaviour {
 
 		timerToFight_text.text = "Time Left: " + (timer - (int)timerToFight);
 //		score_text.enabled = false;
+	}
+
+	public void fightAction(int actionType){
+		if(actionType == 1){
+			actionByATK ();
+		}
+		else if(actionType == 2){
+			actionByWIS ();
+		}
+		else if(actionType == 3){
+			actionByInt ();
+		}
+	}
+
+	void actionByATK (){
+		Debug.Log ("atk");
+	}
+
+	void actionByWIS (){
+		Debug.Log ("wis");
+	}
+
+	void actionByInt (){
+		Debug.Log ("int");
 	}
 }

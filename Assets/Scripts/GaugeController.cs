@@ -116,7 +116,7 @@ public class GaugeController : MonoBehaviour {
 			}
 		}
 
-		if (randomPosition + randomLenght < 7 && timeForCreate > 50 && distanceCheck == arr.Length && arrTalk.Length ==0) {
+		if (randomPosition + randomLenght < 7 && timeForCreate > 100 && distanceCheck == arr.Length && arrTalk.Length ==0) {
 			GameObject instantElement = Instantiate (talkElement, new Vector3 (talkElement.transform.position.x
 			, talkElement.transform.position.y, talkElement.transform.position.z)
 			, Quaternion.identity) as GameObject;

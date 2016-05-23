@@ -38,14 +38,16 @@ public class WitchController : MonoBehaviour {
 
 	private float count;
 
-	private int ATK;
-	private int HP;
-	private int INT;
-	private int WIS;
+	public int HP;
+	public int ATK;
+	public int INT;
+	public int WIS;
+	public int AGI;
 	public TextMesh ATKNumber;
 	public TextMesh HPNumber;
 	public TextMesh INTNumber;
 	public TextMesh WISNumber;
+	public TextMesh AGINumber;
 	public TextMesh curHp_maxHp;
 
 	void Awake(){
@@ -63,15 +65,11 @@ public class WitchController : MonoBehaviour {
 		};
 		preferNumber = new int[3];
 
-		ATK = 1;
-		HP = 10;
-		INT = 1;
-		WIS = 1;
-
 		ATKNumber.text = ""+ATK;
 		HPNumber.text = ""+HP;
 		INTNumber.text = ""+INT;
-		WISNumber.text = "" + WISNumber;
+		WISNumber.text = "" + WIS;
+		AGINumber.text = "" + AGI;
 	}
 
 	// Use this for initialization
@@ -223,6 +221,7 @@ public class WitchController : MonoBehaviour {
 		HP += element.GetComponent<ElementController> ().HP;
 		INT += element.GetComponent<ElementController> ().INT;
 		WIS += element.GetComponent<ElementController> ().WIS;
+		AGI += element.GetComponent<ElementController> ().AGI;
 	}
 
 	void minusHR(){
@@ -270,6 +269,7 @@ public class WitchController : MonoBehaviour {
 		HPNumber.text = ""+HP;
 		INTNumber.text = ""+INT;
 		WISNumber.text = ""+WIS;
+		AGINumber.text = ""+AGI;
 	}
 
 	// Update is called once per frame
