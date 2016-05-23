@@ -107,7 +107,7 @@ public class WitchController : MonoBehaviour {
 
 	void checkRitualPhase(){
 		if (curHR == maxHR && hrText.active == true) {
-			isRitual = true;
+//			isRitual = true;
 			this.transform.position = new Vector3(0,2,this.transform.position.z);
 			GameController.instance.addWizard ();;
 		}
@@ -300,6 +300,10 @@ public class WitchController : MonoBehaviour {
 		if (countEmo >= 1.5) {
 			loveEmo.enabled = false;
 			angryEmo.enabled = false;
+		}
+
+		if (isRitual) {
+			curHp_maxHp.text = curHR+" /"+maxHR;
 		}
 
 		upDateStatus ();
