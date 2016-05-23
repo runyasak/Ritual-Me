@@ -98,7 +98,7 @@ public class WitchController : MonoBehaviour {
 		hrText.SetActive (true);
 		curHp_maxHp.text = "";
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
-
+		Debug.Log (this.transform.position);
 	}
 
 	void countTime (){
