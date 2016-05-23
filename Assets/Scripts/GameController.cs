@@ -11,11 +11,7 @@ public class GameController : MonoBehaviour {
 	public static GameController instance;
 	public SocketIOComponent socketIO;
 	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
-<<<<<<< HEAD
 	public Text timerToFight_text;
-=======
-	public Text mission_text, timer_text, score_text, miss_text;
->>>>>>> a777380aa4fdcfb1dbaf95bb905fcec5343a7c37
 
 	private static int checker;
 	public SpriteRenderer startScene, restartScene, ritualScene, SuccessScene;
@@ -47,10 +43,10 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//Socket.IO
-		GameObject go = GameObject.Find("SocketIO");
-		socketIO = go.GetComponent<SocketIOComponent>();
-		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
-		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
+//		GameObject go = GameObject.Find("SocketIO");
+//		socketIO = go.GetComponent<SocketIOComponent>();
+//		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
+//		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
 
 		StartCoroutine("CalltoServer");
 

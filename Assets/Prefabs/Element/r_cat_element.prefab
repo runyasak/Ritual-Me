@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 446480}
   - 212: {fileID: 21286210}
   - 65: {fileID: 6591532}
+  - 114: {fileID: 11410254}
   m_Layer: 8
   m_Name: r_cat_element
   m_TagString: Element
@@ -41,6 +42,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.04, y: 7.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11410254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d39d6bde8b554b72bb7504ca98009e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionType: 1
 --- !u!212 &21286210
 SpriteRenderer:
   m_ObjectHideFlags: 1
