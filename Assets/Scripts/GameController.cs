@@ -319,7 +319,7 @@ public class GameController : MonoBehaviour {
 			if (j == wizardArr.Length && j%2!=0) {
 				y = height * 0.1f;
 			} else {
-				y = height*0.6f -((height) / (3))*j;
+				y = height*0.6f -((height) / (3))*(j%2+1);
 			}
 			i.GetComponent<Transform>().position = new Vector3 (x, y, 0.1f);
 			j += 1;
