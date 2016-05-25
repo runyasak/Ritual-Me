@@ -2,18 +2,29 @@ var io = require('socket.io')(6969)
 var shortID = require('shortid')
 
 var clients = []
-var count_player = 0
+// var count_player = 0
 
 io.on('connection', function (socket) {
-
+	console.log('clients connected')
 	var currentUser
 	socket.join('game room')
 
 	socket.on('USER_CONNECT', function (data) {
 		console.log('user has connect')
-		count_player++
-		console.log(count_player)
-		if(count_player == 2){
+		currentUser = {
+			id:shortID.generate()
+		}
+		clients.push(currentUser)
+		// count_player++
+		console.log("Number of clients: " + clients.length)
+
+		for (var i = 0; i < clients.length; i++) {
+			if (clients[i].id === currentUser.id){
+				console.log("Client: " + clients[i].id)
+			}
+		}
+
+		if(clients.length == 2){
 			io.to('game room').emit('START_SPAWN_WIZARD')
 		}
 		// for (var i = 0; i < clients.length; i++) {
@@ -27,6 +38,7 @@ io.on('connection', function (socket) {
 	})
 
 	socket.on('START_GAME', function (data) {
+		console.log('click play')
 		io.to('game room').emit('CLICK_PLAY')
 	})
 
@@ -52,11 +64,12 @@ io.on('connection', function (socket) {
 	})
 
 	socket.on('disconnect', function (data) {
-		socket.broadcast.emit('USER_DISCONNECTED', currentUser)
+		// socket.broadcast.emit('USER_DISCONNECTED', currentUser)
 		for (var i = 0; i < clients.length; i++) {
-			if (clients[i].name === currentUser.name && clients[i].id === currentUser.id){
-				console.log('User: ' + clients[i].name + ' ID: ' + clients[i].id + ' has disconnected')
+			if (clients[i].id === currentUser.id){
+				console.log('User ID: ' + clients[i].id + ' has disconnected')
 				clients.splice(i,1)
+				console.log("Number of clients: " + clients.length)
 			}
 		}
 	})
@@ -66,11 +79,7 @@ io.on('connection', function (socket) {
 		// currentUser.name = data.name
 		// currentUser.id = data.id
 		currentUser.position = data.position
-
 		socket.broadcast.emit('MOVE', currentUser)
-
-
-
 		console.log(currentUser.name + ' Move to ' + currentUser.position)
 
 	})

@@ -315,7 +315,7 @@ namespace SocketIO
 			#endif
 			
 			try {
-//				ws.Send(encoder.Encode(packet));
+				ws.Send(encoder.Encode(packet));
 			} catch(SocketIOException ex) {
 				#if SOCKET_IO_DEBUG
 				debugMethod.Invoke(ex.ToString());

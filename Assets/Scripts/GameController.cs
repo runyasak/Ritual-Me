@@ -43,10 +43,10 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//Socket.IO
-//		GameObject go = GameObject.Find("SocketIO");
-//		socketIO = go.GetComponent<SocketIOComponent>();
-//		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
-//		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
+		GameObject go = GameObject.Find("SocketIO");
+		socketIO = go.GetComponent<SocketIOComponent>();
+		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
+		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
 
 		StartCoroutine("CalltoServer");
 

@@ -6,11 +6,14 @@ public class SceneController : MonoBehaviour {
 	
 	private SocketIOComponent socketIO;
 
-	void Start (){
+	void Awake (){
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
-		socketIO.On("CLICK_PLAY", changeToStartScene);
+		DontDestroyOnLoad (socketIO);
+	}
 
+	void Start (){
+		socketIO.On("CLICK_PLAY", changeToStartScene);
 //		StartCoroutine("CalltoServer");
 	}
 
