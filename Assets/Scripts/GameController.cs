@@ -146,11 +146,18 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void startRitualPhase () {
+		
 		wizardRitualPhase ();
+
+		Dictionary<string, string> data = new Dictionary<string, string>();
+		data["numb_wizard"] = wizardArr.Length + "";
+		socketIO.Emit ("START_FIGHT_PHASE", new JSONObject(data));
+
 		ritualScene.gameObject.SetActive (true);
 		ritualScene.enabled = true;
 		StartCoroutine (startCounting());
 		hideCircleBar ();
+
 	}
 
 	IEnumerator stopCounting(){
@@ -247,10 +254,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	void onSpawnEnemyWizard (SocketIOEvent obj){
-		Debug.Log("enemy spawn");
-		int rand = int.Parse(JsonToString(obj.data.GetField("rand").ToString(), "\""));
-		Debug.Log (rand);
-		var instantElement = Instantiate (allWizard[rand], new Vector3 (-4.1f, 1.5f, 0.1f), Quaternion.identity) as GameObject;
+		int enemy_rand = int.Parse(JsonToString(obj.data.GetField("rand").ToString(), "\""));
+		Debug.Log ("enemy spawn: " + enemy_rand);
+//		var instantElement = Instantiate (allWizard[rand], new Vector3 (-4.1f, 1.5f, 0.1f), Quaternion.identity) as GameObject;
 
 	}
 
@@ -383,6 +389,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	//mock atk
 	void actionByATK (){
 		Debug.Log ("atk");
 		float[] atkArr = new float[wizardOfPlayer2Test.Length];
@@ -399,6 +406,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	//mock atk all
 	void actionByWIS (){
 		Debug.Log ("wis");
 		int heal = 0;

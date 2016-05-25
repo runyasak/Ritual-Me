@@ -43,11 +43,37 @@ io.on('connection', function (socket) {
 	})
 
 	socket.on('SPAWN_WIZARD', function (data) {
-		console.log('spawn wizard!!')
-		console.log(data.rand)
+		// console.log('spawn wizard!!')
+		for (var i = 0; i < clients.length; i++) {
+			if (clients[i].id === currentUser.id){
+				console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
+			}
+		}
 		socket.broadcast.emit('SPAWN_WIZARD', data)
 	})
 
+	socket.on('START_FIGHT_PHASE', function (data) {
+		for (var i = 0; i < clients.length; i++) {
+			if (clients[i].id === currentUser.id){
+				// console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
+				console.log("Client: " + clients[i].id + " has " + data.numb_wizard)
+			}
+		}
+		socket.broadcast.emit('START_FIGHT_PHASE', data)
+	})
+
+	socket.on('disconnect', function (data) {
+		// socket.broadcast.emit('USER_DISCONNECTED', currentUser)
+		for (var i = 0; i < clients.length; i++) {
+			if (clients[i].id === currentUser.id){
+				console.log('User ID: ' + clients[i].id + ' has disconnected')
+				clients.splice(i,1)
+				console.log("Number of clients: " + clients.length)
+			}
+		}
+	})
+
+	//P'Wach code
 	socket.on('PLAY', function (data) {
 
 		currentUser = {
@@ -61,17 +87,6 @@ io.on('connection', function (socket) {
 
 		socket.broadcast.emit('USER_CONNECTED', currentUser)
 
-	})
-
-	socket.on('disconnect', function (data) {
-		// socket.broadcast.emit('USER_DISCONNECTED', currentUser)
-		for (var i = 0; i < clients.length; i++) {
-			if (clients[i].id === currentUser.id){
-				console.log('User ID: ' + clients[i].id + ' has disconnected')
-				clients.splice(i,1)
-				console.log("Number of clients: " + clients.length)
-			}
-		}
 	})
 
 	socket.on('MOVE', function (data){

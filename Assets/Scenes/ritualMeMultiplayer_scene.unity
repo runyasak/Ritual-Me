@@ -939,7 +939,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11486242, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
       propertyPath: wizardOfPlayer2Test.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 454312, guid: c70f4c0c164bb7a4cb8b3e38f654d845, type: 2}
       propertyPath: m_LocalPosition.x
