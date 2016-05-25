@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
 using SocketIO;
 
 
@@ -47,6 +48,7 @@ public class GameController : MonoBehaviour {
 		socketIO = go.GetComponent<SocketIOComponent>();
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
 		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
+		socketIO.On ("START_FIGHT_PHASE", onStartFightPhase);
 
 		StartCoroutine("CalltoServer");
 
@@ -98,13 +100,29 @@ public class GameController : MonoBehaviour {
 		socketIO.Emit("USER_CONNECT");
 
 	}
+
+	//Convert JsonToString
 	string  JsonToString( string target, string s){
-
 		string[] newString = Regex.Split(target,s);
-
 		return newString[1];
+	}
 
+	//From server >> trigger to start spawn
+	void onStartSpawnWizard (SocketIOEvent obj) {
+		spawnWizard ();
+	}
 
+	//From server >> enemy's wizard random number
+	void onSpawnEnemyWizard (SocketIOEvent obj) {
+		int enemy_rand = int.Parse(JsonToString(obj.data.GetField("rand").ToString(), "\""));
+		Debug.Log ("enemy spawn: " + enemy_rand);
+		//		var instantElement = Instantiate (allWizard[rand], new Vector3 (-4.1f, 1.5f, 0.1f), Quaternion.identity) as GameObject;
+
+	}
+
+	void onStartFightPhase (SocketIOEvent obj) {
+		wizardOfPlayer2Test = new float[int.Parse(JsonToString(obj.data.GetField("numb_wizard").ToString(), "\""))];
+		Debug.Log ("wizardOfPlayer2Test length: " + wizardOfPlayer2Test.Length);
 	}
 
 
@@ -200,10 +218,6 @@ public class GameController : MonoBehaviour {
 //		miss_text.text = input_text;	
 //	}
 
-	void scoreTextCommand() {
-//		score_text.text = "Score: " + score;	
-	}
-
 	void clearElement () {
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Element");
 		GameObject[] temp_talkElement = GameObject.FindGameObjectsWithTag("TalkElement");
@@ -240,23 +254,12 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	void onStartSpawnWizard (SocketIOEvent obj){
-		spawnWizard ();
-	}
-
 	void spawnWizard () {
 		int rand_wizard = Random.Range (0, allWizard.Length);
 		var instantElement = Instantiate (allWizard[rand_wizard], new Vector3 (0, allWizard[rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;
 		Dictionary<string, string> data = new Dictionary<string, string>();
 		data["rand"] = rand_wizard+"";
 		socketIO.Emit ("SPAWN_WIZARD", new JSONObject(data));
-
-	}
-
-	void onSpawnEnemyWizard (SocketIOEvent obj){
-		int enemy_rand = int.Parse(JsonToString(obj.data.GetField("rand").ToString(), "\""));
-		Debug.Log ("enemy spawn: " + enemy_rand);
-//		var instantElement = Instantiate (allWizard[rand], new Vector3 (-4.1f, 1.5f, 0.1f), Quaternion.identity) as GameObject;
 
 	}
 
@@ -360,7 +363,6 @@ public class GameController : MonoBehaviour {
 //		gameTimeScore ();
 
 		timertoFightCount ();
-//		scoreTextCommand();
 	}
 
 	void timertoFightCount(){
@@ -393,6 +395,7 @@ public class GameController : MonoBehaviour {
 	void actionByATK (){
 		Debug.Log ("atk");
 		float[] atkArr = new float[wizardOfPlayer2Test.Length];
+
 		foreach (GameObject i in wizardArr) {
 			WitchController aWitch = i.GetComponent<WitchController> ();
 			if (aWitch.cooldown == aWitch.maxCooldown) {
@@ -401,6 +404,16 @@ public class GameController : MonoBehaviour {
 				aWitch.cooldown = 0;
 			}
 		}
+
+		JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
+		JSONObject json_arr = new JSONObject(JSONObject.Type.ARRAY);
+		j.AddField("atk_arr", json_arr);
+		foreach(float i in atkArr){
+			json_arr.Add (i);
+		}
+
+		socketIO.Emit ("ATK_TO_PLAYER", j);
+
 		for (int i = 0; i < atkArr.Length; i++) {
 			wizardOfPlayer2Test [i] -= atkArr [i];
 		}

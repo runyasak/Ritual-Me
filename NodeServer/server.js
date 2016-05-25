@@ -62,6 +62,19 @@ io.on('connection', function (socket) {
 		socket.broadcast.emit('START_FIGHT_PHASE', data)
 	})
 
+	socket.on('ATK_TO_PLAYER', function (data) {
+		console.log('atk')
+		for (var i = 0; i < clients.length; i++) {
+			if (clients[i].id === currentUser.id){
+				// console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
+				// console.log("Client: " + clients[i].id + " has " + data.numb_wizard)
+				for (var i = 0; i < data.atk_arr.length; i++) {
+					console.log(data.atk_arr[i])
+				}
+			}
+		}
+	})
+
 	socket.on('disconnect', function (data) {
 		// socket.broadcast.emit('USER_DISCONNECTED', currentUser)
 		for (var i = 0; i < clients.length; i++) {

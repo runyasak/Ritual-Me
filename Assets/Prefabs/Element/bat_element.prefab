@@ -58,6 +58,8 @@ MonoBehaviour:
   ATK: 1
   HP: 2
   INT: 0
+  WIS: 0
+  AGI: 0
 --- !u!212 &21246592
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -85,7 +87,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ddc7d37bfb83505468b0f44823bb5e4c, type: 3}
-  m_Color: {r: 0.20891002, g: 0.50735295, b: 0.34681118, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
