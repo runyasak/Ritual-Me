@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+//using ArrayJSON;
 
 using SocketIO;
 
@@ -49,6 +50,9 @@ public class GameController : MonoBehaviour {
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
 		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
 		socketIO.On ("START_FIGHT_PHASE", onStartFightPhase);
+		socketIO.On ("ATK_TO_PLAYER", onATK);
+
+	
 
 		StartCoroutine("CalltoServer");
 
@@ -413,9 +417,27 @@ public class GameController : MonoBehaviour {
 		}
 
 		socketIO.Emit ("ATK_TO_PLAYER", j);
-
-		for (int i = 0; i < atkArr.Length; i++) {
-			wizardOfPlayer2Test [i] -= atkArr [i];
+	}
+		
+//	void onATK (SocketIOEvent obj) {
+//		Debug.Log ("onATK");
+//		this.atk = JSONSerialize.Deserialize<ATK> (JsonToString (obj.data.ToString(), "\""));
+////		float[] getAtk_arr = new float[this.atk.atk_arr.Length];
+//		for (int i = 0; i < this.atk.atk_arr.Length; i++) {
+//			Debug.Log ("atk_arr: " + this.atk.atk_arr[i]);
+//			wizardOfPlayer2Test [i] -= this.atk.atk_arr[i];
+//		}
+////		for (int i = 0; i < atkArr.Length; i++) {
+////			wizardOfPlayer2Test [i] -= atkArr [i];
+////		}
+//	}
+	            
+	void onATK (SocketIOEvent obj) {
+		Debug.Log ("onATK");
+		ArrayJSON atk_arr = ArrayJSON.createFromJson (obj.data.ToString ());
+		for (int i = 0; i < atk_arr.atk_arr.Length; i++) {
+			Debug.Log ("atk_arr: " + atk_arr.atk_arr[i]);
+			wizardOfPlayer2Test [i] -= atk_arr.atk_arr [i];
 		}
 	}
 

@@ -73,6 +73,7 @@ io.on('connection', function (socket) {
 				}
 			}
 		}
+		socket.broadcast.emit('ATK_TO_PLAYER', data)
 	})
 
 	socket.on('disconnect', function (data) {
