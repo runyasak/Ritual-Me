@@ -39,11 +39,13 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 		//Socket.IO
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
+		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard); //Spawn Wizard at start game
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
-		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
+
 
 		StartCoroutine("CalltoServer");
 
@@ -228,10 +230,6 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	void onStartSpawnWizard (SocketIOEvent obj){
-		spawnWizard ();
-	}
-
 	void spawnWizard () {
 		int rand_wizard = Random.Range (0, allWizard.Length);
 		var instantElement = Instantiate (allWizard[rand_wizard], new Vector3 (0, allWizard[rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;
@@ -239,6 +237,10 @@ public class GameController : MonoBehaviour {
 		data["rand"] = rand_wizard+"";
 		socketIO.Emit ("SPAWN_WIZARD", new JSONObject(data));
 
+	}
+
+	void onStartSpawnWizard (SocketIOEvent obj){
+		spawnWizard ();
 	}
 
 	void onSpawnEnemyWizard (SocketIOEvent obj){
