@@ -4,7 +4,7 @@ using System.Collections;
 public class RunnerController : MonoBehaviour {
 	
 	private Vector3 dir;
-	private float mult;
+	public float speedRunner;
 	public static RunnerController instance;
 
 	public GameObject LeftGauge;
@@ -31,7 +31,6 @@ public class RunnerController : MonoBehaviour {
 
 	public void initiate () {
 		this.transform.position = startPoint;
-		mult = 5f;
 		dir = new Vector3(1, 0, 0);
 		countTalkElement = 0;
 		missText.SetActive (false);
@@ -46,7 +45,7 @@ public class RunnerController : MonoBehaviour {
 	}
 
 	void move() {
-		this.transform.position += dir * Time.deltaTime * 5f;
+		this.transform.position += dir * Time.deltaTime * speedRunner;
 	}
 	
 	// Update is called once per frame
@@ -75,6 +74,7 @@ public class RunnerController : MonoBehaviour {
 			ray = new Ray (transform.position, new Vector3 (0f, 0f, 1.0f));
 			if (Physics.Raycast (ray, out hit, 100)) {
 				if (hit.transform.tag == "Element") {
+					GameController.instance.fightAction (hit.transform.GetComponent<RitualElement>().actionType);
 					Destroy (hit.transform.gameObject);
 					countPerfect++;
 					countCombo++;
@@ -127,6 +127,8 @@ public class RunnerController : MonoBehaviour {
 					showPerfectText ();
 					countPerfect++;
 					countCombo += 2;
+
+					GameController.instance.fightAction (3);
 					Destroy (hit.transform.parent.parent.gameObject);
 					talkEffect.enableEmission = false;
 				}

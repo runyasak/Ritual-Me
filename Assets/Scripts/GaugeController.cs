@@ -34,7 +34,7 @@ public class GaugeController : MonoBehaviour {
 	void Update () {
 		timeForCreate += Random.Range (0,5);
 		Create ();
-		startMission ();
+//		startMission ();
 	}
 
 	public void Create(){
@@ -46,19 +46,19 @@ public class GaugeController : MonoBehaviour {
 		}
 	}
 
-	public void startMission (){
-		GameController.instance.assignMissionText ("Combo x6: " + (RunnerController.instance.countCombo).ToString ());
-		GameController.instance.assignTimerText ("Time Left: " + ((int) (20 - GameController.instance.ritualCounter)).ToString());
-		GameController.instance.assignMissText ("Miss Left: " + (3 - RunnerController.instance.countMiss).ToString ());
-		if(RunnerController.instance.countCombo >= 6){
-			GameController.instance.isRitualSuccess = true;
-			GameController.instance.stopRitualPhase ();
-			GameController.instance.score += 100;
-		} else if (RunnerController.instance.countMiss >= 3 || GameController.instance.ritualCounter >= 20) {
-			GameController.instance.isRitualSuccess = false;
-			GameController.instance.stopRitualPhase ();
-		}
-	}
+//	public void startMission (){
+//		GameController.instance.assignMissionText ("Combo x6: " + (RunnerController.instance.countCombo).ToString ());
+//		GameController.instance.assignTimerText ("Time Left: " + ((int) (20 - GameController.instance.ritualCounter)).ToString());
+//		GameController.instance.assignMissText ("Miss Left: " + (3 - RunnerController.instance.countMiss).ToString ());
+//		if(RunnerController.instance.countCombo >= 6){
+//			GameController.instance.isRitualSuccess = true;
+//			GameController.instance.stopRitualPhase ();
+//			GameController.instance.score += 100;
+//		} else if (RunnerController.instance.countMiss >= 3 || GameController.instance.ritualCounter >= 20) {
+//			GameController.instance.isRitualSuccess = false;
+//			GameController.instance.stopRitualPhase ();
+//		}
+//	}
 
 	void CreateElement(){
 		float randomPosition = Random.Range (-7f, 7f);
@@ -83,7 +83,7 @@ public class GaugeController : MonoBehaviour {
 
 		int[] preferWizard = WitchController.instance.GetComponent<WitchController> ().preferNumber;
 		int prefer_rand = Random.Range (0, preferWizard.Length);	
-		if ((distanceCheck == arr.Length) && timeForCreate > 200 && arr.Length < maxElement) {
+		if ((distanceCheck == arr.Length) && timeForCreate > 150 && arr.Length < maxElement) {
 			GameObject instantElement = Instantiate (elementArr[preferWizard[prefer_rand]], new Vector3(randomPosition, this.transform.position.y, -1)
 				, Quaternion.identity) as GameObject;
 			timeForCreate = 0;
@@ -116,7 +116,7 @@ public class GaugeController : MonoBehaviour {
 			}
 		}
 
-		if (randomPosition + randomLenght < 7 && timeForCreate > 200 && distanceCheck == arr.Length && arrTalk.Length ==0) {
+		if (randomPosition + randomLenght < 7 && timeForCreate > 100 && distanceCheck == arr.Length && arrTalk.Length ==0) {
 			GameObject instantElement = Instantiate (talkElement, new Vector3 (talkElement.transform.position.x
 			, talkElement.transform.position.y, talkElement.transform.position.z)
 			, Quaternion.identity) as GameObject;

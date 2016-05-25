@@ -5,21 +5,10 @@ public class RitualElement : MonoBehaviour {
 
 	private float rPosition;
 	private int elementID;
-
-	public RitualElement(int elementID, float rPosition){
-		this.rPosition = rPosition;
-		this.elementID = elementID;
-	}
+	public int actionType;
+	// 1 = ATK, 2 = WIS
 
 	void Start () {
 		rPosition = 0;
-	}
-
-	public float getRPosition(){
-		return rPosition;
-	}
-
-	public int getElementID(){
-		return elementID;
 	}
 }

@@ -15,6 +15,7 @@ public class WitchController : MonoBehaviour {
 	public GameObject hrBar;
 	public GameObject hrText;
 	public GameObject lrText;
+	public GameObject hpText;
 	public SpriteRenderer angryEmo;
 	public SpriteRenderer loveEmo;
 	private float countEmo;
@@ -30,12 +31,28 @@ public class WitchController : MonoBehaviour {
 		pot_prefer, star_prefer, wand_prefer;
 
 	private GameObject[] allElement;
-	private GameObject[] prefer;
+	public GameObject[] prefer;
 	public int[] preferNumber;
 
 	private GameObject prefer1, prefer2, prefer3;
 
 	private float count;
+
+	public int HP;
+	public int ATK;
+	public int INT;
+	public int WIS;
+	public int AGI;
+	public TextMesh ATKNumber;
+	public TextMesh HPNumber;
+	public TextMesh INTNumber;
+	public TextMesh WISNumber;
+	public TextMesh AGINumber;
+	public TextMesh curHp_maxHp;
+
+	public GameObject cooldownBar;
+	public float cooldown;
+	public float maxCooldown;
 
 	void Awake(){
 		instance = this;
@@ -51,6 +68,13 @@ public class WitchController : MonoBehaviour {
 			wand_prefer,
 		};
 		preferNumber = new int[3];
+
+		ATKNumber.text = ""+ATK;
+		HPNumber.text = ""+HP;
+		INTNumber.text = ""+INT;
+		WISNumber.text = "" + WIS;
+		AGINumber.text = "" + AGI;
+
 	}
 
 	// Use this for initialization
@@ -70,7 +94,9 @@ public class WitchController : MonoBehaviour {
 		angryEmo.enabled = false;
 
 		lrText.SetActive (false);
+		hpText.SetActive (false);
 		hrText.SetActive (true);
+		curHp_maxHp.text = "";
 		hrBar.GetComponent<Image> ().color = new Color(1,167f/255,167f/255,1);
 		Debug.Log (this.transform.position);
 	}
@@ -81,9 +107,9 @@ public class WitchController : MonoBehaviour {
 
 	void checkRitualPhase(){
 		if (curHR == maxHR && hrText.active == true) {
-			isRitual = true;
+//			isRitual = true;
 			this.transform.position = new Vector3(0,2,this.transform.position.z);
-			GameController.instance.startRitualPhase ();
+			GameController.instance.addWizard ();;
 		}
 	}
 
@@ -186,15 +212,21 @@ public class WitchController : MonoBehaviour {
 			} 
 		}
 		if (count_elem == 2) {
-			addHR (5f);
+			addHR (10f);
 		}
-
+			
 		if (count_elem == 1) {
 			addHR ();
 		}
 		else if(count_elem == 0) {
 			minusHR ();
 		}
+
+		ATK += element.GetComponent<ElementController> ().ATK;
+		HP += element.GetComponent<ElementController> ().HP;
+		INT += element.GetComponent<ElementController> ().INT;
+		WIS += element.GetComponent<ElementController> ().WIS;
+		AGI += element.GetComponent<ElementController> ().AGI;
 	}
 
 	void minusHR(){
@@ -237,6 +269,14 @@ public class WitchController : MonoBehaviour {
 		Destroy (coll.gameObject);
 	}
 
+	void upDateStatus(){
+		ATKNumber.text = ""+ATK;
+		HPNumber.text = ""+HP;
+		INTNumber.text = ""+INT;
+		WISNumber.text = ""+WIS;
+		AGINumber.text = ""+AGI;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		countTime ();
@@ -260,6 +300,43 @@ public class WitchController : MonoBehaviour {
 		if (countEmo >= 1.5) {
 			loveEmo.enabled = false;
 			angryEmo.enabled = false;
+		}
+
+		if (isRitual) {
+			curHp_maxHp.text = curHR+" /"+maxHR;
+		}
+
+		upDateStatus ();
+//		changeToHpBar ();
+
+		increaseCooldown ();
+		cooldownBar.transform.localScale = new Vector3 (cooldown / maxCooldown, cooldownBar.transform.localScale.y, cooldownBar.transform.localScale.z);
+	}
+
+	public void changeToHpBar(){
+		lrText.SetActive (false);
+		hrText.SetActive (false);
+
+		hpText.SetActive (true);
+
+		maxHR = HP;
+		curHR = HP;
+
+		curHp_maxHp.text = curHR+" /"+maxHR;
+		hrBar.GetComponent<Image> ().color = new Color(72f/255,179f/255,0,1);
+	}
+
+	private void increaseCooldown(){
+		float increaseSpeed = 1+AGI;
+		if (isRitual) {
+			if (cooldown < maxCooldown) {
+				cooldown += Time.deltaTime * increaseSpeed;
+				cooldownBar.GetComponent<Image> ().color = new Color(0,181f/255,1,1);
+			}
+			if (cooldown > maxCooldown) {
+				cooldown = maxCooldown;
+				cooldownBar.GetComponent<Image> ().color = new Color(0,1,181f/255,1);
+			}	
 		}
 	}
 }

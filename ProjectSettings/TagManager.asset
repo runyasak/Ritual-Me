@@ -11,6 +11,7 @@ TagManager:
   - TalkElement
   - DeadElement
   - LockElement
+  - PreferElement
   layers:
   - Default
   - TransparentFX
