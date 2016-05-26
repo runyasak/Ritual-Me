@@ -88,7 +88,7 @@ io.on('connection', function (socket) {
 		console.log('int')
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
-				for (var i = 0; i < data.atk_arr.length; i++) {
+				for (var i = 0; i < data.int_arr.length; i++) {
 					console.log("Client: " + clients[i].id + "INT " + i + " : " + data.int_arr[i])
 				}
 			}

@@ -432,8 +432,7 @@ public class GameController : MonoBehaviour {
 		ArrayJSON atk_arr = ArrayJSON.createFromJson (obj.data.ToString ());
 		for (int i = 0; i < atk_arr.atk_arr.Length; i++) {
 			Debug.Log ("Enemy atk_arr: " + atk_arr.atk_arr[i]);
-
-//			wizardOfPlayer2Test [i] -= atk_arr.atk_arr [i];
+			wizardArr [i].GetComponent<WitchController>().curHR -= atk_arr.atk_arr [i];
 		}
 	}
 
@@ -446,7 +445,7 @@ public class GameController : MonoBehaviour {
 		float min = 0;
 		for(int i =0; i < wizardArr.Length; i++) {
 			WitchController aWitch = wizardArr[i].GetComponent<WitchController> ();
-			if (i == 0 || min > aWitch.curHR) {
+			if (i == 0 || min > aWitch.curHR && aWitch.curHR != 0) {
 				min = aWitch.curHR;
 				temp = i;
 			}
@@ -511,8 +510,7 @@ public class GameController : MonoBehaviour {
 		ArrayJSON int_arr = ArrayJSON.createFromJson (obj.data.ToString ());
 		for (int i = 0; i < int_arr.int_arr.Length; i++) {
 			Debug.Log ("Enemy int_arr: " + int_arr.int_arr[i]);
-
-			//			wizardOfPlayer2Test [i] -= atk_arr.atk_arr [i];
+			wizardArr [i].GetComponent<WitchController>().curHR -= int_arr.int_arr [i];
 		}
 	}
 }
