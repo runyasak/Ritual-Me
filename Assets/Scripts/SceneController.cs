@@ -28,7 +28,7 @@ public class SceneController : MonoBehaviour {
 	}
 
 	public void onClick(){
-		socketIO.Emit ("START_GAME");
+		socketIO.Emit ("USER_READY");
 	}
 
 	public void changeToStartScene (SocketIOEvent e) {

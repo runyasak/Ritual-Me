@@ -22,10 +22,10 @@ public class GameController : MonoBehaviour {
 	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, score_canvas;//, ritualMission_canvas;
 	bool isRitual;
 
-	public bool isGameOver, isRitualSuccess;
+	public bool isGameStart, isGameOver, isRitualSuccess;
 
 	public int score;
-	public int timer;
+	private int timer;
 	private float timerToFight;
 	public float[] wizardOfPlayer2Test;
 
@@ -47,15 +47,17 @@ public class GameController : MonoBehaviour {
 		//Socket.IO
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
+		socketIO.On ("START_GAME", onStartGame);
+		socketIO.On ("FIGHT_TIMER", onTimerToFight);
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
-		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
 		socketIO.On ("START_FIGHT_PHASE", onStartFightPhase);
 		socketIO.On ("ATK_TO_PLAYER", onEnemyATK);
 		socketIO.On ("WIS_TO_PLAYER", onEnemyATK);
 		socketIO.On ("INT_TO_PLAYER", onEnemyATK);
-	
 
 		StartCoroutine("CalltoServer");
+
+		isGameStart = false;
 
 		allWizard = new GameObject[] {
 			wizard,
@@ -113,8 +115,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	//From server >> trigger to start spawn
-	void onStartSpawnWizard (SocketIOEvent obj) {
+	void onStartGame (SocketIOEvent obj) {
 		spawnWizard ();
+		isGameStart = true;
+		timer = int.Parse(obj.data.GetField ("time").ToString());
 	}
 
 	//From server >> enemy's wizard random number
@@ -367,21 +371,38 @@ public class GameController : MonoBehaviour {
 
 //		gameTimeScore ();
 
-		timertoFightCount ();
+//		timertoFightCount ();
 	}
 
 	void timertoFightCount(){
-		if (timerToFight <= timer && timerToFight != -1) {
-			timerToFight += Time.deltaTime;
+		if(isGameStart) {
+			if (timerToFight <= timer && timerToFight != -1) {
+				timerToFight += Time.deltaTime;
+			}
+			if (timerToFight > timer) {
+				startRitualPhase ();
+				timerToFight_text.enabled = false;
+				timerToFight = -1;
+			}
+
+			timerToFight_text.text = "Time Left: " + (timer - (int)timerToFight);
+			//		score_text.enabled = false;	
 		}
-		if (timerToFight > timer) {
+	}
+
+	void onTimerToFight(SocketIOEvent obj) {
+//		Debug.Log (obj.data.ToString ());
+		ArrayJSON timeJSON = ArrayJSON.createFromJson (obj.data.ToString ());
+		timerToFight = float.Parse (obj.data.GetField ("time").ToString ());
+		Debug.Log ("Timer: " + timerToFight);
+
+		if (timerToFight == 0) {
 			startRitualPhase ();
 			timerToFight_text.enabled = false;
-			timerToFight = -1;
+//			timerToFight = -1;
 		}
 
-		timerToFight_text.text = "Time Left: " + (timer - (int)timerToFight);
-//		score_text.enabled = false;
+		timerToFight_text.text = "Time Left: " + (int)timerToFight;
 	}
 
 	public void fightAction(int actionType){

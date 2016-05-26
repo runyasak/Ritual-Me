@@ -7,6 +7,7 @@ var clients = []
 io.on('connection', function (socket) {
 	console.log('clients connected')
 	var currentUser
+	var timeToFight = 10;  
 	socket.join('game room')
 
 	socket.on('USER_CONNECT', function (data) {
@@ -25,20 +26,32 @@ io.on('connection', function (socket) {
 		}
 
 		if(clients.length == 2){
-			io.to('game room').emit('START_SPAWN_WIZARD')
+			io.to('game room').emit('START_GAME', {time: timeToFight})
+			count_timer()
 		}
 		// for (var i = 0; i < clients.length; i++) {
-		// 	socket.emit('USER_CONNECTED', {
-		// 		name:clients[i].name,
-		// 		id:clients[i].id,
-		// 		position:clients[i].position
-		// 	})
+			// socket.emit('USER_CONNECTED', {
+			// 	name:clients[i].name,
+			// 	id:clients[i].id,
+			// 	position:clients[i].position
+			// })
 		// 	console.log('User name: ' + clients[i].name + ' is connected..')
 		// }
 	})
 
-	socket.on('START_GAME', function (data) {
-		console.log('click play')
+	function count_timer () {
+		setInterval(function() {
+				if(timeToFight >= 0){
+					console.log("Time to fight: " + timeToFight)
+					io.to('game room').emit('FIGHT_TIMER', {time: timeToFight})
+				    timeToFight--
+				}
+			}, 1000)
+	}
+
+
+	socket.on('USER_READY', function (data) {
+		console.log('All users ready')
 		io.to('game room').emit('CLICK_PLAY')
 	})
 

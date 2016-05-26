@@ -6,6 +6,8 @@ using System;
 [Serializable]
 public class ArrayJSON {
 
+	//TIMER
+	public int timer;
 	//ATK
 	public float[] atk_arr;
 	//INT
