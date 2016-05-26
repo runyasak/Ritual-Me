@@ -289,7 +289,7 @@ public class WitchController : MonoBehaviour {
 		}
 
 		checkRitualPhase ();
-		checkGameover ();
+//		checkGameover ();
 		deceaseHR ();
 
 		if (curHR< 0) {

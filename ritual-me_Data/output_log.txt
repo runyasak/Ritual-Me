@@ -14,7 +14,7 @@ Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.d
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.048 seconds
+- Completed reload, in  0.053 seconds
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\Mono.Security.dll (this message is harmless)
@@ -22,10 +22,25 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.594068 ms
+UnloadTime: 0.994719 ms
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Configuration.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Xml.dll (this message is harmless)
-Player: phone
+5/27/2016 6:14:04 AM|Fatal|WebSocket.acceptException|System.IO.IOException: EndRead failure ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+                           
+                             at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.EndReceive (IAsyncResult asyncResult, System.Net.Sockets.SocketError& errorCode) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.EndReceive (IAsyncResult result) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                             --- End of inner exception stack trace ---
+                             at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                             at WebSocketSharp.Ext+<ReadBytesAsync>c__AnonStoreyF.<>m__2 (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+5/27/2016 6:14:05 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+                           
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+Player: mo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -34,24 +49,10 @@ The referenced script on this Behaviour (Game Object 'pentacle') is missing!
 (Filename:  Line: 1655)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.223065 ms
+UnloadTime: 4.950307 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 972.
-Total: 1.282872 ms (FindLiveObjects: 0.080919 ms CreateObjectMapping: 0.059604 ms MarkObjects: 1.125374 ms  DeleteObjects: 0.009078 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Total: 1.203531 ms (FindLiveObjects: 0.074603 ms CreateObjectMapping: 0.053288 ms MarkObjects: 1.048007 ms  DeleteObjects: 0.008684 ms)
 
 Timer: 10
  
@@ -60,13 +61,6 @@ Timer: 10
 Send message to the server
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 
 IndexOutOfRangeException: Array index is out of range.
   at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
@@ -115,27 +109,15 @@ Timer: 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
+enemy spawn: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 Timer: 4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Timer: 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-The referenced script on this Behaviour (Game Object '<null>') is missing!
- 
-(Filename:  Line: 1655)
-
-The referenced script on this Behaviour (Game Object 'pentacle') is missing!
- 
-(Filename:  Line: 1655)
-
-The referenced script on this Behaviour (Game Object 'pentacle') is missing!
- 
-(Filename:  Line: 1655)
-
-(3.0, 2.0, 0.1)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -155,11 +137,7 @@ Wizard HP: 10
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Wizard HP: 10
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-wizardOfPlayer2Test length: 1
+wizardOfPlayer2Test length: 2
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -167,25 +145,36 @@ Enemy wizard 0 HP: 10
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-int
+Enemy wizard 1 HP: 10
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-System.Single[]
+You win
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-atk
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-9
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
+5/27/2016 6:14:42 AM|Fatal|WebSocket.acceptException|System.IO.IOException: EndRead failure ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+                           
+                             at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.EndReceive (IAsyncResult asyncResult, System.Net.Sockets.SocketError& errorCode) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.EndReceive (IAsyncResult result) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                             --- End of inner exception stack trace ---
+                             at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                             at WebSocketSharp.Ext+<ReadBytesAsync>c__AnonStoreyF.<>m__2 (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+5/27/2016 6:14:43 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+                           
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+5/27/2016 6:14:44 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+                           
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+5/27/2016 6:14:45 AM|Error|WebSocket.Send|The WebSocket connection has already been closed.
+5/27/2016 6:14:45 AM|Error|WebSocket.Send|The WebSocket connection has already been closed.
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2474 -> priority: 1 
+  Thread -> id: 2084 -> priority: 1 

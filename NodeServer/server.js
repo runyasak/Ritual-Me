@@ -126,6 +126,14 @@ io.on('connection', function (socket) {
 		socket.broadcast.emit('INT_TO_PLAYER', data)
 	})
 
+
+	socket.on('END_GAME', function (data) {
+		console.log('GAME IS END!!')
+		console.log(currentUser.name + " is lose")
+		socket.broadcast.emit('END_GAME')
+	})
+
+
 	socket.on('disconnect', function (data) {
 		// socket.broadcast.emit('USER_DISCONNECTED', currentUser)
 		for (var i = 0; i < clients.length; i++) {

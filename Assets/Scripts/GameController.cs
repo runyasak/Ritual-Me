@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour {
 	GameObject circleBar, gaugeBar, notice, magicCircle, botAura, score_canvas;//, ritualMission_canvas;
 	bool isRitual;
 
-	public bool isGameStart, isGameOver, isRitualSuccess;
+	public bool isGameStart, isGameOver, isRitualSuccess, isFightPhase;
 
 	public int score;
 	private int timer;
@@ -54,12 +54,14 @@ public class GameController : MonoBehaviour {
 		socketIO.On ("ATK_TO_PLAYER", onEnemyATK);
 		socketIO.On ("WIS_TO_PLAYER", onEnemyATK);
 		socketIO.On ("INT_TO_PLAYER", onEnemyATK);
+		socketIO.On ("END_GAME", onEndGame);
 
 		StartCoroutine("CalltoServer");
 
 		timerToFight_text.enabled = false;
 
 		isGameStart = false;
+		isFightPhase = false;
 
 		allWizard = new GameObject[] {
 			wizard,
@@ -133,6 +135,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void onStartFightPhase (SocketIOEvent obj) {
+		isFightPhase = true;
 		ArrayJSON wizardJSON = ArrayJSON.createFromJson (obj.data.ToString ());
 //		wizardOfPlayer2Test = new float[int.Parse(JsonToString(obj.data.GetField("numb_wizard").ToString(), "\""))];
 		wizardOfPlayer2Test = new float[wizardJSON.hp_wizard.Length];
@@ -386,7 +389,7 @@ public class GameController : MonoBehaviour {
 
 //		ritualPhaseCounter ();
 
-
+		isEndedGame ();
 //		gameTimeScore ();
 
 //		timertoFightCount ();
@@ -576,17 +579,24 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	//YOU LOSE!!
 	void isEndedGame(){
-		int allZero = 0;
-		for (int i = 0; i < wizardArr.Length; i++) {
-			if (wizardArr [i].GetComponent<WitchController> ().curHR == 0) {
-				allZero++;
+		if(!isGameOver && isFightPhase) {
+			int allZero = 0;
+			for (int i = 0; i < wizardArr.Length; i++) {
+				if (wizardArr [i].GetComponent<WitchController> ().curHR <= 0) {
+					allZero++;
+				}
+			}
+			if (allZero == wizardArr.Length) {
+				Debug.Log ("You Lose");
+				socketIO.Emit ("END_GAME");
+				isGameOver = true;
 			}
 		}
-		if (allZero == wizardArr.Length) {
-			Debug.Log ("You Lose");
-		}
-			
+	}
 
+	void onEndGame (SocketIOEvent obj) {
+		Debug.Log ("You win");
 	}
 }
