@@ -2,9 +2,9 @@ Initialize engine version: 5.3.3f1 (910d71450a97)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 660M (ID=0xfd4)
-    Vendor:   NVIDIA
-    VRAM:     1989 MB
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     880 MB
 Begin MonoManager ReloadAssembly
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -14,7 +14,7 @@ Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.d
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.052 seconds
+- Completed reload, in  0.083 seconds
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\Mono.Security.dll (this message is harmless)
@@ -22,7 +22,7 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.868017 ms
+UnloadTime: 0.697098 ms
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Configuration.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Xml.dll (this message is harmless)
 The referenced script on this Behaviour (Game Object 'pentacle') is missing!
@@ -30,28 +30,28 @@ The referenced script on this Behaviour (Game Object 'pentacle') is missing!
 (Filename:  Line: 1655)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.715053 ms
+UnloadTime: 6.420329 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 957.
-Total: 1.006174 ms (FindLiveObjects: 0.068683 ms CreateObjectMapping: 0.038683 ms MarkObjects: 0.882622 ms  DeleteObjects: 0.009078 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Total: 0.969858 ms (FindLiveObjects: 0.073025 ms CreateObjectMapping: 0.039078 ms MarkObjects: 0.773281 ms  DeleteObjects: 0.012631 ms)
 
 Send message to the server
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+IndexOutOfRangeException: Array index is out of range.
+  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
+  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
+  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IndexOutOfRangeException: Array index is out of range.
+  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
+  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
+  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 The referenced script on this Behaviour (Game Object '<null>') is missing!
  
@@ -65,15 +65,11 @@ The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
 (Filename:  Line: 1655)
 
-enemy spawn: 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
 (0.0, 1.2, 0.1)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-wizardOfPlayer2Test length: 1
+enemy spawn: 4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -93,11 +89,7 @@ The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-atk
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-atk
+wizardOfPlayer2Test length: 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -125,21 +117,9 @@ after12
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-wis
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-before10
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-after12
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-atk
+enemy ATK
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 26d4 -> priority: 1 
+  Thread -> id: 2908 -> priority: 1 

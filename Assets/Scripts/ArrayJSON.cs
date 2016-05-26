@@ -5,7 +5,12 @@ using System;
 // Use this for initialization
 [Serializable]
 public class ArrayJSON {
+
+	//ATK
 	public float[] atk_arr;
+	//WIS
+	public int wizard_index;
+	public int heal_point;
 
 	public static ArrayJSON createFromJson(string json) {
 

@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour {
 		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
 		socketIO.On ("START_FIGHT_PHASE", onStartFightPhase);
 		socketIO.On ("ATK_TO_PLAYER", onEnemyATK);
-
+		socketIO.On ("WIS_TO_PLAYER", onEnemyATK);
 	
 
 		StartCoroutine("CalltoServer");
@@ -436,7 +436,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	//mock atk all
+	//mock heal all
 	void actionByWIS (){
 		Debug.Log ("wis");
 		int heal = 0;
@@ -460,7 +460,20 @@ public class GameController : MonoBehaviour {
 			w.curHR = w.HP;
 		}
 
+		//emit healArr to socket.io
+		JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
+		j.AddField ("wizard_index", temp);
+		j.AddField("heal_point", heal);
+		socketIO.Emit ("WIS_TO_PLAYER", j);
 
+
+	}
+
+	void onEnemyWIS (SocketIOEvent obj) {
+		Debug.Log ("enemy WIS");
+		//HEAL ENEMY
+		ArrayJSON wis_arr = ArrayJSON.createFromJson (obj.data.ToString ());
+		Debug.Log("Enemy heal wizard: " + wis_arr.wizard_index + " with heal: " + wis_arr.heal_point);
 	}
 
 	void actionByInt (){
