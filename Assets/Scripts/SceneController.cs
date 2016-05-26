@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using SocketIO;
+using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour {
 	
 	private SocketIOComponent socketIO;
+
+	private InputField input;
 
 	void Awake (){
 		GameObject go = GameObject.Find("SocketIO");
@@ -15,6 +18,8 @@ public class SceneController : MonoBehaviour {
 	void Start (){
 		socketIO.On("CLICK_PLAY", changeToStartScene);
 //		StartCoroutine("CalltoServer");
+		GameObject inputGO = GameObject.Find("InputField");
+		input = inputGO.GetComponent<InputField> ();
 	}
 
 	//Call server
@@ -28,7 +33,14 @@ public class SceneController : MonoBehaviour {
 	}
 
 	public void onClick(){
-		socketIO.Emit ("USER_READY");
+		//socketIO.Emit ("START_GAME");
+		if (input.text != "") {
+			Debug.Log (input.text);
+//			Application.LoadLevel (1);
+			socketIO.Emit ("USER_READY");
+		} else {
+			input.text = "Please input your name again";
+		}
 	}
 
 	public void changeToStartScene (SocketIOEvent e) {

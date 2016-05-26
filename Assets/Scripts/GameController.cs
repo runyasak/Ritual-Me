@@ -33,9 +33,6 @@ public class GameController : MonoBehaviour {
 
 	private GameObject[] wizardArr, allWizard;
 
-	//Enemy's wizards HP
-	private int[] enemyWizardArr;
-
 	static Camera cam;
 	static float height;
 	static float width;
@@ -137,10 +134,9 @@ public class GameController : MonoBehaviour {
 //		wizardOfPlayer2Test = new float[int.Parse(JsonToString(obj.data.GetField("numb_wizard").ToString(), "\""))];
 		wizardOfPlayer2Test = new float[wizardJSON.hp_wizard.Length];
 		Debug.Log ("wizardOfPlayer2Test length: " + wizardOfPlayer2Test.Length);
-		enemyWizardArr = new int[wizardJSON.hp_wizard.Length];
 		for(int i = 0; i < wizardJSON.hp_wizard.Length; i++){
 			Debug.Log ("Enemy wizard " + i + " HP: " + wizardJSON.hp_wizard [i]);
-			enemyWizardArr [i] = wizardJSON.hp_wizard [i];
+			wizardOfPlayer2Test [i] = wizardJSON.hp_wizard [i];
 		}
 	}
 
@@ -439,6 +435,7 @@ public class GameController : MonoBehaviour {
 	//mock atk
 	void actionByATK (){
 		Debug.Log ("atk");
+		Debug.Log (wizardOfPlayer2Test.Length);
 		float[] atkArr = new float[wizardOfPlayer2Test.Length];
 
 		foreach (GameObject i in wizardArr) {
@@ -453,6 +450,12 @@ public class GameController : MonoBehaviour {
 		//ATK ENEMY TO CLIENT DEVICE
 		for (int i = 0; i < atkArr.Length; i++) {
 			wizardOfPlayer2Test [i] -= atkArr [i];
+			Debug.Log (wizardOfPlayer2Test [i]);
+
+			if (wizardOfPlayer2Test [i] < 0) {
+				atkArr [i] += wizardOfPlayer2Test [i];
+				wizardOfPlayer2Test [i] = 0;
+			}
 		}
 
 		//emit atkArr to socket.io
@@ -531,6 +534,10 @@ public class GameController : MonoBehaviour {
 		}
 		for (int i = 0; i < intArr.Length; i++) {
 			wizardOfPlayer2Test [i] -= intArr [i];
+			if (wizardOfPlayer2Test [i] < 0) {
+				intArr [i] += wizardOfPlayer2Test [i];
+				wizardOfPlayer2Test [i] = 0;
+			}
 		}
 
 		//emit atkArr to socket.io
@@ -552,5 +559,19 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("Enemy int_arr: " + int_arr.int_arr[i]);
 			wizardArr [i].GetComponent<WitchController>().curHR -= int_arr.int_arr [i];
 		}
+	}
+
+	void isEndedGame(){
+		int allZero = 0;
+		for (int i = 0; i < wizardArr.Length; i++) {
+			if (wizardArr [i].GetComponent<WitchController> ().curHR == 0) {
+				allZero++;
+			}
+		}
+		if (allZero == wizardArr.Length) {
+			Debug.Log ("You Lose");
+		}
+			
+
 	}
 }

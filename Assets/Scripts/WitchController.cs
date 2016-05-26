@@ -292,6 +292,9 @@ public class WitchController : MonoBehaviour {
 		checkGameover ();
 		deceaseHR ();
 
+		if (curHR< 0) {
+			curHR = 0;
+		}
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
 		Moveprefer ();
 

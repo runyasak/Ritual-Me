@@ -96,6 +96,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.2132351, y: -0.066666685, z: 0}
   m_LocalScale: {x: 0.7352941, y: 0.16666667, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 441366}
   m_RootOrder: 0
@@ -108,6 +109,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.1838233, y: -0.066666685, z: 0}
   m_LocalScale: {x: 0.7352941, y: 0.16666667, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 441366}
   m_RootOrder: 1
@@ -120,6 +122,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 3.4, y: 3, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 432928}
   - {fileID: 436792}
@@ -135,6 +138,7 @@ Transform:
   m_LocalRotation: {x: -0.21263112, y: -0.6743798, z: -0.21263115, w: 0.6743797}
   m_LocalPosition: {x: -30, y: 0.70000005, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -35, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 477616}
   m_RootOrder: 0
@@ -147,6 +151,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.0588233, y: 0, z: -5}
   m_LocalScale: {x: 0.014705882, y: 0.33333334, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 448912}
   m_Father: {fileID: 441366}
@@ -245,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8742127fd4946059bdf10ef0c6e37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedRunner: 0
   LeftGauge: {fileID: 143868}
   RightGauge: {fileID: 107454}
   missText: {fileID: 0}
@@ -1897,7 +1903,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: de2a99e76f94842e2be21a67068bb1ec, type: 3}
-  m_Color: {r: 1, g: 0.25735295, b: 0.25735295, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.93103456, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
