@@ -22,22 +22,14 @@ public class SceneController : MonoBehaviour {
 		input = inputGO.GetComponent<InputField> ();
 	}
 
-	//Call server
-	private IEnumerator CalltoServer(){
-
-		yield return new WaitForSeconds(1f);
-
-		Debug.Log("Send message to the server");
-		socketIO.Emit("USER_CONNECT");
-
-	}
-
 	public void onClick(){
 		//socketIO.Emit ("START_GAME");
 		if (input.text != "") {
-			Debug.Log (input.text);
+			Debug.Log ("Player: " + input.text);
 //			Application.LoadLevel (1);
-			socketIO.Emit ("USER_READY");
+			JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
+			j.AddField ("name", input.text);
+			socketIO.Emit ("USER_READY", j);
 		} else {
 			input.text = "Please input your name again";
 		}

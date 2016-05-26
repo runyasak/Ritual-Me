@@ -6,6 +6,8 @@ using System;
 [Serializable]
 public class ArrayJSON {
 
+	//PLAYER NAME
+	public string name;
 	//TIMER
 	public int timer;
 	//ATK

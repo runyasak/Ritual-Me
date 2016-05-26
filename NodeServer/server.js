@@ -2,33 +2,36 @@ var io = require('socket.io')(6969)
 var shortID = require('shortid')
 
 var clients = []
-// var count_player = 0
+// var count_player = 0 
+var count_inGame = 0
 
 io.on('connection', function (socket) {
 	console.log('clients connected')
 	var currentUser
-	var timeToFight = 10;  
+	var timeToFight = 10 
 	socket.join('game room')
 
-	socket.on('USER_CONNECT', function (data) {
-		console.log('user has connect')
-		currentUser = {
-			id:shortID.generate()
-		}
-		clients.push(currentUser)
-		// count_player++
-		console.log("Number of clients: " + clients.length)
-
-		for (var i = 0; i < clients.length; i++) {
-			if (clients[i].id === currentUser.id){
-				console.log("Client: " + clients[i].id)
-			}
-		}
-
-		if(clients.length == 2){
+	socket.on('USER_IN_GAME', function (data) {
+		console.log(currentUser.name + ' is in game')
+		count_inGame++
+		console.log(count_inGame)
+		if(count_inGame == 2){
 			io.to('game room').emit('START_GAME', {time: timeToFight})
-			count_timer()
 		}
+		
+		// clients.push(currentUser)
+		// count_player++
+
+		// for (var i = 0; i < clients.length; i++) {
+		// 	if (clients[i].id === currentUser.id){
+		// 		console.log("Client: " + clients[i].id)
+		// 	}
+		// }
+
+		// if(clients.length == 2){
+		// 	io.to('game room').emit('START_GAME', {time: timeToFight})
+		// 	count_timer()
+		// }
 		// for (var i = 0; i < clients.length; i++) {
 			// socket.emit('USER_CONNECTED', {
 			// 	name:clients[i].name,
@@ -37,6 +40,23 @@ io.on('connection', function (socket) {
 			// })
 		// 	console.log('User name: ' + clients[i].name + ' is connected..')
 		// }
+	})
+
+	socket.on('USER_READY', function (data) {
+
+		currentUser = {
+			id: shortID.generate(),
+			name: data.name
+		}
+		clients.push(currentUser)
+		console.log(currentUser.name + " is ready")
+		console.log("Number of clients: " + clients.length)
+
+		if(clients.length == 2) {
+			console.log('All users ready')
+			io.to('game room').emit('CLICK_PLAY')
+			count_timer()
+		}
 	})
 
 	function count_timer () {
@@ -49,17 +69,11 @@ io.on('connection', function (socket) {
 			}, 1000)
 	}
 
-
-	socket.on('USER_READY', function (data) {
-		console.log('All users ready')
-		io.to('game room').emit('CLICK_PLAY')
-	})
-
 	socket.on('SPAWN_WIZARD', function (data) {
 		// console.log('spawn wizard!!')
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
-				console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
+				console.log("Client: " + clients[i].name + " Spawn_wizard: " + data.rand)
 			}
 		}
 		socket.broadcast.emit('SPAWN_WIZARD', data)
@@ -69,7 +83,7 @@ io.on('connection', function (socket) {
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
 				// console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
-				console.log("Client: " + clients[i].id + " has " + data.hp_wizard.length)
+				console.log("Client: " + clients[i].name + " has " + data.hp_wizard.length)
 				for(var j = 0; j < data.hp_wizard.length; j++){
 					console.log("Wizard " + j + " HP: " + data.hp_wizard[j]);
 				}
@@ -83,7 +97,7 @@ io.on('connection', function (socket) {
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
 				for (var i = 0; i < data.atk_arr.length; i++) {
-					console.log("Client: " + clients[i].id + "ATK " + i + " : " + data.atk_arr[i])
+					console.log("Client: " + clients[i].name + "ATK " + i + " : " + data.atk_arr[i])
 				}
 			}
 		}
@@ -94,7 +108,7 @@ io.on('connection', function (socket) {
 		console.log('wis')
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
-				console.log("Client: " + clients[i].id + "HEAL WIZARD: " + data.wizard_index + " with heal: " + data.heal_point)
+				console.log("Client: " + clients[i].name + "HEAL WIZARD: " + data.wizard_index + " with heal: " + data.heal_point)
 			}
 		}
 		socket.broadcast.emit('WIS_TO_PLAYER', data)
@@ -105,7 +119,7 @@ io.on('connection', function (socket) {
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
 				for (var i = 0; i < data.int_arr.length; i++) {
-					console.log("Client: " + clients[i].id + "INT " + i + " : " + data.int_arr[i])
+					console.log("Client: " + clients[i].name + "INT " + i + " : " + data.int_arr[i])
 				}
 			}
 		}
@@ -116,11 +130,12 @@ io.on('connection', function (socket) {
 		// socket.broadcast.emit('USER_DISCONNECTED', currentUser)
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
-				console.log('User ID: ' + clients[i].id + ' has disconnected')
+				console.log('User ID: ' + clients[i].name + ' has disconnected')
 				clients.splice(i,1)
 				console.log("Number of clients: " + clients.length)
 			}
 		}
+		count_inGame--
 	})
 
 	//P'Wach code

@@ -104,7 +104,7 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 
 		Debug.Log("Send message to the server");
-		socketIO.Emit("USER_CONNECT");
+		socketIO.Emit("USER_IN_GAME");
 
 	}
 
