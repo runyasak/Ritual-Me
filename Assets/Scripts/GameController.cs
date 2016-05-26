@@ -92,7 +92,7 @@ public class GameController : MonoBehaviour {
 //		ritualMission_canvas.SetActive (false);
 		notice.SetActive (false);
 		hideGauge ();
-//		spawnWizard ();
+		spawnWizard ();
 	}
 
 
@@ -413,6 +413,10 @@ public class GameController : MonoBehaviour {
 		//ATK ENEMY TO CLIENT DEVICE
 		for (int i = 0; i < atkArr.Length; i++) {
 			wizardOfPlayer2Test [i] -= atkArr [i];
+			if (wizardOfPlayer2Test [i] < 0) {
+				atkArr [i] += wizardOfPlayer2Test [i];
+				wizardOfPlayer2Test [i] = 0;
+			}
 		}
 
 		//emit atkArr to socket.io
@@ -491,6 +495,10 @@ public class GameController : MonoBehaviour {
 		}
 		for (int i = 0; i < intArr.Length; i++) {
 			wizardOfPlayer2Test [i] -= intArr [i];
+			if (wizardOfPlayer2Test [i] < 0) {
+				intArr [i] += wizardOfPlayer2Test [i];
+				wizardOfPlayer2Test [i] = 0;
+			}
 		}
 
 		//emit atkArr to socket.io
@@ -512,5 +520,19 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("Enemy int_arr: " + int_arr.int_arr[i]);
 			wizardArr [i].GetComponent<WitchController>().curHR -= int_arr.int_arr [i];
 		}
+	}
+
+	void isEndedGame(){
+		int allZero = 0;
+		for (int i = 0; i < wizardArr.Length; i++) {
+			if (wizardArr [i].GetComponent<WitchController> ().curHR == 0) {
+				allZero++;
+			}
+		}
+		if (allZero == wizardArr.Length) {
+			Debug.Log ("You Lose");
+		}
+			
+
 	}
 }
