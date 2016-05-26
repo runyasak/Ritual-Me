@@ -57,6 +57,8 @@ public class GameController : MonoBehaviour {
 
 		StartCoroutine("CalltoServer");
 
+		timerToFight_text.enabled = false;
+
 		isGameStart = false;
 
 		allWizard = new GameObject[] {
@@ -117,6 +119,7 @@ public class GameController : MonoBehaviour {
 	//From server >> trigger to start spawn
 	void onStartGame (SocketIOEvent obj) {
 		spawnWizard ();
+		timerToFight_text.enabled = true;
 		isGameStart = true;
 		timer = int.Parse(obj.data.GetField ("time").ToString());
 	}
@@ -442,6 +445,17 @@ public class GameController : MonoBehaviour {
 			WitchController aWitch = i.GetComponent<WitchController> ();
 			if (aWitch.cooldown == aWitch.maxCooldown) {
 				int rand = Random.Range (0,atkArr.Length);
+				if (wizardOfPlayer2Test [rand] == 0) {
+					for (int j = 0; j < wizardOfPlayer2Test.Length; j++) {
+						rand = j;
+						if (wizardOfPlayer2Test [rand] != 0) {
+							break;
+						}
+					}
+				}
+//				while(wizardOfPlayer2Test [rand] != 0) {
+//					rand = Random.Range (0,atkArr.Length);
+//				}
 				atkArr [rand] = aWitch.ATK;
 				aWitch.cooldown = 0;
 			}
@@ -459,13 +473,13 @@ public class GameController : MonoBehaviour {
 		}
 
 		//emit atkArr to socket.io
-		JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
+		JSONObject json = new JSONObject(JSONObject.Type.OBJECT);
 		JSONObject json_arr = new JSONObject(JSONObject.Type.ARRAY);
-		j.AddField("atk_arr", json_arr);
+		json.AddField("atk_arr", json_arr);
 		foreach(float i in atkArr){
 			json_arr.Add (i);
 		}
-		socketIO.Emit ("ATK_TO_PLAYER", j);
+		socketIO.Emit ("ATK_TO_PLAYER", json);
 	}
 	            
 	void onEnemyATK (SocketIOEvent obj) {
@@ -517,6 +531,7 @@ public class GameController : MonoBehaviour {
 		//HEAL ENEMY
 		ArrayJSON wis_arr = ArrayJSON.createFromJson (obj.data.ToString ());
 		Debug.Log("Enemy heal wizard: " + wis_arr.wizard_index + " with heal: " + wis_arr.heal_point);
+		wizardOfPlayer2Test [wis_arr.wizard_index] += wis_arr.heal_point;
 	}
 
 	void actionByInt (){
