@@ -69,7 +69,10 @@ io.on('connection', function (socket) {
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
 				// console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
-				console.log("Client: " + clients[i].id + " has " + data.numb_wizard)
+				console.log("Client: " + clients[i].id + " has " + data.hp_wizard.length)
+				for(var j = 0; j < data.hp_wizard.length; j++){
+					console.log("Wizard " + j + " HP: " + data.hp_wizard[j]);
+				}
 			}
 		}
 		socket.broadcast.emit('START_FIGHT_PHASE', data)

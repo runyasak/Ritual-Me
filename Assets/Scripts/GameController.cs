@@ -33,6 +33,9 @@ public class GameController : MonoBehaviour {
 
 	private GameObject[] wizardArr, allWizard;
 
+	//Enemy's wizards HP
+	private int[] enemyWizardArr;
+
 	static Camera cam;
 	static float height;
 	static float width;
@@ -130,8 +133,15 @@ public class GameController : MonoBehaviour {
 	}
 
 	void onStartFightPhase (SocketIOEvent obj) {
-		wizardOfPlayer2Test = new float[int.Parse(JsonToString(obj.data.GetField("numb_wizard").ToString(), "\""))];
+		ArrayJSON wizardJSON = ArrayJSON.createFromJson (obj.data.ToString ());
+//		wizardOfPlayer2Test = new float[int.Parse(JsonToString(obj.data.GetField("numb_wizard").ToString(), "\""))];
+		wizardOfPlayer2Test = new float[wizardJSON.hp_wizard.Length];
 		Debug.Log ("wizardOfPlayer2Test length: " + wizardOfPlayer2Test.Length);
+		enemyWizardArr = new int[wizardJSON.hp_wizard.Length];
+		for(int i = 0; i < wizardJSON.hp_wizard.Length; i++){
+			Debug.Log ("Enemy wizard " + i + " HP: " + wizardJSON.hp_wizard [i]);
+			enemyWizardArr [i] = wizardJSON.hp_wizard [i];
+		}
 	}
 
 
@@ -176,9 +186,18 @@ public class GameController : MonoBehaviour {
 		
 		wizardRitualPhase ();
 
-		Dictionary<string, string> data = new Dictionary<string, string>();
-		data["numb_wizard"] = wizardArr.Length + "";
-		socketIO.Emit ("START_FIGHT_PHASE", new JSONObject(data));
+		JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
+		JSONObject json_arr = new JSONObject(JSONObject.Type.ARRAY);
+		j.AddField("hp_wizard", json_arr);
+		for(int i = 0; i < wizardArr.Length; i++){
+			Debug.Log ("Wizard HP: " + wizardArr [i].GetComponent<WitchController> ().HP);
+			json_arr.Add (wizardArr [i].GetComponent<WitchController> ().HP);
+		}
+
+		socketIO.Emit ("START_FIGHT_PHASE", j);
+//		Dictionary<string, string> data = new Dictionary<string, string>();
+//		data["numb_wizard"] = wizardArr.Length + "";
+//		socketIO.Emit ("START_FIGHT_PHASE", new JSONObject(data));
 
 		ritualScene.gameObject.SetActive (true);
 		ritualScene.enabled = true;

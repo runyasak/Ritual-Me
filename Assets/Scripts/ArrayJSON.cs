@@ -15,6 +15,8 @@ public class ArrayJSON {
 	//WIS
 	public int wizard_index;
 	public int heal_point;
+	//WIZARD
+	public int[] hp_wizard;
 
 	public static ArrayJSON createFromJson(string json) {
 
