@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour {
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
 		socketIO.On ("START_SPAWN_WIZARD", onStartSpawnWizard);
 		socketIO.On ("START_FIGHT_PHASE", onStartFightPhase);
-		socketIO.On ("ATK_TO_PLAYER", onATK);
+		socketIO.On ("ATK_TO_PLAYER", onEnemyATK);
 
 	
 
@@ -409,35 +409,30 @@ public class GameController : MonoBehaviour {
 			}
 		}
 
+		//ATK ENEMY TO CLIENT DEVICE
+		for (int i = 0; i < atkArr.Length; i++) {
+			wizardOfPlayer2Test [i] -= atkArr [i];
+		}
+
+		//emit atkArr to socket.io
 		JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
 		JSONObject json_arr = new JSONObject(JSONObject.Type.ARRAY);
 		j.AddField("atk_arr", json_arr);
 		foreach(float i in atkArr){
 			json_arr.Add (i);
 		}
-
 		socketIO.Emit ("ATK_TO_PLAYER", j);
 	}
-		
-//	void onATK (SocketIOEvent obj) {
-//		Debug.Log ("onATK");
-//		this.atk = JSONSerialize.Deserialize<ATK> (JsonToString (obj.data.ToString(), "\""));
-////		float[] getAtk_arr = new float[this.atk.atk_arr.Length];
-//		for (int i = 0; i < this.atk.atk_arr.Length; i++) {
-//			Debug.Log ("atk_arr: " + this.atk.atk_arr[i]);
-//			wizardOfPlayer2Test [i] -= this.atk.atk_arr[i];
-//		}
-////		for (int i = 0; i < atkArr.Length; i++) {
-////			wizardOfPlayer2Test [i] -= atkArr [i];
-////		}
-//	}
 	            
-	void onATK (SocketIOEvent obj) {
-		Debug.Log ("onATK");
+	void onEnemyATK (SocketIOEvent obj) {
+		Debug.Log ("enemy ATK");
+
+		//ATK FROM ENEMY
 		ArrayJSON atk_arr = ArrayJSON.createFromJson (obj.data.ToString ());
 		for (int i = 0; i < atk_arr.atk_arr.Length; i++) {
-			Debug.Log ("atk_arr: " + atk_arr.atk_arr[i]);
-			wizardOfPlayer2Test [i] -= atk_arr.atk_arr [i];
+			Debug.Log ("Enemy atk_arr: " + atk_arr.atk_arr[i]);
+
+//			wizardOfPlayer2Test [i] -= atk_arr.atk_arr [i];
 		}
 	}
 
