@@ -52,6 +52,7 @@ public class GameController : MonoBehaviour {
 		socketIO.On ("START_FIGHT_PHASE", onStartFightPhase);
 		socketIO.On ("ATK_TO_PLAYER", onEnemyATK);
 		socketIO.On ("WIS_TO_PLAYER", onEnemyATK);
+		socketIO.On ("INT_TO_PLAYER", onEnemyATK);
 	
 
 		StartCoroutine("CalltoServer");
@@ -491,6 +492,27 @@ public class GameController : MonoBehaviour {
 		}
 		for (int i = 0; i < intArr.Length; i++) {
 			wizardOfPlayer2Test [i] -= intArr [i];
+		}
+
+		//emit atkArr to socket.io
+		JSONObject json_obj = new JSONObject(JSONObject.Type.OBJECT);
+		JSONObject json_arr = new JSONObject(JSONObject.Type.ARRAY);
+		json_obj.AddField("int_arr", json_arr);
+		foreach(float i in intArr){
+			json_arr.Add (i);
+		}
+		socketIO.Emit ("INT_TO_PLAYER", json_obj);
+
+	}
+
+	void onEnemyINT (SocketIOEvent obj) {
+		Debug.Log ("enemy INT");
+		//INT FROM ENEMY
+		ArrayJSON int_arr = ArrayJSON.createFromJson (obj.data.ToString ());
+		for (int i = 0; i < int_arr.int_arr.Length; i++) {
+			Debug.Log ("Enemy int_arr: " + int_arr.int_arr[i]);
+
+			//			wizardOfPlayer2Test [i] -= atk_arr.atk_arr [i];
 		}
 	}
 }

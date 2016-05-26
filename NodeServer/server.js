@@ -66,8 +66,6 @@ io.on('connection', function (socket) {
 		console.log('atk')
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
-				// console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
-				// console.log("Client: " + clients[i].id + " has " + data.numb_wizard)
 				for (var i = 0; i < data.atk_arr.length; i++) {
 					console.log("Client: " + clients[i].id + "ATK " + i + " : " + data.atk_arr[i])
 				}
@@ -80,10 +78,22 @@ io.on('connection', function (socket) {
 		console.log('wis')
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
-				console.log("Client: " + clients[i].id + "HEAL WIZARD: " + data.wizard_index + " with heal: " + data.heal)
+				console.log("Client: " + clients[i].id + "HEAL WIZARD: " + data.wizard_index + " with heal: " + data.heal_point)
 			}
 		}
 		socket.broadcast.emit('WIS_TO_PLAYER', data)
+	})
+
+	socket.on('INT_TO_PLAYER', function (data) {
+		console.log('int')
+		for (var i = 0; i < clients.length; i++) {
+			if (clients[i].id === currentUser.id){
+				for (var i = 0; i < data.atk_arr.length; i++) {
+					console.log("Client: " + clients[i].id + "INT " + i + " : " + data.int_arr[i])
+				}
+			}
+		}
+		socket.broadcast.emit('INT_TO_PLAYER', data)
 	})
 
 	socket.on('disconnect', function (data) {

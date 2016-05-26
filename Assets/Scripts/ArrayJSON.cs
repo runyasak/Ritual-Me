@@ -8,6 +8,8 @@ public class ArrayJSON {
 
 	//ATK
 	public float[] atk_arr;
+	//INT
+	public float[] int_arr;
 	//WIS
 	public int wizard_index;
 	public int heal_point;
