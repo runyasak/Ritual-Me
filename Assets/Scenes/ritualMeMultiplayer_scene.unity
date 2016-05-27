@@ -437,6 +437,14 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1425933263}
+    - target: {fileID: 195064, guid: 9a84aad9fdf41be4aad0158879e1c3f4, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430134, guid: 9a84aad9fdf41be4aad0158879e1c3f4, type: 2}
+      propertyPath: m_Text
+      value: Main Menu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a84aad9fdf41be4aad0158879e1c3f4, type: 2}
   m_IsPrefabParent: 0

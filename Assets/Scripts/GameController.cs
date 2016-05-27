@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
 	public SocketIOComponent socketIO;
 	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
 	public Text timerToFight_text;
+	public Text endGame_text;
 
 	private static int checker;
 	public SpriteRenderer startScene, restartScene, ritualScene, SuccessScene;
@@ -151,7 +152,7 @@ public class GameController : MonoBehaviour {
 
 
 	public void noStartScene(){
-		Application.LoadLevel (1);
+		Application.LoadLevel (0);
 	}
 
 	public void restart(){
@@ -595,11 +596,20 @@ public class GameController : MonoBehaviour {
 				Debug.Log ("You Lose");
 				socketIO.Emit ("END_GAME");
 				isGameOver = true;
+				/*GameObject textGO = GameObject.Find("restartScene");
+				endGame_text = textGO.GetComponent<Text> ();
+				endGame_text.text = "You Lose";*/
+				restart ();
 			}
 		}
 	}
 
 	void onEndGame (SocketIOEvent obj) {
 		Debug.Log ("You win");
+		/*GameObject textGO = GameObject.Find("restartScene");
+		endGame_text = textGO.GetComponent<Text> ();
+		endGame_text.text = "You Win";
+		endGame_text.color = Color.green;*/
+		restart ();
 	}
 }
