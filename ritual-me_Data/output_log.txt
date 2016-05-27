@@ -16,7 +16,7 @@ Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.d
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.065 seconds
+- Completed reload, in  0.063 seconds
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\Mono.Security.dll (this message is harmless)
@@ -24,25 +24,31 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.851044 ms
+UnloadTime: 0.633940 ms
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Configuration.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Xml.dll (this message is harmless)
-5/27/2016 12:28:39 PM|Fatal|WebSocket.acceptException|System.IO.IOException: EndRead failure ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
-                            
-                              at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.EndReceive (IAsyncResult asyncResult, System.Net.Sockets.SocketError& errorCode) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.EndReceive (IAsyncResult result) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
-                              --- End of inner exception stack trace ---
-                              at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
-                              at WebSocketSharp.Ext+<ReadBytesAsync>c__AnonStorey8C.<>m__83 (IAsyncResult ar) [0x00000] in <filename unknown>:0 
-5/27/2016 12:28:40 PM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-Player: c
+5/27/2016 1:25:19 PM|Fatal|WebSocket.acceptException|System.IO.IOException: EndRead failure ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+                           
+                             at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.EndReceive (IAsyncResult asyncResult, System.Net.Sockets.SocketError& errorCode) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.EndReceive (IAsyncResult result) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                             --- End of inner exception stack trace ---
+                             at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                             at WebSocketSharp.Ext+<ReadBytesAsync>c__AnonStorey8C.<>m__89 (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+5/27/2016 1:25:20 PM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+                           
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+5/27/2016 1:25:21 PM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+                           
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
+                             at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+Player: asdfasdf
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -58,40 +64,23 @@ Got user data:
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
+pc test
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
 (Filename:  Line: 1655)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.861529 ms
+UnloadTime: 4.590742 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1008.
-Total: 1.262750 ms (FindLiveObjects: 0.128682 ms CreateObjectMapping: 0.064341 ms MarkObjects: 1.029068 ms  DeleteObjects: 0.007499 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1009.
+Total: 1.058673 ms (FindLiveObjects: 0.129472 ms CreateObjectMapping: 0.067104 ms MarkObjects: 0.823412 ms  DeleteObjects: 0.007105 ms)
 
 9C78
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 
 Timer: 10
  
@@ -101,12 +90,9 @@ Send message to the server
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+"27E402894D31B60D"
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 The referenced script on this Behaviour (Game Object '<null>') is missing!
  
@@ -124,7 +110,7 @@ The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-enemy spawn: 4
+enemy spawn: 7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -180,93 +166,13 @@ Enemy wizard 0 HP: 10
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-int
+You win
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-System.Single[]
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-int
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-System.Single[]
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-wis
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-before10
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-after11
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-wis
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-before10
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-after11
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-int
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-System.Single[]
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-atk
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-9
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-wis
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-before10
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-after11
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-int
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-System.Single[]
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-enemy ATK
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Enemy atk_arr: 1
+Successfully updated user data
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 5e8 -> priority: 1 
+  Thread -> id: 1758 -> priority: 1 

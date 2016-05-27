@@ -17,6 +17,11 @@ public class GameController : MonoBehaviour {
 	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
 	public Text timerToFight_text;
 
+	//PlayFab ID of player
+	public string PlayFabId;
+	//WIN/LOSE
+	private int win, lose;
+
 	private static int checker;
 	public SpriteRenderer startScene, restartScene, ritualScene, SuccessScene;
 	private float timeStop;
@@ -50,6 +55,7 @@ public class GameController : MonoBehaviour {
 		//Socket.IO
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
+		socketIO.On ("PLAYER_ID", onPlayerID);
 		socketIO.On ("START_GAME", onStartGame);
 		socketIO.On ("FIGHT_TIMER", onTimerToFight);
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
@@ -127,6 +133,7 @@ public class GameController : MonoBehaviour {
 		timerToFight_text.enabled = true;
 		isGameStart = true;
 		timer = int.Parse(obj.data.GetField ("time").ToString());
+
 	}
 
 	//From server >> enemy's wizard random number
@@ -149,6 +156,10 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	void onPlayerID (SocketIOEvent obj) {
+		PlayFabId = obj.data.GetField ("id").ToString ();
+		Debug.Log (PlayFabId);
+	}
 
 	public void noStartScene(){
 		Application.LoadLevel (1);
@@ -595,31 +606,73 @@ public class GameController : MonoBehaviour {
 				Debug.Log ("You Lose");
 				socketIO.Emit ("END_GAME");
 				isGameOver = true;
+				SetWinLose ("lose");
 			}
 		}
 	}
 
 	void onEndGame (SocketIOEvent obj) {
 		Debug.Log ("You win");
+		SetWinLose ("win");
+
 	}
 
 	//Playfab
 	void SetWinLose(string key) {
 
-		UpdateUserDataRequest request = new UpdateUserDataRequest() {
-			Data = new Dictionary<string, string>(){
-				{"win", "0"},
-				{"lose", "0"}
-			}
+		if (key == "win") {
+			UpdateUserDataRequest request = new UpdateUserDataRequest () {
+				Data = new Dictionary<string, string> () {
+					{ "win", win+1 + "" },
+				}
+			};
+			PlayFabClientAPI.UpdateUserData(request, (result) =>
+				{
+					Debug.Log("Successfully updated user data");
+				}, (error) =>
+				{
+					Debug.Log("Got error setting user data Ancestor to Arthur");
+					Debug.Log(error.ErrorDetails);
+				});
+		}
+
+		if (key == "lose") {
+			UpdateUserDataRequest request = new UpdateUserDataRequest () {
+				Data = new Dictionary<string, string> () {
+					{ "lose", lose+1 + ""},
+				}
+			};
+			PlayFabClientAPI.UpdateUserData(request, (result) =>
+				{
+					Debug.Log("Successfully updated user data");
+				}, (error) =>
+				{
+					Debug.Log("Got error setting user data Ancestor to Arthur");
+					Debug.Log(error.ErrorDetails);
+				});
+		}
+			
+	}
+		
+
+	void GetUserData() {
+		GetUserDataRequest request = new GetUserDataRequest() {
+			PlayFabId = PlayFabId,
+			Keys = null
 		};
 
-		PlayFabClientAPI.UpdateUserData(request, (result) =>
-			{
-				Debug.Log("Successfully updated user data");
-			}, (error) =>
-			{
-				Debug.Log("Got error setting user data Ancestor to Arthur");
-				Debug.Log(error.ErrorDetails);
-			});
+		PlayFabClientAPI.GetUserData(request,(result) => {
+			Debug.Log("Got user data:");
+			if ((result.Data == null) || (result.Data.Count == 0)) {
+				Debug.Log("No user data available");
+			} else {
+				win = int.Parse(result.Data["win"].Value);
+				lose = int.Parse(result.Data["lose"].Value);
+				Debug.Log("WIN: " + win + ", LOSE: " + lose);
+			}
+		}, (error) => {
+			Debug.Log("Got error retrieving user data:");
+			Debug.Log(error.ErrorMessage);
+		});
 	}
 }

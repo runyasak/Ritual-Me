@@ -10,8 +10,6 @@ public class SceneController : MonoBehaviour {
 	
 	private SocketIOComponent socketIO;
 
-	public PlayerData playerData;
-
 	private InputField input;
 
 	private string player_name;
@@ -25,9 +23,6 @@ public class SceneController : MonoBehaviour {
 		PlayFabSettings.TitleId = "9C78";
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
-
-		GameObject playerObj = GameObject.Find ("PlayerData");
-		playerData = playerObj.GetComponent<PlayerData> ();
 
 		DontDestroyOnLoad (socketIO);
 	}
@@ -152,6 +147,8 @@ public class SceneController : MonoBehaviour {
 			Debug.Log (player_name);
 			j.AddField ("name", player_name);
 		}
+
+		j.AddField ("id", PlayFabId);
 		socketIO.Emit ("USER_READY", j);
 
 	}
