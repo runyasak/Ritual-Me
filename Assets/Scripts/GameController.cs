@@ -602,4 +602,24 @@ public class GameController : MonoBehaviour {
 	void onEndGame (SocketIOEvent obj) {
 		Debug.Log ("You win");
 	}
+
+	//Playfab
+	void SetWinLose(string key) {
+
+		UpdateUserDataRequest request = new UpdateUserDataRequest() {
+			Data = new Dictionary<string, string>(){
+				{"win", "0"},
+				{"lose", "0"}
+			}
+		};
+
+		PlayFabClientAPI.UpdateUserData(request, (result) =>
+			{
+				Debug.Log("Successfully updated user data");
+			}, (error) =>
+			{
+				Debug.Log("Got error setting user data Ancestor to Arthur");
+				Debug.Log(error.ErrorDetails);
+			});
+	}
 }

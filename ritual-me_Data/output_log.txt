@@ -16,7 +16,7 @@ Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.d
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.061 seconds
+- Completed reload, in  0.065 seconds
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\Mono.Security.dll (this message is harmless)
@@ -24,142 +24,83 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.672230 ms
+UnloadTime: 0.851044 ms
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Configuration.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Xml.dll (this message is harmless)
-5/27/2016 11:50:50 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+5/27/2016 12:28:39 PM|Fatal|WebSocket.acceptException|System.IO.IOException: EndRead failure ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+                            
+                              at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
+                              at System.Net.Sockets.Socket.EndReceive (IAsyncResult asyncResult, System.Net.Sockets.SocketError& errorCode) [0x00000] in <filename unknown>:0 
+                              at System.Net.Sockets.Socket.EndReceive (IAsyncResult result) [0x00000] in <filename unknown>:0 
+                              at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                              --- End of inner exception stack trace ---
+                              at System.Net.Sockets.NetworkStream.EndRead (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+                              at WebSocketSharp.Ext+<ReadBytesAsync>c__AnonStorey8C.<>m__83 (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+5/27/2016 12:28:40 PM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
                             
                               at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
                               at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
                               at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
                               at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:50 AM|Error|WebSocket.Send|The WebSocket connection has already been closed.
-5/27/2016 11:50:51 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:52 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:53 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:54 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:55 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:56 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:57 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:58 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:50:59 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-Player: PHONE
+Player: c
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-5/27/2016 11:51:00 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:51:00 AM|Error|WebSocket.Send|The WebSocket connection has already been closed.
-5/27/2016 11:51:01 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:51:02 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-Got PlayFabID: 74C15502E0D14FB1
+Got PlayFabID: 27E402894D31B60D
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-(new account)
+(existing account)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Register new account
+Got user data:
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-5/27/2016 11:51:03 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
 The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
 (Filename:  Line: 1655)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.282203 ms
+UnloadTime: 4.861529 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1008.
-Total: 0.887359 ms (FindLiveObjects: 0.074604 ms CreateObjectMapping: 0.030789 ms MarkObjects: 0.751176 ms  DeleteObjects: 0.005526 ms)
+Total: 1.262750 ms (FindLiveObjects: 0.128682 ms CreateObjectMapping: 0.064341 ms MarkObjects: 1.029068 ms  DeleteObjects: 0.007499 ms)
 
 9C78
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-5/27/2016 11:51:04 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-5/27/2016 11:51:05 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+IndexOutOfRangeException: Array index is out of range.
+  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
+  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
+  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IndexOutOfRangeException: Array index is out of range.
+  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
+  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
+  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IndexOutOfRangeException: Array index is out of range.
+  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
+  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
+  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Timer: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 Send message to the server
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-5/27/2016 11:51:05 AM|Error|WebSocket.Send|The WebSocket connection has already been closed.
 IndexOutOfRangeException: Array index is out of range.
   at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
   at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
@@ -167,60 +108,165 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-5/27/2016 11:51:06 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour (Game Object '<null>') is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1655)
 
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1655)
 
-5/27/2016 11:51:07 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1655)
 
-5/27/2016 11:51:08 AM|Fatal|WebSocket.acceptException|System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
-                            
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+(0.0, 1.2, 0.1)
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-IndexOutOfRangeException: Array index is out of range.
-  at ElementManager.randomElementController () [0x00000] in <filename unknown>:0 
-  at ElementManager.spawnElement () [0x00000] in <filename unknown>:0 
-  at ElementManager.Update () [0x00000] in <filename unknown>:0 
+enemy spawn: 4
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-5/27/2016 11:51:09 AM|Error|WebSocket.Send|The WebSocket connection has already been closed.
-5/27/2016 11:51:09 AM|Error|WebSocket.Send|The WebSocket connection has already been closed.
+Timer: 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Timer: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Wizard HP: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+wizardOfPlayer2Test length: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy wizard 0 HP: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+int
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+System.Single[]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+int
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+System.Single[]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+wis
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+before10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+after11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+wis
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+before10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+after11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+int
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+System.Single[]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+atk
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+wis
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+before10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+after11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+int
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+System.Single[]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+enemy ATK
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy atk_arr: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2080 -> priority: 1 
+  Thread -> id: 5e8 -> priority: 1 
