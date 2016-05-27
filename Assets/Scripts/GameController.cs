@@ -62,8 +62,8 @@ public class GameController : MonoBehaviour {
 		socketIO.On ("SPAWN_WIZARD", onSpawnEnemyWizard);
 		socketIO.On ("START_FIGHT_PHASE", onStartFightPhase);
 		socketIO.On ("ATK_TO_PLAYER", onEnemyATK);
-		socketIO.On ("WIS_TO_PLAYER", onEnemyATK);
-		socketIO.On ("INT_TO_PLAYER", onEnemyATK);
+		socketIO.On ("WIS_TO_PLAYER", onEnemyWIS);
+		socketIO.On ("INT_TO_PLAYER", onEnemyINT);
 		socketIO.On ("END_GAME", onEndGame);
 
 		StartCoroutine("CalltoServer");
@@ -584,7 +584,6 @@ public class GameController : MonoBehaviour {
 	void actionByInt (){
 		Debug.Log ("int");
 		float[] intArr = new float[wizardOfPlayer2Test.Length];
-		Debug.Log (intArr.ToString());
 		foreach (GameObject i in wizardArr) {
 			WitchController aWitch = i.GetComponent<WitchController> ();
 			if (aWitch.cooldown == aWitch.maxCooldown) {

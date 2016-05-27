@@ -8,7 +8,7 @@ var count_inGame = 0
 io.on('connection', function (socket) {
 	console.log('clients connected')
 	var currentUser
-	var timeToFight = 60
+	var timeToFight = 20
 	socket.join('game room')
 
 	socket.on('CHECK_DEVICE', function (data) {
