@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
 
 	public static GameController instance;
 	public SocketIOComponent socketIO;
-	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8;
+	public GameObject wizard, wizard_2, wizard_3, wizard_4, wizard_5, wizard_6, wizard_7, wizard_8 , wizardPlayer2;
 	public Text timerToFight_text;
 
 	//PlayFab ID of player
@@ -154,6 +154,14 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("Enemy wizard " + i + " HP: " + wizardJSON.hp_wizard [i]);
 			wizardOfPlayer2Test [i] = wizardJSON.hp_wizard [i];
 		}
+
+
+		for (int i = 0; i < wizardOfPlayer2Test.Length; i++) {
+			int rand_wizard = Random.Range (0, allWizard.Length);
+			var aWitch = Instantiate (wizardPlayer2, new Vector3 (0, allWizard [rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;
+			aWitch.GetComponent<wizard2Controller>().maxHR = wizardOfPlayer2Test[i];
+		}
+//		addWizardForPlayer2 ();
 	}
 
 	void onPlayerID (SocketIOEvent obj) {
@@ -201,6 +209,7 @@ public class GameController : MonoBehaviour {
 	public void startRitualPhase () {
 		
 		wizardRitualPhase ();
+//		addWizardForPlayer2 ();
 
 		JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
 		JSONObject json_arr = new JSONObject(JSONObject.Type.ARRAY);
@@ -402,7 +411,7 @@ public class GameController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.C)) { clearElement (); }
 
 //		ritualPhaseCounter ();
-
+		updateHPWizardForPlayer2();
 		isEndedGame ();
 //		gameTimeScore ();
 
@@ -675,4 +684,92 @@ public class GameController : MonoBehaviour {
 			Debug.Log(error.ErrorMessage);
 		});
 	}
+
+	public void updateHPWizardForPlayer2(){
+		GameObject[] wizardArr2 = GameObject.FindGameObjectsWithTag("Wizard2");
+		int j = 0;
+		foreach (GameObject i in wizardArr2) {
+			i.GetComponent<wizard2Controller>().curHR = wizardOfPlayer2Test[j];
+			j++;
+		}
+	}
+
+//	public void addWizardForPlayer2(){
+//		for (int i = 0; i < wizardOfPlayer2Test.Length; i++) {
+//			int rand_wizard = Random.Range (0, allWizard.Length);
+//			var aWitch = Instantiate (wizardPlayer2, new Vector3 (0, allWizard [rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;
+//		}
+//
+//		GameObject[] wizardArr2 = GameObject.FindGameObjectsWithTag("Wizard2");
+//		int j = 1;
+//		float x = 6;
+//		float y = 0;
+//		foreach(GameObject i in wizardArr2){
+//			//			if (!i.GetComponent<WitchController> ().isRitual) {
+//			//				i.GetComponent<WitchController> ().gameObject.SetActive (false);
+//			//			} else {
+//			//				i.GetComponent<WitchController> ().curHR = 99;
+//			//			}
+//			WitchController aWitch = i.GetComponent<WitchController> ();
+//			aWitch.isFreeze = true;
+//			aWitch.isRitual = true;
+//			aWitch.changeToHpBar();
+//			//			i.GetComponentInChildren<Canvas> ().enabled = false;
+//			//			GameObject[] prefers = GameObject.FindGameObjectsWithTag ("PreferElement");
+//			//			foreach (GameObject p in prefers) {
+//			//				p.GetComponent<Image> ().enabled = false;
+//			//			}
+//
+//			//position of wizard in ritual phase;
+//			if (j == wizardArr.Length && j%2!=0) {
+//				y = height * 0.1f;
+//			} else {
+//				y = height*0.6f -((height) / (3))*(j%2+1);
+//			}
+//			i.GetComponent<Transform>().position = new Vector3 (x, y, 0.1f);
+//			j += 1;
+//			if (j%2!= 0) {
+//				x -= 3.5f;
+//			}
+//
+//
+//		}
+//		int j = 1;
+//		float x = 6;
+//		float y = 0;
+//		GameObject[] wizardOfPlayer2 = new GameObject[wizardOfPlayer2Test.Length];
+//		for(int i =0; i< wizardOfPlayer2Test.Length ; i++){
+//			int rand_wizard = Random.Range (0, allWizard.Length);
+//			var aWitch = Instantiate (allWizard[rand_wizard], new Vector3 (0, allWizard[rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;
+//			WitchController w = aWitch.GetComponent<WitchController> ();
+//			w.isFreeze = true;
+//			w.isRitual = true;
+//			w.curHR = 10;
+//			Debug.Log ("aaaaaaaaaaaa");
+//			Debug.Log (w.isRitual);
+//			w.changeToHpBar();
+//			if (j == wizardArr.Length && j%2!=0) {
+//				y = height * 0.1f;
+//			} else {
+//				y = height*0.6f -((height) / (3))*(j%2+1);
+//			}
+//			w.GetComponent<Transform>().position = new Vector3 (x, y, 0.1f);
+//			j += 1;
+//			if (j%2!= 0) {
+//				x -= 3.5f;
+//			}
+//			Debug.Log ("bbbbbbbb");
+//			Debug.Log (w.isRitual);
+//		}
+
+
+//		GameObject[] wizardArr2 = GameObject.FindGameObjectsWithTag("Wizard2");
+//		foreach(GameObject i in wizardArr2){
+//			WitchController w = i.GetComponent<WitchController> ();
+//			w.isFreeze = true;
+//			w.isRitual = true;
+//			w.changeToHpBar();
+//		}
+
+
 }
