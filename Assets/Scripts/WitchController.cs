@@ -300,6 +300,9 @@ public class WitchController : MonoBehaviour {
 		if (curHR< 0) {
 			curHR = 0;
 		}
+		if (curHR == 0){
+			cooldown = 0;
+		}
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
 //		Moveprefer ();
 

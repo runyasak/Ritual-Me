@@ -23,28 +23,6 @@ io.on('connection', function (socket) {
 		if(count_inGame == 2){
 			io.to('game room').emit('START_GAME', {time: timeToFight})
 		}
-		
-		// clients.push(currentUser)
-		// count_player++
-
-		// for (var i = 0; i < clients.length; i++) {
-		// 	if (clients[i].id === currentUser.id){
-		// 		console.log("Client: " + clients[i].id)
-		// 	}
-		// }
-
-		// if(clients.length == 2){
-		// 	io.to('game room').emit('START_GAME', {time: timeToFight})
-		// 	count_timer()
-		// }
-		// for (var i = 0; i < clients.length; i++) {
-			// socket.emit('USER_CONNECTED', {
-			// 	name:clients[i].name,
-			// 	id:clients[i].id,
-			// 	position:clients[i].position
-			// })
-		// 	console.log('User name: ' + clients[i].name + ' is connected..')
-		// }
 	})
 
 	socket.on('USER_READY', function (data) {
@@ -152,31 +130,6 @@ io.on('connection', function (socket) {
 		count_inGame--
 	})
 
-	//P'Wach code
-	socket.on('PLAY', function (data) {
-
-		currentUser = {
-			name:data.name,
-			id:shortID.generate(),
-			position:data.position
-		}
-		console.log(currentUser.name + ' ' + currentUser.id + ' ' + currentUser.position)
-		clients.push(currentUser)
-		socket.emit('PLAY', currentUser)
-
-		socket.broadcast.emit('USER_CONNECTED', currentUser)
-
-	})
-
-	socket.on('MOVE', function (data){
-
-		// currentUser.name = data.name
-		// currentUser.id = data.id
-		currentUser.position = data.position
-		socket.broadcast.emit('MOVE', currentUser)
-		console.log(currentUser.name + ' Move to ' + currentUser.position)
-
-	})
 
 })
 
