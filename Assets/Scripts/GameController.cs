@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using PlayFab;
+using PlayFab.ClientModels;
 //using ArrayJSON;
 
 using SocketIO;
@@ -44,6 +46,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log (PlayFabSettings.TitleId);
 		//Socket.IO
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
