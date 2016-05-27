@@ -87,7 +87,7 @@ public class WitchController : MonoBehaviour {
 		curHR = maxHR/2;
 		prefer = new GameObject[3];
 		assignPrefer ();
-		spawnPrefer ();
+//		spawnPrefer ();
 
 		spawnEmo ();
 		loveEmo.enabled = false;
@@ -212,21 +212,26 @@ public class WitchController : MonoBehaviour {
 			} 
 		}
 		if (count_elem == 2) {
-			addHR (10f);
+			addHR (15f);
 		}
 			
-		if (count_elem == 1) {
+		/*if (count_elem == 1) {
 			addHR ();
 		}
 		else if(count_elem == 0) {
 			minusHR ();
-		}
+		}*/
 
 		ATK += element.GetComponent<ElementController> ().ATK;
 		HP += element.GetComponent<ElementController> ().HP;
 		INT += element.GetComponent<ElementController> ().INT;
 		WIS += element.GetComponent<ElementController> ().WIS;
 		AGI += element.GetComponent<ElementController> ().AGI;
+		if (ATK <= 0) { ATK = 0; }
+		if (HP <= 0) { HP = 0; }
+		if (INT <= 0) { INT = 0; }
+		if (WIS <= 0) { WIS = 0; }
+		if (AGI <= 0) { AGI = 0; }
 	}
 
 	void minusHR(){
@@ -281,7 +286,7 @@ public class WitchController : MonoBehaviour {
 	void Update () {
 		countTime ();
 
-		showPrefer ();
+//		showPrefer ();
 
 		if (instance == this) {
 			if (Input.GetKeyDown (KeyCode.H)) { addHR (); }
@@ -296,7 +301,7 @@ public class WitchController : MonoBehaviour {
 			curHR = 0;
 		}
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
-		Moveprefer ();
+//		Moveprefer ();
 
 		spawnEmo ();
 		countEmo += Time.deltaTime;

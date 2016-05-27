@@ -211,6 +211,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+      propertyPath: url
+      value: ws://localhost:6969/socket.io/?EIO=4&transport=websocket
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
   m_IsPrefabParent: 0
@@ -299,6 +303,18 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1769520676}
+    - target: {fileID: 22424684, guid: b3dd0b8acf4558d4ea55a52ad42d657d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22424684, guid: b3dd0b8acf4558d4ea55a52ad42d657d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22424684, guid: b3dd0b8acf4558d4ea55a52ad42d657d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3dd0b8acf4558d4ea55a52ad42d657d, type: 2}
   m_IsPrefabParent: 0

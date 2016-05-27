@@ -49,7 +49,7 @@ public class ElementManager : MonoBehaviour {
 		float rand = Random.Range (0f, 1f);
 		GameObject element = null;
 		if(rand <= 0.35f){ element = talk_element; }
-		else if(rand <= 0.55f) { 
+		/*else if(rand <= 0.55f) { 
 			//not prefer
 			int all_rand;
 			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
@@ -61,9 +61,9 @@ public class ElementManager : MonoBehaviour {
 			} while(System.Array.IndexOf(preferWizard, all_rand)>=0);
 
 			element = elementsArr[all_rand];
-		}
+		}*/
 		else if (rand <= 0.8f) {
-			//prefer
+			/*//prefer
 			//choose wizard
 			GameObject[] wizardArr = GameObject.FindGameObjectsWithTag ("Wizard");
 			int wizard_rand =Random.Range (0, wizardArr.Length);
@@ -72,7 +72,10 @@ public class ElementManager : MonoBehaviour {
 			int[] preferWizard = wizardArr [wizard_rand].GetComponent<WitchController> ().preferNumber;
 			int prefer_rand = Random.Range (0, preferWizard.Length);
 
-			element = elementsArr[preferWizard[prefer_rand]];
+			element = elementsArr[preferWizard[prefer_rand]];*/
+			int all_rand;
+			all_rand = Random.Range (0, 9);
+			element = elementsArr[all_rand];
 		}
 		else if( rand <= 1f) { element = ghost_element;}
 
