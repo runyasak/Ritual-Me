@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using SocketIO;
-using UnityEngine.UI;
 using PlayFab;
 using PlayFab.ClientModels;
 
@@ -12,14 +12,18 @@ public class SceneController : MonoBehaviour {
 
 	private InputField input;
 
+	private string player_name;
+	private bool isNewPlayer;
 	public string PlayFabId;
+
+	private JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
 
 	void Awake (){
 
 		PlayFabSettings.TitleId = "9C78";
-
 		GameObject go = GameObject.Find("SocketIO");
 		socketIO = go.GetComponent<SocketIOComponent>();
+
 		DontDestroyOnLoad (socketIO);
 	}
 
@@ -28,6 +32,8 @@ public class SceneController : MonoBehaviour {
 //		StartCoroutine("CalltoServer");
 		GameObject inputGO = GameObject.Find("InputField");
 		input = inputGO.GetComponent<InputField> ();
+
+		isNewPlayer = false;
 
 		Dictionary<string, string> data = new Dictionary<string, string>();
 		data["device_id"] = SystemInfo.deviceUniqueIdentifier + "";
@@ -51,12 +57,14 @@ public class SceneController : MonoBehaviour {
 				Debug.Log("(new account)");
 				registerNewAccount (PlayFabSettings.TitleId);
 				SetUserData();
-				StartCoroutine (ChangeScene());
+				isNewPlayer = true;
+				StartCoroutine (Ready());
 			}
 			else
 			{
 				Debug.Log("(existing account)");
-				StartCoroutine (ChangeScene());
+				GetUserData ();
+				StartCoroutine (Ready());
 			}
 		},
 			(error) => {
@@ -93,30 +101,68 @@ public class SceneController : MonoBehaviour {
 			});
 	}
 
+	void GetUserData() {
+		GetUserDataRequest request = new GetUserDataRequest() {
+			PlayFabId = PlayFabId,
+			Keys = null
+		};
+
+		PlayFabClientAPI.GetUserData(request,(result) => {
+			Debug.Log("Got user data:");
+			if ((result.Data == null) || (result.Data.Count == 0)) {
+				Debug.Log("No user data available");
+			}
+			else {
+//				foreach (var item in result.Data) {
+//					Debug.Log("    " + item.Key + " == " + item.Value.Value);
+//				}
+//
+//				Debug.Log("    " + result.Data["win"].Value);
+				player_name = result.Data["name"].Value;
+			}
+		}, (error) => {
+			Debug.Log("Got error retrieving user data:");
+			Debug.Log(error.ErrorMessage);
+		});
+	}
+
+
+
 	public void onClick(){
 		
 		if (input.text != "") {
 			Debug.Log ("Player: " + input.text);
-			JSONObject j = new JSONObject(JSONObject.Type.OBJECT);
-			j.AddField ("name", input.text);
-
 			Login (PlayFabSettings.TitleId);
-
-			socketIO.Emit ("USER_READY", j);
 		} else {
 			input.text = "Please input your name again";
 		}
 	}
 
-	IEnumerator ChangeScene(){
+	IEnumerator Ready(){
 
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(3f);
+		if(isNewPlayer){
+			j.AddField ("name", input.text);
+		} else {
+			Debug.Log (player_name);
+			j.AddField ("name", player_name);
+		}
 
-		Application.LoadLevel (1);
+		j.AddField ("id", PlayFabId);
+		socketIO.Emit ("USER_READY", j);
 
 	}
 
 	public void changeToStartScene (SocketIOEvent e) {
 		Application.LoadLevel (1);
+	}
+
+	//Manual Play
+	IEnumerator ChangeScene(){
+
+		yield return new WaitForSeconds(3f);
+
+		Application.LoadLevel (1);
+
 	}
 }

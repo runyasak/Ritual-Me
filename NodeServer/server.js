@@ -19,6 +19,7 @@ io.on('connection', function (socket) {
 		console.log(currentUser.name + ' is in game')
 		count_inGame++
 		console.log(count_inGame)
+		socket.emit('PLAYER_ID', {id: currentUser.id})
 		if(count_inGame == 2){
 			io.to('game room').emit('START_GAME', {time: timeToFight})
 		}
@@ -49,7 +50,7 @@ io.on('connection', function (socket) {
 	socket.on('USER_READY', function (data) {
 
 		currentUser = {
-			id: shortID.generate(),
+			id: data.id,
 			name: data.name
 		}
 		clients.push(currentUser)
