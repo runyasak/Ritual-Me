@@ -381,10 +381,6 @@ Prefab:
       propertyPath: perfectText
       value: 
       objectReference: {fileID: 403618013}
-    - target: {fileID: 11489766, guid: b55ef83f88f084d1e8804b89a491c8af, type: 2}
-      propertyPath: speedRunner
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55ef83f88f084d1e8804b89a491c8af, type: 2}
   m_IsPrefabParent: 0

@@ -96,7 +96,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.2132351, y: -0.066666685, z: 0}
   m_LocalScale: {x: 0.7352941, y: 0.16666667, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 441366}
   m_RootOrder: 0
@@ -109,7 +108,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.1838233, y: -0.066666685, z: 0}
   m_LocalScale: {x: 0.7352941, y: 0.16666667, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 441366}
   m_RootOrder: 1
@@ -122,7 +120,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 3.4, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 432928}
   - {fileID: 436792}
@@ -138,7 +135,6 @@ Transform:
   m_LocalRotation: {x: -0.21263112, y: -0.6743798, z: -0.21263115, w: 0.6743797}
   m_LocalPosition: {x: -30, y: 0.70000005, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -35, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 477616}
   m_RootOrder: 0
@@ -151,7 +147,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.0588233, y: 0, z: -5}
   m_LocalScale: {x: 0.014705882, y: 0.33333334, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 448912}
   m_Father: {fileID: 441366}
@@ -233,7 +228,7 @@ MonoBehaviour:
   r_element3: {fileID: 159782, guid: 2131bf3be426d41159ef31921757fadf, type: 2}
   r_element4: {fileID: 119352, guid: 24b7feea3b29549e08f1437390cb1872, type: 2}
   r_element5: {fileID: 151236, guid: edd16dfe709cc45f797a89341ecdf324, type: 2}
-  r_element6: {fileID: 161862, guid: 44aa3ff76ea0e4076a3475e9284a05fd, type: 2}
+  r_element6: {fileID: 168438, guid: aced7f819e51f41809d3012b50851977, type: 2}
   r_element7: {fileID: 119162, guid: 615bad7372f564e32a37f721bb01cb57, type: 2}
   r_element8: {fileID: 168438, guid: aced7f819e51f41809d3012b50851977, type: 2}
   r_element9: {fileID: 128900, guid: 7bd18603780c743c6af87cf890d71504, type: 2}
@@ -250,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8742127fd4946059bdf10ef0c6e37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRunner: 0
+  speedRunner: 8
   LeftGauge: {fileID: 143868}
   RightGauge: {fileID: 107454}
   missText: {fileID: 0}

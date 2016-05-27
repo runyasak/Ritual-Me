@@ -503,7 +503,7 @@ public class GameController : MonoBehaviour {
 //				while(wizardOfPlayer2Test [rand] != 0) {
 //					rand = Random.Range (0,atkArr.Length);
 //				}
-				atkArr [rand] = aWitch.ATK;
+				atkArr [rand] += aWitch.ATK;
 				aWitch.cooldown = 0;
 			}
 		}
@@ -549,9 +549,12 @@ public class GameController : MonoBehaviour {
 		float min = 0;
 		for(int i =0; i < wizardArr.Length; i++) {
 			WitchController aWitch = wizardArr[i].GetComponent<WitchController> ();
-			if (i == 0 || min > aWitch.curHR && aWitch.curHR != 0) {
-				min = aWitch.curHR;
-				temp = i;
+			if (aWitch.cooldown == aWitch.maxCooldown) {
+				if (i == 0 || min > aWitch.curHR && aWitch.curHR != 0) {
+					min = aWitch.curHR;
+					temp = i;
+				}
+				aWitch.cooldown = 0;
 			}
 			heal += aWitch.WIS;
 		}
