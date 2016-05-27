@@ -16,7 +16,7 @@ Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.d
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.057 seconds
+- Completed reload, in  0.053 seconds
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\Mono.Security.dll (this message is harmless)
@@ -24,10 +24,10 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.611441 ms
+UnloadTime: 0.653677 ms
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Configuration.dll (this message is harmless)
 Platform assembly: D:\Game_Dev\Ritual-Me\ritual-me_Data\Managed\System.Xml.dll (this message is harmless)
-Player: sfdafds
+Player: asdfadsf
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -52,10 +52,10 @@ The referenced script on this Behaviour (Game Object 'pentacle') is missing!
 (Filename:  Line: 1655)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.350097 ms
+UnloadTime: 3.438123 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1052.
-Total: 1.087488 ms (FindLiveObjects: 0.076578 ms CreateObjectMapping: 0.030394 ms MarkObjects: 0.967095 ms  DeleteObjects: 0.007105 ms)
+Total: 1.012489 ms (FindLiveObjects: 0.071841 ms CreateObjectMapping: 0.032368 ms MarkObjects: 0.886175 ms  DeleteObjects: 0.006315 ms)
 
 9C78
  
@@ -89,7 +89,15 @@ The referenced script on this Behaviour (Game Object 'pentacle') is missing!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-enemy spawn: 1
+enemy spawn: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Got user data:
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+WIN: 1, LOSE: 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -265,6 +273,22 @@ Timer: 17
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1655)
+
+The referenced script on this Behaviour (Game Object 'pentacle') is missing!
+ 
+(Filename:  Line: 1655)
+
+The referenced script on this Behaviour (Game Object 'pentacle') is missing!
+ 
+(Filename:  Line: 1655)
+
+(3.0, 2.0, 0.1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 Timer: 16
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
@@ -309,6 +333,22 @@ Timer: 6
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1655)
+
+The referenced script on this Behaviour (Game Object 'pentacle') is missing!
+ 
+(Filename:  Line: 1655)
+
+The referenced script on this Behaviour (Game Object 'pentacle') is missing!
+ 
+(Filename:  Line: 1655)
+
+(4.4, 2.0, 0.1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 Timer: 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
@@ -333,7 +373,15 @@ Timer: 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Wizard HP: 60
+Wizard HP: 30
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Wizard HP: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Wizard HP: 40
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -365,7 +413,7 @@ atk
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-0
+-11
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -378,4 +426,4 @@ Successfully updated user data
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1f30 -> priority: 1 
+  Thread -> id: 26e0 -> priority: 1 

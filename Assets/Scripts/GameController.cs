@@ -68,6 +68,8 @@ public class GameController : MonoBehaviour {
 
 		StartCoroutine("CalltoServer");
 
+		GetUserData ();
+
 		timerToFight_text.enabled = false;
 
 		isGameStart = false;
@@ -675,7 +677,7 @@ public class GameController : MonoBehaviour {
 		if (key == "lose") {
 			UpdateUserDataRequest request = new UpdateUserDataRequest () {
 				Data = new Dictionary<string, string> () {
-					{ "lose", lose+1 + ""},
+					{ "lose", lose+1 + "" },
 				}
 			};
 			PlayFabClientAPI.UpdateUserData(request, (result) =>
