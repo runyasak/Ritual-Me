@@ -156,12 +156,30 @@ public class GameController : MonoBehaviour {
 		}
 
 
+		addWizardForPlayer2 ();
+	}
+
+	void addWizardForPlayer2 (){
+		int j = 1;
+		float x = 6;
+		float y = 0;
 		for (int i = 0; i < wizardOfPlayer2Test.Length; i++) {
 			int rand_wizard = Random.Range (0, allWizard.Length);
 			var aWitch = Instantiate (wizardPlayer2, new Vector3 (0, allWizard [rand_wizard].transform.position.y, 0.1f), Quaternion.identity) as GameObject;
 			aWitch.GetComponent<wizard2Controller>().maxHR = wizardOfPlayer2Test[i];
+
+			if (j == wizardOfPlayer2Test.Length && j%2!=0) {
+				y = height * 0.1f;
+			} else {
+				y = height*0.6f -((height) / (3))*(j%2+1);
+			}
+			aWitch.GetComponent<Transform>().position = new Vector3 (x, y, 0.1f);
+			j += 1;
+			if (j%2!= 0) {
+				x -= 3.5f;
+			}
 		}
-//		addWizardForPlayer2 ();
+
 	}
 
 	void onPlayerID (SocketIOEvent obj) {
