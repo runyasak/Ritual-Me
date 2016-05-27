@@ -11,6 +11,10 @@ io.on('connection', function (socket) {
 	var timeToFight = 10 
 	socket.join('game room')
 
+	socket.on('CHECK_DEVICE', function (data) {
+		console.log("Device ID: " + data.device_id)
+	})
+
 	socket.on('USER_IN_GAME', function (data) {
 		console.log(currentUser.name + ' is in game')
 		count_inGame++
