@@ -69,11 +69,11 @@ public class WitchController : MonoBehaviour {
 		};
 		preferNumber = new int[3];
 
-		ATKNumber.text = ""+ATK;
-		HPNumber.text = ""+HP;
-		INTNumber.text = ""+INT;
-		WISNumber.text = "" + WIS;
-		AGINumber.text = "" + AGI;
+//		ATKNumber.text = ""+ATK;
+//		HPNumber.text = ""+HP;
+//		INTNumber.text = ""+INT;
+//		WISNumber.text = "" + WIS;
+//		AGINumber.text = "" + AGI;
 
 	}
 
