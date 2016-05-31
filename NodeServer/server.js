@@ -8,7 +8,7 @@ var count_inGame = 0
 io.on('connection', function (socket) {
 	console.log('clients connected')
 	var currentUser
-	var timeToFight = 20
+	var timeToFight = 60
 	socket.join('game room')
 
 	socket.on('CHECK_DEVICE', function (data) {
@@ -65,7 +65,6 @@ io.on('connection', function (socket) {
 	socket.on('START_FIGHT_PHASE', function (data) {
 		for (var i = 0; i < clients.length; i++) {
 			if (clients[i].id === currentUser.id){
-				// console.log("Client: " + clients[i].id + " Spawn_wizard: " + data.rand)
 				console.log("Client: " + clients[i].name + " has " + data.hp_wizard.length)
 				for(var j = 0; j < data.hp_wizard.length; j++){
 					console.log("Wizard " + j + " HP: " + data.hp_wizard[j]);
@@ -127,7 +126,6 @@ io.on('connection', function (socket) {
 				console.log("Number of clients: " + clients.length)
 			}
 		}
-		count_inGame--
 	})
 
 
