@@ -30,6 +30,9 @@ public class wizard2Controller : MonoBehaviour {
 		if (curHR< 0) {
 			curHR = 0;
 		}
+		if (curHR > maxHR) {
+			curHR = maxHR;		
+		}
 		hrBar.transform.localScale = new Vector3 (curHR / maxHR, hrBar.transform.localScale.y, hrBar.transform.localScale.z);
 	}
 }
